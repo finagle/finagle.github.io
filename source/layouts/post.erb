@@ -1,0 +1,33 @@
+<% content_for :page_title do %>
+Blog
+<% end %>
+<% wrap_layout :layout do %>
+<div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!--<% if current_page.data.post_author.gravatar %>
+      <img src="http://www.gravatar.com/avatar/<%= current_page.data.post_author.gravatar %>?s=80" class="author_gravatar">
+    <% end %>-->
+    <div class="author-contact">
+      <h4 class="author-name"><%= current_page.data.post_author.display_name %></h4>
+      <p class="author-twitter"><a href="https://twitter.com/<%= current_page.data.post_author.twitter %>">@<%= current_page.data.post_author.twitter %></a></p>
+    </div>
+    <p><em>Posted <%= current_article.date.strftime("%B %e, %Y")  %></em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1><%= current_page.data.title %></h1>
+  
+  <%= yield %>
+</div>
+</div>
+<% end %>

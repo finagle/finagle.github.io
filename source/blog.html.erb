@@ -1,0 +1,40 @@
+---
+title: Finagle | Blog
+breadcrumb: Blog
+---
+<div class="row">
+  <div class="col-md-3">
+    <div><a href="/blog/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+    <div class="meta">
+      <h4><a href="/blog/">Finagle blog</a></h4>
+      <p>Featuring announcements, release notes, and posts by the Finagle team and Finagle adopters outside of Twitter.</p>
+    </div>
+  
+    <div class="share">
+      <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+    </div>
+  </div>
+  <div class="col-md-9">
+    <% blog.articles.each do |post| %>
+      <article>
+        <h2><%= link_to(post.title, post.url)%></h2>
+      <p><em>Posted by <a href="https://twitter.com/<%= post.data.post_author.twitter %>"><%= post.data.post_author.display_name %></a> on <%= post.date.strftime("%B %e, %Y") %></em></p>
+      <%= post.summary %>
+      <%= link_to 'Read more...', post %>
+      </article>
+    <% end %>
+    <div class="about">
+      <h2>About Finagle</h2>
+      <p>Finagle is an extensible RPC system for the JVM, used to construct high-concurrency servers. Finagle implements uniform client and server APIs for several protocols, and is designed for high performance and concurrency. Most of Finagle's code is protocol agnostic, simplifying the implementation of new protocols.</p>
+      <p>For more information, please see the <a href="https://twitter.github.io/finagle/">project website</a>
+        or <a href="https://github.com/twitter/finagle/">source code repository</a>,
+        or get in touch through
+        our  <a href="https://groups.google.com/forum/#!forum/finaglers">mailing list</a>,
+        <a href="https://twitter.com/finagle">Twitter account</a>,
+        or the <code>#finagle</code> IRC channel on Freenode.
+      </p>
+    </div>
+  </div>
+</div>
