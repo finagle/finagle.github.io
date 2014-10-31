@@ -17,7 +17,7 @@ breadcrumb: Blog
     </div>
   </div>
   <div class="col-md-9">
-    <% blog.articles.each do |post| %>
+    <% published(blog.articles).each do |post| %>
       <article>
         <h2><%= link_to(post.title, post.url)%></h2>
       <p><em>Posted by <a href="https://twitter.com/<%= post.data.post_author.twitter %>"><%= post.data.post_author.display_name %></a> on <%= post.date.strftime("%B %e, %Y") %></em></p>

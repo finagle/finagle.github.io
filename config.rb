@@ -17,7 +17,7 @@ activate :syntax
 activate :livereload
 activate :redirect
 
-set :markdown_engine, :rdiscount
+set :markdown_engine, :redcarpet
 set :markdown, :layout_engine => :erb,
                :tables => true,
                :autolink => true,
@@ -56,4 +56,14 @@ end
 
 page "/sitemap.xml", :layout => false
 page "/blog/feed.xml", :layout => false
+
+helpers do
+  def published(articles)
+    if development?
+      articles
+    else
+      articles.reject{|a| a.data.public_draft }
+    end
+  end
+end
 
