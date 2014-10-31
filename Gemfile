@@ -9,4 +9,5 @@ gem 'middleman-deploy', '0.2.4'
 gem 'nokogiri', '1.6.3.1'
 
 gem "rdiscount", '2.1.7.1'
+gem "redcarpet", '3.2.0'
 
