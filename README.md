@@ -1,4 +1,4 @@
-# Finagle blog
+# Finagle blog [![Build Status](https://secure.travis-ci.org/finagle/finagle.github.io.png?branch=source)](http://travis-ci.org/finagle/finagle.github.io)
 
 This project uses [Middleman](http://middlemanapp.com/) to generate the
 [blog](https://finagle.github.io) for the
