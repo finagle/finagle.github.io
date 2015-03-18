@@ -189,7 +189,7 @@ in the exception's message being wrapped in a Serial `ApplicationError`.
 ## Using Serial
 
 Serial is a very young project, but Finagle and Mux are a good foundation to
-build on, and we love to have other people give it a try.
+build on, and we'd love to have other people give it a try.
 
 The API documentation is available on [the project's GitHub Pages site][api],
 and the project's [README][readme] presents some initial benchmarks and goes
