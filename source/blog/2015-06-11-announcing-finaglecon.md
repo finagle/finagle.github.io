@@ -5,14 +5,14 @@ published: true
 post_author:
   display_name: Travis Brown
   twitter: travisbrown
-tags: Finagle
+tags: Finagle, FinagleCon
 ---
 
 Yesterday we opened registration and the call for participation for
 [FinagleCon][finaglecon], a new annual conference for the Finagle community.
-This year's conference will be co-located with [Scala by the Bay][sbtb] at the
-[Kaiser Center][kaiser] in Oakland, CA, and will take place on Thursday, August
-13, the day before Scala by the Bay begins.
+This year's conference will be a [Scala by the Bay][sbtb] event hosted
+[at Twitter HQ][venue-change] in San Francisco, and will take place on Thursday,
+August 13, the day before Scala by the Bay begins.
 
 <p align="center">
   <a href="http://scala.bythebay.io/">
@@ -66,3 +66,4 @@ us know—we're on Twitter at [@finaglecon][twitter], and you can also reach us
 [sbtb]: http://scala.bythebay.io/
 [sbtb-tickets]: http://scala.bythebay.io/tickets.html
 [twitter]: https://twitter.com/finaglecon
+[venue-change]: https://finagle.github.io/blog/2015/07/15/new-finaglecon-venue/
