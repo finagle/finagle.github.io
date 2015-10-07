@@ -90,8 +90,11 @@ Await.result(filteredMethodIface.log("ping", 3).map(println))
 
 This can be used to insert filters into existing Thrift clients.
 
-Please contact the [Finaglers mailing list][finaglers] with questions or bug reports.
+Please contact the [Finaglers mailing list][finaglers] with questions or bug reports,
+and if you're interested in working on projects like Scrooge, get in touch—the
+[Core System Libraries team at Twitter is hiring][csl-opening].
 
+[csl-opening]: https://about.twitter.com/careers/positions?jvi=oLxj1fwm,Job
 [finaglers]: https://groups.google.com/forum/#!forum/finaglers
 [scrooge-4.0.0]: https://github.com/twitter/scrooge/releases/tag/scrooge-4.0.0
 [scrooge-commit]: https://github.com/twitter/scrooge/commit/3fbb635936d82c00456b332647ea9136841f3227
