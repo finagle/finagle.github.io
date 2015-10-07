@@ -43,6 +43,13 @@ case class ServiceIface(
 
 Note that every method in the IDL becomes a `Service` for the corresponding `Args` and `Result` structures. The wrappers are needed to wrap multiple method arguments into one type. 
 
+To construct a client, we use `newServiceIFace`:
+
+```scala
+val clientServiceIface: LoggerService.ServiceIface =
+  Thrift.newServiceIface[LoggerService.ServiceIface]("localhost:1234")
+```
+
 Because every Thrift method is a Finagle `Service`, you can decorate them with `Filter`s:
 
 ```scala
