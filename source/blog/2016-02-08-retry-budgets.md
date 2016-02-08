@@ -28,12 +28,12 @@ Developers can wire up their own budget:
 
 ```scala
 import com.twitter.finagle.Http
-import com.twitter.finagle.service.{Retries, RetryBudget}
+import com.twitter.finagle.service.RetryBudget
 
 val budget: RetryBudget = ???
 
 val twitter = Http.client
-  .configured(Retries.Budget(retryBudget = budget))
+  .withRetryBudget(budget)
   .newService("twitter.com")
 ```
 
