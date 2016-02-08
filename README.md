@@ -22,7 +22,7 @@ and [RubyGems](https://rubygems.org/) installed first.
 
 ## Generating the site
 
-Now you can run `rake dev` and open a browser window to `http://localhost:4567/`
+Now you can run `bundle exec rake dev` and open a browser window to `http://localhost:4567/`
 to see your local build of the site. Any changes you make to the `sources`
 directory will be reflected more or less immediately, and errors will be shown
 in the console you launched `rake dev` in.
