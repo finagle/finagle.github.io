@@ -77,12 +77,12 @@ import com.twitter.finagle.http.service.HttpResponseClassifier;
 // Discoverable Parameters API
 Http.client()
   ...
-  .withResponseClassifier(HttpResponseClassifier.ServerErrorsAsDefault());
+  .withResponseClassifier(HttpResponseClassifier.ServerErrorsAsFailures());
 
 // ClientBuilder API
 ClientBuilder
   ...
-  .responseClassifier(HttpResponseClassifier.ServerErrorsAsDefault());
+  .responseClassifier(HttpResponseClassifier.ServerErrorsAsFailures());
 ```
 
 If a classifier is not specified on a client or if a user’s classifier
