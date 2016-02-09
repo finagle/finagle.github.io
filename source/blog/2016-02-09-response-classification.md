@@ -172,7 +172,7 @@ If you examine that classifier you’ll note a few things. First (#1),
 the deserialized `NotFoundException` can be treated as a failure. Next
 (#2), a “successful” response can be examined to enable services using
 status codes to classify errors. Lastly (#3), the request can be
-introspected to make the decision.
+  introspected to make the decision.
 
 ### But what’s it really gonna do?
 
@@ -202,7 +202,7 @@ If you have any questions on how to use this or feedback on how it’s working,
 please get in touch through [@finagle](https://twitter.com/finagle) or the
 [Finaglers mailing list](https://groups.google.com/forum/#!forum/finaglers).
 
-[release633]:http://localhost:4567/blog/2016/02/05/release-notes-6-33/
+[release633]: http://finagle.github.io/blog/2016/02/05/release-notes-6-33/
 [Try]: https://github.com/twitter/util/blob/8e33b34a0379f920ccb2dfae531a5c003db36152/util-core/src/main/scala/com/twitter/util/Try.scala#L64-L68
 [failureaccrual]: http://twitter.github.io/finagle/guide/Clients.html#failure-accrual
 [successrates]: http://twitter.github.io/finagle/guide/Metrics.html#statsfilter
