@@ -172,17 +172,7 @@ If you examine that classifier you’ll note a few things. First (#1),
 the deserialized `NotFoundException` can be treated as a failure. Next
 (#2), a “successful” response can be examined to enable services using
 status codes to classify errors. Lastly (#3), the request can be
-introspected to make the decision.  But what’s it really gonna do?
-It’s important to understand what the impact will be if you customize
-response classification for your client. Perhaps most importantly,
-when responses are classified as failures, this affects how failure
-accrual sees responses. In the past, you may have had a Thrift service
-returning nothing but exceptions, but this node would continue getting
-traffic due to failure accrual’s lack of visibility. While this
-changes lets you fix this visibility, you should consider what causes
-those responses. For example, if the service is simply proxying a
-failure from its downstream service, you may not want to count that as
-a failure.
+introspected to make the decision.
 
 ### But what’s it really gonna do?
 
