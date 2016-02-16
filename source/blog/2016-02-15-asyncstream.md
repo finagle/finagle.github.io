@@ -77,12 +77,12 @@ import com.twitter.util.Future
 
 // Construction from a materialized value
 val result: String = "wonderful string" // materialized wonderful string
-val spool: Spool[String] = result *:: Spool.empty
+val spool: Spool[String] = result *:: Future.value(Spool.empty)
 
 // Construction from a Future
 def getString(): Future[String] = myService.getString("wonderful string") // gets a wonderful string
 val unforced: () => Future[Spool[String]] =
-  () => getString().map { string => string *:: Spool.empty }
+  () => getString().map { string => string *:: Future.value(Spool.empty) }
 
 // Construction from a Seq
 val results: Seq[String] = Seq("i", "have", "many", "wonderful", "strings") // many nice strings
@@ -90,7 +90,7 @@ val spool: Spool[String] = Spool.fromSeq(results)
 
 // Construction from a function
 def getNext(): Future[String] = myService.getNext()
-def mkStream(): Future[Spool[String]] = getNext().flatMap { string => new Spool.LazyCons(string, mkStream()) }
+def mkStream(): Future[Spool[String]] = getNext().map { string => string *:: mkStream() }
 val unforced: () => Future[Spool[String]] = () => mkStream()
 ```
 
