@@ -8,8 +8,6 @@ post_author:
 tags: Finagle, Streaming
 ---
 
-# AsyncStream
-
 tl;dr AsyncStream is replacing Spool.
 
 Big shoutout to [Neuman Vong][0], who designed and built AsyncStream soup to nuts ✧٩(•́⌄•́๑)
@@ -44,26 +42,28 @@ them as conduits for moving objects through.  The first one (like asyncStream) m
 operation is on average, and the second one (like asyncStream:·gc.alloc.rate.norm) measures how many
 bytes are allocated per operation on average.  Lower is better.
 
-      	      		     		    	    threads 	score
-asyncStream                                  	    1		162.707 ±   39.933   ns/op
-asyncStream:·gc.alloc.rate.norm   		    1		232.000 ±    0.001    B/op
-spool                                               1		611.280 ±  324.364   ns/op
-spool:·gc.alloc.rate.norm                	    1		752.001 ±    0.003    B/op
+```
+                                    threads   score
+asyncStream                               1   162.707  ±   39.933   ns/op
+asyncStream:·gc.alloc.rate.norm           1   232.000  ±    0.001    B/op
+spool                                     1   11.280   ±  324.364   ns/op
+spool:·gc.alloc.rate.norm                 1   752.001  ±    0.003    B/op
 
-asyncStream                                 	    2		514.126 ±   87.914   ns/op
-asyncStream:·gc.alloc.rate.norm   		    2		688.001 ±    0.003    B/op
-spool                                               2		942.653 ±  111.403   ns/op
-spool:·gc.alloc.rate.norm               	    2		1344.001 ±    0.005    B/op
+asyncStream                               2   514.126  ±   87.914   ns/op
+asyncStream:·gc.alloc.rate.norm           2   688.001  ±    0.003    B/op
+spool                                     2   942.653  ±  111.403   ns/op
+spool:·gc.alloc.rate.norm                 2   1344.001 ±   0.005     B/op
 
-asyncStream                                 	    5		1609.987 ±  718.745   ns/op
-asyncStream:·gc.alloc.rate.norm   		    5		2248.003 ±    0.009    B/op
-spool                                               5		2792.601 ± 1238.565   ns/op
-spool:·gc.alloc.rate.norm               	    5		3120.005 ±    0.019    B/op
+asyncStream                               5   1609.987 ±  718.745   ns/op
+asyncStream:·gc.alloc.rate.norm           5   2248.003 ±    0.009    B/op
+spool                                     5   2792.601 ± 1238.565   ns/op
+spool:·gc.alloc.rate.norm                 5   3120.005 ±    0.019    B/op
 
-asyncStream                                 	    10		3214.592 ±  843.915   ns/op
-asyncStream:·gc.alloc.rate.norm    		    10 		4848.005 ±    0.016    B/op
-spool                                               10 		4235.138 ± 1448.331   ns/op
-spool:·gc.alloc.rate.norm                	    10 		6080.006 ±    0.020    B/op
+asyncStream                              10   3214.592 ±  843.915   ns/op
+asyncStream:·gc.alloc.rate.norm          10   4848.005 ±    0.016    B/op
+spool                                    10   4235.138 ± 1448.331   ns/op
+spool:·gc.alloc.rate.norm                10   6080.006 ±    0.020    B/op
+```
 
 As you can see, we have improvements across the board for every number of threads.
 
@@ -71,7 +71,7 @@ As you can see, we have improvements across the board for every number of thread
 ## Migration guide:
 ### Stream construction with Spool
 
-```
+```scala
 import com.twitter.concurrent.Spool
 import com.twitter.util.Future
 
@@ -96,7 +96,7 @@ val unforced: () => Future[Spool[String]] = () => mkStream()
 
 ### Stream construction with AsyncStream
 
-```
+```scala
 import com.twitter.concurrent.AsyncStream
 import com.twitter.util.Future
 
@@ -121,7 +121,7 @@ val unforced: () => AsyncStream[String] = () => mkStream()
 
 ### Iteration with Spool
 
-```
+```scala
 import com.twitter.concurrent.Spool
 import com.twitter.util.Future
 
@@ -136,7 +136,7 @@ val newSpool: Spool[Int] = spool.map { string => string.length }
 
 ### Iteration with AsyncStream
 
-```
+```scala
 import com.twitter.concurrent.AsyncStream
 import com.twitter.util.Future
 
@@ -151,7 +151,7 @@ val newStream: AsyncStream[Int] = stream.map { string => string.length }
 
 ### Aggregation with Spool
 
-```
+```scala
 import com.twitter.concurrent.Spool
 import com.twitter.util.Future
 
@@ -177,7 +177,7 @@ val result: Future[Spool[String]] = spool.flatMap { item => Future.value(split(i
 
 ### Aggregation with AsyncStream
 
-```
+```scala
 import com.twitter.concurrent.AsyncStream
 import com.twitter.util.Future
 
