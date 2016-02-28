@@ -53,7 +53,7 @@ def listEmployees(departmentId: Integer) = Service.mk[Request, Response] { rq =>
 val listEmployeesRoute = listEmployeesContract bindTo listEmployees
 ```
 
-Routes which all live in a common context are then bundled into a ```ModuleSpec```, and the result is converted into a standard Service which can be served as usual using the Finagle ```Http``` API:
+Routes which all live in a common context are then bundled into a ```ModuleSpec``` (which can themselves be combined), and the result is converted into a standard Service which can be served as usual using the Finagle ```Http``` API:
 
 ```scala
 Http.serve(":9000", ModuleSpec(Root / "employee").withRoute(listEmployeesRoute).toService)
