@@ -134,6 +134,20 @@ class FakeEmployeeServer (port: Int) {
 One advantage of this kind of fake server setup is the ability to define CDC-style tests to ensure the integrity of the contract between the real and fake dependency. Another is that the effects of network problems such as timeouts can be easily be realistically recreated by building these into the fake implementation.
 
 
+### web content and templating
+There is built-in support for [Mustache][mustache] and [Handlebars][handlebars] templating engines. View models which implement the ```View``` trait will automatically render in the identically named view file, which is converted by a ```RenderXXXFilter```. Here's an example Web module for ```Mustache``` which uses the filter at a module-level, and describes itself as an XML SiteMap:
+
+```
+// maps to IndexView.mustache in the classpath
+case class IndexView(title: String) extends View
+
+def index() = Service.mk { rq: Request => IndexView("my great website") } 
+
+ModuleSpec[View](Root, new SiteMapModuleRenderer(new URL("http://my.great.site")),
+  new RenderMustacheView(Html.ResponseBuilder, "templates")
+).withRoute(RouteSpec("index").at(Get) bindTo index)
+```
+
 ### fin
 And that's a whirlwind tour of some of the features of Fintrospect - you can see the full feature set in the documentation at the [project site][fintrospect]. For the impatient there is a Github repo with an entire (tested) [demo application][demo]. 
 
@@ -152,3 +166,6 @@ libraryDependencies ++= Seq(
 [circe]: http://circe.io
 [swagger]: http://swagger.io
 [swaggerpetstore]: http://petstore.swagger.io
+[mustache]: http://mustache.github.io/
+[handlebars]: http://handlebarsjs.com/
+
