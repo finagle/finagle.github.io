@@ -86,7 +86,7 @@ Parameter and body type support includes a number of factory methods for various
 val spec = ParameterSpec[EmployeeId]("employeeId", None, NumberParamType, 
   s => EmployeeId(parseInt(s)), id => id.value.toString)
 
-val employeeId = Query.optional(spec)
+val employeeId = Query.required(spec)
 val id: EmployeeId = employeeId <-- request
 ```
 
