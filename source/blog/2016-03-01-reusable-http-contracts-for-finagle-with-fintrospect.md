@@ -30,7 +30,7 @@ val activeOnly = Header.optional.boolean("listOnlyActive")
 val employeeName = Query.required.string("name")
 val departmentId = Path.integer("departmentId")
 
-val listEmployeeesContract = RouteSpec("search for all employees in a particular group")
+val listEmployeesContract = RouteSpec("search for all employees in a particular group")
   .taking(activeOnly)
   .taking(employeeName)
   .at(Get) / "search" / departmentId
@@ -50,7 +50,7 @@ def listEmployees(departmentId: Integer) = Service.mk[Request, Response] { rq =>
   ...
 }
 
-val listEmployeesRoute = listEmployeeesContract bindTo listEmployees
+val listEmployeesRoute = listEmployeesContract bindTo listEmployees
 ```
 
 Routes which all live in a common context are then bundled into a ```ModuleSpec```, and the result is converted into a standard Service which can be served as usual using the Finagle ```Http``` API:
@@ -110,7 +110,7 @@ All parameter locations are represented in the documentation, and in the case of
 The HTTP contract can also be bound to an outgoing Finagle Client ```Service```, which creates a callable ```RouteClient```. Typed values can be bound to the contract parameters using ```-->``` and are auto-marshalled into the outgoing request:
 
 ```
-val client = listEmployeeesContract bindToClient Http.newService("localhost:9001")
+val client = listEmployeesContract bindToClient Http.newService("localhost:9001")
 val response: Future[Response] = client(activeOnly --> true, employeeName --> "bob", departmentId --> 5)
 ```
 
@@ -124,7 +124,7 @@ class FakeEmployeeServer (port: Int) {
   }
 
   val routes = new ServerRoutes[Response] {
-    add(listEmployeeesContract bindTo listEmployees)
+    add(listEmployeesContract bindTo listEmployees)
   }
 
   def start() = new TestHttpServer(port, routes).start()
