@@ -20,7 +20,7 @@ At my current workplace, we've been migrating our architecture stack to a Micros
 
 To solve these requirements, Fintrospect was born! The library provides a thin layer over the top of Finagle HTTP that helped us solve the above requirements with minimal ongoing effort. 
 
-This post describes a brief overview of the main features of the library. Full documentation can be found at the [project site][fintrospect], or for the impatient there is a Github repo with a [demo application][fintrospect].
+This post describes a brief overview of the main features of the library. Full documentation can be found at the [project site][fintrospect], or for the impatient there is a Github repo with a [demo application][demo].
 
 ### defining HTTP contracts
 An HTTP contract is created by defining some typed-parameters and adding them into a ```RouteSpec```:
