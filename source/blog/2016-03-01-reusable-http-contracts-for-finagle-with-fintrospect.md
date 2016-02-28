@@ -104,7 +104,7 @@ val findEmployeeContract = RouteSpec("employee lookup")
 
 In order to interact with the API here, you'll need an instance of the Swagger UI. Normally, these are hosted yourself, but you can see an [example instance][swaggerpetstore].
 
-All parameter locations are represented in the documentation, and in the case of JSON messages (when examples are provided for the responses or bodies), JSON Schema is generated to provide a breakdown of the expected object format.
+All parameter locations are represented in the documentation, and in the case of JSON messages (when examples are provided for the responses or bodies), [JSON Schema][jsonschema] is generated to provide a breakdown of the expected object format.
 
 ## consuming the contract
 The HTTP contract can also be bound to an outgoing Finagle Client ```Service```, which creates a callable ```RouteClient```. Typed values can be bound to the contract parameters using ```-->``` and are auto-marshalled into the outgoing request:
