@@ -83,7 +83,7 @@ def listEmployees(departmentId: Integer) = Service.mk[Request, Response] { rq =>
 Parameter and body type support includes a number of factory methods for various primitive types (as well as JSON and XML), but it is also simple to provide support for your own types - you just need to provide the mechanism to serialise and deserialise the type:
 
 ```
-val spec = ParameterSpec[EmployeeId]("enployeeId", None, NumberParamType, 
+val spec = ParameterSpec[EmployeeId]("employeeId", None, NumberParamType, 
   s => EmployeeId(parseInt(s)), id => id.value.toString)
 
 val employeeId = Query.optional(spec)
