@@ -13,7 +13,7 @@ tags: Finagle, Fintrospect
 ## overview 
 At my current workplace, we've been migrating our architecture stack to a Microservice-based approach and from the application side a few core requirements kept coming up. We wanted our apps to be able to easily:
 
-- generate and serve live API contract documentation (in our case [Swagger][swagger] docs with JSON example schema)
+- generate and serve live API contract documentation - in our case [Swagger][swagger] docs with [JSON schema][jsonschema] example
 - automatically validate and respond to invalid requests (missing or invalid parameters)
 - marshall objects to and from HTTP requests in various messaging formats in a type-safe way, for both server and client-side services
 - provide a low effort way of creating Fake servers for our downstream dependencies for CDC-based testing
@@ -161,6 +161,7 @@ libraryDependencies ++= Seq(
 ```
 
 [fintrospect]: http://fintrospect.io
+[jsonschema]: http://json-schema.org/
 [demo]: http://github.com/daviddenton/fintrospect-example-app
 [argonaut]: http://argonaut.io
 [circe]: http://circe.io
