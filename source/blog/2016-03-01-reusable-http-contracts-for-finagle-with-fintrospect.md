@@ -153,7 +153,7 @@ And that's a whirlwind tour of some of the features of Fintrospect - you can see
 
 Alternatively, you can go straight to Maven for the base SBT install:
 
-```
+```scala
 libraryDependencies ++= Seq(
   "io.github.daviddenton" %% "fintrospect" % "12.4.0",
   "com.twitter" %% "finagle-http" % "6.33.0"
