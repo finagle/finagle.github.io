@@ -60,7 +60,7 @@ Http.serve(":9000", ModuleSpec(Root / "employee").withRoute(listEmployeesRoute).
 ```
 
 #### creating the HTTP response
-Fintrospect includes support for natively creating responses using a number of different protocols, and also ships with bindings for creating JSON messages from several popular JSON libraries, including the auto case-class conversion support included in [Argonaut][argonaut], and more recently [Circe][circe]. There are several different ways fo creating the Responses, but the below method is the most compact. The very first object in the example below is a Finagle ```Status``` object which is implicitly converted to a ```ResponseBuilder```:
+Fintrospect includes support for natively creating responses using a number of different protocols, and also ships with bindings for creating JSON messages from [a bunch][supportedjson] of popular JSON libraries, including the auto case-class conversion support included in [Argonaut][argonaut], and more recently [Circe][circe]. There are various mechanisms of creating the Responses, but the below method is the most compact. The very first object in the example below is a Finagle ```Status``` object which is implicitly converted to a ```ResponseBuilder```:
 
 ```scala
 import Argonaut.ResponseBuilder._
@@ -161,6 +161,7 @@ libraryDependencies ++= Seq(
 ```
 
 [fintrospect]: http://fintrospect.io
+[supportedjson]: http://fintrospect.io/installation
 [jsonschema]: http://json-schema.org/
 [demo]: http://github.com/daviddenton/fintrospect-example-app
 [argonaut]: http://argonaut.io
