@@ -151,7 +151,7 @@ ModuleSpec[View](Root, new SiteMapModuleRenderer(new URL("http://my.great.site")
 ```
 
 ## fin
-And that's a whirlwind tour of some of the features of Fintrospect - you can see the full feature set in the documentation at the [project site][fintrospect]. For the impatient there is a Github repo with an entire (tested) [demo application][demo]. 
+And that's a whirlwind tour of some of the features of Fintrospect - you can see the full feature set in the documentation at the [project site][fintrospect]. For the impatient there is a Github repo with an fully tested [demo application][demo]. 
 
 Alternatively, you can go straight to Maven for the base SBT install:
 
