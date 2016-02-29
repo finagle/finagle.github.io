@@ -18,7 +18,7 @@ At my current workplace, we've been migrating our architecture stack to a Micros
 - marshall objects to and from HTTP requests in various messaging formats in a type-safe way, for both server and client-side services
 - provide a low effort way of creating Fake servers for our downstream dependencies for CDC-based testing
 
-To solve these requirements, [Fintrospect][fintrospect] was devised! The library provides a thin layer over the top of Finagle HTTP that helped us solve the above requirements with minimal ongoing effort. 
+To solve these requirements, [Fintrospect][fintrospect] was devised. The library provides a thin layer over the top of Finagle HTTP that helped us solve the above requirements with minimal ongoing effort. 
 
 This post describes a brief overview of the main features of the library. Full documentation can be found at the [project site][fintrospect], or for the impatient there is a Github repo with a [demo application][demo].
 
