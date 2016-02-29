@@ -115,7 +115,7 @@ val response: Future[Response] = client(activeOnly --> true, employeeName --> "b
 ```
 
 ## low-effort fake HTTP servers
-The ability to reuse the defined HTTP contract for both the server and the client allows us to very easily create a Fake HTTP server for a downstream dependency:
+The ability to reuse the defined HTTP contract for both the server and the client allows us to very easily create a Fake HTTP server for a downstream dependency. The ```TestHttpServer``` is provided for this purpose, allowing you easily mount single or multiple downstream contracts:
 
 ```scala
 class FakeEmployeeServer (port: Int) {
@@ -131,7 +131,7 @@ class FakeEmployeeServer (port: Int) {
  }
 ```
 
-One advantage of this kind of fake server setup is the ability to define CDC-style tests to ensure the integrity of the contract between the real and fake dependency. Another is that the effects of network problems such as timeouts can be easily be realistically recreated by building these into the fake implementation.
+One advantage of this kind of fake server setup is the ability to define CDC-style tests to ensure the integrity of the contract between the real and fake dependency. Another is that the effects of network problems such as timeouts can be easily be realistically recreated by building these into the fake server implementation.
 
 
 ## web content and templating
