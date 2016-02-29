@@ -23,7 +23,7 @@ To solve these requirements, [Fintrospect][fintrospect] was devised. The library
 This post describes a brief overview of the main features of the library. Full documentation can be found at the [project site][fintrospect], or for the impatient there is a Github repo with a [demo application][demo].
 
 ## defining HTTP contracts
-An HTTP contract is created by defining a ```RouteSpec``` which takes some typed-parameters ata particular path:
+An HTTP contract is created by defining a ```RouteSpec``` which takes some typed-parameters at a particular path:
 
 ```scala
 val activeOnly = Header.optional.boolean("listOnlyActive")
