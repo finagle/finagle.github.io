@@ -16,7 +16,7 @@ At [SpringerNature][springernature], we've been migrating our architecture stack
 - generate and serve live API contract documentation - in our case [Swagger][swagger] docs with [JSON schema][jsonschema] example
 - automatically validate and respond to invalid requests (missing or invalid parameters)
 - marshall objects to and from HTTP requests in various messaging formats in a type-safe way, for both server and client-side services
-- provide a low effort way of creating Fake servers for our downstream dependencies for CDC-based testing
+- provide a low effort way of creating HTTP servers to fake our downstream dependencies for CDC and network based testing
 
 To solve these requirements, [Fintrospect][fintrospect] was devised. The library provides a thin layer over the top of Finagle HTTP that helped us solve the above requirements with minimal ongoing effort. 
 
@@ -123,7 +123,7 @@ val response: Future[Response] = client(activeOnly --> true, employeeName --> "b
 ```
 
 ## low-effort fake HTTP servers
-The ability to reuse the defined HTTP contract for both the server and the client allows us to very easily create a Fake HTTP server for a downstream dependency. The ```TestHttpServer``` is provided for this purpose, allowing you easily mount single or multiple downstream contracts:
+The ability to reuse the defined HTTP contract for both the server and the client allows us to very easily create HTTP servers to fake out downstream dependencies. The ```TestHttpServer``` is provided for this purpose, allowing you easily mount single or multiple downstream contracts:
 
 ```scala
 class FakeEmployeeServer (port: Int) {
