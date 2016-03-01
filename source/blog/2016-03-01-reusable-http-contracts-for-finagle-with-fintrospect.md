@@ -82,7 +82,7 @@ def listEmployees(departmentId: Integer) = Service.mk[Request, Response] { reque
 ```
 
 #### custom parameters and bodies
-Parameter and body type support includes a number of factory methods for various primitive and complex (JSON.XML/Form) types, but it is also simple to provide support for your own - you just need to provide the mechanism to serialise and deserialise the type instance:
+Parameter and body type support includes a number of factory methods for various primitive and complex (JSON/XML/Form) types, but it is also simple to provide support for your own - you just need to provide the mechanism to serialise and deserialise the type instance:
 
 ```scala
 val spec = ParameterSpec[EmployeeId]("employeeId", None, NumberParamType, 
