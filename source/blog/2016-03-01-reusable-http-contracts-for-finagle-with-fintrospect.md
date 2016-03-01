@@ -156,7 +156,7 @@ ModuleSpec[View](Root, new SiteMapModuleRenderer(new URL("http://my.great.site")
 The library has evolved greatly over the year that it's been in production, but the core principles remain:
 
 - design for extensibility: new Parameter and Body types, message formats (such as JSON libraries etc), new module renderers and templating engines are all simple to add.
-- dependency minimisation: Fintrospect only relies on a single external library and the even choice of Finagle version is up to the end-user. Bindings for external message formats and templating libraries are shipped, but dependant libraries are up to the user to include.
+- dependency minimisation: Fintrospect only relies on a single external JAR and the even choice of Finagle version is up to the end-user. Bindings for external message formats and templating libraries are shipped, but dependant libraries are up to the user to include.
 - proper semantic versioning: using major versions to indicate breaking changes, along with notes in the changelog to help end users migrate versions.
 
 
