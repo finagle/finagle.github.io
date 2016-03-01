@@ -143,7 +143,7 @@ One advantage of this kind of fake server setup is the ability to define CDC-sty
 
 
 ## web content and templating
-As well as serving of static content via ```StaticModule```, Fintrospect provides built-in support for [Mustache][mustache] and [Handlebars][handlebars] templating engines. View models which implement the ```View``` trait will automatically render in the identically named view file, which is converted by a ```Render<Engine>View``` Filter. Here's an example Web module for Mustache which uses the filter at a module-level, and describes itself as an XML SiteMap:
+As well as serving of static content via ```StaticModule```, Fintrospect provides built-in support for the [Mustache][mustache] and [Handlebars][handlebars] templating engines. View models which implement the ```View``` trait will automatically render in the identically named view file, which is converted by a ```Render<Engine>View``` Filter. Here's an example Web module for Mustache which uses the filter at a module-level, and describes itself as an XML SiteMap:
 
 ```scala
 // maps to IndexView.mustache in the classpath
