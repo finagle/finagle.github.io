@@ -25,7 +25,7 @@ This post describes a brief overview of the main features of the library. Full d
 Let's dive in...
 
 ## defining HTTP contracts
-An HTTP contract is created by defining a ```RouteSpec``` which takes some typed-parameters at a particular path:
+An HTTP contract is created by defining a ```RouteSpec``` which takes some typed parameters at a particular path:
 
 ```scala
 val activeOnly = Header.optional.boolean("listOnlyActive")
