@@ -15,7 +15,7 @@ At [SpringerNature][springernature], we've been migrating our architecture stack
 
 - generate and serve live API contract documentation - in our case [Swagger][swagger] docs with [JSON schema][jsonschema] example
 - automatically validate and respond to invalid requests (missing or invalid parameters)
-- marshall objects to and from HTTP requests in various messaging formats in a type-safe way, for both server and client-side services
+- marshal objects to and from HTTP requests in various messaging formats in a type-safe way, for both server and client-side services
 - provide a low effort way of creating HTTP servers to fake our downstream dependencies for CDC and network based testing
 
 To solve these requirements, [Fintrospect][fintrospect] was devised. The library provides a thin layer over the top of Finagle HTTP that helped us solve the above requirements with minimal ongoing effort. 
@@ -43,7 +43,7 @@ Body parameters are handled in much the same way... with built in support for bo
 ## serving the contract
 
 #### basics
-In order to serve the contract, we need to bind it to a Finagle ```Service```. Dynamic Path parameters (in this case ```departmentId```) are read from the URL and injected on a request-by-request basis. Other parameters can be retrieved in a type-safe way through applying the ```<--``` operator to the request. Bad requests (missing/malformed parameters) have already been dealt with automatically by this point, so no validation logic is required:
+In order to serve the contract, we need to bind it to a Finagle ```Service```. Dynamic Path parameters (in this case `departmentId`) are read from the URL and injected on a request-by-request basis. Other parameters can be retrieved in a type-safe way through applying the ```<--``` operator to the request. Bad requests (missing/malformed parameters) have already been dealt with automatically by this point, so no validation logic is required:
 
 ```scala
 def listEmployees(departmentId: Integer) = Service.mk[Request, Response] { request => 
@@ -73,7 +73,7 @@ case class Employee(name: String)
 val resp: ResponseBuilder[Json] = Ok(encode(Employee("Bob"))).withHeaders("MyCustomHeader" -> "value")
 ```
 
-The first call to ```Ok``` in the example above is referencing the Finagle ```Status.Ok``` object which is implicitly converted to a ```ResponseBuilder```. We also get implicit conversion from the ```ResponseBuilder``` to a ```Future[Response]```, so an implementation of the server method above could simply be:
+The first call to ```Ok``` in the example above references the Finagle ```Status.Ok``` object which is implicitly converted to a ```ResponseBuilder```. We also get implicit conversion from the ```ResponseBuilder``` to a ```Future[Response]```, so an implementation of the server method above could simply be:
 
 ```scala
 def listEmployees(departmentId: Integer) = Service.mk[Request, Response] { request => 
@@ -115,7 +115,7 @@ In order to interact with the API here, you'll need an instance of the Swagger U
 All parameter locations are represented in the documentation, and in the case of JSON messages (when examples are provided for the responses or bodies), [JSON Schema][jsonschema] is generated to provide a breakdown of the expected object format.
 
 ## consuming the contract
-The HTTP contract can also be bound to an outgoing Finagle Client ```Service```, which creates a callable ```RouteClient```. Typed values can be bound to the contract parameters using ```-->``` and are auto-marshalled into the outgoing request:
+The HTTP contract can also be bound to an outgoing Finagle Client ```Service```, which creates a callable ```RouteClient```. Typed values can be bound to the contract parameters using ```-->``` and are auto-marshaled into the outgoing request:
 
 ```scala
 val client = listEmployeesContract bindToClient Http.newService("localhost:9001")
@@ -177,15 +177,15 @@ libraryDependencies ++= Seq(
 ```
 
 
-[springernature]: http://www.springernature.com
-[fintrospect]: http://fintrospect.io
-[supportedjson]: http://fintrospect.io/installation
-[jsonschema]: http://json-schema.org/
-[demo]: http://github.com/daviddenton/fintrospect-example-app
-[argonaut]: http://argonaut.io
-[circe]: http://circe.io
-[swagger]: http://swagger.io
-[swaggerpetstore]: http://petstore.swagger.io
-[mustache]: http://mustache.github.io/
-[handlebars]: http://handlebarsjs.com/
+[springernature]: https://www.springernature.com
+[fintrospect]: https://fintrospect.io
+[supportedjson]: https://fintrospect.io/installation
+[jsonschema]: https://json-schema.org/
+[demo]: https://github.com/daviddenton/fintrospect-example-app
+[argonaut]: https://argonaut.io
+[circe]: https://circe.io
+[swagger]: https://swagger.io
+[swaggerpetstore]: https://petstore.swagger.io
+[mustache]: https://mustache.github.io/
+[handlebars]: https://handlebarsjs.com/
 
