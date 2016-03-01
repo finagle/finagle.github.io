@@ -11,7 +11,7 @@ tags: Finagle, Fintrospect
 # Reusable HTTP contracts with Fintrospect
 
 ## overview 
-At my current workplace, we've been migrating our architecture stack to a Microservice-based approach and from the application side a few core requirements kept coming up. We wanted our apps to be able to easily:
+At [SpringerNature][springernature], we've been migrating our architecture stack to a Microservice-based approach and from the application side a few core requirements kept coming up. We wanted our apps to be able to easily:
 
 - generate and serve live API contract documentation - in our case [Swagger][swagger] docs with [JSON schema][jsonschema] example
 - automatically validate and respond to invalid requests (missing or invalid parameters)
@@ -21,6 +21,8 @@ At my current workplace, we've been migrating our architecture stack to a Micros
 To solve these requirements, [Fintrospect][fintrospect] was devised. The library provides a thin layer over the top of Finagle HTTP that helped us solve the above requirements with minimal ongoing effort. 
 
 This post describes a brief overview of the main features of the library. Full documentation can be found at the [project site][fintrospect], or for the impatient there is a Github repo with a [demo application][demo].
+
+Let's dive in...
 
 ## defining HTTP contracts
 An HTTP contract is created by defining a ```RouteSpec``` which takes some typed-parameters at a particular path:
@@ -137,7 +139,7 @@ One advantage of this kind of fake server setup is the ability to define CDC-sty
 
 
 ## web content and templating
-There is built-in support for [Mustache][mustache] and [Handlebars][handlebars] templating engines. View models which implement the ```View``` trait will automatically render in the identically named view file, which is converted by a ```Render<Engine>View``` Filter. Here's an example Web module for Mustache which uses the filter at a module-level, and describes itself as an XML SiteMap:
+As well as serving of static content via ```StaticModule```, Fintrospect provides built-in support for [Mustache][mustache] and [Handlebars][handlebars] templating engines. View models which implement the ```View``` trait will automatically render in the identically named view file, which is converted by a ```Render<Engine>View``` Filter. Here's an example Web module for Mustache which uses the filter at a module-level, and describes itself as an XML SiteMap:
 
 ```scala
 // maps to IndexView.mustache in the classpath
@@ -150,11 +152,18 @@ ModuleSpec[View](Root, new SiteMapModuleRenderer(new URL("http://my.great.site")
 ).withRoute(RouteSpec("index").at(Get) bindTo index)
 ```
 
+## a note on design philosophy
+The library has evolved greatly over the year that it's been in production, but the core principles remain:
+
+- design for extensibility: new Parameter and Body types, message formats (such as JSON libraries etc), new module renderers and templating engines are all simple to add.
+- dependency minimisation: Fintrospect only relies on a single external library and the even choice of Finagle version is up to the end-user. Bindings for external message formats and templating libraries are shipped, but dependant libraries are up to the user to include.
+- proper semantic versioning: using major versions to indicate breaking changes, along with notes in the changelog to help end users migrate versions.
+
+
 ## fin
 And that's a whirlwind tour of some of the features of Fintrospect - you can see the full feature set in the documentation at the [project site][fintrospect]. For the impatient there is a Github repo with an fully tested [demo application][demo]. 
 
 Alternatively, you can go straight to Maven for the base SBT install:
-
 ```scala
 libraryDependencies ++= Seq(
   "io.github.daviddenton" %% "fintrospect" % "12.4.0",
@@ -162,6 +171,8 @@ libraryDependencies ++= Seq(
 )
 ```
 
+
+[springernature]: http://www.springernature.com
 [fintrospect]: http://fintrospect.io
 [supportedjson]: http://fintrospect.io/installation
 [jsonschema]: http://json-schema.org/
