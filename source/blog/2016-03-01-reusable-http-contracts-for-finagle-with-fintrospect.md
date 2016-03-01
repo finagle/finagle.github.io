@@ -11,7 +11,7 @@ tags: Finagle, Fintrospect
 # Reusable HTTP contracts with Fintrospect
 
 ## overview 
-At [SpringerNature][springernature], we've been migrating our architecture stack to a Microservice-based approach and from the application side a few core requirements kept coming up. We wanted our apps to be able to easily:
+At [SpringerNature][springernature], we've been migrating our architecture stack to a Microservice-based approach, and from the application side a few core requirements kept coming up. We wanted our apps to be able to easily:
 
 - generate and serve live API contract documentation - in our case [Swagger][swagger] docs with [JSON schema][jsonschema] example
 - automatically validate and respond to invalid requests (missing or invalid parameters)
