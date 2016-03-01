@@ -73,7 +73,7 @@ case class Employee(name: String)
 val resp: ResponseBuilder[Json] = Ok(encode(Employee("Bob"))).withHeaders("MyCustomHeader" -> "value")
 ```
 
-The first call to ```Ok``` in the example above is referencing the Finagle ```Status.Ok``` object which is implicitly converted to a ```ResponseBuilder```. We also get implicit conversion to a ```Future[Response]```, so an implementation of the server method above could simply be:
+The first call to ```Ok``` in the example above is referencing the Finagle ```Status.Ok``` object which is implicitly converted to a ```ResponseBuilder```. We also get implicit conversion from the ```ResponseBuilder``` to a ```Future[Response]```, so an implementation of the server method above could simply be:
 
 ```scala
 def listEmployees(departmentId: Integer) = Service.mk[Request, Response] { request => 
