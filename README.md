@@ -55,6 +55,12 @@ Once you've written your post, push your commits to your fork and file a pull
 request. We'll review your post and will get back to you as soon as we can if we
 have changes to suggest, etc. Please let us know if you have any questions!
 
+## Deploying the site
+
+Once you merged you new blog post into the `source` branch, it's time to get that deployed
+on [Github Pages](https://pages.github.com/) by running `bundle exec middleman deploy`
+against the `source` branch.
+
 ## Licensing
 
 Unless otherwise noted, all content published on this blog is released under the
