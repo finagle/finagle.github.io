@@ -19,7 +19,7 @@ goal is to transition to a current version of Apache libthrift which is
 hosted by the Central Repository, but there is a significant amount of
 work we need to do internally before we can get there.
 
-However, we have good news: Now maven.twttr.com is no longer required! We
+However, we have good news: now maven.twttr.com is no longer required! We
 have published a fork of libthrift v0.5.0 to the central repository
 under the 'com.twitter' organization. The class files still reside in
 the 'org.apache' namespace, so users can still upgrade to newer version
