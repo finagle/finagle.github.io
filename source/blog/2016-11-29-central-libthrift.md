@@ -25,7 +25,16 @@ under the 'com.twitter' organization. The class files still reside in
 the 'org.apache' namespace, so users can still upgrade to newer version
 of libthrift as they wish, but doing so will now require manual exclusion
 rules because the eviction mechanisms used by sbt rely on matching
-organization names. See the [sbt documentation on library management](http://www.scala-sbt.org/0.13/docs/Library-Management.html)
+organization names:
+
+```scala
+libraryDependencies ++= Seq(
+  "com.twitter" %% "finagle-thrift" % "6.40.0" exclude("com.twitter", "libthrift"),
+  "org.apache.thrift" % "libthrift" % "0.9.3"
+)
+```
+
+ See the [sbt documentation on library management](http://www.scala-sbt.org/0.13/docs/Library-Management.html)
 for more details.
 
 
