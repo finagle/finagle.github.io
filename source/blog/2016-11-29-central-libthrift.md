@@ -28,6 +28,7 @@ rules because the eviction mechanisms used by sbt rely on matching
 organization names:
 
 ```scala
+// snippet from build.sbt script
 libraryDependencies ++= Seq(
   "com.twitter" %% "finagle-thrift" % "6.40.0" exclude("com.twitter", "libthrift"),
   "org.apache.thrift" % "libthrift" % "0.9.3"
