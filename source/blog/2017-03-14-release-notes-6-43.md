@@ -19,7 +19,7 @@ See [accompanying blog post][finatra_blog_post] for details.
 
 * finagle-http now classifies server error status codes (500s) as failures. This affects success rate metrics and failure accrual. See the `com.twitter.finagle.http.serverErrorsAsFailuresV2` [toggle][toggles] for opting out of this behavior. [f34a7344](https://github.com/twitter/finagle/commit/f34a73443679ac4fe76bc011bfb36a5b1abe9e5e)
 * The finagle-http APIs continue their trek to rid themselves of having Netty 3 in its public API.
-* finagle-http now has experimental http/2 support. To try it out, pass the command line parameter `-com.twitter.finagle.http.UseHttp2=1.0`. Please let us know of any issues that you run into!
+* finagle-http now has experimental http/2 support. To try it out, pass the command line parameter `-com.twitter.finagle.toggle.flag.overrides=com.twitter.finagle.http.UseHttp2=1.0`. Please let us know of any issues that you run into!
 
 ### Scrooge ###
 
