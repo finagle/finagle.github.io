@@ -13,14 +13,14 @@ The team working on [Finagle](https://twitter.github.io/finagle/), [Finatra](htt
 #### In the spirit of Spring cleaning:
 
 * Remove Netty 3 support from most protocols. We expect to complete most protocols, however HTTP is a long shot.
-* Upgrade [libthrift](https://thrift.apache.org/) to 0.10.0 from the ancient fork of 0.5.0.
+* Upgrade [libthrift](https://thrift.apache.org/) to 0.10.0 from the ancient fork of 0.5.0. ([twitter/scrooge#85](https://github.com/twitter/scrooge/issues/85))
 * Deprecate and then remove modules that are unsupported or exist in a zombie-like state. This includes [ostrich](https://github.com/twitter/ostrich), [finagle-ostrich4](https://github.com/twitter/finagle/tree/develop/finagle-ostrich4), [finagle-kestrel](https://github.com/twitter/finagle/tree/develop/finagle-kestrel), [finagle-stream](https://github.com/twitter/finagle/tree/develop/finagle-stream), [finagle-native](https://github.com/twitter/finagle/tree/develop/finagle-native), [finagle-mdns](https://github.com/twitter/finagle/tree/develop/finagle-mdns), and [util-eval](https://github.com/twitter/util/tree/develop/util-eval).
 * Minimize dependencies on [twitter-commons](https://github.com/twitter/commons) with the eventual goal of removing all of them.
 
 #### For those interested in the shiny and new:
 
 * Get HTTP/2 to production level quality so that it becomes the default HTTP implementation.
-* Continued SSL/TLS work, including STARTTLS support.
+* Continued SSL/TLS work, including STARTTLS support for Mux.
 * Finish the work on [Tunables](https://github.com/twitter/util/tree/develop/util-tunable) such that service owners can dynamically change configuration.
 * Finish the work on [MethodBuilder](https://github.com/twitter/finagle/blob/develop/finagle-core/src/main/scala/com/twitter/finagle/client/MethodBuilder.scala) as a replacement for ClientBuilder and the foundation for more enhancements.
 
@@ -32,6 +32,6 @@ The team working on [Finagle](https://twitter.github.io/finagle/), [Finatra](htt
 * Move TwitterServer to use [slf4j](https://www.slf4j.org/) for logging and begin the process of moving Util and Finagle.
 * A handful of Scrooge changes to make the Scala generated code more composable, fixing [ResponseClassification](https://twitter.github.io/finagle/guide/Clients.html#response-classification) for servers for example.
 
-I realize details here are sparse and certainly not comprehensive. Please ask questions on the mailing list and hopefully we can help clarify if you would like to know more.
+Please feel free to ask questions on the [mailing list](https://groups.google.com/forum/#!forum/finaglers) about anything that is unclear and we’ll help clarify if you would like to know more.
 
 Kevin Oliver and the Core Systems Libraries team
