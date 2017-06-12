@@ -7,8 +7,8 @@ post_author:
 tags: Finagle, CLA, Twitter
 ---
 
-We have integrated [cla-assistant.io](CLA Assistant) with the Finagle Github repository.
+We have integrated [CLA Assistant](https://cla-assistant.io) with the Finagle Github repository.
 
 Due to lack of discoverability, not everyone has been consistent about signing [Twitter's existing CLA](https://engineering.twitter.com/opensource/cla). We believe that this will be less of a burden than manually checking CLAs against an internal list.
 
-Eitan Adler, Vlad Kostyukov, on behalf of Twitter's Open Source Team
+Eitan Adler, Vladimir Kostyukov, on behalf of Twitter's Open Source Team
