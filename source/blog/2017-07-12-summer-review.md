@@ -112,7 +112,7 @@ Twitter Futures into [IDEA’s async
 stacktraces](https://blog.jetbrains.com/idea/2017/02/intellij-idea-2017-1-eap-extends-debugger-with-async-stacktraces/).
 
 Converting logging in TwitterServer over to slf4j is a large change
-that is in progress. land.
+that is in progress.
 
 #### Security
 
