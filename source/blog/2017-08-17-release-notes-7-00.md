@@ -21,9 +21,16 @@ Without further ado, here are the highlights:
 
 ### Finagle ###
 
+In addition to the Netty dependency cleanup, Finagle gets new [Tunables](https://twitter.github.io/finagle/guide/Configuration.html#tunables) api for configuring dynamic timeouts and finagle-stats drops a hard-to-kill legacy dependency on [Commons](https://github.com/twitter/commons)
+
 * finagle-core: Finagle is now fully decoupled from Netty 3. [49d4d0d](https://github.com/twitter/finagle/commit/49d4d0df6d7e0a5dcac85ca6564efcae101c8e04)
 * finagle-mux: Introduce a new more efficient message decoder. [f432bd4](https://github.com/twitter/finagle/commit/f432bd443c4998431e4cbfeb6934916e7310c9a8)
 * finagle-netty4: Netty 4 transports now use pooled allocators by default. [a70b4b9](https://github.com/twitter/finagle/commit/a70b4b92bf025e30284d4ef96d1d3150c298ef97)
+* finagle-stats: No longer backed by commons metrics, now its own thing. [a647fb9](https://github.com/twitter/finagle/commit/a647fb9cb051ddccaf8efff1533844264cdcc1d1)
+* finagle-tunable: `StandardTunableMap` is now public. Users can access file-based, in-memory,
+    and service-loaded tunable values using the map.
+    See [tunables](https://twitter.github.io/finagle/guide/Configuration.html#tunables) for details. [f07ebb6](https://github.com/twitter/finagle/commit/f07ebb6475ec38ee8ef77f526c724d98c2b2d95e)
+
 
 ### Scrooge ###
 
