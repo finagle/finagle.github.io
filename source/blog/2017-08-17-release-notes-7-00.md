@@ -22,7 +22,7 @@ Without further ado, here are the highlights:
 ### Finagle ###
 
 * finagle-core: Finagle is now fully decoupled from Netty 3. [49d4d0d](https://github.com/twitter/finagle/commit/49d4d0df6d7e0a5dcac85ca6564efcae101c8e04)
-* finagle-mux: Introduce to new more efficient message decoder. [f432bd4](https://github.com/twitter/finagle/commit/f432bd443c4998431e4cbfeb6934916e7310c9a8)
+* finagle-mux: Introduce a new more efficient message decoder. [f432bd4](https://github.com/twitter/finagle/commit/f432bd443c4998431e4cbfeb6934916e7310c9a8)
 * finagle-netty4: Netty 4 transports now use pooled allocators by default. [a70b4b9](https://github.com/twitter/finagle/commit/a70b4b92bf025e30284d4ef96d1d3150c298ef97)
 
 ### Scrooge ###
@@ -33,7 +33,7 @@ Without further ado, here are the highlights:
   removes some compiler warnings about implicit casts. [f48cd56](https://github.com/twitter/scrooge/commit/f48cd56e9398305ee7e280e161b0423da4131845)
   
 ### Util ###
-Util's StatsReceivers learned about Vebosity Levels as a way to reduce the number of exported metrics during normal operations.
+Util's StatsReceivers learned about Verbosity Levels as a way to reduce the number of exported metrics during normal operations.
 
 * util-stats: Introducing Verbosity Levels for StatsReceivers [fa91412](https://github.com/twitter/finagle/commit/fa91412d243eae8146465a439d69c78a1caca9c6)
 * util-core: Added `c.t.util.SlowProbeProxyTimer` for monitoring the duration
