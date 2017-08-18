@@ -8,7 +8,7 @@ post_author:
 tags: Releases, Finagle, Finatra, Util, Scrooge, TwitterServer
 ---
 
-The August release is here and brings a major version bump for both Finagle and Util to v7! :cake::cake::cake:
+The August release is here and brings a major version bump for both Finagle and Util to v7! :cake: :cake: :cake:
 
 Over the last few years Finagle has had an extensive internal overhaul to support Netty 4 along with a rewrite of all its protocols so now as the last traces of Netty 3 have been removed from finagle-core we felt the time was right to celebrate with a shiny new major version.
 
