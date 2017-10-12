@@ -20,7 +20,7 @@ regularly on a quarterly basis. You can start with a recap of what we were talki
 ------------
 
 - Finagle's 7th "birthday" (7th anniversary of the [first public
-commits](https://github.com/twitter/finagle/tree/e04e51645374f8d958d85de384142dd00f4b7574))
+commit](https://github.com/twitter/finagle/tree/e04e51645374f8d958d85de384142dd00f4b7574))
 is approaching. Stay tuned for a celebratory blog post!
 
 - We're retiring the [Finatra](https://github.com/twitter/finatra)-specific
@@ -28,7 +28,7 @@ blog, formerly available
 [here](https://twitter.github.io/finatra/blog/archives/). This will happen with 
 our next release scheduled in the next few weeks. Unfortunately, we won't be 
 keeping any of the old posts but any new information will be shared on the 
-finagle blog here.
+Finagle blog here.
 
 ---------
 
@@ -48,20 +48,20 @@ Verbosity
 Levels`](https://twitter.github.io/util/guide/util-stats/user_guide.html#leveraging-verbosity-levels).
 
 Our internal roll-out of our new load balancer, [Deterministic
-Aperture](https://github.com/twitter/finagle/blob/finagle-6.45.0/finagle-core/src/main/scala/com/twitter/finagle/loadbalancer/aperture/DeterministicOrdering.scala) continues and we’re excited about bringing this to the wider community soon!
+Aperture](https://github.com/twitter/finagle/blob/finagle-6.45.0/finagle-core/src/main/scala/com/twitter/finagle/loadbalancer/aperture/DeterministicOrdering.scala), continues and we’re excited about bringing this to the wider community soon!
+
+We’ve completed the internal rollout of [edge-triggered native
+transport](https://github.com/twitter/finagle/search?utf8=%E2%9C%93&q=nativeEpoll&type=) using Netty’s JNI edge-triggered transport, instead of using the JDK’s NIO. User can toggle on this feature by using the [`com.twitter.finagle.netty4.UseNativeEpollV2`](https://github.com/twitter/finagle/blob/b89042a35ab0f39637e48bb89b170c80c95f03cf/finagle-netty4/src/main/resources/com/twitter/toggles/configs/com.twitter.finagle.netty4.json) toggle [[1](https://github.com/twitter/finagle/blob/2d37c2c1684132121f15423b2f08054785f8e29c/finagle-netty4/src/main/scala/com/twitter/finagle/netty4/nativeEpoll.scala)].
 
 ### Resiliency
 
-Transparently replacing HTTP/1.1 usage with HTTP/2 is continues internally. HTTP/2 gives you the resource reductions (a single multiplexed connection) and resiliency features (fast rolling restarts without a success rate drop) that services are already accustomed to with Mux.
+Transparently replacing HTTP/1.1 usage with HTTP/2 continues internally. HTTP/2 gives you the resource reductions (a single multiplexed connection, request cancellations no longer require tearing down the connection) and resiliency features (fast rolling restarts without a success rate drop) that services are already accustomed to with Mux.
 
 ### Operability
 
 We’ll be open-sourcing the work done by our summer intern [@McKardah](https://twitter.com/McKardah) to wire
 Twitter Futures into [IDEA’s async
 stacktraces](https://blog.jetbrains.com/idea/2017/02/intellij-idea-2017-1-eap-extends-debugger-with-async-stacktraces/).
-
-We’ve completed the internal rollout of [edge-triggered native
-transport](https://github.com/twitter/finagle/search?utf8=%E2%9C%93&q=nativeEpoll&type=) using Netty’s JNI edge-triggered transport, instead of using the JDK’s NIO and are working to make it available to configure externally.
 
 #### Security
 
@@ -73,7 +73,7 @@ Mux protocol in order to support opportunistic TLS for ThriftMux.
 
 We've been working hard to move
 [TwitterServer](https://github.com/twitter/twitter-server) to the [SLF4J
-API](https://) and this should be merging in the near future. Stay tuned for
+API](https://https://www.slf4j.org/) and this should be merging in the near future. Stay tuned for
 updates and documentation on the changes.
 
 #### Scrooge Updates
@@ -83,7 +83,7 @@ Scrooge and Scrooge-generated code. This includes a set of refactorings to moder
 
 This will allow us to address some long standing issues like server-side response classification and correctly stating on serialization/deserialization failures.
 
-Additionally, we going to try to update to libthrift 0.10.0 from 0.5.0. This is still exploratory and we’re working to understand the ramifications.
+Additionally, we're going to try to update libthrift from 0.5.0 to 0.10.0. This is still exploratory and we’re working to understand the ramifications.
 
 #### Bringing Backup Requests Back
 
@@ -91,7 +91,7 @@ Finagle has had a
 [BackupRequestFilter](https://github.com/twitter/finagle/blob/develop/finagle-exp/src/main/scala/com/twitter/finagle/exp/BackupRequestFilter.scala)
 since [late
 2012](https://github.com/twitter/finagle/commit/526e508579309711a9c56007eff2a783826d331c)
-and evolved into its current form in [early
+and it evolved into its current form in [early
 2013](https://github.com/twitter/finagle/commit/8ca92593aac1d3f5bd4741d6b8e6fcf26053dc44).
 The filter has a variety of what we would consider flaws (too many
 configuration knobs, less than ideal memory characteristics in many cases,
@@ -105,11 +105,11 @@ configure sending a backup request to another server.
 #### ‘Push’ based API for Protocols
 
 Modern multiplexing protocols are characteristically very stateful and event
-driven making them challenging to implement with the current ‘pull’ based
+driven which makes them challenging to implement with the current ‘pull’ based
 abstractions available in Finagle.
 
 We are currently working towards the introduction of a Finagle ‘push’ based
-model which when coupled with a single threaded concurrency model would
+model which when coupled with a single threaded concurrency model will
 provide a more efficient and natural foundation for implementing multiplexing
 protocols.
 
@@ -117,10 +117,10 @@ protocols.
 
 Related to the above, Finagle has historically been dependent on
 request-response style protocols: a single request would be sent by the client
-and the server would reply with a single response. And then later multiplexing
+and the server would reply with a single response. Then later multiplexing
 protocols to alleviate head-of-line blocking. However, all the protocols in
 Finagle are expressed as request-response APIs with some limited support for
-streaming through using Reader and AsyncStream
+streaming through the use of Reader and AsyncStream
 [[1](https://github.com/twitter/finagle/blob/develop/finagle-example/src/main/scala/com/twitter/finagle/example/http/HttpStreamingServer.scala)].
 These are somewhat low-level constructs and can be hard to use properly.
 
