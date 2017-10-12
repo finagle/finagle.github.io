@@ -35,7 +35,7 @@ is approaching. Stay tuned for a celebratory blog post! 🎉
 - We're retiring the [Finatra](https://github.com/twitter/finatra)-specific
 blog, formerly available
 [here](https://twitter.github.io/finatra/blog/archives/). This will happen with
-our next release scheduled in the next few weeks. Unfortunately, we won't be
+our release this month. Unfortunately, we won't be
 keeping any of the old posts but any new information will be shared on the
 Finagle blog here.
 
