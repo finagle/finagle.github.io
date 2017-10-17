@@ -99,7 +99,7 @@ protocol in order to support opportunistic TLS for ThriftMux.
 
 We've been working hard to move
 [TwitterServer](https://github.com/twitter/twitter-server) to the [SLF4J
-API](https://https://www.slf4j.org/) and this should be merging in the near
+API](https://www.slf4j.org/) and this should be merging in the near
 future. Stay tuned for updates and documentation on the changes.
 
 #### Scrooge Updates
