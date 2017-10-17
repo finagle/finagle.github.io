@@ -170,6 +170,6 @@ and can't wait to share it with the community.
 Thanks for following along. As always, please feel free to ask questions on
 either the [Finagle](https://groups.google.com/forum/#!forum/finaglers) or
 [Finatra](https://groups.google.com/forum/#!forum/finatra-users) mailing lists
-about anything that is unclear if you would just like to know more.
+about anything that is unclear or if you would just like to know more.
 
 Christopher Coco and the Core Systems Libraries team
