@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 🎃 October 2017 Release Notes - Version 17.10.0
-published: false
+published: true
 post_author:
   display_name: Jordan Parker
   twitter: nepthar
