@@ -177,6 +177,10 @@ Runtime Behavior Changes:
 
 ### Twitter Server ###
 
+* TwitterServer now uses the [`slf4j-api`](https://www.slf4j.org/) for framework logging. Backwards compatibility is 
+  supplied via the [`twitter-server/slf4j-jdk14`](https://github.com/twitter/twitter-server/tree/6565a1c6ab6d111e9858e2e9e2e5d307d8ca8b3e/slf4j-jdk14) library.
+  See the TwitterServer [documentation](https://twitter.github.io/twitter-server/Features.html#logging) for more information. [c458b881](https://github.com/twitter/twitter-server/commit/c458b88161f56768d0226c8419424f8365574b83)
+
 * All admin endpoints except ping + healthcheck are now by-default served outside
   the global worker pool. [acf13a2a](https://github.com/twitter/twitter-server/commit/acf13a2a933618fb3f719a1a4cf7b5b53ef23b7d)
 
