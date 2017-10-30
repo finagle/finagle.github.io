@@ -9,7 +9,7 @@ tags: Releases, Finagle, Finatra, Util, Scrooge, TwitterServer
 ---
 
 The October releases have arrived! For this release and hereafter, Finagle, Finatra,
-Scrooge, and TwitterServer will be versioned as $year.$month.$patch, as opposed to
+Scrooge, Util, and TwitterServer will be versioned as $year.$month.$patch, as opposed to
 $major.$minor.$patch. This means that all project versions will be in sync.
 
 [Finagle 17.10.0][finagle], [Finatra 17.10.0][finatra], [Scrooge 17.10.0][scrooge], [TwitterServer 17.10.0][twitterserver], and [Util 17.10.0][util].
