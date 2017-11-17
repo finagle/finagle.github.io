@@ -9,7 +9,8 @@ tags: Releases, Finagle, Finatra, Util, Scrooge, TwitterServer
 ---
 
 It's November, and you know what that means!  Library releases!!!  We're now publishing
-with sbt 1.0.x, and we now also publish sbt-scrooge-plugin for sbt 1.0.x.
+with sbt 1.0.x, and we now also publish sbt-scrooge-plugin for sbt 1.0.x.  We are also
+continuing to publish sbt-scrooge-plugin for sbt 0.13.x.
 
 [Finagle 17.11.0][finagle], [Finatra 17.11.0][finatra], [Scrooge 17.11.0][scrooge], [TwitterServer 17.11.0][twitterserver], and [Util 17.11.0][util].
 
@@ -24,11 +25,6 @@ New Features:
   * finagle-netty4: `Netty4Transporter` and `Netty4Listener` are now accessible, which
     allows external users to create their own protocols for use with Finagle on Netty 4.
     [3ce475db](https://github.com/twitter/finagle/commit/3ce475dbdb800a635bbed944139b9690418e09d9)
-
-Bug Fixes:
-
-  * finagle-exp: Fix race condition in `LatencyHistogram` which could lead to the wrong
-    value returned for `quantile`. [947884f5](https://github.com/twitter/finagle/commit/947884f5ad9119eb9f985c60607927cc7bcafeb2)
 
 Breaking API Changes:
 
