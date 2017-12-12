@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ⛄December 2017 Release Notes - Version 17.12.0
+title: ⛄ December 2017 Release Notes - Version 17.12.0
 published: true
 post_author:
   display_name: Isabel Martin
