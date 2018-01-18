@@ -8,7 +8,7 @@ post_author:
 tags: Releases, Finagle, Finatra, Util, Scrooge, TwitterServer
 ---
 
-Time to turn the calendar to a new year and a new release -- our January release is here!
+Time to turn the calendar to a new year and a new release — our January release is here!
 
 [Finagle 18.1.0][finagle], [Finatra 18.1.0][finatra], [Scrooge 18.1.0][scrooge], [TwitterServer 18.1.0][twitterserver], and [Util 18.1.0][util].
 
