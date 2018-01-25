@@ -1,11 +1,11 @@
 ---
 layout: post
 title:❄️ ❄️ ❄️ Winter Update ❄️ ❄️ ❄️
-published: false 
+published: true 
 post_author:
   display_name: Daniel Schobel
   twitter: dschobel
-tags: Releases, Finagle, Finatra, Util, Scrooge, TwitterServer
+tags: Finagle, Finatra, Util, Scrooge, TwitterServer
 ---
 
 We've been running scalac around the clock to fend off the cold and bring you another quarter's
@@ -27,7 +27,7 @@ Our new load balancer [Deterministic Aperture](https://github.com/twitter/finagl
 
 #### Operability
 
-ThriftMux now supports [response headers](https://github.com/twitter/finagle/commit/df5f10bd00b070809ea1f1995becc9bbac6c3089).
+ThriftMux now supports [request and response headers](https://github.com/twitter/finagle/commit/df5f10bd00b070809ea1f1995becc9bbac6c3089).
 
 Our summer intern [@McKardah](https://twitter.com/mckardah) added the ability to wire Twitter Futures
 into [IDEA’s async stacktraces](http://finagle.github.io/blog/2017/11/02/async-stack-traces/).
@@ -49,7 +49,7 @@ PEM formatted [X509CRL files](https://github.com/twitter/util/commit/32d8cc8ac4f
 
 As always, please feel free to ask questions on
 either the [Finagle](https://groups.google.com/forum/#!forum/finaglers) or
-[Finatra](https://groups.google.com/forum/#!forum/finatra-users) mailing lists.
+[Finatra](https://groups.google.com/forum/#!forum/finatra-users) mailing lists or on [Gitter](https://gitter.im/twitter/finagle)
 
 
 See you in the Spring!
