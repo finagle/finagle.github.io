@@ -1,6 +1,6 @@
 ---
 layout: post
-title:❄️ ❄️ ❄️ Winter Update ❄️ ❄️ ❄️
+title: ❄️ ❄️ ❄️ Winter Update ❄️ ❄️ ❄️
 published: true 
 post_author:
   display_name: Daniel Schobel
