@@ -54,4 +54,4 @@ either the [Finagle](https://groups.google.com/forum/#!forum/finaglers) or
 
 See you in the Spring!
 
-Daniel Schobel and the Core Systems Libraries team
+Daniel Schobel and the Finagle team
