@@ -4,7 +4,7 @@ title: 🏮 February 2018 Release Notes - Version 18.2.0
 published: true
 post_author:
   display_name: Yufan Gong
-  twitter: @yufangong
+  twitter: yufangong
 tags: Releases, Finagle, Finatra, Util, Scrooge, TwitterServer
 ---
 
