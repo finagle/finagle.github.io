@@ -1,16 +1,12 @@
 ---
 layout: post
-title: Make application errors great again
+title: Making application errors matter
 published: true
 post_author:
   display_name: Kevin Oliver
   twitter: kevino
 tags: Finagle, Resiliency
 ---
-
-<p align="center">
-  <img src="/assets/img/make.png" style="margin: 1em 0em;" alt="make application errors great again"/>
-</p>
 
 Finagle’s new response classifiers improve client’s avoidance of
 faulty nodes thus increasing your success rate. To get this benefit,
