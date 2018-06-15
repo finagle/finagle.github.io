@@ -117,24 +117,24 @@ Bug Fixes:
     as `Thrift{Mux}.client.withPerEndpointStats`. [0f1ff3eb](https://github.com/twitter/finagle/commit/0f1ff3eb88de7e270254956b8bf5f2936c7d9947)
 
   * finagle-netty4: Avoid NoClassDefFoundError if netty-transport-native-epoll is not available
-    on the classpath.
+    on the classpath. [940809af](https://github.com/twitter/finagle/commit/940809af1a5f1874af0513c9cdca3b1c3b2ce03c)
 
 
 ### [Finatra](https://github.com/twitter/finatra/) ###
 
 Added:
 
-* finatra: Add HTTP route, Thrift method, and Filter information to the Library 
-  registry. ``PHAB_ID=D177583``
+* finatra: Add HTTP route, Thrift method, and Filter information to the Library
+  registry. [e12fd996](https://github.com/twitter/finatra/commit/e12fd996cafda36fa9aebcf5170dc3528e4f5e46)
 
 * finatra-inject/inject-logback: Add an `c.t.inject.logback.AsyncAppender` to
-  provide metrics about the underlying queue. ``PHAB_ID=D173278``
+  provide metrics about the underlying queue. [8fa73604](https://github.com/twitter/finatra/commit/8fa73604ffa5187505922e6465e5b8a78fe1558c)
 
 Changed:
 
 * inject-slf4j: Move the SLF4J API logging bridges from `inject-slf4j` to `inject-app`
   and `inject-server`. This allows code in the inject framework to be mostly useful in
-  environments where having the bridges on the classpath causes issues. ``PHAB_ID=D179652``
+  environments where having the bridges on the classpath causes issues. [9e57deca](https://github.com/twitter/finatra/commit/9e57deca061a160bae181b388ec3b9579eae8f29)
 
 Fixed:
 
@@ -143,21 +143,21 @@ Fixed:
   fail server startup but were not correctly detected when building routes in the `CallbackConverter`.
   The route building logic has been patched to correctly detect these routes which would fail at
   runtime to ensure we fail fast at server startup (and can thus be caught by StartupTests).
-  ``PHAB_ID=D178330``
+  [7b983dc9](https://github.com/twitter/finatra/commit/7b983dc98250f2e82ba2f182b148c1939359460c)
 
 * finatra-http: Change exceptions emitted from `c.t.f.http.filter.HttpNackFilter` to not extend
-  from `HttpException` and add a specific mapper over `HttpNackException` such that Nack 
+  from `HttpException` and add a specific mapper over `HttpNackException` such that Nack
   exceptions are handled distinctly from HttpExceptions and thus more specifically. Handling of
   Nack exceptions should not be conflated with handling of the more generic `HttpExceptions` and
   it should be clear if a new mapper is desired that it is specifically for changing how Nack
-  exceptions are handled. ``PHAB_ID=D172456``
+  exceptions are handled. [f95bf28f](https://github.com/twitter/finatra/commit/f95bf28f3271a471d1d12852ae49c4dc26bd3144)
 
 ### [TwitterServer](https://github.com/twitter/twitter-server/) ###
 
 New Features:
 
   * Added an admin page at "/admin/balancers.json" with details about client load balancers,
-    including both configuration and current status. ``PHAB_ID=D171589``
+    including both configuration and current status. [90cca9e9](https://github.com/twitter/twitter-server/commit/90cca9e9a90ca077d383fa14bd635434dfc8df8b)
 
 ### [Util](https://github.com/twitter/util/) ###
 
