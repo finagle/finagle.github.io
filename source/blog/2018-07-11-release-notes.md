@@ -75,6 +75,10 @@ API Changes:
   * util-app: util-core: `Local.Context` used to be a type alias for `Array[Option[_]]`, now it is
 a new key-value liked structure. [faaf0f2f](https://github.com/twitter/util/commit/faaf0f2f)
 
+### [Scrooge](https://github.com/twitter/scrooge/) ###
+
+  * scrooge-adaptive: Turn scrooge-adaptive on as the default in `ScroogeRunner`. [633e0f2668d](https://github.com/twitter/scrooge/commit/633e0f2668d92404beca77fa5d3c8d1d52181756)
+
 ### Changelogs ###
 
  * [Finagle 18.7.0][finagle]
