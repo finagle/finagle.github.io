@@ -24,7 +24,7 @@ Finally, we revamped the string representation of services and filters. This mea
 
 #### Resiliency
 
-[Deadlines](https://twitter.github.io/finagle/docs/com/twitter/finagle/context/Deadline.html) are working their way back into production at Twitter and can be used to avoid doing unnecessary work for requests which are about to time out anyway. Expect to hear more about our rollout in the future.
+We've also been focusing on [Deadlines](https://twitter.github.io/finagle/docs/com/twitter/finagle/context/Deadline.html) which can be used to avoid doing unnecessary work for requests which are about to time out anyway.
 
 Our newest loadbalancer, Deterministic Aperture, [got a bit more deterministic](https://github.com/twitter/finagle/commit/3d84e2975fb46982d5cedeb1f43e2c9c89221840). We found that allowing the aperture to expand based on load caused uneven load distribution, so we've disabled this feature by default.
 
