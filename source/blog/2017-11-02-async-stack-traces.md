@@ -54,7 +54,7 @@ click the funnel icon in the top right, "Hide Frames from Libraries".
 ## Example
 
 We will illustrate how to use the capture points to assist with debugging with a
-[small example](http://github.com/twitter/util/util-intellij/src/test/scala/com/twitter/util/capturepoints/Demo.scala) 
+[small example](https://github.com/twitter/util/blob/develop/util-intellij/src/test/scala/com/twitter/util/capturepoints/Demo.scala)
 written by [Kevin Oliver](https://twitter.com/kevino) (thanks, Kevin!).
 
 A brief explanation of this test: the test passes a [`Promise[Int]`](https://github.com/twitter/util/blob/develop/util-core/src/main/scala/com/twitter/util/Promise.scala)
