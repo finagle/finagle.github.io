@@ -1,6 +1,6 @@
 ---
 layout: post
-title: September 2018 Release Notes — Version 18.9.0
+title: ⛱️ September 2018 Release Notes 🐚 — Version 18.9.0
 published: true
 post_author:
   display_name: Jordan Parker
@@ -8,8 +8,8 @@ post_author:
 tags: Releases, Finagle, Finatra, Util, Scrooge, TwitterServer
 ---
 
-It's the sunniest month of the year here in the Bay Area, and we're celebrating
-with yet another set of fresh releases!
+September is beach season here in the Bay Area! Time to finally get out to the beach and
+cut fresh new versions of our libraries.
 
 [Finagle 18.9.0](https://github.com/twitter/finagle/releases/tag/finagle-18.9.0),
 [Finatra 18.9.0](https://github.com/twitter/finatra/releases/tag/finatra-18.9.0),
