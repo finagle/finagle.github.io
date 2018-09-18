@@ -35,10 +35,6 @@ and [Util 18.9.0](https://github.com/twitter/util/releases/tag/util-18.9.0).
 
 #### Breaking API Changes
 
-* finagle: `c.t.io.Reader` and `c.t.io.Writer` are now abstracted over the type
-  they produce/consume (`Reader[A]` and `Writer[A]`) and are no longer fixed to `Buf`.
-  [5242d49d](https://github.com/twitter/finagle/commit/5242d49d8e6aa9041626311ae66405b2634136b2)
-
 * finagle-core: `Address.hashOrdering` now takes a seed parameter and
   `PeerCoordinate.setCoordinate` does not take a `peerOffset` any longer.
   [9e6734b2](https://github.com/twitter/finagle/commit/9e6734b21f55d0aed95e33dc299ce05b3c524748)
@@ -96,10 +92,6 @@ and [Util 18.9.0](https://github.com/twitter/util/releases/tag/util-18.9.0).
 #### Changed
 
 * inject-core: Remove unnecessary Await.result Future.Value in TestMixin. [1616188c](https://github.com/twitter/finatra/commit/1616188cfb5414efa47d28618bde3b90abba0e63)
-
-* finatra-http: (BREAKING API CHANGE) `c.t.io.Reader` and `c.t.io.Writer` are now abstracted over
-  the type they produce/consume (`Reader[A]` and `Writer[A]`) and are no longer fixed to `Buf`.
-  [d56244d1](https://github.com/twitter/finatra/commit/d56244d1f0cd1442c8712e3b2ba24fdd6570f9ee)
 
 ### [Scrooge](https://github.com/twitter/scrooge/) ###
 
