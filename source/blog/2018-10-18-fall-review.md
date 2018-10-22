@@ -45,14 +45,14 @@ experimental! This will be on by default in the next few months.
   simpler and less costly. Since `transform` is fundamental to many other
   future operations, the result is faster futures. ([1](https://github.com/twitter/util/commit/3245a8e1a98bd5eb308f366678528879d7140f5e))
 - Avoid unnecessary deep copies in Local.Context. ([1](https://github.com/twitter/util/commit/faaf0f2fe27520d47f896099bb8dc5f34b5d3c6a))
-- Push is now default implementation for ThriftMux. We removed the previous
+- Push is now the default implementation for ThriftMux. We removed the previous
   implementation because we saw that Push improved throughput, CPU usage, and
   allocations. ([1](https://github.com/twitter/finagle/commit/c0a1f295f58d699a77142ea2720965b63203cc89), [2](https://github.com/twitter/finagle/commit/735a6bae3f8352b569ff153ec47d97a54914eee2), [3](https://github.com/twitter/finagle/commit/735a6bae3f8352b569ff153ec47d97a54914eee2), [4](https://github.com/twitter/finagle/commit/eedd1fd890da85c6efcdc0ff597e22055967d811))
 
 **Netty3 cookies are dead, long live Netty4 cookies?**
 
 We are _almost_ there. The last threshold to cross is decoupling cookie
-validation logic. ([1](https://github.com/twitter/finagle/commit/5e5ea39079f0445fc8823f5947ea2e504574c564))
+validation logic.
 
 **Finatra.**
 
