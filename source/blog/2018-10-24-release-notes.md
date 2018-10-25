@@ -53,7 +53,7 @@ and [Util 18.10.0](https://github.com/twitter/util/releases/tag/util-18.10.0).
   This allows users the ability to set Finagle client concerns like ResponseClassification or other
   configuration not expressed by the DarkTrafficFilterModule's API.
 
-  - Additionally, the Thrift `DarkTrafficFilterModule` has been updated to be ThriftMux only. For more information on mux see: [What is ThriftMux](https://twitter.github.io/finagle/guide/FAQ.html?highlight=thriftmux#what-is-thriftmux>).
+  - Additionally, the Thrift `DarkTrafficFilterModule` has been updated to be ThriftMux only. For more information on mux see: [What is ThriftMux](https://twitter.github.io/finagle/guide/FAQ.html?highlight=thriftmux#what-is-thriftmux).
 
   - We also update the `enableSampling` method to accept a `c.t.inject.Injector` to aid in the decision-making for if a given request should be "sampled" by the filter. [d7486843](https://github.com/twitter/finatra/commit/d74868430cf6b0da2051b3ff0f2d1e47e6c0c169)
 
