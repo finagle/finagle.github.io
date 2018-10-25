@@ -38,7 +38,7 @@ experimental! This will be on by default in the next few months.
 - Finatra security update. Jackson Upgraded 2.8.4 => 2.9.6, plugs
   [CVE-2017-7525](https://nvd.nist.gov/vuln/detail/CVE-2017-7525).
 
-**Performance.**
+**Performance**
 
 - `Future.transform` creates a new `Promise` every time it is called, but
   sometimes we can operate directly on a `Try`, whose operations are much
@@ -54,13 +54,13 @@ experimental! This will be on by default in the next few months.
 We are _almost_ there. The last threshold to cross is decoupling cookie
 validation logic.
 
-**Finatra.**
+**Finatra**
 
 - Custom AsyncAppender with StatsReceiver integration
   ([1](https://twitter.github.io/finatra/user-guide/logging/asyncappender.html)).
 - Better/easier configuration for https servers. ([1](https://github.com/twitter/finatra/commit/3c19b2df303a30fda254822dc97cb2372d2220b3)
 
-**Travis-CI.** MANY stability improvements.
+**Travis-CI** MANY stability improvements.
 
 ------------
 
