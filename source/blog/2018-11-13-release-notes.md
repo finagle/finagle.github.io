@@ -1,6 +1,6 @@
 ---
 layout: post
-title: November 2018 Relase Notes - Version 18.11.0
+title: November 2018 Relase Notes - Version 18.11.0 ❄️
 published: true
 post_author:
   display_name: Dave Rusek
