@@ -5,8 +5,10 @@ published: true
 post_author:
   display_name: Dave Rusek
   twitter: davidjrusek
-tags: tags: Releases, Finagle, Finatra, Util, Scrooge, TwitterServer
+tags: Releases, Finagle, Finatra, Util, Scrooge, TwitterServer
 ---
+
+Halloween has come and gone and it's already snowing here in the Rockies. Time to cuddle up with a warm compiler and check out the new edition of Twitter's open source libraries!
 
 ### [Finagle](https://github.com/twitter/finagle/) ###
 
