@@ -28,8 +28,6 @@ of the year.
   makes modifying the existing `Stack` easier when using method chaining.
   `f1a980cf <https://github.com/twitter/finagle/commit/f1a980cfdb780963d1e4e146d9031a93b43b107d>`__
 
-* finagle-redis: Add support for the new stream API released in Redis 5.0. `ba578c14 <https://github.com/twitter/finagle/commit/ba578c1445b2e241687ad3c89eec4f3d93431a76>`__
-
 * finagle-stats: Split the implementation and `ServiceLoading` into separate modules.
   The implementation is in `finagle-stats-core`. This is backwards compatible
   for existing users of `finagle-stats` while allowing new usages built on top.
