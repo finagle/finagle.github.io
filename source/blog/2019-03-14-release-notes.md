@@ -28,13 +28,13 @@ Spring has almost sprung, so take a look at all that we have done!
 
 #### Runtime Behavior Changes
 
-> -   finagle-core: The tracing annotations from MkJvmFilter have been enhanced. [0586f657](https://github.com/twitter/finagle/commit/0586f657cdba87bbfddbb3f171d646139ec20fdf)
-> -   Timestamped annotations "GC Start" and "GC End" for each garbage collection
->     event that occurred during the request.
-> -   Binary annotation "jvm/gc\_count", with the total number of garbage collection
->     events that occurred during the request.
-> -   Binary annotation "jvm/gc\_ms", with the total milliseconds of garbage collection
->     events that occurred during the request.
+-   finagle-core: The tracing annotations from MkJvmFilter have been enhanced. [0586f657](https://github.com/twitter/finagle/commit/0586f657cdba87bbfddbb3f171d646139ec20fdf)
+-   Timestamped annotations "GC Start" and "GC End" for each garbage collection
+    event that occurred during the request.
+-   Binary annotation "jvm/gc\_count", with the total number of garbage collection
+    events that occurred during the request.
+-   Binary annotation "jvm/gc\_ms", with the total milliseconds of garbage collection
+    events that occurred during the request.
 
 ### [Finatra](https://github.com/twitter/finatra/) ###
 
@@ -68,15 +68,15 @@ Spring has almost sprung, so take a look at all that we have done!
 
 #### Closed
 
-### [Scrooge](https://github.com/twitter/scrooge) ###
+### [Scrooge](https://github.com/twitter/scrooge/) ###
 
 No Changes
 
-### [Twitter Server](https://github.com/twitter/twitter-server) ###
+### [Twitter Server](https://github.com/twitter/twitter-server/) ###
 
 -   Change the /admin/histograms?h=...-style endpoints to return data in the same style as
     /admin/histograms.json. This should make it easier to use tools to parse data from either
-    endpoint. `PHAB_ID=D279779`
+    endpoint. [92e4dad5](https://github.com/twitter/twitter-server/commit/92e4dad51acd0af3ad6bf656e43504716b925eaf)
 
 ### [Util](https://github.com/twitter/util/) ###
 
