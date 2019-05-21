@@ -9,7 +9,7 @@ tags: Releases, Finagle, Finatra, Util, Scrooge, TwitterServer
 ---
 
 With it being late May, the beginning of summer is right around the corner. Along with that comes a
-new release of libraries.  Unfortunately, there was an
+new release of our libraries.  Unfortunately, there was an
 [issue](https://github.com/twitter/finatra/issues/502)
 with our first attempt (19.5.0) so we created a point release (19.5.1), which fixes the problem.
 Here are the changes for both 19.5.0 and 19.5.1
