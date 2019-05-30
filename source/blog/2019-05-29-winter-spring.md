@@ -22,11 +22,11 @@ changelogs!
 We’ve added support for trailing headers to our HTTP implementation.  Although
 trailers were once considered fringe, especially since no browser supports
 trailers, and vanishingly few CDNs or webservers do, trailers have in the last
-few years gained significant transaction because gRPC uses them for signaling
+few years gained significant traction because gRPC uses them for signaling
 stream errors.  Trailers are an important piece in the puzzle in making
 finagle-http compatible with remote peers that speak the gRPC protocol.
 
-Header validation support was reworked in Finagle, so that they are now totally
+Header validation support was reworked in Finagle, so that it is now totally
 RFC-7230-compliant.  This will give us higher confidence that we are writing
 spec-compliant HTTP clients and servers.
 
