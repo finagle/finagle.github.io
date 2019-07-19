@@ -143,3 +143,10 @@ tags: Releases, Finagle, Finatra, Scrooge, TwitterServer, Util
     ThrottledHandlerConfig, SyslogHandlerConfig. These were deprecated in 2012 and have
     no replacement. Users are encouraged to use 'util-slf4j-api' where possible. [28d9de59](https://github.com/twitter/util/commit/28d9de59eea2adeac82691a57c1954dffb9596fa)
 
+#### Runtime Behavior Changes
+
+-   util-core: Remove experimental toggle `com.twitter.util.BypassScheduler` used
+    for speeding up `ConstFuture.map` (`transformTry`). Now, we always run map
+    operations immediately instead of via the Scheduler, where they may be queued
+    and potentially reordered. [64114324](https://github.com/twitter/util/commit/64114324d8d0d36725cfddac28e99840077f036f)
+    
