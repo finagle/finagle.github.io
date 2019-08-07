@@ -64,8 +64,6 @@ Hot off the press — the August releases. Here's what's what.
 
 #### Breaking API Changes
 
--   util-core: (not breaking) c.t.util.Future.join and c.t.util.Future.collect now take
-    Iterable\[Future\[A\]\] other than Seq. [d5d20cc3](https://github.com/twitter/util/commit/d5d20cc337710b07343eb09ecdab005968c97879)
 -   util-logging: The namespace forwarders for Level and Policy in com.twitter.logging.config
     have been removed. Code should be updated to use com.twitter.logging.Level and
     com.twitter.logging.Policy where necessary. Users are encouraged to use 'util-slf4j-api' though
