@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Util August 2019 Point Release Notes - Version 19.8.0
+title: Util August 2019 Point Release Notes - Version 19.8.1
 published: true
 post_author:
   display_name: Yufan Gong
