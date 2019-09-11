@@ -1,6 +1,6 @@
 ---
 layout: post
-title: September 2019 Release Notes - Version 19.9.0
+title: September 2019 Release Notes - Version 19.9.0 🍁
 published: true
 post_author:
   display_name: Jing Yan
@@ -8,7 +8,12 @@ post_author:
 tags: Releases, Finagle, Finatra, Scrooge, TwitterServer, Util
 ---
 
-Embrace a beautiful fall with our fresh baked September release!
+Embrace a beautiful fall with our freshly baked September release! 🍪
+
+### Highlights
+
+- For users of Finagle HTTP/2 servers, we recommend upgrading to this latest release, as the upgrade to [Netty 4.1.39 release addresses multiple HTTP/2 CVE’s](https://netty.io/news/2019/08/13/4-1-39-Final.html).
+- Shout-out to [Martijn Hoekstra](https://github.com/martijnhoekstra) for driving Finagle Scala 2.13.0 cross-building and adding cross-building support in finagle-{core,init,toggle,netty4}. [Future work](https://github.com/twitter/finagle/issues/771) to be continued and any help is appreciated from anyone reading these notes.
 
 ### [Finagle](https://github.com/twitter/finagle/) ###
 
