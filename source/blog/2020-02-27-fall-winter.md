@@ -8,10 +8,7 @@ post_author:
 tags: Finagle, Finatra, Util, Scrooge, TwitterServer
 ---
 
-
 Hi Finaglers,
-
-
 
 It is ⌛time to take a 👀 look back on the 🌇 twilight of the year 2019, when the seasons shift from 🍂 Fall to Winter ❄️. Across our projects, we have introduced support for JDK 11 and added support for Scala 2.13 across a large portion of our projects. A major thanks due to our OSS community [contributions](https://github.com/twitter/finagle/issues/771) on continuing to drive Scala 2.13 support - we couldn’t have made such progress so quickly without your help. We have made some steady progress and improvements across all of our projects, but also want to loop you in on some of our plans looking forward to Spring 🌱.
 
@@ -25,7 +22,7 @@ We have continued to refine the APIs around c.t.util Streaming types (Reader, Wr
 
 ### Finagle
 
-[Martijnhoekstra](https://github.com/martijnhoekstra) added a [new HeaderMap](https://github.com/twitter/finagle/pull/805) to the finagle-http project!We madethis implementation the [default HeaderMap implementation](https://github.com/twitter/finagle/commit/597e78159db35eee9c5353d15243ab0d2889767d), resulting in improved performance - most notably in HTTP and HTTP/2 servers.
+[Martijnhoekstra](https://github.com/martijnhoekstra) added a [new HeaderMap](https://github.com/twitter/finagle/pull/805) to the finagle-http project! We made this implementation the [default HeaderMap implementation](https://github.com/twitter/finagle/commit/597e78159db35eee9c5353d15243ab0d2889767d), resulting in improved performance - most notably in HTTP and HTTP/2 servers.
 
 Check out the blog post on our homemade ◎ [Deterministic Aperture Load Balancer](https://blog.twitter.com/engineering/en_us/topics/infrastructure/2019/daperture-load-balancer.html) ◎!
 
@@ -77,4 +74,3 @@ If all of this excites you and you’d like to work alongside us, not only do we
 Thank you all and here is to a ✨magical ✨ year ahead,
 
 Ian on behalf of CSL
-
