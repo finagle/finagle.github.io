@@ -1,6 +1,6 @@
 ---
 layout: post
-title: April 2020 Release Notes - Version 20.04.0
+title: April 2020 Release Notes - Version 20.4.0
 published: true
 post_author:
   display_name: Ian Bennett
@@ -46,7 +46,7 @@ In these unprecedented times, we wish for nothing but your health and safety. Ap
   custom `CaseClassDeserializer` to efficiently apply per field and method validations as request
   parsing is performed. However, Users can easily turn off validation during request parsing with
   the setting `noValidation` in their server configurations. For more information, please checkout
-  `Finatra User's Guide <https://docbird.twitter.biz/finatra/user-guide/index.html>`__.
+  [Finatra User's Guide](https://twitter.github.io/finatra/user-guide/).
   [d874b1a9](https://github.com/twitter/finatra/commit/d874b1a92cd2cc257bf0d170cfb46a486df3fb5d)
 
 
