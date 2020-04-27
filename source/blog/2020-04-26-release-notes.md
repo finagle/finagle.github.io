@@ -8,7 +8,7 @@ post_author:
 tags: Releases, Finagle, Finatra, Scrooge, TwitterServer, Util
 ---
 
-April Release encountered some issues running on JDK 8, here's a patch release hopefully fixes it. 
+April Release encountered some issues running on JDK 8, here's a patch release that should address it. 
 
 ### [Finagle](https://github.com/twitter/finagle/)
 
