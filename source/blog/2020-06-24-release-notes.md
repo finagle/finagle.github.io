@@ -8,7 +8,7 @@ post_author:
 tags: Releases, Finagle, Finatra, Scrooge, TwitterServer, Util
 ---
 
-Summer is happening 🏖️, and with that comes the June release of Finagle, Finatra, Scrooge, Twitter Server, and Uti 😎.
+Summer is happening 🏖️, and with that comes the June release of Finagle, Finatra, Scrooge, Twitter Server, and Util 😎.
 
 ### [Finagle](https://github.com/twitter/finagle/)
 
