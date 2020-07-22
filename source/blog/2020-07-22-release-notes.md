@@ -28,9 +28,6 @@ Hi folks! Our July release is here – enjoy!
 
 ### [Finatra](https://github.com/twitter/finatra/)
 
-20.7.0
-======
-
 ### Added
 
 -   inject-app: Adding flag converters for java.io.File (including comma-separated variants).
