@@ -1,6 +1,6 @@
 ---
 layout: post
-title: June 2020 Release Notes - Version 20.7.0
+title: July 2020 Release Notes - Version 20.7.0
 published: true
 post_author:
   display_name: Ruben Oanta
