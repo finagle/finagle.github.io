@@ -28,6 +28,9 @@ Hi folks! Our July release is here – enjoy!
 
 ### [Finatra](https://github.com/twitter/finatra/)
 
+20.7.0
+======
+
 ### Added
 
 -   inject-app: Adding flag converters for java.io.File (including comma-separated variants).
@@ -40,6 +43,46 @@ Hi folks! Our July release is here – enjoy!
     now return instances of TracingKafkaProducer and TracingKafkaConsumer respectively with
     tracing enabled by default. Tracing can be enabled with the toggle
     com.twitter.finatra.kafka.TracingEnabled. [d0d8a060](https://github.com/twitter/finatra/commit/d0d8a060ba21b7636b4f935b99efd533f49380bb)
+
+### Changed
+
+-   finatra: Update org.scalatest dependency to 3.1.2 and introduce finer-grained dependencies on
+    org.scalatestplus artifacts. [ceccb7c5](https://github.com/twitter/finatra/commit/ceccb7c5a8748f8124d178a05a857e13c405dfb0) [fbb7b535](https://github.com/twitter/finatra/commit/fbb7b5357f32f15b86c7a70f16804411c17bef7f)
+-   inject-thrift-client: Remove unused ClientId property from
+    ThriftMethodBuilderClientModule\#provideServicePerEndpoint method. [381853f8](https://github.com/twitter/finatra/commit/381853f83ff25b639f143891b49b54c388ef50c1)
+-   inject-server: Improve startup time of EmbeddedTwitterServer by observing lifecycle events to
+    determine startup, where previously we were doing 1 second polls. The nonInjectableServerStarted
+    property is removed and isStarted should be referenced regardless of the type of underlying
+    twitterServer type. The end result should see a faster test execution feedback loop. Our Finatra
+    test targets range from a roughly 2x to 10x reduction in execution times.
+
+    You may experience new test failures in cases where an exception is thrown as part of
+    c.t.inject.TwitterServer.start() or c.t.server.TwitterServer.main() and the test would have
+    expected a failure as part of startup. As the error takes place after the startup lifecycle,
+    you may now need to Await.result the EmbeddedTwitterServer.mainResult() to assert the error.
+
+    You may also experience some new non-deterministic behavior when testing against PubSub style
+    logic. As the server may be started earlier, your tests may be relying on assumptions that
+    an event would have occurred within the previous 1 second startup poll, which is no longer
+    guaranteed. You may need to adjust your test logic to account for this behavior.
+
+    [a134e9b8](https://github.com/twitter/finatra/commit/a134e9b83f79e94f78788add162160678ee1f15e)
+
+-   finatra: Update com.google.inject.guice dependency to 4.2.3 and net.codingwell.scala-guice
+    to version 4.2.11. The net.codingwell.scala-guice library has switched from Manifests to TypeTags
+    for transparent binding and injector key creation. The c.t.inject.TwitterModule has moved from its
+    custom bind DSL to the scalaguice.ScalaModule which brings the TwitterModule inline with both the
+    TwitterPrivateModule and the bind\[T\] test DSL to now have the same consistent binding DSL across
+    all three. Thus, there is no more confusing bindSingleton function in the TwitterModule bind API.
+
+    Upgrading scalaguice helps move a necessary dependency of Finatra to a version which is Scala 2.13
+    compatible moving Finatra closer to Scala 2.13 support. [26c1e810](https://github.com/twitter/finatra/commit/26c1e8102450f57b2d279fb3ddb75977ddcef4f5) [5faa2e6f](https://github.com/twitter/finatra/commit/5faa2e6f4543a19d7beceac631bb7952c60a6d62)
+
+### Fixed
+
+-   inject-app: Having two sets of flag converters for primitive types (both Java and Scala) confuses
+    the DI runtime, preventing the injection. We now have only a single set of converters, based off
+    Scala primitive types. [9c1b0d68](https://github.com/twitter/finatra/commit/9c1b0d68c551a177fb95ca8e0adf8bb08dafa0f3)
 
 ### [Util](https://github.com/twitter/util/)
 
