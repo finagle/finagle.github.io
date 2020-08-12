@@ -49,7 +49,6 @@ Another month, another release. 😺 Here's the August release of Finagle, Finat
 -   finagle-zipkin-core: Removed unused statsReceiver constructor argument from RawZipkinTracer. [5b100ee9](https://github.com/twitter/finagle/commit/5b100ee9b00d620b53f614e496c4faed9af122fc)
 
 
-
 ### [Finatra](https://github.com/twitter/finatra/)
 
 #### Added
@@ -94,7 +93,6 @@ No Changes
 
 
 ### [Scrooge](https://github.com/twitter/scrooge/)
-
 
 -   scrooge: replace deprecated ScalaTest 3.0 API with ScalaTest 3.1/3.2 API. [9878247b](https://github.com/twitter/scrooge/commit/9878247b1bd474fcbb03e3044b664e289565f652)
 -   scrooge-core: Change c.t.scrooge.ThriftStructMetaData from an abstract class to a trait
