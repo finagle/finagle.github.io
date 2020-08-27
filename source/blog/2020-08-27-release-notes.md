@@ -30,7 +30,7 @@ addresses that and includes some other goodies:
 #### Changed
 
 -   inject-core: Remove deprecated com.twitter.inject.Mockito trait. Users are encouraged to
-    switch to the com.twitter.util.mock.Mockito trait from util/util-mock. [92c3f7ba](https://github.com/twitter/finatra/commit/92c3f7ba0f06ab4baf57489af04a32982052e145)
+    switch to the com.twitter.mock.Mockito trait from util/util-mock. [92c3f7ba](https://github.com/twitter/finatra/commit/92c3f7ba0f06ab4baf57489af04a32982052e145)
 
 #### Fixed
 
