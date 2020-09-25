@@ -8,7 +8,7 @@ post_author:
 tags: Releases, Finagle, Finatra, Scrooge, TwitterServer, Util
 ---
 
-With the start of Fall, it's only right for a new release of our libraries. Here's the latest of Finagle, Finatra, Scrooge, TwitterServer, and Util!
+With the start of Fall 🍁, it is only right for a new release of our libraries! Here's the latest of Finagle, Finatra, Scrooge, TwitterServer, and Util!
 
 ### [Finagle](https://github.com/twitter/finagle/)
 
