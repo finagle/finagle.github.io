@@ -1,6 +1,6 @@
 ---
 layout: post
-title: September 2020 Release Notes - Version 20.9.0
+title: 🍁 September 2020 Release Notes - Version 20.9.0
 published: true
 post_author:
   display_name: Hamdi Allam
