@@ -14,8 +14,7 @@ this year (we hope!).  Goodbye to the optometrically significant year! 👓
 
 ### [Finagle](https://github.com/twitter/finagle/) ###
 
-New Features
-------------
+#### New Features
 
 -   finagle-core: Add a new stat (histogram) that reports how long a task has been sitting in the
     offload queue. This instrumentation is sampled at the given interval (100ms by default) that
@@ -34,8 +33,7 @@ New Features
     by Finagle clients, and will allow generic configuration of all sets of parameters.
     [b7bb5afc](https://github.com/twitter/finagle/commit/b7bb5afcebeb5c1e98bf8b82e2af3aab006fcb46)
 
-Breaking API Changes
---------------------
+#### Breaking API Changes
 
 -   finagle-core: Move DarkTrafficFilter and AbstractDarkTrafficFilter from the experimental
     finagle-exp to supported finagle-core. The package containing these classes changed from
@@ -49,8 +47,7 @@ Breaking API Changes
     def classify(ReqRep): ResponseClass to allow expressing that a failure should be ignored.
     [d586bd24](https://github.com/twitter/finagle/commit/d586bd2403c1721831df04d3588c963662b060cb)
 
-Runtime Behavior Changes
-------------------------
+#### Runtime Behavior Changes
 
 -   finagle-core: Use Scala default implementation to calculate Hashcode and equals method for
     ServiceFactoryProxy. [c473b395](https://github.com/twitter/finagle/commit/c473b395ff95166f8f1db26dbc9d2a9d4adf39c5)
@@ -58,8 +55,7 @@ Runtime Behavior Changes
     before failing over to the AbstractQueuedSynchronizer slow path in NonReentrantReadWriteLock
     for Arm64. [d45dfb02](https://github.com/twitter/finagle/commit/d45dfb022355a8105bd76d37dc77628d4e0cd330)
 
-Bug Fixes
----------
+#### Bug Fixes
 
 -   finagle-core: Users should no longer see the problematic
     java.lang.UnsupportedOperationException: tail of empty stream when a c.t.f.s.RetryPolicy
@@ -67,8 +63,7 @@ Bug Fixes
 
 ### [Finatra](https://github.com/twitter/finatra/) ###
 
-Added
------
+#### Added
 
 -   kafka: Add an option includePartitionMetrics to KafkaFinagleMetricsReporter to not include
     metrics per partition of the FinagleKafkaConsumer. Defaults to true. [1f5a00ee](https://github.com/twitter/finatra/commit/1f5a00ee82790bf59403fca6ad0e367fef5d58dd)
@@ -81,8 +76,7 @@ Added
     [306b7196](https://github.com/twitter/finatra/commit/306b719605019ecf2940627d288622d59bc6aece)
 -   finatra: Enables cross-build for 2.13.0 for httpclient, http, and jackson. [d6dbc074](https://github.com/twitter/finatra/commit/d6dbc074e07695d71c19eba25945b33a5f3811e5)
 
-Changed
--------
+#### Changed
 
 -   inject-utils: Deprecate all methods in c.t.inject.conversions.map.RichMap, and move
     functionality to c.t.conversions.MapOps in the util/util-core project. [e765b5ae](https://github.com/twitter/finatra/commit/e765b5ae89ba7c0e32dcea0ad630368c0b1a959e)
@@ -109,21 +103,18 @@ Changed
     producers/consumers. Producer tracing is turned on by default and consumer tracing is turned off
     by default now. [b95b8460](https://github.com/twitter/finatra/commit/b95b84608006662f05c5418daeadc3c61c350bf3)
 
-Fixed
------
+#### Fixed
 
 -   inject-server: Wire through HTTP method in AdminHttpClient so that POST requests can be made to
     HTTPAdmin endpoints. [8d846128](https://github.com/twitter/finatra/commit/8d8461286364c671dba0ad9ae0879500d166c5b1)
 
 ### [Util](https://github.com/twitter/util/) ###
 
-Breaking API Changes
---------------------
+#### Breaking API Changes
 
 -   util-core: removed com.twitter.util.Config. [e95799b8](https://github.com/twitter/util/commit/e95799b8079e018bd3d806e84191990633d751ed)
 
-New Features
-------------
+#### New Features
 
 -   util-core: c.t.conversions now includes conversion methods for maps (under MapOps)
     that were moved from Finatra. [3aa49339](https://github.com/twitter/util/commit/3aa49339e21963e434dbb3ce6f6ef80d9b2fcac9)
@@ -138,9 +129,7 @@ New Features
 
 :   java.time.Duration types. [45340fb4](https://github.com/twitter/util/commit/45340fb4d1a433c09401e11065754b5ffb482108)
 
-    Runtime Behavior Changes
-
-------------------------------------------------------------------------
+#### Runtime Behavior Changes
 
 -   util-core: Activity.apply(Event) will now propagate registry events to the underlying
     Event instead of registering once and deregistering on garbage collection. This means
