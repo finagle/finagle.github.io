@@ -124,10 +124,8 @@ this year (we hope!).  Goodbye to the optometrically significant year! 👓
     that were moved from Finatra. [654a0a37](https://github.com/twitter/util/commit/654a0a374e5d2aae3a10988efb8f71e38041c2dc)
 -   util-core: c.t.conversions now includes conversion methods toOption, and getOrElse
     under StringOps. [2d7ec5c2](https://github.com/twitter/util/commit/2d7ec5c2ebc419c1642b47a31d445632b5102bef)
-
-\* util-core: c.t.util.Duration now includes fromJava and asJava conversions to
-
-:   java.time.Duration types. [45340fb4](https://github.com/twitter/util/commit/45340fb4d1a433c09401e11065754b5ffb482108)
+-   util-core: c.t.util.Duration now includes fromJava and asJava conversions to
+    java.time.Duration types. [45340fb4](https://github.com/twitter/util/commit/45340fb4d1a433c09401e11065754b5ffb482108)
 
 #### Runtime Behavior Changes
 
