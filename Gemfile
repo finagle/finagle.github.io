@@ -10,5 +10,5 @@ gem 'nokogiri', ">= 1.8.5"
 gem 'rake', '12.3.3'
 
 gem "rdiscount", '2.2.0.1'
-gem "redcarpet", '3.4.0'
+gem "redcarpet", '3.5.1'
 
