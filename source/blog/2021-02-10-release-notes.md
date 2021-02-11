@@ -43,6 +43,7 @@ All of our libraries are cross-building with Scala 2.13 in this release! Startin
 #### Changed
 
 -   finatra: all subprojects cross-building with 2.13.1. [7deb1153](https://github.com/twitter/finatra/commit/7deb11535e5c9eb0787326e64dc44bf060b935df)
+
 -   kafkaStreams: Enables cross-build for 2.13.1 for projects kafkaStreamsStaticPartitioning,
     kafkaStreamsPrerestore, and kafkaStreamsQueryableThrift. [c9e5bda1](https://github.com/twitter/finatra/commit/c9e5bda15a01b5b59daa45be2ea15d50fa999e63)
 
