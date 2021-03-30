@@ -8,7 +8,7 @@ post_author:
 tags: Releases, Finagle, Finatra, Scrooge, TwitterServer, Util
 ---
 
-As the animals awake from their hibernation, we too have awoken the beast with this release. Please enjoy!
+As the 🐻 animals 🐿️ awaken from hibernation, we too have awoken the 🐆 beast 🐅 with this release. Please enjoy!
 
 ### NOTE
 
