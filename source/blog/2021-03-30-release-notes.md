@@ -8,7 +8,7 @@ post_author:
 tags: Releases, Finagle, Finatra, Scrooge, TwitterServer, Util
 ---
 
-Depends on which part of this planet you are in, you may grab a hot drink or bask in the sunshine. Here is our short and sweet February release.
+As the animals awake from their hibernation, we too have awoken the beast with this release. Please enjoy!
 
 ### NOTE
 
@@ -250,7 +250,7 @@ Runtime Behavior Changes
 * [TwitterServer 21.3.0][twitterserver]
 
 [finagle]: https://github.com/twitter/finagle/blob/finagle-21.3.0/CHANGELOG.rst
+[finatra]: https://github.com/twitter/finatra/blob/finatra-21.3.0/CHANGELOG.rst
 [util]: https://github.com/twitter/util/blob/util-21.3.0/CHANGELOG.rst
 [scrooge]: https://github.com/twitter/scrooge/blob/scrooge-21.3.0/CHANGELOG.rst
 [twitterserver]: https://github.com/twitter/twitter-server/blob/twitter-server-21.3.0/CHANGELOG.rst
-[finatra]: https://github.com/twitter/finatra/blob/finatra-21.3.0/CHANGELOG.rst
