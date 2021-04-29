@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>❄️ January 2021 Release Notes - Version 21.1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Christopher Coco</h4>
+      <p class="author-twitter"><a href="https://twitter.com/cacoco">@cacoco</a></p>
+    </div>
+    <p><em>Posted January 19, 2021</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>❄️ January 2021 Release Notes - Version 21.1.0</h1>
+  
+  <p>A new year, a new release! 🎆</p>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>  scrooge: Scrooge uses better size estimate for Map/Set containers in read() to improve 
+performance in Java. <a href="https://github.com/twitter/scrooge/commit/b1ebce819e8f7f4ee5c941d29cd661d6c2a2e4ed">b1ebce81</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  finagle-core: Add clnt/&lt;FilterName&gt;_rejected annotation to filters that may throttle requests,
+including c.t.finagle.filter.NackAdmissionFilter and c.t.finagle.filter.RequestSemaphoreFilter.
+<a href="https://github.com/twitter/finagle/commit/66857683c6b8ae2f16dde53f28c52c11b262d16e">66857683</a></li>
+<li>  finagle-http: Record http-specific annotations including http.status_code and
+http.method. See details at
+<a href="https://github.com/open-telemetry/opentelemetry-specification/tree/master/specification/trace">https://github.com/open-telemetry/opentelemetry-specification/tree/master/specification/trace</a>
+<a href="https://github.com/twitter/finagle/commit/78d93fde6cdf18534d6990ec7c8d4e97260e5c57">78d93fde</a></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>  finagle-core: Fix wraparound bug in Ring.weight, as reported by @nvartolomei <a href="https://github.com/twitter/finagle/commit/c4dc4fdc5beedec031a5af25a512e5319843f02b">c4dc4fdc</a></li>
+<li>  finagle-mysql: Update the UTF8 character set to cover those added in MySQL 8.
+<a href="https://github.com/twitter/finagle/commit/25e581bb9106de16d027f709e153912585b5b0a5">25e581bb</a></li>
+<li>  finagle-thriftmux: Fixed a bug where connections were not established eagerly in ThriftMux
+MethodBuilder even when eager connections was enabled. <a href="https://github.com/twitter/finagle/commit/ec67d48a9c8e9bb3db00cf9e921f438b88a4e8e0">ec67d48a</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  finagle-mysql: Don&rsquo;t use the full query when adding tracing annotations. <a href="https://github.com/twitter/finagle/commit/b215d25593e105f4dea8134cce6a902045199b21">b215d255</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">TwitterServer</a></h3>
+
+<ul>
+<li>  Add separator_char field to the top level of the Metrics Metadata endpoint and bump the
+endpoints version number to 2.1. <a href="https://github.com/twitter/twitter-server/commit/38a437b832f437bca18983ad9527190054618eae">38a437b8</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  kafka: Enables cross-build for 2.13.1. Note that kafka 2.5 is bundled with scala 2.13+
+and kafka 2.2 is bundled with scala 2.12-. <a href="https://github.com/twitter/finatra/commit/7bdba713151180b21eb485c16b7e255b1368c679">7bdba713</a></li>
+<li>  kafkaStreams: Enables cross-build for 2.13.1. Note that kafka 2.5 is bundled with
+scala 2.13+ and kafka 2.2 is bundled with scala 2.12-. <a href="https://github.com/twitter/finatra/commit/7bdba713151180b21eb485c16b7e255b1368c679">7bdba713</a></li>
+<li>  benchmarks: Enables cross-build for 2.13.1. <a href="https://github.com/twitter/finatra/commit/c811e18ad3a86a50946de4600ef55bdf6208770f">c811e18a</a></li>
+<li>  inject-thrift-client-http-mapper: Enables cross-build for 2.13.1. <a href="https://github.com/twitter/finatra/commit/7c3f13bab13ff5ced5c595c73067ffc6f855ed7c">7c3f13ba</a></li>
+<li>  http-mustache: Enables cross-build for 2.13.1. <a href="https://github.com/twitter/finatra/commit/7c3f13bab13ff5ced5c595c73067ffc6f855ed7c">7c3f13ba</a></li>
+<li>  thrift: (BREAKING API CHANGE) Removed JavaThriftRouter.add(controller, protocolFactory) method.
+Use AbstractThriftServer.configureThriftServer to override Thrift-specific stack params
+(including Thrift.param.ProtocolFactory). <a href="https://github.com/twitter/finatra/commit/bc34aa7bc191989f45611be946770f94e0e87ca9">bc34aa7b</a></li>
+<li>  finatra-http: Remove deprecated c.t.finatra.http.response.StreamingResponse.
+Use c.t.finatra.http.streaming.StreamingResponse instead. <a href="https://github.com/twitter/finatra/commit/851a06a5aa889269b73654ae5e283bad08f5a633">851a06a5</a></li>
+<li>  finatra-kafka-streams: (BREAKING API CHANGE) Changed the delayWithStore DSL call to ensure that
+the store name is consistent across shards. Requires a new storeName parameter to allow
+for multiple delays in a single topology. <a href="https://github.com/twitter/finatra/commit/7373b478e9a184d13d7fe353b7edf9216f812d7a">7373b478</a></li>
+</ul>
+
+<h4>Fixed</h4>
+
+<ul>
+<li>  finatra-kafka-streams: Renamed implicit Kafka Streams DSL classes in order to
+permit multiple DSL extensions to be used in the same Kafka Streams topology.
+<a href="https://github.com/twitter/finatra/commit/b48d4c5c04244644263446d83ab98bc30896869f">b48d4c5c</a></li>
+<li>  thrift: Fixed a bug where Thrift stack params (i.e., protocol factory) that are passed to
+AbstractThriftServer.configureThriftServer are ignored in JavaThriftRouter.
+<a href="https://github.com/twitter/finatra/commit/bc34aa7bc191989f45611be946770f94e0e87ca9">bc34aa7b</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

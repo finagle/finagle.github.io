@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>April 2020 Release Notes - Version 20.4.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Ian Bennett</h4>
+      <p class="author-twitter"><a href="https://twitter.com/enbnt">@enbnt</a></p>
+    </div>
+    <p><em>Posted April  6, 2020</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>April 2020 Release Notes - Version 20.4.0</h1>
+  
+  <p>In these unprecedented times, we wish for nothing but your health and safety. April showers 🌦️ bring May flowers 🌻, so #StayAtHome and fill some time reading about some of the changes in our latest release.</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>finagle-thrift/thriftmux: Thrift and ThriftMux client side can set a sharable
+TReusableBuffer by <code>withTReusableBufferFactory</code>. <a href="https://github.com/twitter/finagle/commit/9213ca351a949d270e71169729b725e82914888b">9213ca35</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li><p>finagle-partitioning: Rename <code>c.t.finagle.partitioning.CacheNode</code> and <code>CacheNodeMetadata</code>
+to <code>c.t.finagle.partitioning.PartitionNode</code> and <code>PartitionNodeMetadata</code>. <a href="https://github.com/twitter/finagle/commit/d32f0c25ce4ead094c3bce7046872ff1a6195b32">d32f0c25</a></p></li>
+<li><p>finagle-partitioning: Rename <code>c.t.finagle.partitioning.KetamaClientKey</code> to <code>HashNodeKey</code>
+<a href="https://github.com/twitter/finagle/commit/2d0cd33ed8ff0b267465f52b0864462dd1225df1">2d0cd33e</a></p></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>finagle-base-http: RequestBuilder headers use SortedMap to equalize keys in different caps.
+<code>setHeader</code> keys are case insensitive, the last one wins. <a href="https://github.com/twitter/finagle/commit/535f324c8255f87f7848ad927759dac63888ad22">535f324c</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Added</h4>
+
+<ul>
+<li><p>inject-app: Add Java-friendly <code>main</code> to <code>EmbeddedApp</code>. <a href="https://github.com/twitter/finatra/commit/4b40075d75a8499572872179309fea6540d61a3a">4b40075d</a></p></li>
+<li><p>finatra-kafka: Expose timeout duration in KafkaProducerConfig dest(). <a href="https://github.com/twitter/finatra/commit/c5340a97d6d6521890faf888b62fff2efd99b7d7">c5340a97</a></p></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li>finatra-validation|jackson: (BREAKING API CHANGE) Introduced new case class validation library
+inspired by JSR-380 specification. The new library can be used as its own to validate field and
+method annotations for a case class. The library is also automatically integrated with Finatra&rsquo;s
+custom <code>CaseClassDeserializer</code> to efficiently apply per field and method validations as request
+parsing is performed. However, Users can easily turn off validation during request parsing with
+the setting <code>noValidation</code> in their server configurations. For more information, please checkout
+<a href="https://twitter.github.io/finatra/user-guide/">Finatra User&rsquo;s Guide</a>.
+<a href="https://github.com/twitter/finatra/commit/d874b1a92cd2cc257bf0d170cfb46a486df3fb5d">d874b1a9</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>util-core: When looking to add idempotent close behavior, users should mix in <code>CloseOnce</code> to
+classes which already extend (or implement) <code>Closable</code>, as mixing in <code>ClosableOnce</code> leads to
+compiler errors. <code>ClosableOnce.of</code> can still be used to create a <code>ClosableOnce</code> proxy of an
+already instantiated <code>Closable</code>. Classes which do not extend <code>Closable</code> can still
+mix in <code>ClosableOnce</code>. <a href="https://github.com/twitter/util/commit/43671464bd0bcb925d970370d45eaa9e84400ccb">43671464</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>util-hashing: Rename
+<code>c.t.hashing.KetamaNode</code> =&gt; <code>HashNode</code>,
+<code>c.t.hashing.KetamaDistributor</code> =&gt; <code>ConsistentHashingDistributor</code>.
+<a href="https://github.com/twitter/util/commit/f595ed971acacd2ccac84a49053e6b737cff860d">f595ed97</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<ul>
+<li>No Changes</li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>No Changes</li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

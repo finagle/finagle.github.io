@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>May 2019 Release Notes - Version 19.5.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Ryan O'Neill</h4>
+      <p class="author-twitter"><a href="https://twitter.com/ryanoneill">@ryanoneill</a></p>
+    </div>
+    <p><em>Posted May 21, 2019</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>May 2019 Release Notes - Version 19.5.1</h1>
+  
+  <p>With it being late May, the beginning of summer is right around the corner. Along with that comes a
+new release of our libraries.  Unfortunately, there was an
+<a href="https://github.com/twitter/finatra/issues/502">issue</a>
+with our first attempt (19.5.0) so we created a point release (19.5.1), which fixes the problem.
+Here are the changes for both 19.5.0 and 19.5.1</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  finagle-http: Add two new methods to <code>com.twitter.finagle.http.MediaType</code>,
+<code>MediaType#typeEquals</code> for checking if two media types have the same type and
+subtype, ignoring their charset, and <code>MediaType#addUtf8Charset</code> for easily
+setting a utf-8 charset. <a href="https://github.com/twitter/finagle/commit/ec0953f12acd85485994c009c4a349caf776f268">ec0953f1</a></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>  finagle-http: Ensure server returns 400 Bad Request when
+non-ASCII characters are present in the HTTP request URI path. <a href="https://github.com/twitter/finagle/commit/a7dae7ea84f828313cdf37cabf2b792435661ec7">a7dae7ea</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  finagle-core: Deterministic aperture (d-aperture) load balancers no longer export
+&ldquo;loadband&rdquo; scoped metrics: &ldquo;widen&rdquo;, &ldquo;narrow&rdquo;, &ldquo;offered_load_ema&rdquo;. These were not
+necessary as d-aperture does not change the aperture size at runtime. <a href="https://github.com/twitter/finagle/commit/20029ac5437dba59eb580398cbf2207e43de020e">20029ac5</a></li>
+<li>  finagle-core: Request logging now defaults to disabled. Enable it by configuring the
+<code>RequestLogger</code> Stack parameter on your <code>Client</code> or <code>Server</code>. <a href="https://github.com/twitter/finagle/commit/ee9cb4ec2c17b810354b36ff97816fc97efb6394">ee9cb4ec</a></li>
+<li>  finagle-core: Subtree binding failures in <code>NameTree.Union</code>&lsquo;s are ignored in the
+final binding result. <a href="https://github.com/twitter/finagle/commit/2fde4d2d023503a7ced1a1793cedd4f0de97c6bc">2fde4d2d</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  finagle-core: The <code>c.t.f.client.EndpointerModule</code> and <code>c.t.f.pushsession.PushStackClient</code> public
+and protected APIs have been changed to use the abstract <code>java.net.SocketAddress</code> instead of the
+concrete <code>java.net.InetSocketAddress</code> as relying on the concrete implementation was not
+necessary. <a href="https://github.com/twitter/finagle/commit/77a3cdfd17695e814d9263cff3ad888ab4646a59">77a3cdfd</a></li>
+<li>  finagle-http: For Finagle HTTP clients, the <code>withMaxRequestSize(size)</code> API
+method has been removed. For Finagle HTTP servers, the
+<code>withMaxResponseSize(size)</code> method has been removed. The underlying Stack
+params which are set by these methods are respectively HTTP server and HTTP
+client side params only. Using these removed methods had no effect on the
+setup of Finagle HTTP clients and servers. <a href="https://github.com/twitter/finagle/commit/5eb3ae242289b074771deef2bd574636959e4d56">5eb3ae24</a></li>
+<li>  finagle-mysql: HandshakeResponse has been removed from finagle-mysql&rsquo;s public
+API. It is expected that users of the library are relying entirely on
+finagle-mysql for handshaking. <a href="https://github.com/twitter/finagle/commit/f0ab09a6504925893e82400d10531817e6dd9d01">f0ab09a6</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Added</h4>
+
+<ul>
+<li>  inject-server/http/thrift: Allow users to specify a <code>StatsReceiver</code> implementation to use in the
+underlying <code>EmbeddedTwitterServer</code> instead of always providing an <code>InMemoryStatsReceiver</code>
+implementation. <a href="https://github.com/twitter/finatra/commit/7a486fd28b3126ecb62ec209c51dd06721b24d5a">7a486fd2</a></li>
+<li>  finatra-http: Add ability for Java HTTP Controllers to use the RouteDSL for per-route filtering
+and for route prefixing. <a href="https://github.com/twitter/finatra/commit/c27331587276678771c2c25f3d6f4a690768b964">c2733158</a></li>
+<li>  inject-request-scope: Add a <code>Filter.TypeAgnostic</code> implementation for the <code>FinagleRequestScopeFilter</code>
+for better compatibility with Thrift servers. Update the FinagleRequestScope to make more idiomatic
+use of Context locals. <a href="https://github.com/twitter/finatra/commit/451cff77e3207394d3e007b77c39e10617667296">451cff77</a></li>
+<li>  finatra-http: Route params are now URL-decoded automatically. <a href="https://github.com/twitter/finatra/commit/a79f56347acd2194e415975ab125e2509c8e91e5">a79f5634</a></li>
+<li>  finatra-jackson: Add ability to bypass case class validation using the
+<code>NullValidationFinatraJacksonModule</code>. <a href="https://github.com/twitter/finatra/commit/401d72859980fc9d29abe02fa1f62f906bb90351">401d7285</a></li>
+<li>  inject-app: Add <code>c.t.inject.app.DtabResolution</code> to help users apply supplemental Dtabs added by
+setting the dtab.add flag. This will append the supplemental Dtabs to the
+Dtab.base in a premain function. <a href="https://github.com/twitter/finatra/commit/6c4eeda034e40337e73fdec79cea15bc71a83282">6c4eeda0</a></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  finatra-http: Move when admin routes are added to the AdminHttpServer to the <code>postInjectorStartup</code>
+phase, such that any admin routes are available to be hit during server warmup. Simplify <code>HttpWarmup</code>
+utility to make it clear that it can and should only be used for sending requests to endpoints added
+to the server&rsquo;s configured <code>HttpRouter</code>. The <code>forceRouteToAdminHttpMuxers</code> param has been renamed
+to admin to signal that the request should be sent to the <code>HttpRouter#adminRoutingService</code> instead
+of the <code>HttpRouter#externalRoutingService</code>. Routing to TwitterServer HTTP Admin Interface via this
+utility never worked properly and the (broken) support has been dropped. <a href="https://github.com/twitter/finatra/commit/0cd3ed691d4d86b5500dfddb858e0f25f9dc5058">0cd3ed69</a></li>
+<li>  finatra-kafka: Update <code>com.twitter.finatra.kafka.test.KafkaTopic</code>, and
+<code>com.twitter.finatra.kafka.test.utils.PollUtils</code> methods to take
+<code>com.twitter.util.Duration</code> instead of <code>org.joda.time.Duration</code>. <a href="https://github.com/twitter/finatra/commit/94c051b382865685620b4def6cba12cbc7e286c4">94c051b3</a></li>
+<li>  finatra: Removed Commons IO as a dependency. <a href="https://github.com/twitter/finatra/commit/4b6e4726f48ab2845427c5b418ea92f69fa8a0c6">4b6e4726</a></li>
+<li>  finatra-http: <code>com.twitter.finatra.http.EmbeddedHttpServer</code> methods which previously used the
+<code>routeToAdminServer</code> parameter have been changed to use a <code>RouteHint</code> instead for added
+flexibility in controlling where a test request is sent. <a href="https://github.com/twitter/finatra/commit/4653992cf0d14481aa3faeae4071c873b6a81a5d">4653992c</a></li>
+<li>  finatra-inject: Feature tests no longer default to printing metrics after tests.
+This can be enabled on a per-test basis by overriding <code>FeatureTestMixin.printStats</code>
+and setting it to true. <a href="https://github.com/twitter/finatra/commit/28eecabe149de6b046055d4db162ca46d19d42e4">28eecabe</a></li>
+<li>  finatra-inject: Update <code>com.twitter.inject.utils.RetryPolicyUtils</code>,
+<code>com.twitter.inject.thrift.modules.FilteredThriftClientModule</code>, and
+<code>com.twitter.inject.thrift.filters.ThriftClientFilterChain</code> methods to take
+<code>com.twitter.util.Duration</code> instead of <code>org.joda.time.Duration</code>. <a href="https://github.com/twitter/finatra/commit/c295efb043fe9f4f1c3cb01a8ec47ea5899c79be">c295efb0</a></li>
+<li>  finatra: Fix Commons FileUpload vulnerability. Update <code>org.apache.commons-fileupload</code> from version
+1.3.1 to version 1.4. This closes #PR-497. <a href="https://github.com/twitter/finatra/commit/d5d3273729d526e610f9f3c7f8c2bce976d971dc">d5d32737</a></li>
+<li>  finatra-http: Replace all usages of guava&rsquo;s <code>com.google.common.net.MediaType</code> with String.
+You can migrate by calling <code>MediaType#toString</code> everywhere you passed a <code>MediaType</code> before. <a href="https://github.com/twitter/finatra/commit/826fabb251f06844ad75e65091cda657cb956c01">826fabb2</a></li>
+<li>  finatra-http: Add <code>http</code> scope to <code>shutdown.time</code> flag, making it <code>http.shutdown.time</code>.
+<a href="https://github.com/twitter/finatra/commit/2abb46f833e1852f027f857683cf9c6e6a162022">2abb46f8</a></li>
+<li>  finatra-http: Remove deprecated <code>DefaultExceptionMapper</code>. Extend
+<code>c.t.finatra.http.exceptions.ExceptionMapper[Throwable]</code> directly instead. <a href="https://github.com/twitter/finatra/commit/cd2d5be357218e76204fcbbb15751119d05f826e">cd2d5be3</a></li>
+<li>  inject-app: Move override of <code>com.twitter.app.App#failfastOnFlagsNotParsed</code> up from
+<code>c.t.inject.server.TwitterServer</code> to <code>com.twitter.inject.app.App</code> such that all Finatra-based
+applications default to this behavior. <a href="https://github.com/twitter/finatra/commit/feb887e0e3e7c88d5c36a87d4aed9b08a8d794c8">feb887e0</a></li>
+<li>  inject-app|server: change capturing of flag ordering from Modules for adding to the App&rsquo;s <code>c.t.app.Flags</code>
+instance to match the semantics of directly calling <code>c.t.app.Flags#add</code>. Prefer <code>AtomicBoolean</code>
+instances over where we currently use mutable Boolean instances in <code>c.t.inject.app.App</code>, <code>c.t.inject.app.TestInjector</code>,
+and <code>c.t.inject.server.EmbeddedTwitterServer</code>. <a href="https://github.com/twitter/finatra/commit/2dfd33b58d2855fa14d8800555518ee314db314a">2dfd33b5</a></li>
+<li>  finatra-examples: Update &ldquo;twitter-clone&rdquo; example to use Dtabs instead of the deprecated resolverMap.
+Move the &ldquo;hello-world&rdquo; example to &ldquo;http-server&rdquo;. <a href="https://github.com/twitter/finatra/commit/6c4eeda034e40337e73fdec79cea15bc71a83282">6c4eeda0</a></li>
+</ul>
+
+<h4>Fixed</h4>
+
+<ul>
+<li>  finatra: The added <code>c.t.finatra.http.RouteHint</code> was missing from the test-jar sources and has
+been added. <a href="https://github.com/twitter/finatra/commit/7945d128c3de8ecd9f2c8c890fd39600262df11f">7945d128</a></li>
+<li>  finatra-jackson: Properly account for timezone in Joda <code>DateTime</code> deserialization. <a href="https://github.com/twitter/finatra/commit/abb17d5ac1150f4a94014bfa56e8a8c2c0d386e5">abb17d5a</a></li>
+<li>  finatra-http: <code>EmbeddedHttpServer</code>&rsquo;s <code>httpGetJson</code> method now properly passes
+all parameters through to the underlying client call. <a href="https://github.com/twitter/finatra/commit/068cd440dc17d6671e0d075ba7f13af74d0e56a6">068cd440</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>  scrooge-generator: Extensions of <code>(ReqRep)ServicePerEndpoint</code> now provide a proper filtered
+method by default. <a href="https://github.com/twitter/scrooge/commit/e46b2785d036b2f6920eea9aefb5a93307618231">e46b2785</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<ul>
+<li>  twitter-server: Add <code>DuplicateFlagDefinitions</code> lint rule which is violated when multiple <code>Flags</code> with the same
+name are added to the underlying com.twitter.app.App#flag com.twitter.app.Flags instance. <a href="https://github.com/twitter/twitter-server/commit/fe231c9a1034f526584ef1cbb30d1313abf78eae">fe231c9a</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<ul>
+<li>  util-app: Track the registration of duplicated <code>Flag</code> names. Currently, we print a warning to
+stderr but do not track the duplicated <code>Flag</code> names. Tracking them allows us to inspect and
+warn over the entire set. <a href="https://github.com/twitter/util/commit/4875552e3bf5752a389b9af524831d6bb3507c57">4875552e</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

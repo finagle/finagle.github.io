@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello AsyncStream!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Moses Nakamura</h4>
+      <p class="author-twitter"><a href="https://twitter.com/mnnakamura">@mnnakamura</a></p>
+    </div>
+    <p><em>Posted February 15, 2016</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>Hello AsyncStream!</h1>
+  
+  <p>tl;dr AsyncStream is replacing Spool.</p>
+
+<p>Big shoutout to <a href="https://github.com/luciferous">Neuman Vong</a>, who designed and built AsyncStream soup to nuts ✧٩(•́⌄•́๑)</p>
+
+<p>We know and love <a href="https://github.com/twitter/util/blob/develop/util-core/src/main/scala/com/twitter/concurrent/Spool.scala">Spool</a>, the Twitter <a href="https://github.com/twitter/util">util</a> tool for asynchronous object streaming.  The main
+advantages of asynchronous stream processing are that it makes it easy to exert backpressure by no
+longer reading from the stream, it’s easy to map over it lazily and asynchronously, and unlike a
+Stream of Futures, it’s simple to discover the end of the collection without having to resort to
+making it blocking, or allowing users to grab Futures past the end of the stream.</p>
+
+<p>However, since we’ve had a long time to experiment with it, we’ve found that there are places where
+Spool is a little clumsy.  For example, the <code>flatMap</code> operation in Spool isn’t associative, some of
+the flatMap behavior is unintuitive, and the API is a little messy.  Taking lessons from our
+experience with Spool, we are proud to announce <a href="https://github.com/twitter/util/blob/develop/util-core/src/main/scala/com/twitter/concurrent/AsyncStream.scala"><em>~AsyncStream~</em></a>, as an improved API for
+asynchronous object streaming.  Several twitter services spent months experimenting with it, and we
+decided we were confident enough in it a few months ago to consider it stable.  We like it a lot,
+and we hope you like it too.</p>
+
+<p>We’ve taken care with the API to make it more pleasant to use, while still keeping the APIs that
+worked well with Spool, so migration shouldn&rsquo;t be too painful (migration guide in appendix below).
+We’ve also benchmarked it carefully, to ensure that we don’t regress–in fact, it should be faster
+and entail less GC pressure than before.  We aren’t planning to deprecate Spool immediately, but
+we’re targeting all new features and performance optimizations for AsyncStream, so if you’re a heavy
+user of Spool, you should strongly consider migrating to AsyncStream.</p>
+
+<h1>Appendix</h1>
+
+<h2>Perf</h2>
+
+<p>Here are the differences in microbenchmark results between AsyncStream and Spool, when trying to use
+them as conduits for moving objects through.  The first one (like asyncStream) measures how fast an
+operation is on average, and the second one (like asyncStream:·gc.alloc.rate.norm) measures how many
+bytes are allocated per operation on average.  Lower is better.</p>
+<pre class="highlight plaintext"><code>                                    threads   score
+asyncStream                               1   162.707  ±   39.933   ns/op
+asyncStream:·gc.alloc.rate.norm           1   232.000  ±    0.001    B/op
+spool                                     1   11.280   ±  324.364   ns/op
+spool:·gc.alloc.rate.norm                 1   752.001  ±    0.003    B/op
+
+asyncStream                               2   514.126  ±   87.914   ns/op
+asyncStream:·gc.alloc.rate.norm           2   688.001  ±    0.003    B/op
+spool                                     2   942.653  ±  111.403   ns/op
+spool:·gc.alloc.rate.norm                 2   1344.001 ±   0.005     B/op
+
+asyncStream                               5   1609.987 ±  718.745   ns/op
+asyncStream:·gc.alloc.rate.norm           5   2248.003 ±    0.009    B/op
+spool                                     5   2792.601 ± 1238.565   ns/op
+spool:·gc.alloc.rate.norm                 5   3120.005 ±    0.019    B/op
+
+asyncStream                              10   3214.592 ±  843.915   ns/op
+asyncStream:·gc.alloc.rate.norm          10   4848.005 ±    0.016    B/op
+spool                                    10   4235.138 ± 1448.331   ns/op
+spool:·gc.alloc.rate.norm                10   6080.006 ±    0.020    B/op
+</code></pre>
+
+<p>As you can see, we have improvements across the board for every number of threads.</p>
+
+<h2>Migration guide:</h2>
+
+<h3>Stream construction with Spool</h3>
+<pre class="highlight scala"><code><span class="k">import</span> <span class="nn">com.twitter.concurrent.Spool</span>
+<span class="k">import</span> <span class="nn">com.twitter.util.Future</span>
+
+<span class="c1">// Construction from a materialized value
+</span><span class="k">val</span> <span class="n">result</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"wonderful string"</span> <span class="c1">// materialized wonderful string
+</span><span class="k">val</span> <span class="n">spool</span><span class="k">:</span> <span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">result</span> <span class="o">*::</span> <span class="nc">Future</span><span class="o">.</span><span class="n">value</span><span class="o">(</span><span class="nc">Spool</span><span class="o">.</span><span class="n">empty</span><span class="o">)</span>
+
+<span class="c1">// Construction from a Future
+</span><span class="k">def</span> <span class="n">getString</span><span class="o">()</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">myService</span><span class="o">.</span><span class="n">getString</span><span class="o">(</span><span class="s">"wonderful string"</span><span class="o">)</span> <span class="c1">// gets a wonderful string
+</span><span class="k">val</span> <span class="n">unforced</span><span class="k">:</span> <span class="o">()</span> <span class="o">=&gt;</span> <span class="nc">Future</span><span class="o">[</span><span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]]</span> <span class="k">=</span>
+  <span class="o">()</span> <span class="k">=&gt;</span> <span class="n">getString</span><span class="o">().</span><span class="n">map</span> <span class="o">{</span> <span class="n">string</span> <span class="k">=&gt;</span> <span class="n">string</span> <span class="o">*::</span> <span class="nc">Future</span><span class="o">.</span><span class="n">value</span><span class="o">(</span><span class="nc">Spool</span><span class="o">.</span><span class="n">empty</span><span class="o">)</span> <span class="o">}</span>
+
+<span class="c1">// Construction from a Seq
+</span><span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">spool</span><span class="k">:</span> <span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Spool</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+
+<span class="c1">// Construction from a function
+</span><span class="k">def</span> <span class="n">getNext</span><span class="o">()</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">myService</span><span class="o">.</span><span class="n">getNext</span><span class="o">()</span>
+<span class="k">def</span> <span class="n">mkStream</span><span class="o">()</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]]</span> <span class="k">=</span> <span class="n">getNext</span><span class="o">().</span><span class="n">map</span> <span class="o">{</span> <span class="n">string</span> <span class="k">=&gt;</span> <span class="n">string</span> <span class="o">*::</span> <span class="n">mkStream</span><span class="o">()</span> <span class="o">}</span>
+<span class="k">val</span> <span class="n">unforced</span><span class="k">:</span> <span class="o">()</span> <span class="o">=&gt;</span> <span class="nc">Future</span><span class="o">[</span><span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]]</span> <span class="k">=</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="n">mkStream</span><span class="o">()</span>
+</code></pre>
+
+<h3>Stream construction with AsyncStream</h3>
+<pre class="highlight scala"><code><span class="k">import</span> <span class="nn">com.twitter.concurrent.AsyncStream</span>
+<span class="k">import</span> <span class="nn">com.twitter.util.Future</span>
+
+<span class="c1">// Construction from a materialized value
+</span><span class="k">val</span> <span class="n">result</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"wonderful string"</span> <span class="c1">// materialized wonderful string
+</span><span class="k">val</span> <span class="n">spool</span><span class="k">:</span> <span class="kt">AsyncStream</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">AsyncStream</span><span class="o">.</span><span class="n">of</span><span class="o">(</span><span class="n">result</span><span class="o">)</span>
+
+<span class="c1">// Construction from a Future
+</span><span class="k">def</span> <span class="n">getString</span><span class="o">()</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">myService</span><span class="o">.</span><span class="n">getString</span><span class="o">(</span><span class="s">"wonderful string"</span><span class="o">)</span> <span class="c1">// gets a wonderful string
+</span><span class="k">val</span> <span class="n">unforced</span><span class="k">:</span> <span class="o">()</span> <span class="o">=&gt;</span> <span class="nc">AsyncStream</span> <span class="k">=</span>
+  <span class="o">()</span> <span class="k">=&gt;</span> <span class="nc">AsyncStream</span><span class="o">.</span><span class="n">fromFuture</span><span class="o">(</span><span class="n">getString</span><span class="o">())</span>
+
+<span class="c1">// Construction from a Seq
+</span><span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">spool</span><span class="k">:</span> <span class="kt">AsyncStream</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">AsyncStream</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+
+<span class="c1">// Construction from a function
+</span><span class="k">def</span> <span class="n">getNext</span><span class="o">()</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">myService</span><span class="o">.</span><span class="n">getNext</span><span class="o">()</span>
+<span class="k">def</span> <span class="n">mkStream</span><span class="o">()</span><span class="k">:</span> <span class="kt">AsyncStream</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">AsyncStream</span><span class="o">.</span><span class="n">fromFuture</span><span class="o">(</span><span class="n">getNext</span><span class="o">())</span> <span class="o">++</span> <span class="n">mkStream</span><span class="o">()</span>
+<span class="k">val</span> <span class="n">unforced</span><span class="k">:</span> <span class="o">()</span> <span class="o">=&gt;</span> <span class="nc">AsyncStream</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="n">mkStream</span><span class="o">()</span>
+</code></pre>
+
+<h3>Iteration with Spool</h3>
+<pre class="highlight scala"><code><span class="k">import</span> <span class="nn">com.twitter.concurrent.Spool</span>
+<span class="k">import</span> <span class="nn">com.twitter.util.Future</span>
+
+<span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">spool</span><span class="k">:</span> <span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Spool</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+<span class="n">spool</span><span class="o">.</span><span class="n">foreach</span> <span class="o">{</span> <span class="n">string</span> <span class="k">=&gt;</span> <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="o">(</span><span class="n">s</span><span class="s">"love to log my string $string"</span><span class="o">)</span> <span class="o">}</span>
+
+<span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">spool</span><span class="k">:</span> <span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Spool</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">newSpool</span><span class="k">:</span> <span class="kt">Spool</span><span class="o">[</span><span class="kt">Int</span><span class="o">]</span> <span class="k">=</span> <span class="n">spool</span><span class="o">.</span><span class="n">map</span> <span class="o">{</span> <span class="n">string</span> <span class="k">=&gt;</span> <span class="n">string</span><span class="o">.</span><span class="n">length</span> <span class="o">}</span>
+</code></pre>
+
+<h3>Iteration with AsyncStream</h3>
+<pre class="highlight scala"><code><span class="k">import</span> <span class="nn">com.twitter.concurrent.AsyncStream</span>
+<span class="k">import</span> <span class="nn">com.twitter.util.Future</span>
+
+<span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">stream</span><span class="k">:</span> <span class="kt">AsyncStream</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">AsyncStream</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+<span class="n">stream</span><span class="o">.</span><span class="n">foreach</span> <span class="o">{</span> <span class="n">string</span> <span class="k">=&gt;</span> <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="o">(</span><span class="n">s</span><span class="s">"love to log my string $string"</span><span class="o">)</span> <span class="o">}</span>
+
+<span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">stream</span><span class="k">:</span> <span class="kt">AsyncStream</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">AsyncStream</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">newStream</span><span class="k">:</span> <span class="kt">AsyncStream</span><span class="o">[</span><span class="kt">Int</span><span class="o">]</span> <span class="k">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">map</span> <span class="o">{</span> <span class="n">string</span> <span class="k">=&gt;</span> <span class="n">string</span><span class="o">.</span><span class="n">length</span> <span class="o">}</span>
+</code></pre>
+
+<h3>Aggregation with Spool</h3>
+<pre class="highlight scala"><code><span class="k">import</span> <span class="nn">com.twitter.concurrent.Spool</span>
+<span class="k">import</span> <span class="nn">com.twitter.util.Future</span>
+
+<span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">spool</span><span class="k">:</span> <span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Spool</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">fullyFolded</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">spool</span><span class="o">.</span><span class="n">foldLeft</span><span class="o">(</span><span class="s">""</span><span class="o">)</span> <span class="o">{</span> <span class="o">(</span><span class="n">acc</span><span class="o">,</span> <span class="n">item</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">acc</span> <span class="o">++</span> <span class="n">item</span> <span class="o">}</span>
+
+<span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">spool</span><span class="k">:</span> <span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Spool</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+<span class="k">def</span> <span class="n">recursing</span><span class="o">(</span><span class="n">spool</span><span class="k">:</span> <span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">spool</span><span class="o">.</span><span class="n">headOption</span> <span class="k">match</span> <span class="o">{</span>
+  <span class="k">case</span> <span class="nc">Some</span><span class="o">(</span><span class="n">head</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="k">if</span> <span class="o">(</span><span class="n">head</span><span class="o">.</span><span class="n">length</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="o">)</span> <span class="n">spool</span><span class="o">.</span><span class="n">tail</span><span class="o">.</span><span class="n">flatMap</span> <span class="o">{</span>
+    <span class="n">next</span> <span class="k">=&gt;</span> <span class="n">recursing</span><span class="o">(</span><span class="n">next</span><span class="o">).</span><span class="n">map</span> <span class="o">{</span> <span class="n">rest</span> <span class="k">=&gt;</span> <span class="n">spool</span><span class="o">.</span><span class="n">head</span> <span class="o">++</span> <span class="n">rest</span> <span class="o">}</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="nc">Future</span><span class="o">.</span><span class="n">value</span><span class="o">(</span><span class="n">head</span><span class="o">)</span>
+  <span class="k">case</span> <span class="nc">None</span> <span class="k">=&gt;</span> <span class="nc">Future</span><span class="o">.</span><span class="n">value</span><span class="o">(</span><span class="s">""</span><span class="o">)</span>
+<span class="o">}</span>
+<span class="k">val</span> <span class="n">partiallyForced</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">recursing</span><span class="o">(</span><span class="n">spool</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">spool</span><span class="k">:</span> <span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Spool</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+<span class="k">def</span> <span class="n">split</span><span class="o">(</span><span class="n">item</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Spool</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="n">grouped</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="n">toSeq</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">result</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">Spool</span><span class="o">[</span><span class="kt">String</span><span class="o">]]</span> <span class="k">=</span> <span class="n">spool</span><span class="o">.</span><span class="n">flatMap</span> <span class="o">{</span> <span class="n">item</span> <span class="k">=&gt;</span> <span class="nc">Future</span><span class="o">.</span><span class="n">value</span><span class="o">(</span><span class="n">split</span><span class="o">(</span><span class="n">item</span><span class="o">))</span> <span class="o">}</span>
+</code></pre>
+
+<h3>Aggregation with AsyncStream</h3>
+<pre class="highlight scala"><code><span class="k">import</span> <span class="nn">com.twitter.concurrent.AsyncStream</span>
+<span class="k">import</span> <span class="nn">com.twitter.util.Future</span>
+
+<span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">stream</span><span class="k">:</span> <span class="kt">AsyncStream</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">AsyncStream</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">fullyFolded</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">foldLeft</span><span class="o">(</span><span class="s">""</span><span class="o">)</span> <span class="o">{</span> <span class="o">(</span><span class="n">acc</span><span class="o">,</span> <span class="n">item</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">acc</span> <span class="o">++</span> <span class="n">item</span> <span class="o">}</span>
+
+<span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">stream</span><span class="k">:</span> <span class="kt">AsyncStream</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">AsyncStream</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+<span class="k">def</span> <span class="n">continue</span><span class="o">(</span><span class="n">next</span><span class="k">:</span> <span class="kt">String</span><span class="o">,</span> <span class="n">acc</span><span class="k">:</span> <span class="o">=&gt;</span> <span class="nc">Future</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="k">if</span> <span class="o">(</span><span class="n">next</span><span class="o">.</span><span class="n">length</span> <span class="o">&gt;</span> <span class="mi">6</span><span class="o">)</span> <span class="nc">Future</span><span class="o">.</span><span class="n">value</span><span class="o">(</span><span class="n">next</span><span class="o">)</span> <span class="k">else</span> <span class="n">acc</span><span class="o">.</span><span class="n">map</span> <span class="o">{</span>
+  <span class="n">string</span> <span class="k">=&gt;</span> <span class="n">next</span> <span class="o">++</span> <span class="n">string</span>
+<span class="o">}</span>
+<span class="k">val</span> <span class="n">partiallyForced</span><span class="k">:</span> <span class="kt">Future</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">foldRight</span><span class="o">(</span><span class="nc">Future</span><span class="o">.</span><span class="n">value</span><span class="o">(</span><span class="s">""</span><span class="o">))(</span><span class="n">continue</span> <span class="k">_</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">results</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"i"</span><span class="o">,</span> <span class="s">"have"</span><span class="o">,</span> <span class="s">"many"</span><span class="o">,</span> <span class="s">"wonderful"</span><span class="o">,</span> <span class="s">"strings"</span><span class="o">)</span> <span class="c1">// many nice strings
+</span><span class="k">val</span> <span class="n">stream</span><span class="k">:</span> <span class="kt">AsyncStream</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">AsyncStream</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">results</span><span class="o">)</span>
+<span class="k">def</span> <span class="n">split</span><span class="o">(</span><span class="n">item</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span><span class="k">:</span> <span class="kt">AsyncStream</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="nc">AsyncStream</span><span class="o">.</span><span class="n">fromSeq</span><span class="o">(</span><span class="n">item</span><span class="o">.</span><span class="n">grouped</span><span class="o">(</span><span class="mi">1</span><span class="o">).</span><span class="n">toSeq</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">result</span><span class="k">:</span> <span class="kt">AsyncStream</span><span class="o">[</span><span class="kt">String</span><span class="o">]</span> <span class="k">=</span> <span class="n">stream</span><span class="o">.</span><span class="n">flatMap</span><span class="o">(</span><span class="n">split</span><span class="o">)</span>
+</code></pre>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

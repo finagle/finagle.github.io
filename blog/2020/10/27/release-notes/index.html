@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>October 2020 Release Notes - Version 20.10.0 🎃</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Jing Yan</h4>
+      <p class="author-twitter"><a href="https://twitter.com/freshlemonfish">@freshlemonfish</a></p>
+    </div>
+    <p><em>Posted October 27, 2020</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>October 2020 Release Notes - Version 20.10.0 🎃</h1>
+  
+  <p>Trick or&hellip; our October release is as sweet as candies 👻</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  finagle-thrift: Change the partition locator function getLogicalPartitionId in
+PartitioningStrategy from Int =&gt; Int to Int =&gt; Seq[Int], which supports many to many mapping
+from hosts and logical partitions. <a href="https://github.com/twitter/finagle/commit/ab641adccaff073f26ed63624c32eb584a47addf">ab641adc</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  finagle-core: Disable eager connections for balancers with a non 1.0 weight. <a href="https://github.com/twitter/finagle/commit/11eae0d6b87a73a6ec11edf22a4c6a2bb7b35c68">11eae0d6</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Added</h4>
+
+<ul>
+<li><p>finatra-kafka-streams: Add toCluster DSL call to publish to another Kafka cluster. <a href="https://github.com/twitter/finatra/commit/449eea1aa27f48ae9fbbacb104f841f7fe9b7d69">449eea1a</a></p></li>
+<li><p>jackson: Add support for validating @JsonCreator annotated static (e.g., companion object defined apply methods) or secondary case class constructors. <a href="https://github.com/twitter/finatra/commit/1c1b55c99461b38aa18e82199a4b650ca393937f">1c1b55c9</a></p></li>
+<li><p>inject-app: Allow injecting flags without default values as both scala.Option and java.util.Optional. <a href="https://github.com/twitter/finatra/commit/b74fe9e949c983c8ab75f61976419b646013c537">b74fe9e9</a></p></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  utils: Undo usage of TypesApi for help in determining if a class is a Scala case class
+as this fails for generic case classes in Scala 2.11, failing some supported cases for
+Jackson processing. <a href="https://github.com/twitter/finatra/commit/b1d43381b000ed6aa130bc40ca5cb2e4d2548dad">b1d43381</a></li>
+<li>  utils: Update ClassUtils#simpleName to handle when package names have underscores
+followed by a number which throws an InternalError. Add tests. <a href="https://github.com/twitter/finatra/commit/bbc0cf7b6034d1e0eac7ed90b9fc394cdb03776c">bbc0cf7b</a></li>
+<li>  utils: Revamp ClassUtils#isCaseClass to use the TypesApi for help in determining
+if a class is a Scala case class. Add tests. <a href="https://github.com/twitter/finatra/commit/bbc0cf7b6034d1e0eac7ed90b9fc394cdb03776c">bbc0cf7b</a></li>
+<li>  http: The http server did not properly log the bound address on server startup. Fix this
+and make the thrift server consistent. <a href="https://github.com/twitter/finatra/commit/4410ff38961a0187c862dfb9ee4c0c5cbbe9c91e">4410ff38</a></li>
+<li>  utils: (BREAKING API CHANGE) Rename maybeIsCaseClass to notCaseClass in
+ClassUtils and change the scope of the method. <a href="https://github.com/twitter/finatra/commit/82ffb4be9428fa318189575b645a5b24d3ab610f">82ffb4be</a></li>
+<li>  http: Adding support for optionally passing chain in the TLS sever trait. <a href="https://github.com/twitter/finatra/commit/5bcce35c8f53111d52050953e1f96acc32f8ce5a">5bcce35c</a></li>
+<li>  finatra: Bump version of Joda-Time to 2.10.8. <a href="https://github.com/twitter/finatra/commit/e2cbca30374cc1998bdf453a3cb501aa3045e7de">e2cbca30</a></li>
+</ul>
+
+<h4>Fixed</h4>
+
+<ul>
+<li><p>finatra-kafka-streams: Revert AsyncTransformer to still use ConcurrentHashMap. <a href="https://github.com/twitter/finatra/commit/7d5b3ccf030582ffc3b704c43c6fd47eb21ca7bc">7d5b3ccf</a></p></li>
+<li><p>inject-thrift-client: The Singleton annotation has been removed from the DarkTrafficFilter and the JavaDarkTrafficFilter. It was there in error. <a href="https://github.com/twitter/finatra/commit/5efc1ab237899be7cb3d8985484ed8f135c4d496">5efc1ab2</a></p></li>
+<li><p>inject-thrift-client: When using RepRepServicePerEndpoint, Finatra&rsquo;s DarkTrafficFilter would throw a NoSuchMethodException when trying to lookup an inherited Thrift endpoint.
+<a href="https://github.com/twitter/finatra/commit/697b21375c934454673d3c6429a4395b2a17a67e">697b2137</a></p></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>  util-stat: MetricBuilder now uses a configurable metadataScopeSeparator to align
+more closely with the metrics.json api. Services with an overridden scopeSeparator will
+now see that reflected in metric_metadata.json where previously it was erroneously using
+/ in all cases. <a href="https://github.com/twitter/util/commit/7665b9eb09adaaa282e65f32b040aeb14ce29c3b">7665b9eb</a></li>
+<li>  util-slf4j-api: Better Java interop. Deprecate c.t.util.logging.Loggers as Java users should be
+able to use the c.t.util.logging.Logger companion object with less verbosity required.
+<a href="https://github.com/twitter/util/commit/26e7874bfe4fdc7b338acfbd74612b414adf7118">26e7874b</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<p>No Changes</p>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<p>No Changes</p>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

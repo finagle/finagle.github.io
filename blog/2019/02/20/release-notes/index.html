@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>February 2019 Release Notes - Version 19.2.0 ☔️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Yufan Gong</h4>
+      <p class="author-twitter"><a href="https://twitter.com/yufangong">@yufangong</a></p>
+    </div>
+    <p><em>Posted February 20, 2019</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>February 2019 Release Notes - Version 19.2.0 ☔️</h1>
+  
+  <p>It is the rainy season in San Francisco, grab a cup of hot tea and take a look at our new February release!</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li><p>finagle-core: Added gauge <code>is_marked_dead</code> as an indicator of whether the host is marked
+as dead(1) or not(0) in <code>FailFastFactory</code>. <a href="https://github.com/twitter/finagle/commit/068a15e685dc5dda02ef098b1031378c04f1b9cc">068a15e6</a></p></li>
+<li><p>finagle-core: <code>KeyCredentials.CertsAndKey</code> has been added as an option for
+<code>c.t.f.ssl.KeyCredentials</code> for when the certificate and certificate chain are
+contained within the same file. <a href="https://github.com/twitter/finagle/commit/b4a9e8cdbc79c27d6ff909f810e072115c7cbc4b">b4a9e8cd</a></p></li>
+<li><p>finagle-thriftmux: Additional information is now annotated in traces for clients
+using Scrooge generated Thrift bindings. <a href="https://github.com/twitter/finagle/commit/c69a22f8a174e86aca2e72ddcdc98f3a5927157b">c69a22f8</a>, <a href="https://github.com/twitter/finagle/commit/32d9b56b905b13035bf5f92ad9639371e9e7e631">32d9b56b</a>,
+<a href="https://github.com/twitter/finagle/commit/6283c6ce95bf4dda1c826c41cd3a6a2b15f38327">6283c6ce</a>.
+This includes:</p>
+
+<ul>
+<li>RPC method name</li>
+<li>Request serialization time, in nanoseconds</li>
+<li>Request deserialization time, in nanoseconds</li>
+<li>Response serialization time, in nanoseconds</li>
+<li>Response deserialization time, in nanoseconds</li>
+</ul></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li><p>finagle-http: Removed <code>Http.Client.withCompressionLevel</code> because it wasn&rsquo;t doing anything.
+To migrate your client, simply remove the configuration&ndash;it had absolutely no effect.
+<a href="https://github.com/twitter/finagle/commit/8794437119a6b7c492657e3e13ead7f0021d0494">87944371</a></p></li>
+<li><p>finagle-http: <code>c.t.f.dispatch.ExpiringServerDispatcher</code> was dead code. We removed it.
+<a href="https://github.com/twitter/finagle/commit/ae0571c9dbc88b1708f2dc338c2511318812c3c3">ae0571c9</a></p></li>
+<li><p>finagle-thrift: Removed <code>newIface</code> and <code>newServiceIface</code> methods from
+<code>c.t.f.thrift.ThriftRichClient.MultiplexedThriftClient</code>, which are deprecated in November 2017.
+<a href="https://github.com/twitter/finagle/commit/773b6e57ab38c45c0dbecc4438fe0b3d9bcb2e12">773b6e57</a></p></li>
+<li><p>finagle-thrift: Removed deprecated APIs located in Thrift.scala:</p>
+
+<ol>
+<li>c.t.f.Thrift.Client.stats
+=&gt; use c.t.f.Thrift.Client.clientParam.clientStats</li>
+<li>c.t.f.Thrift.withProtocolFactory
+=&gt; use c.t.f.Thrift.client.withProtocolFactory</li>
+<li>c.t.f.Thrift.withClientId
+=&gt; usec.t.f.Thrift.client.withClientId</li>
+<li>c.t.f.Thrift.Server.serverLabel
+=&gt; use c.t.f.Thrift.Server.serverParam.serviceName</li>
+<li>c.t.f.Thrift.Server.serverStats
+=&gt; use c.t.f.Thrift.Server.serverParam.serverStats</li>
+<li>c.t.f.Thrift.Server.maxThriftBufferSize
+=&gt; use c.t.f.Thrift.Server.serverParam.maxThriftBufferSize
+<a href="https://github.com/twitter/finagle/commit/c6eb20207376a86f59ef34753da39a27390faf18">c6eb2020</a></li>
+</ol></li>
+<li><p>finagle-thrift: <code>c.t.f.thrift.ThriftServiceIface.Filterable</code> is removed, use
+<code>c.t.f.thrift.service.Filterable</code> instead. <a href="https://github.com/twitter/finagle/commit/23affacc34d7559d89bbd7ce9d0fe9720f584e92">23affacc</a></p></li>
+<li><p>finagle-thrift: <code>c.t.f.thrift.ThriftServiceIface</code> is removed, use
+<code>c.t.f.thrift.service.ThriftServicePerEndpoint</code> instead. <a href="https://github.com/twitter/finagle/commit/23affacc34d7559d89bbd7ce9d0fe9720f584e92">23affacc</a></p></li>
+<li><p>finagle-thriftmux: Removed deprecated APIs located in ThriftMux.scala:</p>
+
+<ol>
+<li>c.t.f.ThriftMux.Client.stats
+=&gt; use c.t.f.ThriftMux.Clien.clientParam.clientStats</li>
+<li>c.t.f.ThriftMux.Server.serverLabel
+=&gt; use c.t.f.ThriftMux.Server.serverParam.serviceName</li>
+<li>c.t.f.ThriftMux.Server.serverStats
+=&gt; use c.t.f.ThriftMux.Server.serverParam.serverStats</li>
+<li>c.t.f.ThriftMux.Server.maxThriftBufferSize
+=&gt; use c.t.f.ThriftMux.Server.serverParam.maxThriftBufferSize
+<a href="https://github.com/twitter/finagle/commit/c6eb20207376a86f59ef34753da39a27390faf18">c6eb2020</a></li>
+</ol></li>
+<li><p>finagle-thriftmux: <code>ThriftMux.Client.pushMuxer</code> is removed. Use <code>ThriftMux.Client.standardMuxer</code>
+instead. <a href="https://github.com/twitter/finagle/commit/90333b1acaae9ebf2d34358b183574598c3b1c83">90333b1a</a></p></li>
+<li><p>finagle-thriftmux: <code>ThriftMux.serverMuxer</code> is removed. Use <code>ThriftMux.Server.defaultMuxer</code>
+instead. <a href="https://github.com/twitter/finagle/commit/90333b1acaae9ebf2d34358b183574598c3b1c83">90333b1a</a></p></li>
+<li><p>finagle-base-http: Removed the <code>c.t.f.http.Statuses</code> java helper, which was deprecated two years
+ago in favor of using <code>c.t.f.http.Status</code> directly. <a href="https://github.com/twitter/finagle/commit/75a4a2097540d3577f1a72611340c371974b8406">75a4a209</a></p></li>
+<li><p>finagle-base-http: Removed the <code>c.t.f.http.Versions</code> java helper, which was deprecated two years
+ago in favor of using <code>c.t.f.http.Version</code> directly. <a href="https://github.com/twitter/finagle/commit/f191f1db1cbcb8d5dac7e9e295e7e09c21762a75">f191f1db</a></p></li>
+<li><p>finagle-base-http: Removed the <code>c.t.f.http.Methods</code> java helper, which was deprecated two years
+ago in favor of using <code>c.t.f.http.Method</code> directly. <a href="https://github.com/twitter/finagle/commit/ccf10dbc54f33313860d4f1a229537a2d9677a07">ccf10dbc</a></p></li>
+<li><p>finagle-http: <code>c.t.f.http.Response.Ok</code> was removed. Use just <code>Response()</code> or <code>Response.Proxy</code>
+if you need to mock it. <a href="https://github.com/twitter/finagle/commit/d93bb1c97c96312fb2354d552fc6d83f29e6e975">d93bb1c9</a></p></li>
+<li><p>finagle-core: <code>Drv.Aliased</code> and <code>Drv.newVose</code> are now private, please
+construct a <code>Drv</code> instance using <code>Drv.apply</code> or <code>Drv.fromWeights</code>.
+<a href="https://github.com/twitter/finagle/commit/9c810dd3b5f5111f2ad4abdab56a6b09a65cc05d">9c810dd3</a></p></li>
+<li><p>finagle-core: <code>c.t.f.BackupRequestLost</code> is now removed. Please use <code>c.t.f.Failure.ignorable</code>
+instead. <a href="https://github.com/twitter/finagle/commit/02d3d524b64dd6ba9af4f4b5104c901abeb9b9f5">02d3d524</a></p></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li><p>finagle-http: Fix for a bug where HTTP/2 clients could retry requests that had a chunked
+body even if the request body was consumed. <a href="https://github.com/twitter/finagle/commit/b031e757a624ba082397a849e7fad26073b6e6f1">b031e757</a></p></li>
+<li><p>finagle-http: Fix for a bug where HTTP clients could assume connections are reusable, despite
+having streaming requests in flight. <a href="https://github.com/twitter/finagle/commit/88a2d0ba683124fb390d8e9367ccd5959bd5df27">88a2d0ba</a></p></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li><p>finagle-core: Faster <code>Filters</code>. Removes unnecessary <code>Service.rescue</code> proxies from
+the intermediate <code>andThen</code>-ed <code>Filters</code>. Previously in rare cases you might have seen
+a raw <code>Exception</code> not wrapped in a <code>Future</code> if the <code>Filter</code> threw. These will now
+consistently be lifted into a <code>Future.exception</code>. <a href="https://github.com/twitter/finagle/commit/a2ddc72761885782fbf7ee8dec335aeb190dc027">a2ddc727</a></p></li>
+<li><p>finagle-core: MethodBuilder metrics filtering updated to now report rolled-up
+logical failures. <a href="https://github.com/twitter/finagle/commit/6e3bf33f83cfe211163233ce430d17b533b2fe14">6e3bf33f</a></p></li>
+<li><p>finagle-http: Disabling Netty3 cookies in favor of Netty4 cookies. <a href="https://github.com/twitter/finagle/commit/fccd92c6f9a1ebc4053f07f90047e4fcbab8414e">fccd92c6</a></p></li>
+<li><p>finagle-http: Removed the debug metrics <code>http/cookie/dropped_samesites</code> and
+<code>http/cookie/flagless_samesites</code>. <a href="https://github.com/twitter/finagle/commit/2de928ce4bb6973fe38160de3e174ecfc147f5b0">2de928ce</a></p></li>
+</ul>
+
+<h4>Deprecations</h4>
+
+<ul>
+<li><p>finagle-core: Multi-param legacy <code>tls</code> methods have been deprecated in
+<code>c.t.f.param.ServerTransportParams</code> and <code>c.t.f.builder.ServerBuilder</code>. Users should migrate
+to using the <code>tls(SslServerConfiguration)</code> method instead. <a href="https://github.com/twitter/finagle/commit/fbfc6d1aac4bd242bd546a9bbfa87deb53bea280">fbfc6d1a</a></p></li>
+<li><p>finagle-core: <code>$client.withSession.maxIdleTime</code> is now deprecated; use
+<code>$client.withSessionPool.ttl</code> instead to set the maximum allowed duration a connection may be
+cached for.  <a href="https://github.com/twitter/finagle/commit/0f060e3701f48e27f108a4911e156b8180f0c5aa">0f060e37</a></p></li>
+<li><p>finagle-serversets: <code>c.t.f.zookeeper.ZkResolver</code> has been deprecated in favor
+of <code>c.t.f.serverset2.Zk2Resolver</code>. <a href="https://github.com/twitter/finagle/commit/9878a9ec32e9605caa58728e469d694c18fed1e7">9878a9ec</a></p></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Added</h4>
+
+<ul>
+<li><p>finatra-kafka: Expose timeout duration in FinagleKafkaConsumerBuilder dest(). <a href="https://github.com/twitter/finatra/commit/abd68ddfc6393e816c97079a28eb9ab10cb3a3d3">abd68ddf</a></p></li>
+<li><p>finatra-kafka-streams: Expose all existing RocksDb configurations. See
+<code>c.t.f.k.config.FinatraRocksDBConfig</code> for details on flag names,
+descriptions and default values. <a href="https://github.com/twitter/finatra/commit/1454867ca2b2b4e59fecdfcb8f97d57d8853ada4">1454867c</a></p></li>
+<li><p>finatra-kafka-streams: Added two RocksDB flags related to block cache tuning,
+<code>cache_index_and_filter_blocks</code> and <code>pin_l0_filter_and_index_blocks_in_cache</code>.
+<a href="https://github.com/twitter/finatra/commit/3b0931e399877ce51d8b1e861ee7fc4e537932d2">3b0931e3</a></p></li>
+<li><p>finatra-kafka: Adding an implicit implementation of
+<code>c.t.app.Flaggable[c.t.finatra.kafka.domain.SeekStrategy]</code>
+and <code>c.t.app.Flaggable[org.apache.kafka.clients.consumer.OffsetResetStrategy]</code>.
+<a href="https://github.com/twitter/finatra/commit/ef071e546966d21b70d085a654810b158ae49169">ef071e54</a></p></li>
+<li><p>finatra-http: Added support to serve <code>c.t.io.Reader</code> as a streaming response in
+<code>c.t.finatra.http.internal.marshalling.CallbackConverter</code>. <a href="https://github.com/twitter/finatra/commit/e5bda446476e98d7ccf6053a3d6cb4b404948cc1">e5bda446</a></p></li>
+<li><p>finatra-kafka: Expose endOffsets() in FinagleKafkaConsumer. <a href="https://github.com/twitter/finatra/commit/bcbb57748bbfad717d3151353a8962a58b20b593">bcbb5774</a></p></li>
+<li><p>finatra-kafka-streams: Adding missing ScalaDocs. Adding metric for elapsed state
+restore time. RocksDB configuration now contains a flag for adjusting the number
+of cache shard bits, <code>rocksdb.block.cache.shard.bits</code>. <a href="https://github.com/twitter/finatra/commit/afd9a17c9d7223065dfb37e7d6c006da21c1b2d4">afd9a17c</a></p></li>
+<li><p>finatra-jackson: Added @Pattern annotation to support finatra/jackson for regex pattern
+validation on string values. <a href="https://github.com/twitter/finatra/commit/862f0ab15660145fb8c3f432da544950a57747e9">862f0ab1</a></p></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li><p>finatra-kafka-streams: Refactor package names. All classes moved from
+com.twitter.finatra.streams to com.twitter.finatra.kafkastreams. <a href="https://github.com/twitter/finatra/commit/a2ad0ef3df8de67486a49ddcc3661fb030a3670c">a2ad0ef3</a></p></li>
+<li><p>finatra-kafka-streams: Delete deprecated and unused classes. <a href="https://github.com/twitter/finatra/commit/ee948398653e7f387d29e815dec0d7b651bb9305">ee948398</a></p></li>
+<li><p>finatra-kafka-streams: <code>c.t.finatra.streams.transformer.domain.Time</code> is now the canonical
+representation of time for watermarks and timers. <code>RichLong</code> implicit from
+<code>com.twitter.finatra.streams.converters.time</code> has been renamed to <code>RichFinatraKafkaStreamsLong</code>.
+<a href="https://github.com/twitter/finatra/commit/093b31b8739dc8e776c7d9d78b0059dd7e880ce1">093b31b8</a></p></li>
+<li><p>finatra-jackson: Fix <code>CaseClassField</code> annotation reflection for Scala 2.12. <a href="https://github.com/twitter/finatra/commit/3747c1ab12abd53739e277834370f1e8c951b0ad">3747c1ab</a></p></li>
+<li><p>finatra-kafka-streams: Combine FinatraTransformer with FinatraTransformerV2. <a href="https://github.com/twitter/finatra/commit/cd455c43d2b25415248228862f8b96991a494a54">cd455c43</a></p></li>
+<li><p>finatra-thrift: The return type of <code>ReqRepDarkTrafficFilterModule#newFilter</code> has been changed from
+<code>DarkTrafficFilter[MethodIface]</code> to <code>Filter.TypeAgnostic</code>. <a href="https://github.com/twitter/finatra/commit/50184f1ba1876dc4465ec0df5d8847692e87a0e5">50184f1b</a></p></li>
+<li><p>finatra-kafka: Add lookupBootstrapServers function that takes timeout as a parameter.
+<a href="https://github.com/twitter/finatra/commit/e3426fb98a320b2bf9bd48ef62843337e9a928e4">e3426fb9</a></p></li>
+<li><p>finatra-thrift: If a Controller is not configured with exactly one endpoint
+per method, it will throw an AssertionError instead of logging an error message.
+An attempt to use non-legacy functionality with a legacy Controller will throw
+an AssertionError. <a href="https://github.com/twitter/finatra/commit/d1d6d1e079faa05b3ac1a8a42b792f56cd12f777">d1d6d1e0</a></p></li>
+<li><p>finatra-kafka: Add flags for controlling rocksdb internal LOG file growth.</p>
+
+<ul>
+<li><code>rocksdb.log.info.level</code> Allows the setting of rocks log levels
+<code>DEBUG_LEVEL</code>, <code>INFO_LEVEL</code>, <code>WARN_LEVEL</code>, <code>ERROR_LEVEL</code>, <code>FATAL_LEVEL</code>,
+<code>HEADER_LEVEL</code>.</li>
+<li><code>rocksdb.log.max.file.size</code> The maximal size of the info log file.</li>
+<li><code>rocksdb.log.keep.file.num</code> Maximal info log files to be kept.
+<a href="https://github.com/twitter/finatra/commit/c03a497c0b96edae20671c4ab5ad754056a9d329">c03a497c</a></li>
+</ul></li>
+<li><p>finatra-kafka: Add admin routes for properties and topology information</p>
+
+<ul>
+<li><code>/admin/kafka/streams/properties</code> Dumps the
+<code>KafkaStreamsTwitterServer#properties</code> as plain text in the TwitterServer
+admin page.</li>
+<li><code>/admin/kafka/streams/topology</code> Dumps the
+<code>KafkaStreamsTwitterServer#topology</code> as plain text in the TwitterServer
+admin page.
+<a href="https://github.com/twitter/finatra/commit/ecf2e54f685a3f017175fb1711d2666439c9bfed">ecf2e54f</a></li>
+</ul></li>
+<li><p>inject-server: EmbeddedTwitterServer that fails to start will now continue to
+throw the startup failure on calls to methods that require a successfully started server.
+<a href="https://github.com/twitter/finatra/commit/3ca4437cf9b2755692375de4e468d720a78836a4">3ca4437c</a></p></li>
+</ul>
+
+<h4>Fixed</h4>
+
+<ul>
+<li><p>finatra-kafka-streams: <code>FinatraTopologyTester</code> did not set
+<code>TopologyTestDriver#initialWallClockTimeMs</code> on initialization causing diverging wall clock time
+when <code>TopologyTestDriver#advanceWallClockTime</code> advanced time. The divergence was between
+system time set by <code>org.joda.time.DateTimeUtils.setCurrentMillisFixed</code> and internal mock timer
+<code>TopologyTestDriver#mockWallClockTime</code>. <code>FinatraTopologyTester.inMemoryStatsReceiver</code> is reset on
+<code>TopologyFeatureTest#beforeEach</code> for all test that extend <code>TopologyFeatureTest</code>.
+<a href="https://github.com/twitter/finatra/commit/3b93a7d7d0316d49489cf7882d0a424278d66cd7">3b93a7d7</a></p></li>
+<li><p>finatra-kafka-streams: Improve watermark assignment/propagation upon reading the first
+message and when caching key value stores are used. <a href="https://github.com/twitter/finatra/commit/9aa12b8db05360853443cb60d975423e8af8048b">9aa12b8d</a></p></li>
+<li><p>finatra-jackson: Support inherited annotations in case class deserialization. Case class
+deserialization support does not properly find inherited Jackson annotations. This means
+that code like this:</p></li>
+</ul>
+<pre class="highlight plaintext"><code>  trait MyTrait {
+    @JsonProperty("differentName")
+    def name: String
+  }
+  case class MyCaseClass(name: String) extends MyTrait
+</code></pre>
+
+<p>would not properly expect an incoming field with name <code>differentName</code> to parse into the
+  case class <code>name</code> field. This commit provides support for capturing inherited annotations
+  on case class fields. Annotations processed in order, thus if the same annotation appears
+  in the class hierarchy multiple times, the value configured on the class will win otherwise
+  will be in the order of trait linearization with the &ldquo;last&rdquo; declaration prevailing.
+  <a href="https://github.com/twitter/finatra/commit/6237ff86718e6e91fd0a5174fa17718fa740005f">6237ff86</a></p>
+
+<ul>
+<li>finatra: Remove extraneous dependency on old <code>javax.servlet</code> ServletAPI dependency.
+The fixes #478. <a href="https://github.com/twitter/finatra/commit/851009524e0a9f9d40fbc1ef97a0d16ccd93dac5">85100952</a></li>
+</ul>
+
+<h4>Closed</h4>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<p>No Changes</p>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<p>No Changes</p>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li><p>util-core: updated <code>Reader#fromFuture</code> to resolve its <code>onClose</code> when reading of end-of-stream.
+<a href="https://github.com/twitter/util/commit/f2a05474ec41f34146d710bdc2a789efd6da9d21">f2a05474</a></p></li>
+<li><p>util-core: Added <code>Reader.flatten</code> to flatten a <code>Reader[Reader[_]]</code> to <code>Reader[_]</code>,
+and <code>Reader.fromSeq</code> to create a new Reader from a Seq. <a href="https://github.com/twitter/util/commit/a49bab4db50b09f2516805cb82a318d6b0557c8c">a49bab4d</a></p></li>
+<li><p>util-core: Added <code>Duration.fromMinutes</code> to return a <code>Duration</code> from a given number of minutes.
+<a href="https://github.com/twitter/util/commit/eda0b390f3ac61fc3dd01df6255c18ef807f6920">eda0b390</a></p></li>
+<li><p>util-core: If given a <code>Timer</code> upon construction, <code>c.t.io.Pipe</code> will respect the close
+deadline and wait the given amount of time for any pending writes to be read. <a href="https://github.com/twitter/util/commit/0a142872237b2709c1228bcedf9441cde2164af6">0a142872</a></p></li>
+<li><p>util-core: Optimized <code>ConstFuture.proxyTo</code> which brings the performance of
+<code>flatMap</code> and <code>transform</code> of a <code>ConstFuture</code> in line with <code>map</code>. <a href="https://github.com/twitter/util/commit/de4cebda30c90f2461990e623e8a842f57249534">de4cebda</a></p></li>
+<li><p>util-core: Experimental toggle (com.twitter.util.BypassScheduler) for speeding up
+<code>ConstFuture.map</code> (<code>transformTry</code>). The mechanism, when turned on, runs map operations
+immediately (why not when we have a concrete value), instead of via the Scheduler, where it may
+be queued and potentially reordered, e.g.:
+<code>f.flatMap { _ =&gt; println(1); g.map { _ =&gt; println(2) }; println(3) }</code> will print <code>1 2 3</code>,
+where it would have printed <code>1 3 2</code>. <a href="https://github.com/twitter/util/commit/aeafba1a4f547dc0e543a3bcea596ceb78ff4e63">aeafba1a</a></p></li>
+<li><p>util-security: <code>Pkcs8KeyManagerFactory</code> now supports a certificates file which contains multiple
+certificates that are part of the same certificate chain. <a href="https://github.com/twitter/util/commit/337e270f8fbdb5dd76ec01573e5262c0ab2054bd">337e270f</a></p></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>util-core: Fixed the behavior in <code>c.t.io.Reader</code> where <code>Reader#flatMap</code> fails to propagate
+parent reader&rsquo;s <code>onClose</code>. <a href="https://github.com/twitter/util/commit/f2a05474ec41f34146d710bdc2a789efd6da9d21">f2a05474</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li><p>util-core: Closing a <code>c.t.io.Pipe</code> will notify <code>onClose</code> when the deadline has passed whereas
+before the pipe would wait indefinitely for a read before transitioning to the Closed state.
+<a href="https://github.com/twitter/util/commit/0a142872237b2709c1228bcedf9441cde2164af6">0a142872</a></p></li>
+<li><p>util-core: Don&rsquo;t allow <code>AsyncSemaphore</code> <code>Permit</code>s to be released multiple times. Before it was
+possible to release a permit more than once and incorrectly remove waiters from the queue.
+With this change, the <code>release</code> permit operation is idempotent. <a href="https://github.com/twitter/util/commit/ea24c9510623bdc4d0e35f21fa4ba2c7a66d4279">ea24c951</a></p></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li><p>util-core: Remove <code>c.t.u.CountDownLatch</code> which is an extremely thin shim around
+<code>j.u.c.CountDownLatch</code> that provides pretty limited value.  To migrate to <code>j.u.c.CountDownLatch</code>,
+instead of <code>c.t.u.CountDownLatch#await(Duration)</code>, please use
+<code>j.u.c.CountDownLatch#await(int, TimeUnit)</code>, and instead of
+<code>c.t.u.CountDownLatch#within(Duration)</code>, please throw an exception yourself after awaiting.
+<a href="https://github.com/twitter/util/commit/b9914f15b14e28cc6705cc6b5c876b22087f326b">b9914f15</a></p></li>
+<li><p>util-core: Deprecated conversions in <code>c.t.conversions</code> have new implementations
+that follow a naming scheme of <code>SomethingOps</code>. <a href="https://github.com/twitter/util/commit/df397f5338fb608d20e103307cb57985428fce47">df397f53</a></p>
+
+<ul>
+<li><code>percent</code> is now <code>PercentOps</code></li>
+<li><code>storage</code> is now <code>StorageUnitOps</code></li>
+<li><code>string</code> is now <code>StringOps</code></li>
+<li><code>thread</code> is now <code>ThreadOps</code></li>
+<li><code>time</code> is now <code>DurationOps</code></li>
+<li><code>u64</code> is now <code>U64Ops</code></li>
+</ul></li>
+<li><p>util-collection: Delete util-collection.  We deleted <code>GenerationalQueue</code>, <code>MapToSetAdapter</code>, and
+<code>ImmutableLRU</code>, because we found that they were of little utility.  We deleted <code>LruMap</code> because it
+was a very thin shim around a <code>j.u.LinkedHashMap</code>, where you override <code>removeEldestEntry</code>.  If you
+need <code>SynchronizedLruMap</code>, you can wrap your <code>LinkedHashMap</code> with
+<code>j.u.Collection.synchronizedMap</code>.  We moved <code>RecordSchema</code> into finagle-base-http because it was
+basically only used for HTTP messages, so its new package name is <code>c.t.f.http.collection</code>.
+<a href="https://github.com/twitter/util/commit/60eff0a430fe16912accc5dec4b8c9f574ddc588">60eff0a4</a></p></li>
+<li><p>util-core: Rename <code>BlacklistStatsReceiver</code> to <code>DenylistStatsReceiver</code>. <a href="https://github.com/twitter/util/commit/ed3f7069ffd5640e53776b09bb490b09fd1b8b25">ed3f7069</a></p></li>
+<li><p>util-core: <code>Buf.Composite</code> is now private. Program against more generic, <code>Buf</code> interface instead.
+<a href="https://github.com/twitter/util/commit/41e24395a0d38c2c64c5451a358e7e130a93f6fe">41e24395</a></p></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

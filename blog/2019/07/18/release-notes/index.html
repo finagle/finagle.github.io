@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>July 2019 Release Notes - Version 19.7.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Dorothy Ordogh</h4>
+      <p class="author-twitter"><a href="https://twitter.com/dordogh">@dordogh</a></p>
+    </div>
+    <p><em>Posted July 18, 2019</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>July 2019 Release Notes - Version 19.7.0</h1>
+  
+  <h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  finagle-http: Measure streaming (message.isChunked) chunk payload size with two new histograms:
+stream/request/chunk_payload_bytes and stream/response/chunk_payload_bytes, they are
+published with a debug verbosity level. These chunk payload sizes are also traced via the same
+trace keys. <a href="https://github.com/twitter/finagle/commit/11f4e32cd8e5fcab9fc0de998f3e844f37ab741c">11f4e32c</a></li>
+<li>  finagle-base-http: Add support for new &ldquo;b3&rdquo; tracing header. <a href="https://github.com/twitter/finagle/commit/87218372d0ae81d93c551a0752aec57b3fdaf60d">87218372</a></li>
+<li>  finagle-core: Allow to not bypass SOCKS proxy for localhost by using the GlobalFlag
+-com.twitter.finagle.socks.socksProxyForLocalhost <a href="https://github.com/twitter/finagle/commit/5521bc830f792862bb2aa06847f3f8493c673412">5521bc83</a></li>
+<li>  finagle-core: OffloadFilter flag to reduce network contention. <a href="https://github.com/twitter/finagle/commit/2bd4d61b896d261b3928ce5b6858e7d250e2be39">2bd4d61b</a></li>
+<li>  finagle-exp: Add private c.t.f.exp.ConcurrencyLimitFilter for rejecting requests
+that exceed estimated concurrency limit <a href="https://github.com/twitter/finagle/commit/e331491cb7c9013ac0292e1d39b6fd9f16374b99">e331491c</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  finagle-http: c.t.f.http.Cors has been changed to no longer use the c.t.f.http.Response
+associated with the passed in c.t.f.http.Request. <a href="https://github.com/twitter/finagle/commit/455718a5bec275452d904d09351d10ab0727973a">455718a5</a></li>
+<li>  finagle-http: c.t.f.http.filter.ExceptionFilter has been changed to no longer
+use the c.t.f.http.Response associated with the passed in c.t.f.http.Request.
+<a href="https://github.com/twitter/finagle/commit/54d4acf1918fba9d1711f3591f667fd62fc4e2da">54d4acf1</a></li>
+<li>  finagle-http: Optimize creation of new Http Dispatchers by re-using created metrics and loggers.
+<a href="https://github.com/twitter/finagle/commit/9156f0f82c31b0df689a851712cefcce490aa50f">9156f0f8</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  finagle-base-http: Removed the methods setStatusCode and getStatusCode from
+c.t.f.http.Response which have been deprecated since 2017. <a href="https://github.com/twitter/finagle/commit/20b37b0be21b345622ebe48ad1b16fabd58b7f03">20b37b0b</a></li>
+<li>  finagle-core: All deprecated c.t.f.builder.ServerBuilder#build methods have
+been removed. Users should migrate to using the build method which takes a
+ServiceFactory[Req, Rep] as a parameter. <a href="https://github.com/twitter/finagle/commit/7ae208df0499b89bc3e632502a36463303172074">7ae208df</a></li>
+<li>  finagle-core: The c.t.f.ssl.client.SslClientEngineFactory#getHostname method has been removed.
+All uses should be changed to use the getHostString method of SslClientEngineFactory instead.
+<code>PHAB_ID=DD334087</code></li>
+<li>  finagle-http: The setOriginAndCredentials, setMaxAge, setMethod, and setHeaders methods
+of c.t.f.http.Cors.HttpFilter are no longer overridable. <a href="https://github.com/twitter/finagle/commit/455718a5bec275452d904d09351d10ab0727973a">455718a5</a></li>
+<li>  finagle-http: The details of the c.t.f.Http.HttpImpl class are meant to be implementation
+details so the class constructor was made private along with the fields. Along these same lines
+the c.t.f.Http.H2ClientImpl.transporter method has been moved to a private location.
+<a href="https://github.com/twitter/finagle/commit/1338e508dff6517a1801454cdcad95c1a4b94779">1338e508</a></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>  finagle-core: Ensure ClientDispatcher queueSize gauge is removed on transport
+close, instead of waiting for clean-up at GC time. <a href="https://github.com/twitter/finagle/commit/963e9b84153584184fc47c03c32b5cd5feda8bdc">963e9b84</a></li>
+<li>  finagle-http2: Don&rsquo;t propagate stream dependency information for the H2 client.
+<a href="https://github.com/twitter/finagle/commit/a2e6c0ba5a1e9381fe7306ae128acca92df16021">a2e6c0ba</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Added</h4>
+
+<ul>
+<li>  finatra-kafka-streams: Adding test/sample for FinatraDslWindowedAggregations.aggregate. <a href="https://github.com/twitter/finatra/commit/ae433fc982e7676eacb6cdc18dd53586bb725adf">ae433fc9</a></li>
+<li>  finatra-jackson: Add com.twitter.util.Time deserializer with JsonFormat support.
+<a href="https://github.com/twitter/finatra/commit/ed3d666a78fc80ab2cbac61bff2f5d4b522ebbd4">ed3d666a</a></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  finatra-kafka: BUILD file update compile and runtime deps.
+<a href="https://github.com/twitter/finatra/commit/8241cd7c959536be953fb2767aa09e4a80ebd1b6">8241cd7c</a></li>
+<li><p>finatra-httpclient: introduce new HttpClientModuleTrait and deprecate HttpClientModule.
+The HttpClientModule has been modified to extend from HttpClientModuleTrait to allow
+for bridging the two implementations. c.t.f.httpclient.RichHttpClient has also been deprecated
+as part of this change. The new HttpClientModuleTrait allows for direct configuration of the
+underling c.t.finagle.Http.Client. The new HttpClientModuleTrait does not provide any
+default bindings, so it is up to users to supply them - this allows for custom binding
+annotations and binding multiple HttpClients, which was not previously possible with
+HttpClientModule. <a href="https://github.com/twitter/finatra/commit/fe0c94aaa616c0f1a63516a3278437ac549850c3">fe0c94aa</a></p>
+
+<p>To migrate,</p>
+<pre class="highlight plaintext"><code>class MyHttpClientModule extends HttpClientModule {
+  override val dest = "flag!mydest"   
+  override val sslHostname = Some("sslHost")
+}
+</code></pre>
+
+<p>becomes</p>
+<pre class="highlight plaintext"><code>class MyHttpClientModule extends HttpClientModuleTrait {
+  override val dest = "flag!mydest"
+  override val label = "myhttpclient"
+  val sslHostname = "sslHost"  
+  // we only override in this example for TLS configuration with the `sslHostname`
+  override def configureClient(
+    injector: Injector,
+    client: Http.Client
+  ): Http.Client = client.withTls(sslHostname)
+
+  @Singleton
+  @Provides
+  final def provideHttpClient(
+    injector: Injector,
+    statsReceiver: StatsReceiver,
+    mapper: FinatraObjectMapper
+  ): HttpClient = newHttpClient(injector, statsReceiver, mapper)
+
+  // Note that `provideHttpClient` no longer needs an injected `Service[Request, Response]` so
+  // the following is only needed if you require a `Service[Request, Response]` elsewhere:
+
+  @Singleton
+  @Provides
+  final def provideHttpService(
+    injector: Injector,
+    statsReceiver: StatsReceiver
+  ): Service[Request, Response] = newService(injector, statsReceiver)
+
+} 
+</code></pre></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>  scrooge-generator: A deprecated \$FinagleClient constructor which does not
+use RichClientParam has been removed. <a href="https://github.com/twitter/scrooge/commit/28061ba9a6879e80946c1ae0a46b0e255fef2372">28061ba9</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<h4>Changes</h4>
+
+<ul>
+<li>  Remove c.t.server.util.TwitterStats as it is dead code. <a href="https://github.com/twitter/twitter-server/commit/55d6d28862f7f260f3171342ad8ca363553bac40">55d6d288</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  util-core: Removed deprecated c.t.concurrent.Scheduler methods usrTime,
+cpuTime, and wallTime. These were deprecated in 2015 and have no
+replacement. <a href="https://github.com/twitter/util/commit/0d77572c76c7c54c0b10a1d25856af16148fe3c4">0d77572c</a></li>
+<li>  util-core: Removed deprecated com.twitter.logging.config classes SyslogFormatterConfig,
+ThrottledHandlerConfig, SyslogHandlerConfig. These were deprecated in 2012 and have
+no replacement. Users are encouraged to use &lsquo;util-slf4j-api&rsquo; where possible. <a href="https://github.com/twitter/util/commit/28d9de59eea2adeac82691a57c1954dffb9596fa">28d9de59</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  util-core: Remove experimental toggle <code>com.twitter.util.BypassScheduler</code> used
+for speeding up <code>ConstFuture.map</code> (<code>transformTry</code>). Now, we always run map
+operations immediately instead of via the Scheduler, where they may be queued
+and potentially reordered. <a href="https://github.com/twitter/util/commit/64114324d8d0d36725cfddac28e99840077f036f">64114324</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

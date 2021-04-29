@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>🍁 September 2020 Release Notes - Version 20.9.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Hamdi Allam</h4>
+      <p class="author-twitter"><a href="https://twitter.com/allam_hamdi">@allam_hamdi</a></p>
+    </div>
+    <p><em>Posted September 25, 2020</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>🍁 September 2020 Release Notes - Version 20.9.0</h1>
+  
+  <p>With the start of Fall 🍁, it is only right for a new release of our libraries! Here&rsquo;s the latest of Finagle, Finatra, Scrooge, TwitterServer, and Util!</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  finagle-core: Add RelativeName field to Metric Metadata and populate it for
+client and server metrics. <a href="https://github.com/twitter/finagle/commit/de589ffad1e51174f96a31e6a58d4123725b5f1c">de589ffa</a></li>
+<li>  finagle-scribe: Add c.t.finagle.scribe.Publisher for publishing messages to a
+Scribe process. <a href="https://github.com/twitter/finagle/commit/7723a949eae3efa0d9a256a816712716e4f10ce5">7723a949</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  finagle: Bump version of Jackson to 2.11.2. <a href="https://github.com/twitter/finagle/commit/6c6c882a2044f752d3462fb619372060b3a92d8b">6c6c882a</a></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>  finagle-core: The TraceId alternative constructor now forwards the traceIdHigh parameter to
+the primary constructor. <a href="https://github.com/twitter/finagle/commit/567e8d66d5659feb876e3e96c4f2e7d257edc971">567e8d66</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Added</h4>
+
+<ul>
+<li>  finatra-inject: TestInjector has been reworked to allow users executing modules&rsquo; lifecycle
+callbacks. Specifically, the TestInjector builder API has been moved under TestInjector.Builder
+to allow TestInjector extends Injector with two new methods: start() and close().
+<a href="https://github.com/twitter/finatra/commit/07bf53face428674b6d6fab97d81ebddaf14396a">07bf53fa</a></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  finatra-kafka-streams: Update and separate the Finatra kafka stream code base which has direct
+dependency on Kafka 2.2. Separate any code which cannot easily be upgraded to separate build
+target. <a href="https://github.com/twitter/finatra/commit/3c78c34df0c55f3b5dec9717d54749a3f5dc751e">3c78c34d</a></li>
+<li>  inject-core: c.t.inject.Injector is now an abstract class. Use Injector.apply to create
+a new instance (versus the new Injector(&hellip;) before). <a href="https://github.com/twitter/finatra/commit/64ba51e97a64f866d951b7e11afc03c5f6a0597b">64ba51e9</a></li>
+<li>  http: Ensure HttpWarmer creates the request exactly the number of times requested and
+mutates the correct objects. <a href="https://github.com/twitter/finatra/commit/0a3be37679922dd7234c6cf5297170da87ca4063">0a3be376</a></li>
+<li>  kafka: Replaced the com.twitter.finatra.kafka.TracingEnabled toggle with a GlobalFlag enabling
+Zipkin tracing for Kafka clients. <a href="https://github.com/twitter/finatra/commit/0e829aae6326ed6a05582d069033094c62714e3f">0e829aae</a></li>
+<li>  finatra: Bump version of Jackson to 2.11.2. <a href="https://github.com/twitter/finatra/commit/94bc773dd2377d02f7c7b71b2581828aa336b55d">94bc773d</a></li>
+</ul>
+
+<h4>Fixed</h4>
+
+<ul>
+<li>  jackson: Fix issue in the handling of unknown properties. The CaseClassDeserializer only
+considered the case where the incoming JSON contained more fields than the case class and
+not the case where the incoming JSON contained less fields than specified in the case class.
+This has been fixed to ensure that when the fields of the JSON do not line up to the
+non-ignored case class fields the handling of unknown properties is properly invoked.
+<a href="https://github.com/twitter/finatra/commit/9762145d00cc679cd80d036d3465b63675f998d8">9762145d</a></li>
+<li>  validation: c.t.f.validation.Validator would throw an IndexOutOfBoundsException when
+trying to validate a case class which contained additional fields that are not included in the
+constructor parameters. <a href="https://github.com/twitter/finatra/commit/bb342c096dfbf0d5de5e9c5b416d65177b37ca8b">bb342c09</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<p>No Changes</p>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<ul>
+<li>  Bump version of Jackson to 2.11.2. <a href="https://github.com/twitter/twitter-server/commit/86992eabf5197bed91bb0ebd277f66b39094f89b">86992eab</a></li>
+<li>  Encode the request URL names in /admin/clients/&lt;client_name&gt; and /admin/servers/&lt;server_name&gt;.
+<a href="https://github.com/twitter/twitter-server/commit/038ce6482d4b3bdd951dfb39abdd40039d87650a">038ce648</a></li>
+<li>  If a client connecting to an instance of TwitterServer is sending a client certificate,
+its expiry date (i.e. Not After) is now included as part of the information listed.
+<a href="https://github.com/twitter/twitter-server/commit/18b8b5276ab9b6d6787fc7a6eb074ba41d20853d">18b8b527</a>.</li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  Add relative_name field to metrics in the Metrics Metadata endpoint and bump the
+endpoints version number to 2.0. <a href="https://github.com/twitter/twitter-server/commit/8b49adea5ff2ddd05f45c4565877679f1b21d79f">8b49adea</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  util-app: Seq/Tuple2/Map flags can now operate on booleans. For example,
+Flag[Seq[Boolean]] now works as expected instead of throwing an assert exception (previous
+behaviour). <a href="https://github.com/twitter/util/commit/e4f54d3c18b0ddc864a36b90ecbcbd7f1ed6b846">e4f54d3c</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  util-app: Flaggable.mandatory now takes implicit ClassTag[T] as an argument. This is change is
+source-compatible in Scala but requires Java users to pass argument explicitly via
+ClassTag\$.MODULE\$.apply(clazz). <a href="https://github.com/twitter/util/commit/b08a02ec68ca2e987ecec0cb5f7b177d9dccb831">b08a02ec</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  util: Bump version of Jackson to 2.11.2. <a href="https://github.com/twitter/util/commit/5d8877dba7cdf278c105ab4747c7886d633dc38b">5d8877db</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

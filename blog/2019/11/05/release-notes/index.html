@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>November 2019 Release Notes - Version 19.11.0 ❄️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Dave Rusek</h4>
+      <p class="author-twitter"><a href="https://twitter.com/davidjrusek">@davidjrusek</a></p>
+    </div>
+    <p><em>Posted November  5, 2019</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>November 2019 Release Notes - Version 19.11.0 ❄️</h1>
+  
+  <p>Now that Halloween has come and gone, it&rsquo;s time to get ready for cold weather fun! ❄️</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  finagle-base-http: The Uri class now provides access publicly to its
+path, which is the request uri without the query parameters.
+<a href="https://github.com/twitter/finagle/commit/f40fe447494c81524900941c7311c697d575698c">f40fe447</a></li>
+<li>  finagle-mysql: Adding native support to finagle-mysql for MySQL JSON Data Type. A client
+can now use jsonAsObjectOrNull[T] or getJsonAsObject[T] APIs on c.t.f.mysql.Row to
+read the underlying json value as type T or use jsonBytesOrNull API to get a raw byte
+array of the the json column value. <a href="https://github.com/twitter/finagle/commit/4d403051b953f76c7899f3ae667d2d0a6e65b544">4d403051</a></li>
+<li>  MySQL integration tests can now run on a port other than the default (3306). Add a port
+property to .finagle-mysql/integration-test.properties to customize the value.
+<a href="https://github.com/twitter/finagle/commit/4d403051b953f76c7899f3ae667d2d0a6e65b544">4d403051</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  finagle: Upgrade to Netty 4.1.43.Final and netty-tcnative 2.0.26.Final. <a href="https://github.com/twitter/finagle/commit/cfaaa471a70ca679f2596b09687b7e1835051764">cfaaa471</a></li>
+<li>  finagle: Add initial support for JDK 11 compatibility. <a href="https://github.com/twitter/finagle/commit/04def84b797e7c3e4615e7fcd74bdae947a862c6">04def84b</a></li>
+<li>  finagle: Upgrade to caffeine 2.8.0 <a href="https://github.com/twitter/finagle/commit/c335b29e7632ce7165e662136beaf377bfc4e24e">c335b29e</a></li>
+<li>  finagle-http2: Nacks in the form of RST(STREAM_REFUSED | ENHANCE_YOUR_CALM) no
+longer surface as a RstException, instead opting for a generic Failure to be
+symmetric with the HTTP/1.x nack behavior. <a href="https://github.com/twitter/finagle/commit/cb67fa33c4b3a482e1545405af444ecbfdc1b3fd">cb67fa33</a></li>
+<li>  finagle-mux: The mux handshake latency stat has be changed to Debug
+verbosity. <a href="https://github.com/twitter/finagle/commit/0eb2cfb680203024e99118d2a87e9d0b762e6094">0eb2cfb6</a></li>
+<li>  finagle-serversets: finagle/serverset2/stabilizer/notify_ms histogram has been downgraded to
+debug verbosity. <a href="https://github.com/twitter/finagle/commit/30d3d0ea432dd20821c0e1d17f6fbc0c92dadae9">30d3d0ea</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  finagle-base-http: c.t.f.http.codec.HttpContext moved into c.t.f.http.codec.context.HttpContext
+<a href="https://github.com/twitter/finagle/commit/cc29b26502f5d47225425d0aa8df3e64c4eb07d2">cc29b265</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Fixed</h4>
+
+<ul>
+<li>  finatra-http: Better handling of URI decoding issues when extracting path parameters for
+routing. If we cannot extract a path pattern, and the exception is not intercepted by a
+user-defined Exception Mapper, we will now explicitly return a 400 - BAD REQUEST.
+Fixes #507. <a href="https://github.com/twitter/finatra/commit/5f293844bb8aa8cc638f869bf739878e3de372d5">5f293844</a></li>
+</ul>
+
+<h4>Added</h4>
+
+<ul>
+<li>  finatra: Add initial support for JDK 11 compatibility. <a href="https://github.com/twitter/finatra/commit/dfc521c94db28116c25bca755a20706136b1573d">dfc521c9</a></li>
+<li>  inject-core: Add support for optional binding in c.t.inject.TwitterModule.
+<a href="https://github.com/twitter/finatra/commit/285da3bbc2d41969eed6678c11d54e9cecdec57e">285da3bb</a></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  finatra-http: (BREAKING API CHANGE) AsyncStream[Buf] =&gt; AsyncStream[String] and
+Reader[Buf] =&gt; Reader[String] handlers will always be tread the output as a JSON arrays of
+Strings. Whereas, before, the incoming bytes would have been converted to String and
+returned as-is. <a href="https://github.com/twitter/finatra/commit/43eaa555fd8ef591ae1c0a387adadc3d268c9150">43eaa555</a></li>
+<li>  finatra: Deprecate c.t.finatra.http.modules.DocRootModule. Introduce FileResolverModule.
+The DocRootModule defines configuration flags for the FileResolver which was moved from
+finatra/http to a more correctly generic location in finatra/utils. However, configuration for
+injection of a properly configured FileResolver is still incorrectly tied to HTTP because of the
+DocRootModule. Thus, we deprecate the DocRootModule and introduce the
+c.t.finatra.modules.FileResolverModule which is defined closer to the
+c.t.finatra.utils.FileResolver in finatra/utils. This allows the FileResolver to be properly
+configured outside of HTTP concerns. <a href="https://github.com/twitter/finatra/commit/5a97b2aac847a374671825986d5c69e6f3740ccf">5a97b2aa</a></li>
+<li>  finatra-thrift: Updated BUILD files for Pants 1:1:1 layout. <a href="https://github.com/twitter/finatra/commit/c46209fd440ab6e1fecb8f156c6accf1e1cdd69f">c46209fd</a></li>
+<li>  inject-ports: Add finatra/inject/inject-ports which has c.t.inject.server.Ports and
+c.t.inject.server.PortUtils. <a href="https://github.com/twitter/finatra/commit/5676d0387353c6e30a2bc3b4d13f1c2a42e33e69">5676d038</a></li>
+<li>  inject-utils: Move AnnotationUtils to c.t.inject.utils.AnnotationUtils and make public
+for use. <a href="https://github.com/twitter/finatra/commit/0ac7af99976c243f12721f5739c5a2346cd7b2e4">0ac7af99</a></li>
+<li>  finatra-http: Updated package structure for Pants 1:1:1 layout. Moved META-INF/mime.types file
+to finatra/utils which is where the FileResolver is located for proper resolution of mime types
+from file extension. <a href="https://github.com/twitter/finatra/commit/57555f8015876d8acc10b5d04b4070b39d51d395">57555f80</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li><p>util: Add initial support for JDK 11 compatibility. <a href="https://github.com/twitter/util/commit/e6970ed1749eefbc3d34bfe36c8ef33ba823210d">e6970ed1</a></p></li>
+<li><p>util-core: Created public method Closable.stopCollectClosablesThread that stops CollectClosables
+thread. <a href="https://github.com/twitter/util/commit/a8260998518a9efc32ece0c5114694674c63072c">a8260998</a></p></li>
+<li><p>util-core: Introduced Reader.fromIterator to create a Reader from an iterator. It is not
+recommended to call iterator.next() after creating a Reader from it. Doing so will affect the
+behavior of Reader.read() because it will skip the value returned from iterator.next.
+<a href="https://github.com/twitter/util/commit/d1b42f4bc8ee281d33ef4a52e2d5295ad410250c">d1b42f4b</a></p></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  util: Upgrade to caffeine 2.8.0 <a href="https://github.com/twitter/util/commit/f35ae591930e2c37a965e66f707bb704f41070d1">f35ae591</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  util-core: Add c.t.io.BufReader.readAll to consume a Reader[Buf] and concat values to a Buf.
+Replace c.t.io.Reader.readAll with Reader.readAllItems, the new API consumes a generic Reader[T],
+and return a Seq of items. <a href="https://github.com/twitter/util/commit/a47a219b618e2dac2135acf5ee629d25fafe480d">a47a219b</a></li>
+<li>  util-core: Moved c.t.io.Reader.chunked to c.t.io.BufReader.chunked, and Reader.framed to
+BufReader.framed. <a href="https://github.com/twitter/util/commit/459038f9533a5c38c6e1f4359aee1227ad772170">459038f9</a></li>
+<li>  util-core: Moved c.t.io.Reader.copy to c.t.io.Pipe.copy, and Reader.copyMany to
+Pipe.copyMany. <a href="https://github.com/twitter/util/commit/5562ebf36a728bef09e6a9104c49c41526538fa2">5562ebf3</a></li>
+</ul>
+
+<h4>Deprecations</h4>
+
+<ul>
+<li>  util-core: Mark c.t.io.BufReaders, c.t.io.Bufs, c.t.io.Readers, and c.t.io.Writers as
+Deprecated. These classes will no longer be needed, and will be removed, after 2.11 support is
+dropped. <a href="https://github.com/twitter/util/commit/844fe24d0e190baaa976971221c88d8b4b7f9ad5">844fe24d</a></li>
+<li>  util-stats: Removed deprecated methods stat0 and counter0 from StatsReceiver. <a href="https://github.com/twitter/util/commit/5119e65c5c947893b15a70b0af05b22b910fc3de">5119e65c</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<ul>
+<li>  Add initial support for JDK 11 compatibility. <a href="https://github.com/twitter/twitter-server/commit/99914111241fbc4b3d4efb5869f3b849b71c8f38">99914111</a></li>
+<li>  The endpoints section of the clients page has been fixed
+to no longer render an incorrect html line break tag. <a href="https://github.com/twitter/twitter-server/commit/4463e9d57f94bc73e67003d1bb9e28e376296557">4463e9d5</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>  scrooge: Add initial support for JDK 11 compatibility. <a href="https://github.com/twitter/scrooge/commit/e7b88e846f3bb7b0c03983e73a18a051aa48d2df">e7b88e84</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

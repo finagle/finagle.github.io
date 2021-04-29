@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>April 2019 Release Notes - Version 19.4.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Vladimir Kostyukov</h4>
+      <p class="author-twitter"><a href="https://twitter.com/vkostyukov">@vkostyukov</a></p>
+    </div>
+    <p><em>Posted April 19, 2019</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>April 2019 Release Notes - Version 19.4.0</h1>
+  
+  <h3>Highlights</h3>
+
+<ul>
+<li>After several years of continuous effort decoupling Finagle from Netty 3, we&rsquo;ve finally got to the
+point the dependency can be dropped. As of this release, there is no Netty 3 artifacts on the
+classpath.</li>
+<li>Finagle HTTP now transmits trailing headers (trailers).</li>
+<li>Finagle HTTP has become more strict with headers validation and is now in compliance with
+RFC7230.</li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  finagle-core: Make <code>maxDepth</code> in <code>Namer</code> configurable. <a href="https://github.com/twitter/finagle/commit/03cc319706182eb86ad1f4eb54041894a2599528">03cc3197</a>
+
+<ul>
+<li>  namerMaxDepth in Namer now configurable through a global flag (<code>namerMaxDepth</code>)</li>
+</ul></li>
+<li>  finagle-core: The newly renamed <code>SslSessionInfo</code> is now public. It is
+intended for providing information about a connection&rsquo;s SSL/TLS session.
+<a href="https://github.com/twitter/finagle/commit/811fe004a835620c834f2cac87dc69fa8b347d35">811fe004</a></li>
+<li>  finagle-core: Added the <code>c.t.finagle.DtabFlags</code> trait which defines a Flag and function for
+appending to the &ldquo;base&rdquo; <code>c.t.finagle.Dtab</code> delegation table. <a href="https://github.com/twitter/finagle/commit/675630dfaace1a0f06104c4ac8719a581fa44851">675630df</a></li>
+<li>  finagle-http: Finagle HTTP implementation now supports trailing headers (trailers). Use
+<code>c.t.f.http.Message.trailers</code> to access trailing headers on a fully-buffered message
+(isChunked == false) or <code>c.t.f.http.Message.chunkReader</code> on a message with chunked payload
+(isChunked == true). <a href="https://github.com/twitter/finagle/commit/351c43c15861f644b77ca3c5e627a0225001c615">351c43c1</a></li>
+<li>  finagle-http,thriftmux: Added tracing annotations to backup requests. <a href="https://github.com/twitter/finagle/commit/48f54e82c2df35a5546a55c889286e99622b8b44">48f54e82</a>
+
+<ul>
+<li>  Binary annotation <code>srv/backup\_request\_processing</code>, when servers are processing backup requests.</li>
+</ul></li>
+<li>  finagle-http: Added new server metrics to keep track of inbound requests that are rejected due to
+their headers containing invalid characters (as seen by RFC-7230): <code>rejected_invalid_header_names</code>
+and <code>rejected_invalid_header_values</code>. <a href="https://github.com/twitter/finagle/commit/41bd061a4b8afbd170c6bc108eb7de2b77a298d2">41bd061a</a></li>
+<li>  finagle-http: Added stats of the duration in milliseconds of request/response streams:
+<code>request_stream_duration_ms</code> and <code>response_stream_duration_ms</code>. They are enabled by using
+<code>.withHttpStats</code> on <code>Http.Client</code> and <code>Http.Server</code> <a href="https://github.com/twitter/finagle/commit/916f4a2683aef99bc5e0c29bbdad0523cebb7bc1">916f4a26</a></li>
+<li>  finagle-mysql: A new toggle, <code>com.twitter.finagle.mysql.IncludeHandshakeInServiceAcquisition</code>, has
+been added. Turning on this toggle will move MySQL session establishment (connection phase) to be
+part of service acqusition. <a href="https://github.com/twitter/finagle/commit/fe4d8919922115cf5aa4d4c03305b04c89abb362">fe4d8919</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  finagle-core: Client-side nacking admission control now defaults on. See the documentation
+on <code>c.t.f.filter.NackAdmissionFilter</code> for details. This can be disabled by setting the
+global flag, <code>com.twitter.finagle.client.useNackAdmissionFilter</code>, to <code>false</code>.
+<a href="https://github.com/twitter/finagle/commit/aa36f56b7e47eb2af8fadca83f204fa57a38603e">aa36f56b</a></li>
+<li>  finagle-core: <code>LatencyCompensation</code> now applies to service acquisition. <a href="https://github.com/twitter/finagle/commit/1ec020a5b80b35f1d0158aac181b14d7942aaa66">1ec020a5</a></li>
+<li>  finagle-http: HTTP headers validation on the outbound path is now in compliance with RFC7230.
+<a href="https://github.com/twitter/finagle/commit/5b2e9f9540b865983e060b65cb7dae83cbf93a22">5b2e9f95</a></li>
+<li>  finagle-netty4: Netty&rsquo;s reference leak tracking now defaults to disabled.
+Set the flag <code>com.twitter.finagle.netty4.trackReferenceLeaks</code> to <code>true</code> to enable.
+<a href="https://github.com/twitter/finagle/commit/f63d7f7a28157318f98ec8ca44821856aa7f550f">f63d7f7a</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li><p>finagle: Dropped a dependency on Netty 3 <a href="https://github.com/twitter/finagle/commit/03c773a506aa838c562e37a3e586fb862cfa1a6a">03c773a5</a>:</p>
+
+<ul>
+<li>  finagle-netty3 sub-project has been removed</li>
+<li>  finagle-http-cookie sub-project has been removed</li>
+<li>  <code>c.t.f.http.Cookie</code> no longer takes Netty&rsquo;s <code>DefaultCookie</code> in the constructor</li>
+</ul></li>
+<li><p>finagle-core: The <code>peerCertificate</code> methods of <code>c.t.f.t.TransportContext</code> and <code>c.t.f.p.PushChannelHandle</code>
+have been replaced with the more robust <code>sslSessionInfo</code>. Users looking for just the functional
+equivalence of peerCertificate can use <code>sslSessionInfo.peerCertificates.headOption</code>.
+<a href="https://github.com/twitter/finagle/commit/dc4bfbcf226adc7b1a5f52366148f8ac36690a71">dc4bfbcf</a></p></li>
+<li><p>finagle-core: The <code>com.twitter.finagle.core.UseClientNackAdmissionFilter</code> toggle has been replaced
+by a global flag, <code>com.twitter.finagle.client.useNackAdmissionFilter</code>.
+<a href="https://github.com/twitter/finagle/commit/aa36f56b7e47eb2af8fadca83f204fa57a38603e">aa36f56b</a></p></li>
+<li><p>finagle-thrift: Allow users to specify <code>stringLengthLimit</code> and <code>containerLengthLimit</code>
+<a href="https://github.com/twitter/finagle/commit/233150a9f20dca50ed75c41b80f351674c17a862">233150a9</a></p>
+
+<ul>
+<li>  method parameter readLength in <code>com.twitter.finagle.thrift.Protocols#binaryFactory</code> renamed to
+<code>stringLengthLimit</code> to reflect usage</li>
+<li>  method parameter <code>containerLengthLimit</code> added to <code>com.twitter.finagle.thrift.Protocols#binaryFactory</code></li>
+</ul></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Added</h4>
+
+<ul>
+<li>  inject-server: Add <code>globalFlags</code> argument to <code>EmbeddedTwitterServer</code>, which will allow for scoping
+a <code>c.t.a.GlobalFlag</code> property change to the lifecycle of the underlying TwitterServer, as a
+<code>c.t.a.GlobalFlag</code> is normally scoped to the JVM/process. This change is also reflected in
+<code>EmbeddedHttpServer</code> and <code>EmbeddedThriftServer</code> constructors. <a href="https://github.com/twitter/finatra/commit/38a3180a5d61d12fb1546dd572f075cfd2fb3dbf">38a3180a</a></li>
+<li>  inject-utils: add <code>toOrderedMap</code> implicit conversion for <code>java.util.Map</code> <a href="https://github.com/twitter/finatra/commit/1686420c58506eddf3ef2fb4e75d8007bc27ee2e">1686420c</a></li>
+<li>  finatra-kafka-streams: Add flag <code>rocksdb.manifest.preallocation.size</code> with default value <code>4.megabytes</code>
+to <code>c.t.f.k.c.RocksDbFlags</code> and set value in <code>c.t.f.k.c.FinatraRocksDBConfig</code>. <a href="https://github.com/twitter/finatra/commit/0cac9785bc90c421e49a7c0db08066cd0d7a61b9">0cac9785</a></li>
+<li>  finatra-http: Add <code>commaSeparatedList</code> boolean parameter to <code>QueryParams</code>, for parsing comma-separated
+query parameters into collection types. <a href="https://github.com/twitter/finatra/commit/0ae425a2f50d0f764f39c80fddd8e11ee0f4bf8e">0ae425a2</a></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  finatra-kafka: Upgraded kafka libraries from 2.0.0 to 2.2.0 <a href="https://github.com/twitter/finatra/commit/9d22ee7ea99f9db605882b90b0b6052e841e60ec">9d22ee7e</a>
+
+<ul>
+<li>  <a href="https://archive.apache.org/dist/kafka/2.0.1/RELEASE_NOTES.html">Kafka 2.0.1 Release Notes</a></li>
+<li>  <a href="https://archive.apache.org/dist/kafka/2.1.0/RELEASE_NOTES.html">Kafka 2.1.0 Release Notes</a></li>
+<li>  <a href="https://archive.apache.org/dist/kafka/2.1.1/RELEASE_NOTES.html">Kafka 2.1.1 Release Notes</a></li>
+<li>  <a href="https://archive.apache.org/dist/kafka/2.2.0/RELEASE_NOTES.html">Kafka 2.2.0 Release Notes</a></li>
+</ul></li>
+<li>  finatra-thrift: Removed <code>c.t.finatra.thrift.exceptions.FinatraThriftExceptionMapper</code>,
+<code>c.t.finatra.thrift.filters.ClientIdAcceptlistFilter</code>,
+<code>c.t.finatra.thrift.modules.ClientIdAcceptlistModule</code>,
+<code>c.t.finatra.thrift.filters.ClientIdWhitelistFilter</code>,
+<code>c.t.finatra.thrift.modules.ClientIdWhitelistModule</code>,
+and the finatra/finatra_thrift_exceptions.thrift IDL. <a href="https://github.com/twitter/finatra/commit/caed5ec8c0aa38381853d8efb3a6717b78670dbc">caed5ec8</a></li>
+<li>  finatra-thrift: Constructing a ThriftRouter now requires serverName. <a href="https://github.com/twitter/finatra/commit/dc357fd8361f75e4831f464835581ce9ab38cdee">dc357fd8</a></li>
+<li>  finatra-examples: Updated <code>StreamingController</code> to use <code>Reader</code> instead of <code>AsyncStream</code>
+<a href="https://github.com/twitter/finatra/commit/3d5e3282cd860a1b4fa5b1c4a608098f97ca300a">3d5e3282</a></li>
+<li>  finatra-kafka-streams: Implement <code>FinatraKeyValueStore</code> as custom store. <a href="https://github.com/twitter/finatra/commit/cd38ddf699872c48e4bbce2cfbda14c1a98d5864">cd38ddf6</a></li>
+<li>  finatra-thrift: Constructing a <code>ThriftRouter</code> now requires <code>c.t.f.StackTransformer</code>.
+<a href="https://github.com/twitter/finatra/commit/a96312d2fb3ee53ba56b2eda914245ef05c89c02">a96312d2</a></li>
+</ul>
+
+<h4>Fixed</h4>
+
+<ul>
+<li>  finatra-kafka: Ensure that <code>EmbeddedKafka</code> implementation of <code>beforeAll()</code> makes
+call to <code>super.beforeAll()</code> so hooks registered in super class get executed. <a href="https://github.com/twitter/finatra/commit/9404b28f4477387872140a6d153196887213bb70">9404b28f</a></li>
+<li>  finatra-kafka-streams: <code>FinatraTransformer.timerStore</code> config object references immutable
+map which causes exception thrown if user code calls <code>AbstractStoreBuilder.withLoggingDisabled</code>.
+Fixed <code>FinatraTransformer.timerStore</code> to convert from immutable map to mutable map before
+forwarding config object to kafka library. <a href="https://github.com/twitter/finatra/commit/827c46126dddc271e8b29b80f6275da3d852cb4d">827c4612</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<ul>
+<li>  Remove deprecated uses of <code>c.t.server.ShadowAdminServer</code>. <a href="https://github.com/twitter/twitter-server/commit/e94e83006d24b26c63f279fa72ab22a95d406f4a">e94e8300</a></li>
+<li>  Mix in the <code>c.t.finagle.DtabFlags</code> to allow servers to append to the &ldquo;base&rdquo; <code>c.t.finagle.Dtab</code>
+delegation table. Users can now call <code>c.t.finagle.DtabFlags\#addDtabs()</code> when they want to append
+the parsed <code>Flag</code> value to the <code>Dtab.base</code> delegation table. Users should note to only call this
+method <em>after</em> Flag parsing has occurred (which is after <strong>init</strong> and before <strong>premain</strong>).
+We also update the <code>c.t.server.handler.DtabHandler</code> to always return a proper JSON response of
+the currently configured <code>c.t.finagle.Dtab.base</code>. <a href="https://github.com/twitter/twitter-server/commit/a00e3942d95fd0a0e29e14b47fa0997c8e6b3799">a00e3942</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<ul>
+<li>  util-app: Improve usage of <code>Flag.let</code> by providing a <code>Flag.letParse</code> method
+<a href="https://github.com/twitter/util/commit/0d9dded32b931d6fff7335b5f4c573c474b5b65a">0d9dded3</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

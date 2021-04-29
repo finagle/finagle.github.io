@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>🎃 October 2017 Release Notes - Version 17.10.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Jordan Parker</h4>
+      <p class="author-twitter"><a href="https://twitter.com/nepthar">@nepthar</a></p>
+    </div>
+    <p><em>Posted October 27, 2017</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>🎃 October 2017 Release Notes - Version 17.10.0</h1>
+  
+  <p>The October releases have arrived! For this release and hereafter, Finagle, Finatra,
+Scrooge, Util, and TwitterServer will be versioned as $year.$month.$patch, as opposed to
+$major.$minor.$patch. This means that all project versions will be in sync.</p>
+
+<p><a href="https://github.com/twitter/finagle/blob/finagle-17.10.0/CHANGES">Finagle 17.10.0</a>, <a href="https://github.com/twitter/finatra/blob/finatra-17.10.0/CHANGELOG.md">Finatra 17.10.0</a>, <a href="https://github.com/twitter/scrooge/blob/scrooge-17.10.0/CHANGES">Scrooge 17.10.0</a>, <a href="https://github.com/twitter/twitter-server/blob/twitter-server-17.10.0/CHANGES">TwitterServer 17.10.0</a>, and <a href="https://github.com/twitter/util/blob/util-17.10.0/CHANGES">Util 17.10.0</a>.</p>
+
+<h3>Finagle</h3>
+
+<p>New Features:</p>
+
+<ul>
+<li><p>finagle-core: DeadlineFilter may now be created from the class and used as a
+regular Filter in addition to a stack module as before. <a href="https://github.com/twitter/finagle/commit/b80a1df4156fc6f7e4b35399d996bc46af465881">b80a1df4</a></p></li>
+<li><p>finagle-mysql: Add ability to toggle the <code>CLIENT_FOUND_ROWS</code> flag. <a href="https://github.com/twitter/finagle/commit/fae2e69d81faeef7cf0dee0340cb4ec27d2bcf10">fae2e69d</a></p></li>
+<li><p>finagle-http: Separated the DtabFilter.Extractor from the ServerContextFilter into
+a new module: ServerDtabContextFilter. While this is still enabled in the default
+Http server stack, it can be disabled independently of the ServerContextFilter.
+<a href="https://github.com/twitter/finagle/commit/335d639f2140f44948b914b931bd467774e72fc2">335d639f</a></p></li>
+</ul>
+
+<p>Runtime Behavior Changes:</p>
+
+<ul>
+<li><p>finagle-netty4: <code>Netty4ClientEngineFactory</code> and <code>Netty4ServerEngineFactory</code> now
+validate loaded certificates in all cases to ensure that the current date
+range is within the validity range specified in the certificate. <a href="https://github.com/twitter/finagle/commit/dc3230e3a98fb6ec68f23f8fc00c703401db5738">dc3230e3</a></p></li>
+<li><p>finagle-netty4: <code>TrustCredentials.Insecure</code> now works with native SSL/TLS engines.
+<a href="https://github.com/twitter/finagle/commit/6b822e94e309f0946ace6586095a511d47fa152b">6b822e94</a></p></li>
+<li><p>finagle-http2: Upgraded to the new netty http/2 API in netty version 4.1.16.Final,
+which fixes several long-standing bugs but has some bugs around cleartext http/2.
+One of the work-arounds modifies the visibility of a private field, so it&rsquo;s incompatible
+with security managers.  This is only true for http/2&ndash;all other protocols will be unaffected.
+<a href="https://github.com/twitter/finagle/commit/bb01393fc2a41a34e7ff92e1e7dc24bcadbef954">bb01393f</a></p></li>
+<li><p>finagle-http: Netty 3 <code>HeaderMap</code> was replaced with our own implementation.
+<a href="https://github.com/twitter/finagle/commit/199dc51cfcf573349fe436d7eaf594a857667657">199dc51c</a></p></li>
+</ul>
+
+<p>Deprecations:</p>
+
+<ul>
+<li>finagle-base-http: With the intention to make <code>c.t.f.http.Cookie</code> immutable,
+<code>set</code> methods on <code>c.t.f.http.Cookie</code> have been deprecated:
+
+<ul>
+<li><code>comment_=</code></li>
+<li><code>commentUrl_=</code></li>
+<li><code>domain_=</code></li>
+<li><code>maxAge_=</code></li>
+<li><code>path_=</code></li>
+<li><code>ports_=</code></li>
+<li><code>value_=</code></li>
+<li><code>version_=</code></li>
+<li><code>httpOnly_=</code></li>
+<li><code>isDiscard_=</code></li>
+<li><code>isSecure_=</code>
+Use the <code>c.t.f.http.Cookie</code> constructor to set <code>domain</code>, <code>maxAge</code>, <code>path</code>, <code>value</code>, <code>httpOnly</code>,
+and <code>secure</code>. <code>comment</code>, <code>commentUrl</code>, <code>ports</code>, <code>version</code>, and <code>discard</code> have been removed
+per RFC-6265. <a href="https://github.com/twitter/finagle/commit/717600969e4d4e7db047e758deae0ba30282461d">71760096</a>.</li>
+</ul></li>
+</ul>
+
+<p>Alternatively, use the <code>domain</code>, <code>maxAge</code>, <code>path</code>, <code>httpOnly</code>, and <code>secure</code> methods to create a
+  new <code>Cookie</code> with the existing fields set, and the respective field set to a given value.
+  <a href="https://github.com/twitter/finagle/commit/14beb975d1c3aa4f57cf2ee3a0ab46c766496737">14beb975</a></p>
+
+<ul>
+<li>finagle-base-http: <code>c.t.f.http.Cookie.isSecure</code> and <code>c.t.f.http.Cookie.isDiscard</code>
+have been deprecated. Use <code>c.t.f.http.Cookie.secure</code> for <code>c.t.f.http.Cookie.isSecure</code>.
+<code>isDiscard</code> has been removed per RFC-6265. <a href="https://github.com/twitter/finagle/commit/717600969e4d4e7db047e758deae0ba30282461d">71760096</a></li>
+</ul>
+
+<p>Breaking API Changes:</p>
+
+<ul>
+<li><p>finagle-mysql: Moved <code>Cursors.cursor</code> method to <code>Client</code> trait, and removed <code>Cursors</code> trait.
+This allows cursor queries to used with transactions. <a href="https://github.com/twitter/finagle/commit/1224721ccf25930e5f2cede3f4ecedfca219dee9">1224721c</a></p></li>
+<li><p>finagle-mux: Expose transport contexts in mux.Request and mux.Response. <a href="https://github.com/twitter/finagle/commit/f0f46785a24daa09a68ebcf2f4b841474df31114">f0f46785</a></p></li>
+<li><p>finagle-mux: The &ldquo;leased&rdquo; gauge has been removed from the mux client implementation since the
+metric is reported as the sum of the value over all clients which is unlikely to be useful.
+<a href="https://github.com/twitter/finagle/commit/1c31e3848e337f3bc5b8bfd687daadffc64dbb94">1c31e384</a></p></li>
+</ul>
+
+<h3>Finatra</h3>
+
+<p>Added:</p>
+
+<ul>
+<li><p>inject-core: Remove deprecated <code>c.t.inject.TestMixin#resetMocks</code>. Properly
+use <code>c.t.inject.Mockito</code> trait in tests. Deprecate resetting of mocks and
+resettables in <code>c.t.inject.IntegrationTestMixin</code>. <a href="https://github.com/twitter/finatra/commit/b8cfeb659b39cfb232a2c7142700ff437fe8adf2">b8cfeb65</a></p></li>
+<li><p>finatra-http: Parameterize <code>@RouteParam</code>,<code>@QueryParam</code>,<code>@FormParam</code>, and
+<code>@Header</code> to allow specifying the field name to read from the params or
+header map. Previously these annotations only looked for values by the
+case class field name leading to possible ugliness when defining case
+class fields (especially with <code>@Header</code>). <a href="https://github.com/twitter/finatra/commit/9913a6cccc378c6ba286f91a317381db5b378059">9913a6cc</a></p></li>
+<li><p>finatra: Add support for using a <code>java.lang.annotation.Annotation</code> instance
+with the <code>#bind[T]</code> testing DSL. This adds a way to bind instances in tests
+that use the @Named binding annotation. <a href="https://github.com/twitter/finatra/commit/f9503c4ce1acda711abf093d941f489f614900ea">f9503c4c</a></p></li>
+<li><p>finatra-http: Allow setting the content type of a Mustache view.
+<a href="https://github.com/twitter/finatra/commit/2009159f5b6975d8f5aca7b3018356ebd90d08dd">2009159f</a></p></li>
+</ul>
+
+<p>Changed:</p>
+
+<ul>
+<li><p>finatra-utils: Remove deprecated <code>ExternalServiceExceptionMatcher</code>. <a href="https://github.com/twitter/finatra/commit/9c78117a1fe5a8731e4315d0ce7f60c3f47c419b">9c78117a</a></p></li>
+<li><p>finatra-jackson: ScalaType&rsquo;s <code>isMap</code> and <code>isCollection</code> methods now check that
+the given object&rsquo;s class is a subclass of <code>scala.collection.Map[Any, Any]</code> and
+<code>scala.collection.Iterable[Any]</code>, respectively. Previously the superclasses&rsquo;
+packages were unspecified. This is a runtime behavior change.
+<a href="https://github.com/twitter/finatra/commit/15a4e529153437bb43ee65d38a8160d5ae137ff7">15a4e529</a></p></li>
+<li><p>finatra-http: Require that route URIs and prefixes begin with forward slash (/).
+<a href="https://github.com/twitter/finatra/commit/9bd53557a3fc24d4ae9ea98392388d9ac9d440f2">9bd53557</a></p></li>
+<li><p>inject-utils: (BREAKING API CHANGE) RichOption toFutureOrFail, toTryOrFail, and
+toFutureOrElse signature changed to take the fail or else parameter by name.
+<a href="https://github.com/twitter/finatra/commit/a1efd13ff295051ce06679ce3bf7d99b20ccbd7b">a1efd13f</a></p></li>
+<li><p>inject-server: Remove usage of deprecated <code>c.t.inject.logging.Slf4jBridgeUtility</code>.
+Change usages to <code>c.t.util.logging.Slf4jBridgeUtility</code>. <a href="https://github.com/twitter/finatra/commit/4cf842ba4aaed545a897f60e546b25d5114960cb">4cf842ba</a></p></li>
+<li><p>finatra-http, inject-thrift-client: Remove netty3 specific types and dependency.
+In finatra-http, the code using these types is deprecated and can be removed allowing
+us to remove netty3-specific dependencies. In inject-thrift-client we can default to
+use the DefaultTimer for the backupRequestFilter method param instead of the
+HashedWheelTimer. <a href="https://github.com/twitter/finatra/commit/d8fb15fe4fc7beb6ee7f1b85eef62af2f510a7af">d8fb15fe</a></p></li>
+</ul>
+
+<p>Fixed:</p>
+
+<ul>
+<li>finatra-jackson: Fix issue causing <code>IllegalArgumentException</code> from Validations to
+be swallowed. A catch clause in the <code>c.t.finatra.json.internal.caseclass.jackson.FinatraCaseClassDeserializer</code>
+is too broad as it catches thrown <code>IllegalArgumentException</code>s from field validations
+when the annotation is applied to a field of the incorrect type, e.g., when <code>@Max</code> is
+applied to a String field. <a href="https://github.com/twitter/finatra/commit/37ec705095e2702a31dc1fb6d75f078746acbc5a">37ec7050</a></li>
+</ul>
+
+<h3>Util</h3>
+
+<p>API Changes:</p>
+
+<ul>
+<li>util-app: c.t.app.Flag.let and letClear are now generic in their return type.
+<a href="https://github.com/twitter/util/commit/a58db2892d82f68bbaa5b41c1394aca9011fd5ef">a58db289</a></li>
+</ul>
+
+<p>Bug Fixes:</p>
+
+<ul>
+<li>util-core: Fix Buf.ByteArray.Shared.apply(bytes,begin,end) constructor function.
+<a href="https://github.com/twitter/util/commit/363778374f8366e13ab0142ca549559a6ba5516c">36377837</a></li>
+</ul>
+
+<p>Runtime Behavior Changes:</p>
+
+<ul>
+<li><p>util-core: c.t.io.Buf.ByteArray.<a href="Array[Byte],%20begin,%20end">Owned.Shared</a> now
+validates its input arguments. <a href="https://github.com/twitter/util/commit/363778374f8366e13ab0142ca549559a6ba5516c">36377837</a></p></li>
+<li><p>util-jvm: The <code>jvm/mem/postGC/{poolName}/max</code> metric has been removed
+because it is the same as the <code>jvm/mem/current/{poolName}/max</code> metric.
+<a href="https://github.com/twitter/util/commit/357912dac0696cb77d77070ec95504145a0902ba">357912da</a></p></li>
+<li><p>util-security: Assert validity of X.509 certificates when read from a file.
+Attempting to read a <code>c.t.util.security.X509CeritificateFile</code> will now assert
+that the certificate is valid, i.e., if the current date and time are within
+the validity period given in the certificate. <a href="https://github.com/twitter/util/commit/9dc859efef85d173aaefe08d9aa930fa7662006a">9dc859ef</a></p></li>
+</ul>
+
+<h3>Scrooge</h3>
+
+<ul>
+<li><p>scrooge-generator: For generated scala $FinagleService, moved per-endpoint statsFilter to the
+outermost of filter chain so it can capture all exceptions, added per-endpoint response
+classification in statsFilter. <a href="https://github.com/twitter/scrooge/commit/853323dce96d8e8d0d0c7f63d888dc969472f67a">853323dc</a></p></li>
+<li><p>scrooge-generator: Generated scala $FinagleClient takes a <code>RichClientParam</code> for all
+configuration params, such as <code>TProtocolFactory</code>, <code>ResponseClassifier</code>, <code>maxReusableBufferSize</code>,
+and <code>StatsReceiver</code>, $FinagleService takes a <code>RichServerParam</code>. <a href="https://github.com/twitter/scrooge/commit/8bdf36cbd0297f45704ea48dc7a62872f0e581ce">8bdf36cb</a></p></li>
+</ul>
+
+<h3>Twitter Server</h3>
+
+<ul>
+<li><p>TwitterServer now uses the <a href="https://www.slf4j.org/"><code>slf4j-api</code></a> for framework logging. Backwards compatibility is 
+supplied via the <a href="https://github.com/twitter/twitter-server/tree/6565a1c6ab6d111e9858e2e9e2e5d307d8ca8b3e/slf4j-jdk14"><code>twitter-server/slf4j-jdk14</code></a> library.
+See the TwitterServer <a href="https://twitter.github.io/twitter-server/Features.html#logging">documentation</a> for more information. <a href="https://github.com/twitter/twitter-server/commit/c458b88161f56768d0226c8419424f8365574b83">c458b881</a></p></li>
+<li><p>All admin endpoints except ping + healthcheck are now by-default served outside
+the global worker pool. <a href="https://github.com/twitter/twitter-server/commit/acf13a2a933618fb3f719a1a4cf7b5b53ef23b7d">acf13a2a</a></p></li>
+<li><p>Rename AdminHttpServer#defaultHttpPort to AdminHttpServer#defaultAdminPort.
+<a href="https://github.com/twitter/twitter-server/commit/15e35a3a3070c50168ff55fd83a2dff28b09795c">15e35a3a</a></p></li>
+</ul>
+
+<h3>Dependencies</h3>
+
+<ul>
+<li>Netty has been updated to 4.1.16 <a href="https://github.com/twitter/finagle/commit/f28705d556077cbd56b19ce90eba35be7203ad07">f28705d5</a></li>
+</ul>
+
+<h3>Changelogs</h3>
+
+<ul>
+<li><a href="https://github.com/twitter/finagle/blob/finagle-17.10.0/CHANGES">Finagle 17.10.0</a></li>
+<li><a href="https://github.com/twitter/util/blob/util-17.10.0/CHANGES">Util 17.10.0</a></li>
+<li><a href="https://github.com/twitter/scrooge/blob/scrooge-17.10.0/CHANGES">Scrooge 17.10.0</a></li>
+<li><a href="https://github.com/twitter/twitter-server/blob/twitter-server-17.10.0/CHANGES">TwitterServer 17.10.0</a></li>
+<li><a href="https://github.com/twitter/finatra/blob/finatra-17.10.0/CHANGELOG.md">Finatra 17.10.0</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

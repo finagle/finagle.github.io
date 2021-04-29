@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>November 2018 Release Notes - Version 18.11.0 ❄️</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Dave Rusek</h4>
+      <p class="author-twitter"><a href="https://twitter.com/davidjrusek">@davidjrusek</a></p>
+    </div>
+    <p><em>Posted November 13, 2018</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>November 2018 Release Notes - Version 18.11.0 ❄️</h1>
+  
+  <p>Halloween has come and gone and it&rsquo;s already snowing here in the Rockies. Time to cuddle up with a warm compiler and check out the new edition of Twitter&rsquo;s open source libraries!</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li><p>finagle-base-http: Add <code>Message.httpDateFormat(millis)</code> to format the epoch millis into
+an RFC 7231 formatted String representation. <a href="https://github.com/twitter/finagle/commit/eb9bec0ec83792a1bfb1e1fc94ecd214efdf0c48">eb9bec0e</a></p></li>
+<li><p>finagle-core: Introduce an <code>StackClient.withStack</code> overload that
+makes modifying the existing <code>Stack</code> easier when using method chaining.
+<a href="https://github.com/twitter/finagle/commit/8f69e83366c7e275fbe1cbf7671f04e0e3daab70">8f69e833</a></p></li>
+<li><p>finagle-mysql: Introduce <code>session</code> to be able to perform multiple operations that require
+session state on a guaranteed single connection. <a href="https://github.com/twitter/finagle/commit/a06f7d672dce4b9e131356634f18e168e68f3692">a06f7d67</a></p></li>
+<li><p>finagle-netty4: When using the native epoll transport, finagle now publishes the TCP window size
+and number of retransmits based on the <code>tcpInfo</code> provided by from the channel.  These stats are
+published with a debug verbosity level.  <a href="https://github.com/twitter/finagle/commit/160710883174e35d01f8460a80c4ad616653961a">16071088</a></p></li>
+<li><p>finagle-http: HTTP clients and servers now accept <code>fixedLengthStreamedAfter</code> param in their
+<code>withStreaming</code> configuration (default: 5 MB when streaming is enabled). This new parameter
+controls the limit after which Finagle will stop aggregating messages with known <code>Content-Length</code>
+(payload will be available at <code>.content</code>) and switch into a streaming mode (payload will be
+available at <code>.reader</code>). Note messages with <code>Transfer-Encoding: chunked</code> never aggregated.
+<a href="https://github.com/twitter/finagle/commit/842e5e1a2b5613307add41fd064ebb589cc22bef">842e5e1a</a></p></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li><p>finagle-http: <code>c.t.f.http.param.MaxChunkSize</code> has been removed. There is no good reason to
+configure it with anything but <code>Int.MaxValue</code> (unlimited). <a href="https://github.com/twitter/finagle/commit/990c8650366e5374ea062c753a4628c5971fc40e">990c8650</a></p></li>
+<li><p>finagle-exp: Update <code>DarkTrafficFilter#handleFailedInvocation</code> to accept the request type
+for more fidelity in handling the failure. <a href="https://github.com/twitter/finagle/commit/b247f941e97fe5c3bcf667ae69c27128f3cf1c52">b247f941</a></p></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li><p>finagle-http: Unset <code>maxChunkSize</code> limit in Netty HTTP codecs. Now both clients and servers
+emit all available data as a single chunk so we can put it into use quicker.
+<a href="https://github.com/twitter/finagle/commit/990c8650366e5374ea062c753a4628c5971fc40e">990c8650</a></p></li>
+<li><p>finagle-http: Streaming clients (<code>withStreaming(true)</code>) now aggregate inbound messages with known
+<code>Content-Length</code> if their payloads are less than 5mb (8k before). Use <code>withStreaming(true, 32.kb)</code>
+to override it with a different value. <a href="https://github.com/twitter/finagle/commit/24271b29e5030230e16d9b628de1a7ab029e99e5">24271b29</a></p></li>
+<li><p>finagle-http2: HTTP/2 servers perform a more graceful shutdown where an initial
+GOAWAY is sent with the maximum possible stream id and waits for either the client
+to hang up or for the close deadline, at which time a second GOAWAY is sent with
+the true last processed stream and the connection is then closed.
+<a href="https://github.com/twitter/finagle/commit/93fee4994e3ac83078a4342be5d8a31f921a094f">93fee499</a></p></li>
+</ul>
+
+<h4>Deprecations</h4>
+
+<ul>
+<li>finagle-core: Deprecate
+<code>EndpointerStackClient.transformed(Stack[ServiceFactory[Req, Rep]] =&gt; Stack[ServiceFactory[Req, Rep]])</code>
+in favor of the <code>withStack</code> variant. <a href="https://github.com/twitter/finagle/commit/8f69e83366c7e275fbe1cbf7671f04e0e3daab70">8f69e833</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Changed</h4>
+
+<ul>
+<li><p>finatra-thrift: Fixes and improvements for better Java support. ExceptionMappingFilter now
+works properly with generated Java controllers, added an exception mapper for the exceptions
+defined in <code>finatra_thrift_exceptions.thrift</code> which works on the geneated Java code for these
+exceptions. Better Java API separation to make usage less error prone and confusing.
+<a href="https://github.com/twitter/finatra/commit/f6c44cab87d1f9023e6028b76c61ce1920710a7b">f6c44cab</a></p></li>
+<li><p>finatra-thrift: (BREAKING API CHANGE) Update <code>DarkTrafficFilter#handleFailedInvocation</code> to accept
+the request type for more fidelity in handling the failure. <a href="https://github.com/twitter/finatra/commit/20bd33acdb443545d65a68fec2032c764564a2d4">20bd33ac</a></p></li>
+<li><p>finatra-http: Move <code>request.ContentType</code> and <code>response.Mustache</code> Java annotations to
+<code>com.twitter.finatra.http</code> package namespace. <a href="https://github.com/twitter/finatra/commit/ef13561030cb38d56c15c6030974eda0e1131c40">ef135610</a></p></li>
+<li><p>finatra-jackson: Move away from deprecated code and update error handling and exceptions post
+Jackson 2.9.x upgrade. <a href="https://github.com/twitter/finatra/commit/f1e5c96ebc6b6baaf244df382f764ae028b5abd3">f1e5c96e</a></p></li>
+<li><p>inject-core: (BREAKING API CHANGE) Remove <code>c.t.inject.TestMixin#sleep</code>. We do not want to
+promote this usage of Thread blocking in testing utilities. Add a new testing function:
+<code>c.t.inject.TestMixin#await</code> which will perform <code>Await.result</code> on a given <code>c.t.util.Awaitable</code>.
+This function was duplicated across tests in the codebase. We also introduce an overridable default
+timeout on the underlying <code>Await.result</code> call: <code>c.t.inject.TestMixin#defaultAwaitTimeout</code>.
+<a href="https://github.com/twitter/finatra/commit/4aee1051fd3656486e0c7c2d910cf90c2179871a">4aee1051</a></p></li>
+</ul>
+
+<h4>Fixed</h4>
+
+<ul>
+<li>finatra-http: Fix registration of HTTP Routes in the Library registry to properly account
+for Routes that duplicate a URI with a different HTTP verb. That is, a Route should be considered
+unique per URI + HTTP verb combination. <a href="https://github.com/twitter/finatra/commit/6a7150759e7ccb9ae9c77269223bda182bb19d13">6a715075</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>scrooge-generator: Allow for <code>Filter.TypeAgnostic</code> filters to be applied to a generated
+Java <code>Service</code> via a new constructor that takes an additional argument of a <code>Filter.TypeAgnostic</code>.
+This filter is then applied per generated method service. <a href="https://github.com/twitter/scrooge/commit/19c7d58b907006e3403fdc9828abe55cb843c276">19c7d58b</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<p>No Changes</p>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li><p>util-core: <code>c.t.u.Future.raiseWithin</code> methods now take the timeout exception as a call-by-name
+parameter instead of a strict exception. While Scala programs should compile as usual, Java
+users will need to use a <code>scala.Function0</code> as the second parameter. The helper
+<code>c.t.u.Function.func0</code> can be helpful. <a href="https://github.com/twitter/util/commit/9bde57caffa7e127967fb2452beab3d09fd9888e">9bde57ca</a></p></li>
+<li><p>util-core: Rename <code>c.t.io.Reader.ReaderDiscarded</code> to <code>c.t.io.ReaderDiscardedException</code>.
+<a href="https://github.com/twitter/util/commit/a970c5b5ddf9cb66a63693aa5cf7709d177a234a">a970c5b5</a></p></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>util-core: Made Stopwatch.timeNanos monotone. <a href="https://github.com/twitter/util/commit/8d35b496756172e9bb29c473d77e32f6414806e6">8d35b496</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

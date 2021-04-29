@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>April 2018 Release Notes - Version 18.4.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Bryce Anderson</h4>
+      <p class="author-twitter"><a href="https://twitter.com/BryceAnderson22">@BryceAnderson22</a></p>
+    </div>
+    <p><em>Posted April 11, 2018</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>April 2018 Release Notes - Version 18.4.0</h1>
+  
+  <p>Our April releases have arrived!</p>
+
+<p><a href="https://github.com/twitter/finagle/blob/finagle-18.4.0/CHANGES">Finagle 18.4.0</a>, <a href="https://github.com/twitter/finatra/blob/finatra-18.4.0/CHANGELOG.md">Finatra 18.4.0</a>, <a href="https://github.com/twitter/scrooge/blob/scrooge-18.4.0/CHANGES">Scrooge 18.4.0</a>, <a href="https://github.com/twitter/twitter-server/blob/twitter-server-18.4.0/CHANGES">TwitterServer 18.4.0</a>, and <a href="https://github.com/twitter/util/blob/util-18.4.0/CHANGES">Util 18.4.0</a>.</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<p>New Features</p>
+
+<ul>
+<li><p>finagle-core: <code>c.t.f.filter.NackAdmissionFilter</code> can now be disabled via a <code>with</code>-method.
+<code>$Protocol.client.withAdmissionControl.noNackAdmissionControl</code> <a href="https://github.com/twitter/finagle/commit/323a20f406d44f009df7cf39aa09f0fadcb1b8c5">323a20f4</a></p></li>
+<li><p>finagle-mysql: Exceptions now include the SQL that was being executed when possible.
+<a href="https://github.com/twitter/finagle/commit/5a54f45da4b78f22ccc001164f7c3df5314b34ce">5a54f45d</a></p></li>
+<li><p>finagle-mysql: Address <code>PreparedStatement</code> usability from Java via
+<code>PreparedStatement.asJava()</code>. Through this, you can use the API with
+varargs and Java 8 lambdas. <a href="https://github.com/twitter/finagle/commit/c5bd6b975657782607ad33b73ea414661a54f544">c5bd6b97</a></p></li>
+<li><p>finagle-mysql: Added support for <code>Option</code>\s to <code>Parameter</code> implicits. This
+allows for the natural represention of nullable columns with an <code>Option</code>
+where a <code>None</code> is treated as a <code>null</code>. <a href="https://github.com/twitter/finagle/commit/48f688d1b52ed51499eb3c693a4fe253a5b67100">48f688d1</a></p></li>
+<li><p>finagle-netty4: Add &lsquo;tls/connections&rsquo; gauge for Finagle on Netty 4 which tracks the number
+of open SSL/TLS connections per Finagle client or server.
+<a href="https://github.com/twitter/finagle/commit/911a01cee08852f47385ac7b9d709cf3fc5422a9">911a01ce</a></p></li>
+<li><p>finagle-redis: Support has been added for a number of new cluster commands
+introduced in Redis 3.0.0. <a href="https://github.com/twitter/finagle/commit/86b151bf641534304c9c9102d93e1e8e3ea9348a">86b151bf</a></p></li>
+</ul>
+
+<p>Bug Fixes</p>
+
+<ul>
+<li>finagle-mysql: Fix handling of interrupts during transactions. <a href="https://github.com/twitter/finagle/commit/1b9111eb3e8576c41977b05447a3f17ef1c1a5f9">1b9111eb</a></li>
+</ul>
+
+<p>Breaking API Changes</p>
+
+<ul>
+<li><p>finagle-core: <code>c.t.f.ssl.client.HostnameVerifier</code> has been removed since it was using
+<code>sun.security.util.HostnameChecker</code> which is no longer accessible in JDK 9.
+<a href="https://github.com/twitter/finagle/commit/1313d9ba77b35da0a9a6fce3599dfc7c4c5e137d">1313d9ba</a></p></li>
+<li><p>finagle-thrift: Upgraded libthrift to 0.10.0, <code>c.t.f.thrift.Protocols.TFinagleBinaryProtocol</code>
+constructor now takes <code>stringLengthLimit</code> and <code>containerLengthLimit</code>, <code>NO_LENGTH_LIMIT</code> value
+changed from 0 to -1. <a href="https://github.com/twitter/finagle/commit/61c7a71182866250e53f9731c46f31dde28d464c">61c7a711</a></p></li>
+<li><p>finagle-thrift: Move &ldquo;stateless&rdquo; methods in <code>c.t.finagle.thrift.ThriftRichClient</code>
+to <code>c.t.finagle.thrift.ThriftClient</code>. Then mix the <code>ThriftClient</code> trait into the
+ThriftMux and Thrift Client companions to make it clearer that these stateless methods
+are not affected by the changing state of the configured client instance but are instead
+simply utility methods which convert or wrap the incoming argument. <a href="https://github.com/twitter/finagle/commit/7a175a9875cb3f897a17f18e6dcb6dfb0da1974a">7a175a98</a></p></li>
+<li><p>finagle-base-http: Removed deprecated <code>c.t.f.Cookie.value_=</code>; use <code>c.t.f.Cookie.value</code>
+instead. <a href="https://github.com/twitter/finagle/commit/4bdd261b4249bc59547f31310b97505e144118d5">4bdd261b</a></p></li>
+<li><p>finagle-base-http: Removed deprecated <code>c.t.f.Cookie.domain_=</code>; use <code>c.t.f.Cookie.domain</code>
+instead. <a href="https://github.com/twitter/finagle/commit/4bdd261b4249bc59547f31310b97505e144118d5">4bdd261b</a></p></li>
+<li><p>finagle-base-http: Removed deprecated <code>c.t.f.Cookie.path_=</code>; use <code>c.t.f.Cookie.path</code>
+instead. <a href="https://github.com/twitter/finagle/commit/4bdd261b4249bc59547f31310b97505e144118d5">4bdd261b</a></p></li>
+</ul>
+
+<p>Runtime Behavior Changes</p>
+
+<ul>
+<li><p>finagle-core: Add minimum request threshold for <code>successRateWithinDuration</code> failure accrual.
+<a href="https://github.com/twitter/finagle/commit/b6caf3ddd0edd92541263d74950f71684f7fa955">b6caf3dd</a></p></li>
+<li><p>finagle-core: <code>c.t.f.filter.NackAdmissionFilter</code> no longer takes effect when
+the client&rsquo;s request rate is too low to accurately update the EMA value or
+drop requests. <a href="https://github.com/twitter/finagle/commit/387d87d45d7cd334c121ba43b8d6a43f3d97f8e4">387d87d4</a></p></li>
+<li><p>finagle-core: SSL/TLS client hostname verification is no longer performed by
+<code>c.t.f.ssl.client.HostnameVerifier</code>. The same underlying library
+<code>sun.security.util.HostnameChecker</code> is used to perform the hostname verification.
+However it now occurs before the SSL/TLS handshake has been completed, and the
+exception on failure has changes from a <code>c.t.f.SslHostVerificationException</code> to a
+<code>javax.net.ssl.CertificateException</code>. <a href="https://github.com/twitter/finagle/commit/1313d9ba77b35da0a9a6fce3599dfc7c4c5e137d">1313d9ba</a></p></li>
+<li><p>finagle-core: Closing <code>c.t.f.NullServer</code> is now a no-op. <a href="https://github.com/twitter/finagle/commit/36aac62c70b50e4de0f0c2598c7783d8e64b8bd4">36aac62c</a></p></li>
+<li><p>finagle-netty4: Netty ByteBuf leak tracking is enabled by default. <a href="https://github.com/twitter/finagle/commit/24690b137dc147e436fee42807502d1c24189621">24690b13</a></p></li>
+</ul>
+
+<p>Deprecations</p>
+
+<ul>
+<li>finagle-thrift: System property &ldquo;-Dorg.apache.thrift.readLength&rdquo; is deprecated. Use
+constructors to set read length limit for TBinaryProtocol.Factory and TCompactProtocol.Factory.
+<a href="https://github.com/twitter/finagle/commit/61c7a71182866250e53f9731c46f31dde28d464c">61c7a711</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<p>Added</p>
+
+<ul>
+<li><p>finatra-http: Added the ability for requests to have a maximum forward depth to
+<code>c.t.finatra.http.routing.HttpRouter</code>, which prevents requests from being forwarded
+an infinite number of times. By default the maximum forward depth is 5.
+<a href="https://github.com/twitter/finatra/commit/cb2362943963759967bf233d828c1c61835475f5">cb236294</a></p></li>
+<li><p>inject-thrift-client: Update <code>configureServicePerEndpoint</code> and
+<code>configureMethodBuilder</code> in <code>ThriftMethodBuilderClientModule</code> to also pass a
+<code>c.t.inject.Injector</code> instance which allows users to use bound instances from
+the object graph when providing further <code>thriftmux.MethodBuilder</code> or
+<code>ThriftMethodBuilderFactory</code> configuration.
+<a href="https://github.com/twitter/finatra/commit/ee16c1c655af6bc061202f0bf7b190d0756e9143">ee16c1c6</a></p></li>
+<li><p>inject-thrift-client: Update <code>configureThriftMuxClient</code> in <code>ThriftClientModuleTrait</code> to
+also pass a <code>c.t.inject.Injector</code> instance which allows users to use bound instances
+from the object graph when providing further <code>ThriftMux.client</code> configuration.
+<a href="https://github.com/twitter/finatra/commit/e3047fe379bc7c9636517717ce462aea16aec6b5">e3047fe3</a></p></li>
+<li><p>inject-server: Capture errors on close of the underlying TwitterServer. The embedded
+testing utilities can now capture and report on an exception that occurs during close
+of the underlying TwitterServer. <code>EmbeddedTwitterServer#assertCleanShutdown</code> inspects
+for any Throwable captured from closing the underlying server which it will then throw.
+<a href="https://github.com/twitter/finatra/commit/0e304bbc14980c7d1f0c9c74ab368e56acdb5566">0e304bbc</a></p></li>
+<li><p>finatra-http: Created a new API into <code>c.t.f.h.response.StreamingResponse</code> which permits passing
+a <code>transformer</code> which is an <code>AsynStream[T] =&gt; AsyncStream[(U, Buf)]</code> for serialization purposes,
+as well as two callbacks &ndash; <code>onDisconnect</code>, called when the stream is disconnected, and <code>onWrite</code>,
+which is a <code>respond</code> side-effecting callback to every individual write to the stream.
+<a href="https://github.com/twitter/finatra/commit/ab44378c426419e53c639bb6a2c29ce146f01bbe">ab44378c</a></p></li>
+</ul>
+
+<p>Changed</p>
+
+<ul>
+<li>inject-app: Update and improve the test <code>#bind[T]</code> DSL. The testing <code>#bind[T]</code> DSL is lacking in
+its ability to be used from Java and we would like to revise the API to be more expressive such
+that it also includes binding from a Type to a Type. Due to wanting to also support the ability
+to bind a Type to a Type, the DSL has been re-worked to more closely match the actual Guice
+binding DSL.</li>
+</ul>
+
+<p>For Scala users the <code>#bind[T]</code> DSL now looks as follows:</p>
+<pre class="highlight plaintext"><code>    bind[T].to[U &lt;: T]
+    bind[T].to[Class[U &lt;: T]]
+    bind[T].toInstance(T)
+
+    bind[T].annotatedWith[Ann].to[U &lt;: T]
+    bind[T].annotatedWith[Ann].to[Class[U &lt;: T]]
+    bind[T].annotatedWith[Ann].toInstance(T)
+
+    bind[T].annotatedWith[Class[Ann]].to[U &lt;: T]
+    bind[T].annotatedWith[Class[Ann]].to[Class[U &lt;: T]]
+    bind[T].annotatedWith[Class[Ann]].toInstance(T)
+
+    bind[T].annotatedWith(Annotation).to[U &lt;: T]
+    bind[T].annotatedWith(Annotation).to[Class[U &lt;: T]]
+    bind[T].annotatedWith(Annotation).toInstance(T)
+
+    bindClass(Class[T]).to[T]
+    bindClass(Class[T]).to[Class[U &lt;: T]]
+    bindClass(Class[T]).toInstance(T)
+
+    bindClass(Class[T]).annotatedWith[Class[Ann]].to[T]
+    bindClass(Class[T]).annotatedWith[Class[Ann]].[Class[U &lt;: T]]
+    bindClass(Class[T]).annotatedWith[Class[Ann]].toInstance(T)
+
+    bindClass(Class[T]).annotatedWith(Annotation).to[T]
+    bindClass(Class[T]).annotatedWith(Annotation).[Class[U &lt;: T]]
+    bindClass(Class[T]).annotatedWith(Annotation).toInstance(T)
+</code></pre>
+
+<p>For Java users, there are more Java-friendly methods:</p>
+<pre class="highlight plaintext"><code>    bindClass(Class[T], T)
+    bindClass(Class[T], Annotation, T)
+    bindClass(Class[T], Class[Annotation], T)
+
+    bindClass(Class[T], Class[U &lt;: T])
+    bindClass(Class[T],  Annotation, Class[U &lt;: T])
+    bindClass(Class[T], Class[Annotation], Class[U &lt;: T])
+</code></pre>
+
+<p>Additionally, these changes highlighted the lack of Java-support in the <code>TwitterModule</code> for
+  creating injectable Flags. Thus <code>c.t.inject.TwitterModuleFlags</code> has been updated to also provide
+  Java-friendly flag creation methods:</p>
+<pre class="highlight plaintext"><code>    protected def createFlag[T](name: String, default: T, help: String, flggble: Flaggable[T]): Flag[T]
+    protected def createMandatoryFlag[T](name: String, help: String, usage: String, flggble: Flaggable[T]): Flag[T]
+</code></pre>
+
+<p><a href="https://github.com/twitter/finatra/commit/0d5320848cbd48e103047c3267b73c9dff92c027">0d532084</a></p>
+
+<ul>
+<li><p>inject-thrift-client: The &ldquo;retryBudget&rdquo; in the <code>c.t.inject.thrift.modules.ThriftMethodBuilderClientModule</code>
+should be a <code>RetryBudget</code> and not the generic <code>Budget</code> configuration Param. Updated the type.
+<a href="https://github.com/twitter/finatra/commit/8feea4bb5bd0a0bb54464143cade82e870e926b7">8feea4bb</a></p></li>
+<li><p>inject-server: Move HTTP-related concerns out of the embedded testing utilities into
+specific HTTP &ldquo;clients&rdquo;. The exposed <code>httpAdminClient</code> in the <code>EmbeddedTwitterServer</code>
+and the <code>httpClient</code> and <code>httpsClient</code> in the <code>EmbeddedHttpServer</code> are no longer just
+Finagle Services from Request to Response, but actual objects. The underlying Finagle
+<code>Service[Request, Response]</code> can be accessed via <code>Client.service</code>. <a href="https://github.com/twitter/finatra/commit/0e304bbc14980c7d1f0c9c74ab368e56acdb5566">0e304bbc</a></p></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li><p>scrooge-generator: Add support for construction_required fields. Add a validateNewInstance method
+to all generated scala companion objects. <a href="https://github.com/twitter/scrooge/commit/cbde33122c768b54d00b77b32aeed09041b95ca0">cbde3312</a></p></li>
+<li><p>scrooge-core: Check for corruption in size meta field of container and throw
+an exception if size is found corrupted. <a href="https://github.com/twitter/scrooge/commit/753921613a1488b04302d5c8b336d3070b5d26ac">75392161</a></p></li>
+<li><p>scrooge: Upgrade libthrift to 0.10.0. <a href="https://github.com/twitter/scrooge/commit/997f2464ca04998ce5b7a73c56c7667d1754a01b">997f2464</a></p></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">TwitterServer</a></h3>
+
+<p>No Changes</p>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<p>New Features</p>
+
+<ul>
+<li><p>util-app: Add the ability to bind specific implementations for <code>LoadService.apply</code>
+via <code>App.loadServiceBindings</code>. <a href="https://github.com/twitter/util/commit/740586781d2822a7ddca1cee04b54987c36ec016">74058678</a></p></li>
+<li><p>util-core: Introduce the <code>ClosableOnce</code> trait which extends the guarantees of
+<code>Closable</code> to include idempotency of the <code>close</code> method. <a href="https://github.com/twitter/util/commit/ccd1c697057cc4893630dd8aac419fb07b903512">ccd1c697</a></p></li>
+</ul>
+
+<p>Runtime Behavior Changes</p>
+
+<ul>
+<li><p>util-app: Add visibility for NonFatal exceptions during exiting of <code>c.t.app.App</code>.
+Added visibility into any NonFatal exceptions which occur during the closing of
+resources during <code>App#close</code>. <a href="https://github.com/twitter/util/commit/b152745ef5d06d9b688d330fb7d30cbd7a0fd2cc">b152745e</a></p></li>
+<li><p>util-core: Ensure the <code>Awaitable.CloseAwaitably0.closeAwaitably</code> Future returns.
+Because the <code>closed</code> AtomicBoolean is flipped, we want to make sure that executing
+the passed in <code>f</code> function satisfies the <code>onClose</code> Promise even the cases of thrown
+exceptions. <a href="https://github.com/twitter/util/commit/0c793f97f1a9d481295137d7603e407c4a4a780c">0c793f97</a></p></li>
+<li><p>util-stats: Alphabetically sort stats printed to the given <code>PrintStream</code> in the
+<code>c.t.finagle.stats.InMemoryStatsReceiver#print(PrintStream)</code> function.</p>
+
+<p>To include stats headers which provide better visual separation for the different
+types of stats being printedm, set <code>includeHeaders</code> to true. E.g.,</p>
+<pre class="highlight plaintext"><code>InMemoryStatsReceiver#print(PrintStream, includeHeaders = true)
+</code></pre>
+
+<p><a href="https://github.com/twitter/util/commit/a60a311c141fc21ecb4da4cc23712e1722cb18fe">a60a311c</a></p></li>
+</ul>
+
+<h3>Changelogs</h3>
+
+<ul>
+<li><a href="https://github.com/twitter/finagle/blob/finagle-18.4.0/CHANGES">Finagle 18.4.0</a></li>
+<li><a href="https://github.com/twitter/util/blob/util-18.4.0/CHANGES">Util 18.4.0</a></li>
+<li><a href="https://github.com/twitter/scrooge/blob/scrooge-18.4.0/CHANGES">Scrooge 18.4.0</a></li>
+<li><a href="https://github.com/twitter/twitter-server/blob/twitter-server-18.4.0/CHANGES">TwitterServer 18.4.0</a></li>
+<li><a href="https://github.com/twitter/finatra/blob/finatra-18.4.0/CHANGELOG.md">Finatra 18.4.0</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

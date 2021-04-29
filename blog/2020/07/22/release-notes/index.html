@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>July 2020 Release Notes - Version 20.7.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Ruben Oanta</h4>
+      <p class="author-twitter"><a href="https://twitter.com/rubenoanta">@rubenoanta</a></p>
+    </div>
+    <p><em>Posted July 22, 2020</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>July 2020 Release Notes - Version 20.7.0</h1>
+  
+  <p>Hi folks! Our July release is here – enjoy!</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h3>Breaking API Changes</h3>
+
+<ul>
+<li>  finagle-core: Correct the spelling of Tracing.recordClientSendFrargmet() to
+Tracing.recordClientSendFragment() <a href="https://github.com/twitter/finagle/commit/30726c014efe95760e9daff00e1813a412cd1bbe">30726c01</a></li>
+<li>  finagle-redis: Use StrictKeyCommand for XDEL <a href="https://github.com/twitter/finagle/commit/d174f9d603fa28122e3cdcc1d39563790bcbe98e">d174f9d6</a></li>
+<li>  finagle-toggle: Toggle.isDefinedAt(i: Int) has become Toggle.isDefined. Additionally, a new method Toggle.isUndefined has been added. <a href="https://github.com/twitter/finagle/commit/3bb78ce8dd10e816f18544143cbd5081a2f13721">3bb78ce8</a></li>
+<li>  finagle-zipkin-scribe: The scribe.thrift file was moved to finagle-thrift/src/main/thrift under a new
+namespace. com.twitter.finagle.thrift.scribe.(thrift|thriftscala) <a href="https://github.com/twitter/finagle/commit/01a20b798726550a670b890aa630e4ddd657bddd">01a20b79</a></li>
+</ul>
+
+<h3>Bug Fixes</h3>
+
+<ul>
+<li>  finagle-zipkin-scribe: The scribe client should be configured using the NullTracer. Otherwise, spans
+produced by the client stack will be sampled at initialSampleRate. <a href="https://github.com/twitter/finagle/commit/0446dd3e5ea519cac15cec990f919113c5a2d503">0446dd3e</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h3>Added</h3>
+
+<ul>
+<li>  inject-app: Adding flag converters for java.io.File (including comma-separated variants).
+<a href="https://github.com/twitter/finatra/commit/48429870b9fd2378599d10d648c2f51b86f1224a">48429870</a></li>
+<li>  finatra-kafka-streams: Added TracingKafkaClientSupplier to provide TracingKafkaProducer and
+TracingKafkaConsumer to enable Zipkin tracing. Tracing can be enabled with the toggle
+com.twitter.finatra.kafka.TracingEnabled. <a href="https://github.com/twitter/finatra/commit/fd2c5e0d652a30f2d8a7eb991124e970266d8ca7">fd2c5e0d</a></li>
+<li>  finatra-kafka: Added TracingKafkaProducer and TracingKafkaConsumer to enable Zipkin tracing
+for Kafka. FinagleKafkaProducerBuilder.build() and FinagleKafkaConsumerBuilder.buildClient()
+now return instances of TracingKafkaProducer and TracingKafkaConsumer respectively with
+tracing enabled by default. Tracing can be enabled with the toggle
+com.twitter.finatra.kafka.TracingEnabled. <a href="https://github.com/twitter/finatra/commit/d0d8a060ba21b7636b4f935b99efd533f49380bb">d0d8a060</a></li>
+</ul>
+
+<h3>Changed</h3>
+
+<ul>
+<li>  finatra: Update org.scalatest dependency to 3.1.2 and introduce finer-grained dependencies on
+org.scalatestplus artifacts. <a href="https://github.com/twitter/finatra/commit/ceccb7c5a8748f8124d178a05a857e13c405dfb0">ceccb7c5</a> <a href="https://github.com/twitter/finatra/commit/fbb7b5357f32f15b86c7a70f16804411c17bef7f">fbb7b535</a></li>
+<li>  inject-thrift-client: Remove unused ClientId property from
+ThriftMethodBuilderClientModule#provideServicePerEndpoint method. <a href="https://github.com/twitter/finatra/commit/381853f83ff25b639f143891b49b54c388ef50c1">381853f8</a></li>
+<li><p>inject-server: Improve startup time of EmbeddedTwitterServer by observing lifecycle events to
+determine startup, where previously we were doing 1 second polls. The nonInjectableServerStarted
+property is removed and isStarted should be referenced regardless of the type of underlying
+twitterServer type. The end result should see a faster test execution feedback loop. Our Finatra
+test targets range from a roughly 2x to 10x reduction in execution times.</p>
+
+<p>You may experience new test failures in cases where an exception is thrown as part of
+c.t.inject.TwitterServer.start() or c.t.server.TwitterServer.main() and the test would have
+expected a failure as part of startup. As the error takes place after the startup lifecycle,
+you may now need to Await.result the EmbeddedTwitterServer.mainResult() to assert the error.</p>
+
+<p>You may also experience some new non-deterministic behavior when testing against PubSub style
+logic. As the server may be started earlier, your tests may be relying on assumptions that
+an event would have occurred within the previous 1 second startup poll, which is no longer
+guaranteed. You may need to adjust your test logic to account for this behavior.</p>
+
+<p><a href="https://github.com/twitter/finatra/commit/a134e9b83f79e94f78788add162160678ee1f15e">a134e9b8</a></p></li>
+<li><p>finatra: Update com.google.inject.guice dependency to 4.2.3 and net.codingwell.scala-guice
+to version 4.2.11. The net.codingwell.scala-guice library has switched from Manifests to TypeTags
+for transparent binding and injector key creation. The c.t.inject.TwitterModule has moved from its
+custom bind DSL to the scalaguice.ScalaModule which brings the TwitterModule inline with both the
+TwitterPrivateModule and the bind[T] test DSL to now have the same consistent binding DSL across
+all three. Thus, there is no more confusing bindSingleton function in the TwitterModule bind API.</p>
+
+<p>Upgrading scalaguice helps move a necessary dependency of Finatra to a version which is Scala 2.13
+compatible moving Finatra closer to Scala 2.13 support. <a href="https://github.com/twitter/finatra/commit/26c1e8102450f57b2d279fb3ddb75977ddcef4f5">26c1e810</a> <a href="https://github.com/twitter/finatra/commit/5faa2e6f4543a19d7beceac631bb7952c60a6d62">5faa2e6f</a></p></li>
+</ul>
+
+<h3>Fixed</h3>
+
+<ul>
+<li>  inject-app: Having two sets of flag converters for primitive types (both Java and Scala) confuses
+the DI runtime, preventing the injection. We now have only a single set of converters, based off
+Scala primitive types. <a href="https://github.com/twitter/finatra/commit/9c1b0d68c551a177fb95ca8e0adf8bb08dafa0f3">9c1b0d68</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h3>New Features</h3>
+
+<ul>
+<li>  util-app: Add ability to observe App lifecycle events. <a href="https://github.com/twitter/util/commit/2d2e680310c21052f3879f30c568515585b3148b">2d2e6803</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<h3>Breaking API Changes</h3>
+
+<ul>
+<li>  Make Lifecycle and Lifecycle.Warmup self-typed to TwitterServer. Lifecycle was previously
+self-typed to c.t.app.App and Lifecycle.Warmup previously had no self-type restrictions. These
+traits can now only be mixed into instances of TwitterServer. The Lifecycle.DetatchedWarmup
+trait is introduced to allow users to transition to it, where they were previously extending
+Lifecycle.Warmup without mixing into a TwitterServer. Lifecycle.DetatchedWarmup
+is immediately deprecated and will be removed in a future release. <a href="https://github.com/twitter/twitter-server/commit/cb85a45fbc4d4d380b66f14db16b164a4d194981">cb85a45f</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>  scrooge-core: c.t.scrooge.ThriftStructMetaData has been changed from a concrete
+class to an abstract class with different implementations. To construct an object
+of ThriftStructMetaData, please now use one of the apply methods in the
+ThrifStructMetaData companion object. <a href="https://github.com/twitter/scrooge/commit/05881d4d5a90f1800f178f80c80d050366a690e7">05881d4d</a></li>
+<li>  scrooge-generator: Removed experiment-flag argument and replaced it with
+language-flag. Updated GeneratorFactory object and trait to match. <a href="https://github.com/twitter/scrooge/commit/8fa0583cac55ed90ac7df689740e52c28241d355">8fa0583c</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

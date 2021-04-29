@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Upgrading Finagle to Netty 4</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Sonja Keserovic</h4>
+      <p class="author-twitter"><a href="https://twitter.com/thesonjake">@thesonjake</a></p>
+    </div>
+    <p><em>Posted October 20, 2014</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>Upgrading Finagle to Netty 4</h1>
+  
+  <p>Netty 4 was released <a href="http://netty.io/news/2013/07/16/4-0-0-Final.html">more than a year
+ago</a> and Netty 5 Alpha is
+already available. Finagle is still using Netty 3, which is getting outdated
+quickly and is preventing us from taking advantage of various performance
+improvements in newer versions. It&rsquo;s also creating additional work for the
+Finagle team at Twitter as we need to port important security and performance
+fixes back to Netty 3.
+</p>
+
+<h2>Challenges</h2>
+
+<p>We can split the work required to make this upgrade into two main areas:</p>
+
+<ol>
+<li>Replacing internal Finagle usage of Netty 3 with Netty 4.</li>
+<li>Replacing usage of Netty 3 types in Finagle&rsquo;s public API surface.</li>
+</ol>
+
+<p>The first area is relatively straightforward. Once the changes are implemented,
+we&rsquo;ll use a new load test framework that Twitter is developing to verify that
+there are no regressions in performance or functionality.</p>
+
+<p>The second area is the really problematic one and is what makes this effort
+epic. Many projects that directly depend on Finagle are affected, and some of
+these expose Netty 3 types as part of their own public surface, affecting even
+more projects that depend on them, and so on.</p>
+
+<h2>High level plan</h2>
+
+<p>We are addressing these challenges by adopting a multi-stage approach.</p>
+
+<h3>Part 1: Provide alternatives for APIs that contain Netty types</h3>
+
+<p>For parts of Finagle that have a relatively low number of affected APIs (e.g.
+finagle-core) we&rsquo;ll add new APIs alongside the old ones, and deprecate the old
+ones. As part of deprecation we&rsquo;ll update all internal projects at Twitter to
+use the new version.</p>
+
+<p>For each part that has lots of Netty 3-based APIs (e.g. finagle-http,
+finagle-memcached, and finagle-kestrel), we&rsquo;ll add a whole new parallel package
+with the suffix &ldquo;x&rdquo; (e.g. finagle-httpx, finagle-memcachedx). All new bug
+fixing and feature additions will be done in the new packages.</p>
+
+<p>Existing packages that are not widely used internally (such as finagle-redis)
+will be moved out of the Finagle repository and into their own projects under
+the <a href="https://github.com/finagle">new Finagle organization</a> on GitHub.</p>
+
+<h3>Part 2: Remove all Netty types from Finagle&rsquo;s public surface</h3>
+
+<p>Once a sufficient number of projects have been migrated, we&rsquo;ll remove all
+deprecated APIs and packages (this will require incrementing Finagle&rsquo;s major
+version).
+  </p>
+
+<h3>Part 3: Change internal implementation to use Netty 4</h3>
+
+<p>At this point, the Netty version used by Finagle will be an implementation
+detail, and we&rsquo;ll do the work necessary to upgrade to Netty 4 and verify that
+performance and functionality are not affected. While this upgrade will be
+seamless for users of Finagle, we&rsquo;ll still increment the major version to
+indicate that such a significant implementation detail has been changed. We
+anticipate completing this process in the second quarter of 2015, although
+the timeline is still subject to revision.</p>
+
+<h2>Next steps</h2>
+
+<p>The <a href="https://github.com/twitter/finagle">Finagle repository</a> on GitHub now
+contains &ldquo;x&rdquo; versions of three Finagle packages (finagle-http,
+finagle-memcached, and finagle-kestrel), and you can follow our progress there,
+or even experiment with using these new packages in your own
+applications—we&rsquo;d love feedback about any challenges you run into. If you have
+questions about this upgrade, please contact us on the <a href="https://groups.google.com/forum/#!forum/finaglers">Finaglers mailing
+list</a>, and be sure to watch
+this space for upcoming blog posts about details of the transition for
+individual Finagle packages.</p>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

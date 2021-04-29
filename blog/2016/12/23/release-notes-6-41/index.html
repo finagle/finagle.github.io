@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Finagle 6.41 Release Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Jillian Crossley</h4>
+      <p class="author-twitter"><a href="https://twitter.com/jillyfish">@jillyfish</a></p>
+    </div>
+    <p><em>Posted December 23, 2016</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>Finagle 6.41 Release Notes</h1>
+  
+  <p>As the year ends, we&rsquo;ve got an exciting new release for you! Here&rsquo;s a quick rundown
+of what we&rsquo;ve been up to.</p>
+
+<h3>Scala 2.12 Support is Here</h3>
+
+<p>Finagle, Util, Ostrich, Scrooge, and Twitter-Server are all now cross-compiled for Scala 2.11 and 2.12(!)</p>
+
+<h3>Dynamic Timeouts</h3>
+
+<p>The new <a href="https://github.com/twitter/finagle/blob/finagle-6.41.0/finagle-core/src/main/scala/com/twitter/finagle/client/DynamicTimeout.scala">Dynamic Timeout module</a> module allows clients to specify call-site specific timeouts. </p>
+
+<h3>Deadline Filter Rises from the Dead</h3>
+
+<p>We&rsquo;ve resurrected <a href="https://github.com/twitter/finagle/blob/finagle-6.41.0/finagle-core/src/main/scala/com/twitter/finagle/service/DeadlineFilter.scala">Deadline Filter</a> as an optional module that can be added to clients and servers to reject requests with expired deadlines. If your calling clients are
+well-prepared to handle the resulting NACKs, check out this filter.</p>
+
+<h3>Filtered ThriftMux Clients</h3>
+
+<p>You can now add filters (using the <code>.filtered</code> method) on ThriftMux stack clients.</p>
+
+<h3>Turn it up to a 1.0</h3>
+
+<p>Toggles prove a convenient way to slowly roll out functionality. We&rsquo;ve now promoted them
+out of experimental. If you&rsquo;d like to give them a go, check out the <a href="http://twitter.github.io/finagle/guide/Configuration.html#feature-toggles">guide</a>.</p>
+
+<h3>Next Year in&hellip;.Finagle</h3>
+
+<p>The team is steadily working towards Netty 4. Since the last update, we&rsquo;ve finished migrating
+Memcached and MySQL, and Redis will come in the next release.</p>
+
+<p>Here&rsquo;s to a great 2017!</p>
+
+<h3>Changelog</h3>
+
+<ul>
+<li><a href="https://github.com/twitter/finagle/releases/tag/finagle-6.41.0">Finagle 6.41</a></li>
+<li><a href="https://github.com/twitter/util/releases/tag/util-6.40.0">Util 6.40</a></li>
+<li><a href="https://github.com/twitter/scrooge/releases/tag/scrooge-4.13.0">Scrooge 4.13</a></li>
+<li><a href="https://github.com/twitter/twitter-server/releases/tag/twitter-server-1.26.0">TwitterServer 1.26</a></li>
+<li><a href="https://github.com/twitter/finatra/releases/tag/finatra-2.7.0">Finatra 2.7</a></li>
+<li>Ostrich 9.24 (no changes, only dependency bump)</li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

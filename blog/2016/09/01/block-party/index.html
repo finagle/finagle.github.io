@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Finagle Block Party</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Kevin Oliver</h4>
+      <p class="author-twitter"><a href="https://twitter.com/kevino">@kevino</a></p>
+    </div>
+    <p><em>Posted September  1, 2016</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>Finagle Block Party</h1>
+  
+  <p>💔 <strong>SPOILER ALERT:</strong> you do not want to go to this party 💔</p>
+
+<p>Blocking Finagle&rsquo;s event loop via calls to
+<a href="http://twitter.github.io/util/docs/index.html#com.twitter.util.Await$@result[T](awaitable:com.twitter.util.Awaitable[T],timeout:com.twitter.util.Duration):T">Await.result</a>
+or
+<a href="http://twitter.github.io/util/docs/index.html#com.twitter.util.Await$@ready[T%3C:com.twitter.util.Awaitable[_]](awaitable:T):T">Await.ready</a>
+will cause your application to experience unexpected slowness, a
+decrease in throughput, and potentially deadlocks. Find out if our new
+tools that identify the calls that cause service sadness are right for
+you.</p>
+
+<p>✮ <em>Why is blocking bad?</em></p>
+
+<p>Finagle uses Netty which is a network library built on an event loop.
+When an event loop thread blocks, that thread can no longer do its
+other asynchronous work. As such, blocking has effects that span
+beyond the line of code that is doing the blocking. Removing blocking
+code should help your service with throughput and latency.</p>
+
+<p>✮ <em>How do I find out if my service is blocking?</em></p>
+
+<p>Blocking can happen in two ways, explicitly and implicitly. Explicit
+blocking is when code synchronously waits on a Future from an event
+loop thread. In Finagle, this is done by making calls to
+<a href="http://twitter.github.io/util/docs/index.html#com.twitter.util.Await$@result[T](awaitable:com.twitter.util.Awaitable[T],timeout:com.twitter.util.Duration):T">Await.result</a>
+or
+<a href="http://twitter.github.io/util/docs/index.html#com.twitter.util.Await$@ready[T%3C:com.twitter.util.Awaitable[_]](awaitable:T):T">Await.ready</a>.</p>
+
+<p>If your service is running Finagle 6.37, there is now a gauge exported
+as
+<a href="http://twitter.github.io/finagle/guide/Metrics#scheduler">scheduler/blocking_ms</a>
+which can be used to identify how much time is being spent. You can
+verify that your service continues to operate correctly by checking
+the new lint rule added to TwitterServer&rsquo;s
+<a href="http://twitter.github.io/twitter-server/Admin.html#admin-lint">/admin/lint</a>
+admin endpoint.</p>
+
+<p>Implicit blocking happens when your code runs a potentially expensive
+operation, for example making network calls on the event loop thread
+using a synchronous API. Unfortunately, these calls are difficult to
+track down and we do not yet have any tooling to help on this front.</p>
+
+<p>✮ <em>Bummer, it is blocking. How do I find out what’s blocking?</em></p>
+
+<p>You can do a deploy with an extra system property set that will log
+the stacktraces for a fraction of the blocking calls. Given that the
+code is about to block, the extra overhead of logging the stacktrace
+shouldn&rsquo;t be a significant overhead. However, if your service has a
+large amount of blocking, you may want to limit this fraction to avoid
+filling up your logs. You can set it via
+<code>-Dcom.twitter.concurrent.schedulerSampleBlockingFraction=$fraction</code>
+where <code>$fraction</code> must be between <code>0.0</code> and <code>1.0</code>, inclusive.</p>
+
+<p>This will output a log that should point you to the code doing the
+blocking. For example in the stacktrace below, HttpServer.scala would
+be the cause:</p>
+<pre class="highlight plaintext"><code>I 0812 21:39:31.743 THREAD18 TraceId:a2c1d94ae0029777: Scheduler blocked for 5004957 micros via the following stacktrace
+com.twitter.concurrent.LocalScheduler$BlockingHere
+  at com.twitter.concurrent.LocalScheduler$Activation.blocking(Scheduler.scala:216)
+  at com.twitter.concurrent.LocalScheduler.blocking(Scheduler.scala:285)
+  at com.twitter.concurrent.Scheduler$.blocking(Scheduler.scala:115)
+  at com.twitter.util.Await$.result(Awaitable.scala:151)
+  at com.twitter.util.Await$.result(Awaitable.scala:140)
+  at com.twitter.example.HttpServer$$anonfun$4.apply(HttpServer.scala:28)
+  at com.twitter.example.HttpServer$$anonfun$4.apply(HttpServer.scala:24)
+  ...
+</code></pre>
+
+<p>✮ <em>How can I fix the blocking code?</em></p>
+
+<p>We recommend that applications use the <a href="http://twitter.github.io/finagle/guide/Futures.html#sequential-composition">Future
+combinators</a>
+such as <code>flatMap</code>, <code>onSuccess</code>, <code>transform</code>, and so on. Sometimes this type
+of change may not be feasible and in those cases you can use a
+<a href="https://github.com/twitter/util/blob/master/util-core/src/main/scala/com/twitter/util/FuturePool.scala">FuturePool</a>
+to shift the blocking off of the event loop and onto a thread pool
+that your application controls.</p>
+
+<p>Please let us know if you have any questions, either by
+getting in touch through <a href="https://twitter.com/finagle">@finagle</a>, the
+<a href="https://groups.google.com/forum/#!forum/finaglers">Finaglers mailing list</a>,
+or <a href="https://gitter.im/twitter/finagle">chat</a>.</p>
+
+<p>Thanks for reading and we sincerely hope you don’t RSVP.</p>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

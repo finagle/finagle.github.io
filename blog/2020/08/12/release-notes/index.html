@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>August 2020 Release Notes - Version 20.8.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Bonnie Eisenman</h4>
+      <p class="author-twitter"><a href="https://twitter.com/brindelle">@brindelle</a></p>
+    </div>
+    <p><em>Posted August 12, 2020</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>August 2020 Release Notes - Version 20.8.0</h1>
+  
+  <p>Another month, another release. 😺 Here&rsquo;s the August release of Finagle, Finatra, Scrooge, Twitter Server, and Util.</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  finagle-netty4-http: Post, Put, Patch non-streaming outbound requests with empty bodies will
+be added the Content-Length header with value 0. <a href="https://github.com/twitter/finagle/commit/9ce18e853deafad499e2a8d413e48dea9052fbe7">9ce18e85</a></li>
+<li>  finagle-core: A ServiceFactory created by ServiceFactory.const/constant propagates the wrapped
+service status. <a href="https://github.com/twitter/finagle/commit/3347c0956ff0d64dac68592d030c7d46d70f37f6">3347c095</a></li>
+<li>  finagle-http: c.t.f.http.filter.PayloadSizeFilter no longer adds an annotation on each
+streaming chunk and instead aggregates the byte count and adds a single record on stream
+termination. <a href="https://github.com/twitter/finagle/commit/e87b1c35da8d625dc573c8641b8e6a4ad23927e2">e87b1c35</a></li>
+<li>  finagle-zipkin-scribe: zipkin scribe log_span prefix replaced with scribe. zipkin-scribe/scribe/&lt;stats&gt;. <a href="https://github.com/twitter/finagle/commit/5b100ee9b00d620b53f614e496c4faed9af122fc">5b100ee9</a></li>
+</ul>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  finagle-core: introduce type-safe ReqRep variant <a href="https://github.com/twitter/finagle/commit/459daf6864825f26cf8e5a707d75797b938e6808">459daf68</a></li>
+<li>  finagle-core: Added a new variant of Filter.andThenIf which allows passing the parameters
+as individual parameters instead of a Scala tuple. <a href="https://github.com/twitter/finagle/commit/fb071d9b755843dc2841bc14f0192252a136f06a">fb071d9b</a></li>
+<li>  finagle-core: new metric (counter) for traces that are sampled. finagle/tracing/sampled <a href="https://github.com/twitter/finagle/commit/1d6503e07b957f87403211bcf0ac80db1b009716">1d6503e0</a></li>
+<li>  finagle-netty4: Add the c.t.f.netty4.Netty4Listener.MaxConnections param that can be used
+to limit the number of connections that a listener will maintain. Connections that exceed
+the limit are eagerly closed. <a href="https://github.com/twitter/finagle/commit/9991aae3851e6db2367379836298afce7fe6f210">9991aae3</a></li>
+<li>  finagle-thrift: Added java-friendly c.t.f.thrift.exp.partitioning.ClientHashingStrategy and
+c.t.f.thrift.exp.partitioning.ClientCustomStrategy create methods, and added java-friendly
+c.t.f.thrift.exp.partitioning.RequestMergerRegistry#addRequestMerger and
+c.t.f.thrift.exp.partitioning.ResponseMergerRegistry#addResponseMerger to make partitioning
+easier to use from Java. <a href="https://github.com/twitter/finagle/commit/e0d78d146208c9592e88574a6d032d5bf20b29b2">e0d78d14</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  finagle-core: ReqRep can no longer be created via new ReqRep(..). Please use
+ReqRep.apply(..) instead.
+<a href="https://github.com/twitter/finagle/commit/459daf6864825f26cf8e5a707d75797b938e6808">459daf68</a></li>
+<li>  finagle-thrift: Updated the c.t.f.thrift.exp.partitioning.ClientHashingStrategy and the
+c.t.f.thrift.exp.partitioning.ClientCustomStrategy to take constructor arguments instead
+of needing to override methods on construction. <a href="https://github.com/twitter/finagle/commit/e0d78d146208c9592e88574a6d032d5bf20b29b2">e0d78d14</a></li>
+<li>  finagle-zipkin-core: Removed unused statsReceiver constructor argument from RawZipkinTracer. <a href="https://github.com/twitter/finagle/commit/5b100ee9b00d620b53f614e496c4faed9af122fc">5b100ee9</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Added</h4>
+
+<ul>
+<li>  inject-app: Add more Java-friendly constructors for the TestInjector. <a href="https://github.com/twitter/finatra/commit/2408860e1c550b030329dc746283232cd73f7679">2408860e</a></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  inject-modules: Improve Java usability: rename apply to get for
+StatsReceiverModule and LoggerModule.
+Add get methods for other TwitterModule singleton objects.
+(BREAKING API CHANGE) <a href="https://github.com/twitter/finatra/commit/0cbbf8ab6c8e69682ee04746267e33b5848260dc">0cbbf8ab</a></li>
+<li>  inject-core: Deprecate c.t.inject.Resettable (no replacement) and c.t.inject.TestTwitterModule.
+Users should prefer the #bind[T] DSL over usage of the TestTwitterModule. <a href="https://github.com/twitter/finatra/commit/f95fe7cb9002592ebf219227df253cd5c7e65b82">f95fe7cb</a></li>
+</ul>
+
+<h4>Fixed</h4>
+
+<ul>
+<li>  inject-server: Fix EmbeddedTwitterServer to return StartupTimeoutException when server under
+test fails to start within max startup time. <a href="https://github.com/twitter/finatra/commit/3eb0cd859dd3e8293dd14773af8740e3d5c48be7">3eb0cd85</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  util-stats: Store MetricSchemas in InMemoryStatsReceiver to enable further testing. <a href="https://github.com/twitter/util/commit/c305712e6fc1fc85d598256b7850393a97cd5c38">c305712e</a></li>
+<li>  util-core: c.t.u.Var.Observer is now public. This allows scala users to extend the Var trait
+as has been the case for Java users. <a href="https://github.com/twitter/util/commit/ee1cebcf44897cdd4df87c11ebc752fd9d583e07">ee1cebcf</a></li>
+<li>  util-core: Added two new methods to c.t.u.Duration and c.t.u.Time: .fromHours and .fromDays. <a href="https://github.com/twitter/util/commit/955f2ce9458c8a60af78b919275d934e51d7f623">955f2ce9</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  util-app: Treat empty strings as empty collections in Flag[Seq[_]], Flag[Set[_]],
+Flag[java.util.List[_]], and Flag[java.util.Set[_]]. They were treated as collections
+with single element, empty string, before. <a href="https://github.com/twitter/util/commit/43f83d2250af2f47425825175bd49e563a79fa18">43f83d22</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<p>No Changes</p>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>  scrooge: replace deprecated ScalaTest 3.0 API with ScalaTest 3.1/3.2 API. <a href="https://github.com/twitter/scrooge/commit/9878247b1bd474fcbb03e3044b664e289565f652">9878247b</a></li>
+<li>  scrooge-core: Change c.t.scrooge.ThriftStructMetaData from an abstract class to a trait
+to allow for mixin to classes that already extend other classes. <a href="https://github.com/twitter/scrooge/commit/982e8530184cd04d9b16dd11addc6d0c4efcaa68">982e8530</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>October 2018 Release Notes — Version 18.10.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Neuman Vong</h4>
+      <p class="author-twitter"><a href="https://twitter.com/neuman">@neuman</a></p>
+    </div>
+    <p><em>Posted October 24, 2018</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>October 2018 Release Notes — Version 18.10.0</h1>
+  
+  <p>Here we are in the month of October, just a few weeks until creatures of
+fantasy roam the streets together with people dressed up as creatures of
+fantasy 👹.</p>
+
+<p>Speaking of the fantastic, we have new releases!</p>
+
+<p><a href="https://github.com/twitter/finagle/releases/tag/finagle-18.10.0">Finagle 18.10.0</a>,
+<a href="https://github.com/twitter/finatra/releases/tag/finatra-18.10.0">Finatra 18.10.0</a>,
+<a href="https://github.com/twitter/scrooge/releases/tag/scrooge-18.10.0">Scrooge 18.10.0</a>,
+<a href="https://github.com/twitter/twitter-server/releases/tag/twitter-server-18.10.0">TwitterServer 18.10.0</a>,
+and <a href="https://github.com/twitter/util/releases/tag/util-18.10.0">Util 18.10.0</a>.</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>Deprecations</h4>
+
+<ul>
+<li>finagle-core: Deprecation warnings have been removed from the &lsquo;status&rsquo;, &lsquo;onClose&rsquo;,
+and &lsquo;close&rsquo; methods on <code>c.t.f.t.Transport</code>, and added to the corresponding methods
+on <code>c.t.f.t.TransportContext</code>. <a href="https://github.com/twitter/finagle/commit/9ae6d978c9b0c77309e7d199f6f71c6cc5d58586">9ae6d978</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>finagle-netty3: Implementations for &lsquo;status&rsquo;, &lsquo;onClose&rsquo;, and &lsquo;close&rsquo; methods have
+been moved from <code>c.t.f.n.t.ChannelTransportContext</code> to <code>c.t.f.n.t.ChannelTransport</code>.
+<a href="https://github.com/twitter/finagle/commit/9ae6d978c9b0c77309e7d199f6f71c6cc5d58586">9ae6d978</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Fixed</h4>
+
+<ul>
+<li>finatra-thrift: Set the bound <code>StatsReceiver</code> in the underlying Finagle <code>ThriftMux</code> server
+in the <code>c.t.finatra.thrift.ThriftServer</code>. This prevented testing of underlying Finagle server
+stats as the <code>InMemoryStatsReceiver</code> used by the <code>EmbeddedThriftServer</code> was not properly passed
+all the way through the stack. <a href="https://github.com/twitter/finatra/commit/33d0524b76f943c5661c0b21ff0d38c1d6563202">33d0524b</a></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li><p>finatra-http, finatra-thrift: Make HTTP and Thrift StatsFitlers &ldquo;Response Classification&rdquo;
+aware. <a href="https://github.com/twitter/finatra/commit/4085d40cb7cb607101564bbc488f9a1daea56dff">4085d40c</a></p></li>
+<li><p>finatra-http, finatra-thrift: (BREAKING API CHANGE) Update the <code>DarkTrafficFilterModule</code> in
+both HTTP and Thrift to allow for specifying further configuration of the underlying Finagle client.
+This allows users the ability to set Finagle client concerns like ResponseClassification or other
+configuration not expressed by the DarkTrafficFilterModule&rsquo;s API.</p>
+
+<ul>
+<li>Additionally, the Thrift <code>DarkTrafficFilterModule</code> has been updated to be ThriftMux only. For more information on mux see: <a href="https://twitter.github.io/finagle/guide/FAQ.html?highlight=thriftmux#what-is-thriftmux">What is ThriftMux</a>.</li>
+<li>We also update the <code>enableSampling</code> method to accept a <code>c.t.inject.Injector</code> to aid in the decision-making for if a given request should be &ldquo;sampled&rdquo; by the filter. <a href="https://github.com/twitter/finatra/commit/d74868430cf6b0da2051b3ff0f2d1e47e6c0c169">d7486843</a></li>
+</ul></li>
+<li><p>finatra-thrift: (BREAKING API CHANGE) Update <code>c.t.finatra.thrift.routing.ThriftRouter</code> API for
+adding Java Thrift controllers. The <code>service: Class[_]</code> was rendered unnecessary some time ago
+but not removed from the API signature. Because this parameter is useless and it shadows
+another variable inside of the code we remove it from the signature altogether rather than
+deprecating the API. <a href="https://github.com/twitter/finatra/commit/c2378cc7b61bce18afa65ff5b76175dfaecd7b13">c2378cc7</a></p></li>
+<li><p>finatra-thrift: Rename <code>defaultFinatraThriftPort</code> to <code>defaultThriftPort</code>.
+<a href="https://github.com/twitter/finatra/commit/5910fd2358ad0e9e9c8ee1c25b549afabfee199f">5910fd23</a></p></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>scrooge: Add type annotations to public members in generated code.
+<a href="https://github.com/twitter/scrooge/commit/5cad10055fb9fa45f7b2659bf5830745e9fc472b">5cad1005</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<h4>Changes</h4>
+
+<ul>
+<li>Deprecate <code>c.t.server.AdminHttpServer#routes</code>. Routes should be added to the <code>AdminHttpServer</code>
+via <code>c.t.server.AdminHttpServer#addAdminRoutes</code>. <a href="https://github.com/twitter/twitter-server/commit/4078e4cb39812f1085bd38fdcaca2de35f2dffc7">4078e4cb</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>Update <code>BuildProperties</code> to not emit a warning when no <code>build.properties</code> file can be
+located. <a href="https://github.com/twitter/twitter-server/commit/7ce6e4cbcaf3ac9d9dccd62a5aaf9c9572cf5788">7ce6e4cb</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li><p>util-core: <code>c.t.io.Reader.Writable</code> and <code>c.t.Reader.writable()</code> are removed. Use <code>c.t.io.Pipe</code>
+instead. <a href="https://github.com/twitter/util/commit/5ef6a0dca89dad4488ce33cd1ea5a2f8eab1bb7a">5ef6a0dc</a></p></li>
+<li><p>util-core: <code>c.t.util.TempFolder</code> has been moved to <code>c.t.io.TempFolder</code>. <a href="https://github.com/twitter/util/commit/2f8ee9048431a7cdf10333390b0eb2e1c2df08cd">2f8ee904</a></p></li>
+<li><p>util-core: Removed the forwarding types <code>c.t.util.TimeConversions</code> and
+<code>c.t.util.StorageUnitConversions</code>. Use <code>c.t.conversions.time</code> and
+<code>c.t.conversions.storage</code> directly. <a href="https://github.com/twitter/util/commit/0c83ebc0ae1d6d62fabf80a48bca501c6457440f">0c83ebc0</a></p></li>
+<li><p>util-core: <code>c.t.concurrent.AsyncStream.fromReader</code> has been moved to
+<code>c.t.io.Reader.toAsyncStream</code>. <a href="https://github.com/twitter/util/commit/6c3be47d69bf628a9b87146309e2e02844a2d25b">6c3be47d</a></p></li>
+</ul>
+
+<h4>New Features</h4>
+
+<ul>
+<li>util-core: <code>c.t.io.Reader.fromBuf</code> (<code>BufReader</code>), <code>c.t.io.Reader.fromFile</code>,
+<code>c.t.io.Reader.fromInputStream</code> (<code>InputStreamReader</code>) now take an additional parameter,
+<code>chunkSize</code>, the upper bound of the number of bytes that a given reader emits at each read.
+<a href="https://github.com/twitter/util/commit/719f41a65b723c21d03348d02989c93e293beb42">719f41a6</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>util-core: <code>c.t.u.Duration.inTimeUnit</code> can now return
+<code>j.u.c.TimeUnit.MINUTES</code>. <a href="https://github.com/twitter/util/commit/0daac8d785b02bc819b1464c695f17a28ffb3384">0daac8d7</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

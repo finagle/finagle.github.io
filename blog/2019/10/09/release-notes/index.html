@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>October 2019 Release Notes - Version 19.10.0 🌕</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Christopher Coco</h4>
+      <p class="author-twitter"><a href="https://twitter.com/cacoco">@cacoco</a></p>
+    </div>
+    <p><em>Posted October  9, 2019</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>October 2019 Release Notes - Version 19.10.0 🌕</h1>
+  
+  <p>In preparation for Halloween 👻 at the end of the month, we are very happy to announce 
+our October 🕷️ release: no tricks 🎃 &ndash; all treats 🍬.</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  finagle-partition: Enables cross-build for 2.13.0. <a href="https://github.com/twitter/finagle/commit/89f06885140ee186f7b8d7ff15169a7a3f8b676b">89f06885</a></li>
+<li>  finagle-exception: Enables cross-build for 2.13.0. <a href="https://github.com/twitter/finagle/commit/d90ae6462db9a7f2a5e0e186f04ae1a6b79f4067">d90ae646</a></li>
+<li>  finagle-exp: Enables cross-build for 2.13.0. <a href="https://github.com/twitter/finagle/commit/32bc9f48c3c4b99b3b847134ac315797bd80a643">32bc9f48</a></li>
+<li>  finagle-mysql: Enables cross-build for 2.13.0. <a href="https://github.com/twitter/finagle/commit/ef31c99bb4e6ef0072c8eba09736c781b5d81752">ef31c99b</a></li>
+<li>  finagle-{mux,thrift,thrift-mux}: Enables cross-build for 2.13.0. <a href="https://github.com/twitter/finagle/commit/47ee31fd5bf93b49aa304dfef6aae39abdb9be17">47ee31fd</a></li>
+<li>  finagle-redis: Enables cross-build for 2.13.0. <a href="https://github.com/twitter/finagle/commit/d90ae6462db9a7f2a5e0e186f04ae1a6b79f4067">d90ae646</a></li>
+<li>  finagle-tunable: Enables cross-build for 2.13.0. <a href="https://github.com/twitter/finagle/commit/69ded534047f1115ad46de76bf293ab747d67ea5">69ded534</a></li>
+<li>  finagle-grpc-context: Enables cross-build for 2.13.0. <a href="https://github.com/twitter/finagle/commit/65963f58bab0a4ed634beaf2df4905db2a3422ef">65963f58</a></li>
+<li>  finagle-thrift: Pass a factory to create a TReusableBuffer as the parameter of a finagle client
+to allow multiple clients share one TReusableBuffer. <a href="https://github.com/twitter/finagle/commit/05b2ec71b8e9c680102ea9df6bafe3e670aa264f">05b2ec71</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  finagle-http2: H2ServerFilter will no longer swallow exceptions that fire via
+exceptionCaught in the Netty pipeline. PHAB_ID=D369185</li>
+<li>  finagle-http: Remove legacy HTTP/2 client implementation and make the MultiplexHandler-based
+implementation the default HTTP/2. <a href="https://github.com/twitter/finagle/commit/b6d0aa19878f9faf990c09ab30c067479dd56c24">b6d0aa19</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  finagle-core: c.t.f.l.FailureAccrualFactory&rsquo;s didMarkDead() changed to didMarkDead(Duration).
+The Duration is the length of time the endpoint is marked dead. <a href="https://github.com/twitter/finagle/commit/fe2f43a312aafc2dd8ab6889a1258e795d9653be">fe2f43a3</a></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>  finagle-mux: Mux now properly propagates Ignorable failures multiple levels for superseded
+backup requests. This allows for more accurate success rate metrics for downstream services,
+when using backup requests.
+<a href="https://github.com/twitter/finagle/commit/21b181e89cc1d3d965fb30ba635b48111b0f4c20">21b181e8</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  finatra-jackson: Update jackson reflection to use org.json.reflect instead of
+custom reflection. This enables support for parsing case classes defined over generic
+types, e.g., <code>case class Page[T](data: T)</code>. As a result of this change, use of lazy val
+for trait members which are mixed into case classes for use in deserialization is no
+longer supported. This addresses issue #480. <a href="https://github.com/twitter/finatra/commit/83d3ed6d819f77421caa72764ed8c46467654101">83d3ed6d</a></li>
+</ul>
+
+<h4>Fixed</h4>
+
+<ul>
+<li>  finatra-jackson: Add support for parsing of case classes defined over generic types
+(even nested, and multiple), e.g., <code>case class Page[T, U](data: List[T], column: U)</code>.
+Fixes issue #408. <a href="https://github.com/twitter/finatra/commit/83d3ed6d819f77421caa72764ed8c46467654101">83d3ed6d</a></li>
+<li>  finatra-kafka: Sanitize topic name in MonitoringConsumer stats scope
+<a href="https://github.com/twitter/finatra/commit/0df09c6b540a2e2d3cc5038b628f97eee32d5237">0df09c6b</a></li>
+<li>  inject-server: Fix printing of all stats from the underlying InMemoryStatsReceiver in
+the eventually loop for stat assertion. Address finatra/kafka test logging for
+finatra/kakfa-streams/kafka-streams and finatra/kafka. <a href="https://github.com/twitter/finatra/commit/32833de11c91eb79038298cf65f8e03769271774">32833de1</a></li>
+<li>  inject-logback: A NullReferenceException could be thrown during metrics
+collection due to an incorrect logback.xml configuration. This has been fixed.
+<a href="https://github.com/twitter/finatra/commit/82f0382f17ddebf64cb4e12c1ae55642fa8ed04c">82f0382f</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  util-core: When a computation from FuturePool is interrupted, its promise is
+set to the interrupt, wrapped in a j.u.c.CancellationException. This wrapper
+was introduced because, all interrupts were once CancellationExceptions. In
+<code>RB_ID=98612</code>, this changed to allow the user to raise specific exceptions as
+interrupts, and in the aid of compatibility, we wrapped this raised exception
+in a CancellationException. This change removes the wrapper and fails the
+promise directly with the raised exception. This will affect users that
+explicitly handle CancellationException. <a href="https://github.com/twitter/util/commit/9daad3d9ef7de09d52578fd3e131dea24bd1ce60">9daad3d9</a></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>  util-core: Fixed bug in c.t.io.Reader.framed where if the framer didn&rsquo;t emit a List the
+emitted frames were skipped. <a href="https://github.com/twitter/util/commit/aedc943eb2b53944c6371d2e7a6428260d0def9f">aedc943e</a></li>
+<li>  util-hashing: Fix a bug where partitionIdForHash was returning incosistent values w.r.t
+entryForHash in KetamaDistributor. <a href="https://github.com/twitter/util/commit/c66080b665d25334bcf6cca75ea3f02402342511">c66080b6</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>  scrooge-generator: Make isset BitSet final in Java generated thrift classes. <a href="https://github.com/twitter/scrooge/commit/19ca055efbd0f63e9ebe763127cf76ba1c71f716">19ca055e</a></li>
+<li>  scrooge-generator: Return Nil for exceptionFields when no exceptions declared in Scala service. <a href="https://github.com/twitter/scrooge/commit/e6c44930875bdf763616e46091a5c5bedf1b25aa">e6c44930</a></li>
+<li>  scrooge-generator: Use empty instances as defaults for Seq, Map, Set for Scala generated code. <a href="https://github.com/twitter/scrooge/commit/8904ba899a84276cdadeb33dbee533d2e9276e38">8904ba89</a></li>
+<li>  scrooge-generator: Use wrapper class valueOf in apachejavagen&rsquo;s getFieldValue. <a href="https://github.com/twitter/scrooge/commit/8d02a4f337132bf16527a7e772a7f2866de20091">8d02a4f3</a></li>
+<li>  scrooge-linter: Warn when function names are reserved words. Add support for reserved
+words in Javascript and Go. <a href="https://github.com/twitter/scrooge/commit/ca2ae718ca224434631e8b2809242e6bb5788ffa">ca2ae718</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<p>No Changes</p>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

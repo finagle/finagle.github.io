@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>📆 January 2018 Release Notes - Version 18.1.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Christopher Coco</h4>
+      <p class="author-twitter"><a href="https://twitter.com/cacoco">@cacoco</a></p>
+    </div>
+    <p><em>Posted January 17, 2018</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>📆 January 2018 Release Notes - Version 18.1.0</h1>
+  
+  <p>Time to turn the calendar to a new year and a new release — our January release is here!</p>
+
+<p><a href="https://github.com/twitter/finagle/blob/finagle-18.1.0/CHANGES">Finagle 18.1.0</a>, <a href="https://github.com/twitter/finatra/blob/finatra-18.1.0/CHANGELOG.md">Finatra 18.1.0</a>, <a href="https://github.com/twitter/scrooge/blob/scrooge-18.1.0/CHANGES">Scrooge 18.1.0</a>, <a href="https://github.com/twitter/twitter-server/blob/twitter-server-18.1.0/CHANGES">TwitterServer 18.1.0</a>, and <a href="https://github.com/twitter/util/blob/util-18.1.0/CHANGES">Util 18.1.0</a>.</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<p>New Features:</p>
+
+<ul>
+<li><p>finagle-core: <code>FailureDetector</code> has a new method, <code>onClose</code>, which provides
+a Future that is satisfied when the <code>FailureDetector</code> marks a peer as Closed.
+<a href="https://github.com/twitter/finagle/commit/186f094957b43a9bc4a0e1a5abb6adb95e26fee8">186f0949</a></p></li>
+<li><p>finagle-core: Introduce trace logging of requests as they flow through a
+Finagle client or server. These logs can be turned on at runtime by setting
+the &ldquo;com.twitter.finagle.request.Logger&rdquo; logger to trace level.
+<a href="https://github.com/twitter/finagle/commit/203fed55335633173b2a36b98c30c55336baaf3a">203fed55</a></p></li>
+<li><p>finagle-http2: HTTP/2 clients now expose the number of currently opened streams under
+the <code>$client/streams</code> gauge. <a href="https://github.com/twitter/finagle/commit/add0050e29ff466c8f94dfa48023a7618c8564df">add0050e</a></p></li>
+<li><p>finagle-http2: HTTP/2 servers now expose the number of currently opened streams under
+the <code>$server/streams</code> gauge. <a href="https://github.com/twitter/finagle/commit/ed6800a3c7b8f01c31a963377bbe5b0147ffd6cc">ed6800a3</a></p></li>
+<li><p>finagle-memcached: By default, the Memcached client now creates two connections
+to each endpoint, instead of 4. <a href="https://github.com/twitter/finagle/commit/1c5d9eacd8bacf3ecc6007f17769854cd8a630e0">1c5d9eac</a></p></li>
+<li><p>finagle-redis: Add support for redis Geo Commands. <a href="https://github.com/twitter/finagle/commit/d32d123665fab5bada54a653029d60a88a29b1a6">d32d1236</a> based on the PR
+<a href="https://github.com/twitter/finagle/pull/628">https://github.com/twitter/finagle/pull/628</a> written by Mura-Mi [<a href="https://github.com/Mura-Mi">https://github.com/Mura-Mi</a>]</p></li>
+<li><p>finagle-thrift: Add <code>c.t.f.thrift.service.ThriftServiceBuilder</code> and
+<code>c.t.f.thrift.service.ReqRepThriftServiceBuilder</code> for backwards compatibility
+of creating higher-kinded method-per-endpoint clients. <a href="https://github.com/twitter/finagle/commit/f61b6f99c7d108b458d5adcb9891ff6ddda7f125">f61b6f99</a></p></li>
+<li><p>finagle-core: <code>c.t.f.http.MethodBuilder</code> and <code>c.t.f.thriftmux.MethodBuilder</code> now
+expose <code>idempotent</code> and <code>nonIdempotent</code> methods, which can be used to configure
+retries and the sending of backup requests. <a href="https://github.com/twitter/finagle/commit/2c1105e5e57abf5048f991339f9c54f2570fa7ea">2c1105e5</a></p></li>
+</ul>
+
+<p>Bug Fixes:</p>
+
+<ul>
+<li><p>finagle-mysql: Fix a bug with transactions where an exception during a rollback
+could leave the connection with a partially committed transaction. <a href="https://github.com/twitter/finagle/commit/4b76bfc2fc86d4b713edb382e0cf38ac79371542">4b76bfc2</a></p></li>
+<li><p>finagle-toggle: <code>c.t.f.toggle.Toggle</code>s are independent; that is, applying the same value to
+two different toggles with the same fraction will produce independent true/false
+values. <a href="https://github.com/twitter/finagle/commit/8ef6acb144c57d64dae78d32df724623c29c36e5">8ef6acb1</a></p></li>
+</ul>
+
+<p>Runtime Behavior Changes:</p>
+
+<ul>
+<li><p>finagle-core, finagle-netty4: When creating engines, SslClientEngineFactories now use
+<code>SslClientEngineFactory.getHostString</code> instead of <code>SslClientEngineFactory.getHostname</code>.
+This no longer performs an unnecessary reverse lookup when a hostname is not supplied
+as part of the <code>SslClientConfiguration</code>.  <a href="https://github.com/twitter/finagle/commit/d05d1299032673d03b13b32afe668c83de3fd65c">d05d1299</a></p></li>
+<li><p>finagle-http2: Supplies a dependency on io.netty.netty-tcnative-boringssl-static,
+which adds support for ALPN, which is necessary for encrypted http/2.  To use a
+different static ssl dependency, exclude the tcnative-boringssl dependency and
+manually depend on the one you want to use.  <a href="https://github.com/twitter/finagle/commit/246be7e560e5089396335462b0585214e2f75983">246be7e5</a></p></li>
+</ul>
+
+<p>Breaking API Changes:</p>
+
+<ul>
+<li><p>finagle-base-http, finagle-http: Removed Apache Commons Lang dependency,
+<code>org.apache.commons.lang3.time.FastDateFormat</code> now is <code>java.time.format.DateTimeFormatter</code>.
+<a href="https://github.com/twitter/finagle/commit/8cd6a882bf560bf78594057a756d2dcaa4b0d7d5">8cd6a882</a></p></li>
+<li><p>finagle-base-http: <code>c.t.f.http.Message.headerMap</code> is now an abstract method.
+<a href="https://github.com/twitter/finagle/commit/24e74e5270d0f3c31b50cc1d39181a3908a2ac67">24e74e52</a></p></li>
+<li><p>finagle-core: <code>c.t.f.ssl.server.SslServerSessionVerifier</code> no longer uses the unauthenticated
+host information from <code>SSLSession</code>. <a href="https://github.com/twitter/finagle/commit/559ae4ad3eb6bae4c2f885fb3149b492c6bf46a0">559ae4ad</a></p></li>
+<li><p>finagle-memcached: <code>ConcurrentLoadBalancerFactory</code> was removed and its behavior
+was replaced by a Stack.Param inside finagle-core&rsquo;s <code>LoadBalancerFactory</code>.
+<a href="https://github.com/twitter/finagle/commit/502a91d5f927c8c60f02e3d75e87262f407ae068">502a91d5</a></p></li>
+<li><p>finagle-thrift, finagle-thriftmux: Remove <code>ReqRep</code> specific methods. Since the &ldquo;ReqRep&rdquo;
+builders are now subclasses of their non-&ldquo;ReqRep&rdquo; counterparts their is no longer a
+need to expose &ldquo;ReqRep&rdquo; specific methods. <a href="https://github.com/twitter/finagle/commit/9737ead820eef60896f562b13881c6f8cd9bb67e">9737ead8</a></p></li>
+</ul>
+
+<p>Deprecations:</p>
+
+<ul>
+<li><p>finagle-exp: <code>c.t.f.exp.BackupRequestFilter</code> has been deprecated. Please use
+<code>c.t.f.client.BackupRequestFilter</code> instead. <a href="https://github.com/twitter/finagle/commit/3326d2fd9435c6e34ba61e2f0b100ea447cbadbe">3326d2fd</a></p></li>
+<li><p>finagle-http: <code>c.t.f.http.Request.multipart</code> has been deprecated.
+Use <code>c.t.f.http.exp.MultipartDecoder</code> instead. <a href="https://github.com/twitter/finagle/commit/a205bd207c29e4a6d5cf1273db4ea277f56feda8">a205bd20</a></p></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<p>Added:</p>
+
+<ul>
+<li><p>finatra-thrift: Add support for building all types of Finagle Thrift clients to
+the underlying embedded TwitterServer with the <code>c.t.finatra.thrift.ThriftClient</code>
+test utility. See: <a href="https://twitter.github.io/scrooge/Finagle.html#creating-a-client">https://twitter.github.io/scrooge/Finagle.html#creating-a-client</a>
+<a href="https://github.com/twitter/finatra/commit/47f7f6c71fef30884d445c8ea10666a0232d0ede">  47f7f6c7</a></p></li>
+<li><p>finatra-jackson: Added support to finatra/jackson for deserializing <code>com.twitter.util.Duration</code>
+instances from their String representations. <a href="https://github.com/twitter/finatra/commit/9e6576c99800073cabd8be7d869abd64890e44d5">9e6576c9</a></p></li>
+</ul>
+
+<p>Changed:</p>
+
+<ul>
+<li>finatra-http: Change visibility of internal class <code>c.t.finatra.http.internal.marshalling.RequestInjectableValues</code>
+to be correctly specified as private to the <code>http</code> package. <a href="https://github.com/twitter/finatra/commit/712edf91c0361fd9907deaef06e0bd61384f6a7e">712edf91</a></li>
+</ul>
+
+<p>Fixed:</p>
+
+<ul>
+<li>finatra-http: Ensure we close resources in the <code>ResponseBuilder</code>. Addresses
+<a href="https://github.com/twitter/finatra/issues/440">#440</a>. <a href="https://github.com/twitter/finatra/commit/dafe7259b2ec3d89641425e3eca8af56a869b4e3">dafe7259</a></li>
+</ul>
+
+<p>Closed:</p>
+
+<ul>
+<li><a href="https://github.com/twitter/finatra/issues/440">#440</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li><p>scrooge-generator: Update <code>c.t.fingale.thrit.service.MethodPerEndpointBuilder</code>
+to build <code>MethodPerEndpoint</code> types. Add new <code>ThriftServiceBuilder</code> for
+building the higher-kinded form from a <code>ServicePerEndpoint</code>. Users should
+prefer using the <code>MethodPerEndpointBuilder</code>. <a href="https://github.com/twitter/scrooge/commit/08b25e3d99cbbb7eece52e7589f2de002aeecb5f">08b25e3d</a></p></li>
+<li><p>scrooge-generator: Add more metadata to generated java objects <a href="https://github.com/twitter/scrooge/commit/46dd949c0d6e3859633d8e9cc572eea6fa4f6676">46dd949c</a>
+Includes:</p>
+
+<ul>
+<li>struct and field annotations from the idl files</li>
+<li>which fields have default values</li>
+<li>which field values of TType.STRING are actually binary fields</li>
+</ul></li>
+<li><p>scrooge: Add support for <code>scrooge.Request</code> and <code>scrooge.Response</code>
+types in generated <code>ThriftMethod</code> code. <a href="https://github.com/twitter/scrooge/commit/80bfa731310f70bbe2ef8bae974e06bd43b3041d">80bfa731</a></p></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">TwitterServer</a></h3>
+
+<ul>
+<li>No changes</li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<p>New Features:</p>
+
+<ul>
+<li>util-security: Added <code>c.t.util.security.X509CrlFile</code> for reading
+Certificate Revocation List PEM formatted <code>X509CRL</code> files.
+<a href="https://github.com/twitter/util/commit/32d8cc8ac4fc4c1f9417df6ec6da392291eb4759">32d8cc8a</a></li>
+</ul>
+
+<h3>Changelogs</h3>
+
+<ul>
+<li><a href="https://github.com/twitter/finagle/blob/finagle-18.1.0/CHANGES">Finagle 18.1.0</a></li>
+<li><a href="https://github.com/twitter/util/blob/util-18.1.0/CHANGES">Util 18.1.0</a></li>
+<li><a href="https://github.com/twitter/scrooge/blob/scrooge-18.1.0/CHANGES">Scrooge 18.1.0</a></li>
+<li><a href="https://github.com/twitter/twitter-server/blob/twitter-server-18.1.0/CHANGES">TwitterServer 18.1.0</a></li>
+<li><a href="https://github.com/twitter/finatra/blob/finatra-18.1.0/CHANGELOG.md">Finatra 18.1.0</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

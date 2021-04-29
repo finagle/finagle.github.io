@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>🍂 Fall-ing for Finagle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Christopher Coco</h4>
+      <p class="author-twitter"><a href="https://twitter.com/cacoco">@cacoco</a></p>
+    </div>
+    <p><em>Posted October 12, 2017</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>🍂 Fall-ing for Finagle</h1>
+  
+  <p>As we move headlong into Autumn we thought this might be a good time to take a
+quick look back at some of the work from the previous quarter in
+<a href="https://twitter.github.io/finagle/">Finagle</a>,
+<a href="https://twitter.github.io/finatra/">Finatra</a>,
+<a href="https://twitter.github.io/scrooge">Scrooge</a>,
+<a href="https://twitter.github.io/twitter-server">TwitterServer</a>, and
+<a href="https://twitter.github.io/util">Util</a> and preview what we&rsquo;re working on this
+quarter and beyond.</p>
+
+<p>This covers the <a href="https://github.com/twitter/finagle/tree/finagle-7.0.0">August</a>
+and <a href="https://github.com/twitter/finagle/tree/finagle-7.1.0">September</a> releases
+as well as the upcoming release planned for this month. As mentioned before, we
+plan to continue this review regularly on a quarterly basis. You can start with
+a recap of what we were talking about <a href="https://finagle.github.io/blog/2017/07/12/summer-review/">last
+time</a>.</p>
+
+<h3>News &amp; Notes</h3>
+
+<hr>
+
+<ul>
+<li><p>Finagle&rsquo;s 7th &ldquo;birthday&rdquo; (7th anniversary of the <a href="https://github.com/twitter/finagle/tree/e04e51645374f8d958d85de384142dd00f4b7574">first public
+commit</a>)
+is approaching. Stay tuned for a celebratory blog post! 🎉</p></li>
+<li><p>We&rsquo;re retiring the <a href="https://github.com/twitter/finatra">Finatra</a>-specific
+blog, formerly available
+<a href="https://twitter.github.io/finatra/blog/archives/">here</a>. This will happen with
+our release this month. Unfortunately, we won&rsquo;t be
+keeping any of the old posts but any new information will be shared on the
+Finagle blog here.</p></li>
+</ul>
+
+<hr>
+
+<h4>📣 New Features: HTTP/2 All The Things</h4>
+
+<p>Transparently replacing HTTP/1.1 usage with HTTP/2 continues internally. We&rsquo;re
+really excited about this change and the improvements it brings. HTTP/2
+gives you the resource reductions (a single multiplexed connection, request
+cancellations no longer require tearing down the connection) and resiliency
+features (fast rolling restarts without a success rate drop) that services are
+already accustomed to with Mux.</p>
+
+<p>We encourage you to try it out by enabling the
+<a href="https://github.com/twitter/finagle/blob/9cc08d15216497bb03a1cafda96b7266cfbbcff1/finagle-http/src/main/resources/com/twitter/toggles/configs/com.twitter.finagle.http.json"><code>com.twitter.finagle.http.UseHttp2v2</code></a>
+toggle
+[<a href="https://github.com/twitter/finagle/blob/9c69a0f16cd1e4bffb6a40844c2c8fed619c6bec/finagle-http/src/main/scala/com/twitter/finagle/Http.scala#L51">1</a>].</p>
+
+<h4>Efficiency</h4>
+
+<p>Metrics ‘verbosity’ level. Similar to logging levels in a logging API, we&rsquo;ve
+introduced the concept of a verbosity level for metrics exported by Finagle
+[<a href="https://github.com/twitter/finagle/commit/6c666ab5c3363ae5bd22b0fbd96f33995fe36ac7">1</a>,
+<a href="https://github.com/twitter/util/commit/5e03745015693bc61fa2aace8da5eb452ff6e53d">2</a>,
+<a href="https://github.com/twitter/util/commit/d08661fe49377aafd8af60231d6112d546e55e01">3</a>,
+<a href="https://github.com/twitter/util/commit/1b3ce1eddbb2a9af9fa4f97f1fc1b20ac3ee6a40">4</a>]
+with the ability for users to configure their service&rsquo;s verbosity and to define
+a verbosity when creating a new metric.</p>
+
+<p>For more information see the <a href="https://twitter.github.io/util">Util</a> User&rsquo;s Guide
+section on <a href="https://twitter.github.io/util/guide/util-stats/user_guide.html#leveraging-verbosity-levels"><code>Leveraging Verbosity
+Levels</code></a>.</p>
+
+<p>Our internal roll-out of our new load balancer, <a href="https://github.com/twitter/finagle/blob/finagle-6.45.0/finagle-core/src/main/scala/com/twitter/finagle/loadbalancer/aperture/DeterministicOrdering.scala">Deterministic
+Aperture</a>,
+continues and we’re excited about bringing this to the wider community soon!</p>
+
+<p>We’ve completed the internal rollout of <a href="https://github.com/twitter/finagle/search?utf8=%E2%9C%93&amp;q=nativeEpoll&amp;type=">edge-triggered native
+transport</a>
+using Netty’s JNI edge-triggered transport, instead of using the JDK’s NIO.
+Users can toggle on this feature by using the
+<a href="https://github.com/twitter/finagle/blob/b89042a35ab0f39637e48bb89b170c80c95f03cf/finagle-netty4/src/main/resources/com/twitter/toggles/configs/com.twitter.finagle.netty4.json"><code>com.twitter.finagle.netty4.UseNativeEpollV2</code></a>
+toggle
+[<a href="https://github.com/twitter/finagle/blob/2d37c2c1684132121f15423b2f08054785f8e29c/finagle-netty4/src/main/scala/com/twitter/finagle/netty4/nativeEpoll.scala">1</a>].</p>
+
+<h4>Operability</h4>
+
+<p>We’ll soon be open-sourcing the work done by our summer intern
+<a href="https://twitter.com/McKardah">@McKardah</a> to wire Twitter Futures into <a href="https://blog.jetbrains.com/idea/2017/02/intellij-idea-2017-1-eap-extends-debugger-with-async-stacktraces/">IDEA’s
+async
+stacktraces</a>.</p>
+
+<h4>Security</h4>
+
+<p>Secure Mux (smux). We&rsquo;ve added a
+<a href="https://en.wikipedia.org/wiki/Opportunistic_TLS">STARTTLS</a> command into the Mux
+protocol in order to support opportunistic TLS for ThriftMux.</p>
+
+<h4>Logging Improvements</h4>
+
+<p>We&rsquo;ve been working hard to move
+<a href="https://github.com/twitter/twitter-server">TwitterServer</a> to the <a href="https://www.slf4j.org/">SLF4J
+API</a> and this should be merging in the near
+future. Stay tuned for updates and documentation on the changes.</p>
+
+<h4>Scrooge Updates</h4>
+
+<p>We&rsquo;ve been making lots of changes to improve the usability and performance of
+Scrooge and Scrooge-generated code. This includes a set of refactorings to
+modernize the generated code so that it’s written in terms of Filters and
+Services!</p>
+
+<p>This will allow us to address some long standing issues like server-side
+response classification and correctly stating on serialization/deserialization
+failures.</p>
+
+<p>Additionally, we&rsquo;re going to try to update libthrift from 0.5.0 to 0.10.0. This
+is still exploratory and we’re working to understand the ramifications.</p>
+
+<h4>Bringing Backup Requests Back</h4>
+
+<p>Finagle has had a
+<a href="https://github.com/twitter/finagle/blob/develop/finagle-exp/src/main/scala/com/twitter/finagle/exp/BackupRequestFilter.scala">BackupRequestFilter</a>
+since <a href="https://github.com/twitter/finagle/commit/526e508579309711a9c56007eff2a783826d331c">late
+2012</a>
+and it evolved into its current form in <a href="https://github.com/twitter/finagle/commit/8ca92593aac1d3f5bd4741d6b8e6fcf26053dc44">early
+2013</a>.
+The filter has a variety of what we would consider flaws (too many configuration
+knobs, less than ideal memory characteristics in many cases, lack of integration
+into the Stack-APIs and ClientBuilder to name a few) which has relegated it to
+Finagle&rsquo;s experimental module.</p>
+
+<p>We&rsquo;re investigating what it would take to give users a single configuration
+variable &ndash; ideally the percentage of additional requests to send &ndash; to
+configure sending a backup request to another server.</p>
+
+<h4>‘Push’ based API for Protocols</h4>
+
+<p>Modern multiplexing protocols are characteristically very stateful and event
+driven which makes them challenging to implement with the current ‘pull’ based
+abstractions available in Finagle.</p>
+
+<p>We are currently working towards the introduction of a Finagle ‘push’ based
+model which when coupled with a single threaded concurrency model will provide a
+more efficient and natural foundation for implementing multiplexing protocols.</p>
+
+<h4>Application-Level Streaming Research</h4>
+
+<p>Related to the above, Finagle has historically been dependent on
+request-response style protocols: a single request would be sent by the client
+and the server would reply with a single response. Then later multiplexing
+protocols to alleviate head-of-line blocking. However, all the protocols in
+Finagle are expressed as request-response APIs with some limited support for
+streaming through the use of Reader and AsyncStream
+[<a href="https://github.com/twitter/finagle/blob/develop/finagle-example/src/main/scala/com/twitter/finagle/example/http/HttpStreamingServer.scala">1</a>].
+These are somewhat low-level constructs and can be hard to use properly.</p>
+
+<p>We are investigating the design of an API for bidirectional streaming of objects
+not just bytes. Stay tuned.</p>
+
+<h4>Blocking Code Detection</h4>
+
+<p>Our newest intern <a href="https://twitter.com/andrewmccree14">@andrewmccree14</a> is
+working on a project to help detect blocking code in Finagle. This
+should not only help users of Finagle but also allow for instrumentation and
+reporting (linting) of the blocking code. We&rsquo;re really excited about this work
+and can&rsquo;t wait to share it with the community.</p>
+
+<hr>
+
+<p>Thanks for following along. As always, please feel free to ask questions on
+either the <a href="https://groups.google.com/forum/#!forum/finaglers">Finagle</a> or
+<a href="https://groups.google.com/forum/#!forum/finatra-users">Finatra</a> mailing lists
+about anything that is unclear or if you would just like to know more.</p>
+
+<p>Christopher Coco and the Core Systems Libraries team</p>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>
