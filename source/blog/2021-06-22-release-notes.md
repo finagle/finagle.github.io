@@ -37,6 +37,12 @@ Breaking API Changes
     [2fa17e27](https://github.com/twitter/util/commit/2fa17e27d018caec8b6e865fcadbc5d0d9f2950c)
 
 
+[Scrooge](https://github.com/twitter/scrooge/)
+==============================================
+
+No Changes
+
+
 [Finagle](https://github.com/twitter/finagle/)
 ==============================================
 
