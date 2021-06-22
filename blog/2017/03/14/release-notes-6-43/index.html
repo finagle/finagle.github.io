@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Finagle 6.43 Release Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Kevin Oliver</h4>
+      <p class="author-twitter"><a href="https://twitter.com/kevino">@kevino</a></p>
+    </div>
+    <p><em>Posted March 14, 2017</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>Finagle 6.43 Release Notes</h1>
+  
+  <p>The March releases are hot off the printing press for <a href="https://github.com/twitter/finagle/blob/finagle-6.43.0/CHANGES">Finagle 6.43.0</a>, <a href="https://github.com/twitter/finatra/blob/finatra-2.9.0/CHANGELOG.md">Finatra 2.9.0</a>, <a href="https://github.com/twitter/scrooge/blob/scrooge-4.15.0/CHANGES">Scrooge 4.15.0</a>, <a href="https://github.com/twitter/twitter-server/blob/twitter-server-1.28.0/CHANGES">TwitterServer 1.28.0</a>, and <a href="https://github.com/twitter/util/blob/util-6.42.0/CHANGES">Util 6.42.0</a>.</p>
+
+<p>Here’s a few of the highlights:</p>
+
+<h3>Finatra</h3>
+
+<p>See <a href="https://twitter.github.io/finatra/blog/2017/03/13/announcing-the-release-of-finatra-2-dot-9-0/">accompanying blog post</a> for details.</p>
+
+<h3>Finagle</h3>
+
+<ul>
+<li>finagle-http now classifies server error status codes (500s) as failures. This affects success rate metrics and failure accrual. See the <code>com.twitter.finagle.http.serverErrorsAsFailuresV2</code> <a href="http://twitter.github.io/finagle/guide/Configuration.html#feature-toggles">toggle</a> for opting out of this behavior. <a href="https://github.com/twitter/finagle/commit/f34a73443679ac4fe76bc011bfb36a5b1abe9e5e">f34a7344</a></li>
+<li>The finagle-http APIs continue their trek to rid themselves of having Netty 3 in its public API.</li>
+<li>finagle-http now has experimental http/2 support. To try it out, pass the command line parameter <code>-com.twitter.finagle.toggle.flag.overrides=com.twitter.finagle.http.UseHttp2=1.0</code>. Please let us know of any issues that you run into!</li>
+</ul>
+
+<h3>Scrooge</h3>
+
+<ul>
+<li>The Scala code generator now supports annotations on enums, enum fields, services, and service functions. <a href="https://github.com/twitter/scrooge/commit/4821b46eec45f8235ed15f196c2649cee5715323">4821b46e</a></li>
+<li>Scala&rsquo;s types for ServiceIfaces are now a <code>Service</code> from <code>ThriftMethod.Args</code> to <code>ThriftMethod.SuccessType</code>, instead of <code>ThriftMethod.Args</code> to <code>ThriftMethod.Result</code>. This is a breaking API change though it should generally be easy to adapt existing code to it. <a href="https://github.com/twitter/scrooge/commit/c5ea851546ba215b457fcf09b90e9f1857e954c3">c5ea8515</a></li>
+</ul>
+
+<h3>Util</h3>
+
+<p>Our byte-level abstraction, <code>Buf</code> got a fresh coat of paint:</p>
+
+<ul>
+<li>Introduce <code>Buf.process</code> for sequential processing of a <code>Buf</code>. Finagle has been updated to use it where appropriate, leading to reductions in allocations. <a href="https://github.com/twitter/util/commit/1df3646ffe420256516167591562f85c79498ec5">1df3646f</a> and others</li>
+<li>Introduce <code>Buf.write(java.nio.ByteBuffer)</code> for writing to NIO <code>ByteBuffers</code>. <a href="https://github.com/twitter/util/commit/d6f7985e2014cc8c3dab71417a450900cd769f5d">d6f7985e</a></li>
+<li><code>Buf.concat</code> is now a constant time operation. <a href="https://github.com/twitter/util/commit/bb05f425c6b12d1b2fe9f1a75658aba175fc51f8">bb05f425</a></li>
+<li><code>ConcatBuf</code> has been removed, replaced by <code>Buf.apply</code> and <code>Buf.Composite</code>. <a href="https://github.com/twitter/util/commit/5833c5609b8ad72cd542e34d9d6edecd143e3bad">5833c560</a></li>
+</ul>
+
+<h3>Dependencies</h3>
+
+<p>Guava has been upgraded to version 19.0 from 16.0.1 <a href="https://github.com/twitter/util/commit/d6bdecc9269c34e477b1ce1a6e8f5d22a106e2f9">d6bdecc9</a></p>
+
+<h3>Changelogs</h3>
+
+<ul>
+<li><a href="https://github.com/twitter/finagle/blob/finagle-6.43.0/CHANGES">Finagle 6.43.0</a></li>
+<li><a href="https://github.com/twitter/util/blob/util-6.42.0/CHANGES">Util 6.42.0</a></li>
+<li><a href="https://github.com/twitter/scrooge/blob/scrooge-4.15.0/CHANGES">Scrooge 4.15.0</a></li>
+<li><a href="https://github.com/twitter/twitter-server/blob/twitter-server-1.28.0/CHANGES">TwitterServer 1.28.0</a></li>
+<li><a href="https://github.com/twitter/finatra/blob/finatra-2.9.0/CHANGELOG.md">Finatra 2.9.0</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

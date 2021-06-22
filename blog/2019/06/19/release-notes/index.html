@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>June 2019 Release Notes - Version 19.6.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Ruben Oanta</h4>
+      <p class="author-twitter"><a href="https://twitter.com/rubenoanta">@rubenoanta</a></p>
+    </div>
+    <p><em>Posted June 19, 2019</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>June 2019 Release Notes - Version 19.6.0</h1>
+  
+  <p>Hey Finaglers,</p>
+
+<p>We&rsquo;ve cut a June release for our libraries! Here are some highlights:</p>
+
+<p><code>util-core</code>: Use Local at callback creation for a Future&rsquo;s interrupt handler rather than
+the raiser&rsquo;s locals so that it is consistent with other callbacks. We believe the original
+design can lead to confusing behavior and bugs and will eventually make this new behavior the
+default. This functionality is currently disabled and can be enabled by a toggle
+(com.twitter.util.UseLocalInInterruptible) by setting it to 1.0 if you would like
+to try it out. <a href="https://github.com/twitter/util/commit/04cee8fb8e56e2566318abec74eefa59dfd8ad83">04cee8fb</a></p>
+
+<p><code>finagle-core</code>: For both, servers and clients, introduce a way to shift application-level future
+callbacks off of IO threads, into a given <code>FuturePool</code> or <code>ExecutorService</code>.
+Use <code>withExecutionOffloaded</code> configuration method (on a client or a server) to access
+new functionality. This was always possible in an adhoc fashion using a future pool,
+but we&rsquo;ve now made it easier to do correctly and across an entire server or client.
+This is coupled with some useful <a href="http://twitter.github.io/finagle/guide/ThreadingModel.html#threading-model">docs</a>
+that go into more details on Finagle&rsquo;s threading model and when/why you&rsquo;d want to use
+this feature. <a href="https://github.com/twitter/finagle/commit/40431bb43526efb7450a254e95baf52eda5dc997">40431bb4</a></p>
+
+<p><code>finagle-core</code>: Stats and retry modules use a ResponseClassifier to give hints for how to handle
+failure (e.g., Is this a success or is it a failure? If it&rsquo;s a failure, may I retry the request?).
+The stats module increments a success counter for successes, and increments a failure counter for
+failures. But there isn&rsquo;t a way to tell the stats module to just do nothing. And, this is exactly
+what the stats module should do (nothing) in the case of ignorable failures (e.g. backup request
+cancellations). To represent these cases, we introduce a new ResponseClass: Ignorable. <a href="https://github.com/twitter/finagle/commit/256b79b8c9b61144ca63b2d23940597588aeab9e">256b79b8</a></p>
+
+<p><code>finatra-http</code>: Add c.t.inject.server.InMemoryStatsReceiverUtility which allows for testing
+assertions on metrics captured within an embedded server&rsquo;s InMemoryStatsReceiver. Update the
+Kafka tests and utilities to use the InMemoryStatsReceiverUtility and mark the
+c.t.finatra.kafka.test.utilsInMemoryStatsUtil as deprecated. <a href="https://github.com/twitter/finatra/commit/f82afa58c5832e2508d780ed7ab1f4eb9f7cc971">f82afa58</a></p>
+
+<p><code>finatra</code>: Add an explicit dependency on com.sun.activation to allow for using
+Finatra with JDK 11. This fixes <a href="https://github.com/twitter/finatra/issues/484">#484</a>. <a href="https://github.com/twitter/finatra/commit/5a7ccf312f96f410ae0d96e77ba364faa460ccd8">5a7ccf31</a></p>
+
+<p>Be sure to checkout the full change log for each project to get more details:</p>
+
+<p><a href="https://github.com/twitter/util/releases/tag/util-19.6.0">https://github.com/twitter/util/releases/tag/util-19.6.0</a>
+<a href="https://github.com/twitter/finagle/releases/tag/finagle-19.6.0">https://github.com/twitter/finagle/releases/tag/finagle-19.6.0</a>
+<a href="https://github.com/twitter/twitter-server/releases/tag/twitter-server-19.6.0">https://github.com/twitter/twitter-server/releases/tag/twitter-server-19.6.0</a>
+<a href="https://github.com/twitter/scrooge/releases/tag/scrooge-19.6.0">https://github.com/twitter/scrooge/releases/tag/scrooge-19.6.0</a>
+<a href="https://github.com/twitter/finatra/releases/tag/finatra-19.6.0">https://github.com/twitter/finatra/releases/tag/finatra-19.6.0</a></p>
+
+<p>-Ruben</p>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

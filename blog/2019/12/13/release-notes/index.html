@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>December 2019 Release Notes - Version 19.12.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Bryce Anderson</h4>
+      <p class="author-twitter"><a href="https://twitter.com/brycelanderson">@brycelanderson</a></p>
+    </div>
+    <p><em>Posted December 13, 2019</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>December 2019 Release Notes - Version 19.12.0</h1>
+  
+  <p>The seasons changed and depending on which hemisphere you&rsquo;re in it&rsquo;s time to enjoy either the snow ❄️ or the sun ☀️!</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  finagle-core, finagle-exp: Add annotations to <code>DarkTrafficFilter</code> to identify which span
+is dark, as well as which light span it correlates with. <a href="https://github.com/twitter/finagle/commit/ba351f4d180faa49a6f0bbd0884338605f3b9c6b">ba351f4d</a></li>
+<li>  finagle-core: Introduce Trace#traceLocal for creating local spans within a trace context.
+<a href="https://github.com/twitter/finagle/commit/1c6d5d2482521b81d0ce80a823654591910381fa">1c6d5d24</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  finagle: Upgrade to jackson 2.9.10 and jackson-databind 2.9.10.1 <a href="https://github.com/twitter/finagle/commit/e333c839604021893ada0c8d03f3f51843d5a55c">e333c839</a></li>
+<li>  finagle-core: Per-method metrics on MethodBuilder are now created lazily, so if you have
+methods that you don&rsquo;t use, the associated metrics won&rsquo;t be exported. <a href="https://github.com/twitter/finagle/commit/6be5dc48b0f7655cd06c5a8747116407cb381ccd">6be5dc48</a></li>
+<li>  finagle-mysql: The RollbackFactory no longer attempts to roll back if the underlying
+session is closed since it is highly unlikely to succeed. It now simply poisons the
+session and calls close. <a href="https://github.com/twitter/finagle/commit/99135e00d57fd232286ee7a019fbfea480bcc704">99135e00</a></li>
+<li>  finagle-netty4: Change the &lsquo;connection_requests&rsquo; metric to debug verbosity.
+<a href="https://github.com/twitter/finagle/commit/a6dc1296d8bc7007291f8d1f356ee021d91571a1">a6dc1296</a></li>
+<li>  finagle-serversets: Ensure ZkSession#retrying is resilient to ZK host resolution failure.
+<a href="https://github.com/twitter/finagle/commit/7125026a02af34075d4523212389a333aeab87cf">7125026a</a></li>
+<li>  finagle-thrift: Per-method metrics are now created lazily, so if you have methods on a Thrift
+service that you don&rsquo;t use, the associated metrics won&rsquo;t be exported. <a href="https://github.com/twitter/finagle/commit/6be5dc48b0f7655cd06c5a8747116407cb381ccd">6be5dc48</a></li>
+<li>  finagle-zipkin-core: Tracing produces microsecond resolution timestamps in JDK9 or later.
+<a href="https://github.com/twitter/finagle/commit/08a926c6a10c87072adde2b9d15e367009fde129">08a926c6</a></li>
+<li>  finagle-core: Trace#time and Trace#timeFuture no longer generate timestamped annotations or
+silently discard timing information. They now instead generate a BinaryAnnotation containing
+the timing information. In order to also get timestamped Annotations for when the operation
+began and ended, use in conjunction with Trace#traceLocal. <a href="https://github.com/twitter/finagle/commit/1c6d5d2482521b81d0ce80a823654591910381fa">1c6d5d24</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  finagle-core: The RetryPolicy companion object is no longer a JavaSingleton.
+<a href="https://github.com/twitter/finagle/commit/9ffb3d1396070541634d965feb57dfc58068ae45">9ffb3d13</a></li>
+<li>  finagle-thrift: The RichClientParam constructors are now all either
+deprecated, so to construct it, you must call one of the RichClientParam.apply
+methods. <a href="https://github.com/twitter/finagle/commit/6be5dc48b0f7655cd06c5a8747116407cb381ccd">6be5dc48</a></li>
+</ul>
+
+<h4>Deprecations</h4>
+
+<ul>
+<li>  finagle-core: Deprecate Tracing#record(message, duration) as it does not have the intended
+effect and silently discards any duration information in the resulting trace. Instead you should
+use either Tracing#recordBinary or a combination of Trace#traceLocal and Trace#time.
+<a href="https://github.com/twitter/finagle/commit/1c6d5d2482521b81d0ce80a823654591910381fa">1c6d5d24</a></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>  finagle-core: ClosableService client stack module that prevents the reuse of closed services
+when FactoryToService is not set. This is important for clients making use of the newClient
+api. <a href="https://github.com/twitter/finagle/commit/c64bea0939a2c41dcc2addd8fcea3ad6f2af63e2">c64bea09</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  finatra: Upgrade to jackson 2.9.10 and jackson-databind 2.9.10.1 <a href="https://github.com/twitter/finatra/commit/14fc3714e6a6239db0c392264259ddfa52cf2b79">14fc3714</a></li>
+<li><p>finatra: Correctly track Ignorable Exceptions in per-method StatsFilter. Responses
+marked as Ignorable are tracked in the global requests and exceptions metrics but
+were not counted under the per-method metrics. There are now counts of ignored
+and total requests as well as ignored requests by Exception for each method. E.g.</p>
+
+<p>per_method_stats/foo/ignored 1
+per_method_stats/foo/ignored/java.lang.Exception 1
+per_method_stats/foo/requests 1</p>
+
+<p><a href="https://github.com/twitter/finatra/commit/80946f4dd3deeb86e6a1d95c0e9776e37623e094">80946f4d</a></p></li>
+<li><p>finatra-http|jackson (BREAKING API CHANGE): Move parsing of message body contents
+from finatra/jackson via the FinatraObjectMapper #parseMessageBody, #parseRequestBody,
+and #parseResponseBody methods to finatra/http with functionality replicated via an
+implicit which enhances a given FinatraObjectMapper. Additionally we have updated
+finatra-http the MessageBodyComponent API to use c.t.finagle.http.Message instead
+of c.t.finagle.http.Request and c.t.finagle.http.Response. This means that users can use the
+MessageBodyComponent API to read the body of Finagle HTTP requests or responses and all HTTP
+concerns are co-located in finatra-http instead of being partially implemented in finatra-jackson.</p>
+
+<p>In updating the MessageBodyComponent API we have removed support for polymorphic MessageBodyReader
+types, that is we have simplified the MessageBodyReader API to no longer express the #parse
+method parameterized to a subtype of the class type. This API allowed parsing a message body
+into a subtype solely through the presence of a given type parameter but the resulting API has
+proven to be extremely clunky. We feel that the same behavior is achievable in other ways (such
+as adapting the type after parsing) and the improvement and simplification of the
+MessageBodyReader API to be worth removing the awkward method signature.</p>
+
+<p>Lastly, we have fixed the returned charset encoding on response content-type header to be
+applicable only where appropriate instead of always being added when the
+http.response.charset.enabled flag is set to true. <a href="https://github.com/twitter/finatra/commit/4c6283b229fba43fa4a180cef6656fb0b66a92ef">4c6283b2</a></p></li>
+<li><p>finatra: (BREAKING API CHANGE) move DarkTrafficFilter and related modules
+from finatra/thrift to inject/inject-thrift-client. The modules now extend
+from c.t.inject.thrift.modules.ThriftClientModuleTrait for more uniform configuration.
+The following changes were made:</p>
+
+<blockquote>
+<ul>
+<li>  c.t.finatra.thrift.filters.DarkTrafficFilter -&gt;
+c.t.inject.thrift.filters.DarkTrafficFilter</li>
+<li>  c.t.finatra.thrift.modules.DarkTrafficFilterModule -&gt;
+c.t.inject.thrift.modules.DarkTrafficFilterModule</li>
+<li>  c.t.finatra.thrift.modules.ReqRepDarkTrafficFilterModule -&gt;
+c.t.inject.thrift.modules.ReqRepDarkTrafficFilterModule</li>
+<li>  c.t.finatra.thrift.modules.JavaDarkTrafficFilterModule -&gt;
+c.t.inject.thrift.modules.JavaDarkTrafficFilterModule</li>
+</ul>
+</blockquote>
+
+<p><a href="https://github.com/twitter/finatra/commit/a8e54f343e81823e2370977ffc1cf19905f0f910">a8e54f34</a></p></li>
+<li><p>finatra: Update Google Guice version to 4.1.0, update ScalaTest to 3.0.8, and ScalaCheck
+to 1.14.0. <a href="https://github.com/twitter/finatra/commit/1bc3e8891750fbcf12cdfbfb0c6a2a3639ee84f3">1bc3e889</a></p></li>
+<li><p>finatra-http: Remove deprecated c.t.finatra.http.HttpHeaders. Users should use
+com.twitter.finagle.http.Fields instead. <a href="https://github.com/twitter/finatra/commit/e9e5d4e20f09186049db9526ee66f598fe216fc2">e9e5d4e2</a></p></li>
+<li><p>finatra-http: Remove deprecated DocRootModule. <a href="https://github.com/twitter/finatra/commit/6163e7f7bfbf8c204132745204f42d74316fd33b">6163e7f7</a></p></li>
+<li><p>finatra-http: (BREAKING CHANGE) Remove automatic handling of Mustache rendering from
+finatra/http and break Mustache support into two separate libraries: finatra/mustache
+and finatra/http-mustache.</p>
+
+<p>HTTP services that want the framework to automatically negotiate Mustache template rendering
+via the Finatra HTTP MessageBodyComponents framework must now bring this concern into their
+HTTP services via the finatra/http-mustache c.t.finatra.http.modules.MustacheModule as the
+HTTP framework support for specifying a MustacheModule in the HttpServer has been removed.
+I.e., add this module to the server&rsquo;s list of modules.</p>
+
+<p>Additionally, it is also now possible to use Mustache templating completely independent of
+Finatra HTTP concerns by consuming and using only the finatra/mustache library which will
+render Strings via defined Mustache templates. <a href="https://github.com/twitter/finatra/commit/e6aaa19f40d0249ff897104c7ca2625359006f72">e6aaa19f</a></p></li>
+</ul>
+
+<h4>Fixed</h4>
+
+<ul>
+<li>  finatra-http: Fixed issue in the DefaultMessageBodyReaderImpl that determines if the incoming
+message is &ldquo;json encoded&rdquo;. <a href="https://github.com/twitter/finatra/commit/c1f1a093762fff74f83db8c3adbdf6cf0eb2494a">c1f1a093</a></li>
+<li>  inject-modules: Removed the extra registration for closing a client, which used to log false
+warnings when startup a ClientModule. Only register close after materialized clients.
+<a href="https://github.com/twitter/finatra/commit/ddda0b12ce6be14d6832e800764da190ca7f5745">ddda0b12</a></li>
+<li>  inject-server: Addressed a race condition that could allow for an AdminHttpServer to be
+started, even when the disableAdminHttpServer property was set. The AdminHttpServer will
+no longer start prior to the warm-up phase if disabled. The disableAdminHttpServer property
+has also been moved to com.twitter.server.AdminHttpServer. <a href="https://github.com/twitter/finatra/commit/113b7d8da050fde6b28b84c1b83b12c93712084a">113b7d8d</a></li>
+<li>  finatra: Remove com.sun.activation dependency from build.sbt file. The dependency
+duplicates the javax.activation dependency and as a result can cause a uber-JAR to fail
+to build. <a href="https://github.com/twitter/finatra/commit/fd67b83644b001890abaa117172983f370904617">fd67b836</a></li>
+</ul>
+
+<h4>Added</h4>
+
+<ul>
+<li>  finatra-jackson: (BREAKING API CHANGE) Move all Case Class annotation validation related logic to
+a new library in finatra-validation. Please update your library dependencies to the new library if
+you are using case class validations. <a href="https://github.com/twitter/finatra/commit/ba5a045142b5f7c4829704f213c567bb0e118908">ba5a0451</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  util-stats: Introduces c.t.f.stats.LazyStatsReceiver which ensures that counters and histograms
+don&rsquo;t export metrics until after they have been incred or added at least once. <a href="https://github.com/twitter/util/commit/36d820712635a14d9545f2834341744e9932035d">36d82071</a></li>
+<li>  util-core: Introduce Time#nowNanoPrecision to produce nanosecond resolution timestamps in JDK9
+or later. <a href="https://github.com/twitter/util/commit/e6f39b077cf0ad04c7add22ab6a39a90855c2339">e6f39b07</a></li>
+<li>  util-core: Introduce Future#toCompletableFuture, which derives a CompletableFuture from
+a com.twitter.util.Future to make integrating with Java APIs simpler. <a href="https://github.com/twitter/util/commit/2642791962dc34812a3da75be5906e62f495982a">26427919</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  util: Upgrade to jackson 2.9.10 and jackson-databind 2.9.10.1 <a href="https://github.com/twitter/util/commit/c6e3f31772f1b6a8fb9abc039e446cbf0678ce89">c6e3f317</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  util-core: The lightly used com.twitter.util.JavaSingleton trait has been removed. It
+did not work as intended. Users should provide Java friendly objects, classes, and methods
+instead. <a href="https://github.com/twitter/util/commit/19a6af44759e775c33106f95295954f6e6e0cd10">19a6af44</a></li>
+</ul>
+
+<h4>Deprecations</h4>
+
+<ul>
+<li>  util-test: The c.t.logging.TestLogging mixin has been deprecated. Users are encouraged to
+move to slf4j for logging and minimize dependencies on com.twitter.logging in general, as
+it is intended to be replaced entirely by slf4j. <a href="https://github.com/twitter/util/commit/0dc6641cba19c87a1d8c3e888f3d5187310650e2">0dc6641c</a></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>  util-core: Future#toJavaFuture incorrectly threw the exception responsible for failing it,
+instead of a j.u.c.ExecutionException wrapping the exception responsible for failing it.
+<a href="https://github.com/twitter/util/commit/2642791962dc34812a3da75be5906e62f495982a">26427919</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<ul>
+<li>  Upgrade to jackson 2.9.10 and jackson-databind 2.9.10.1 <a href="https://github.com/twitter/twitter-server/commit/acf7e01034902769eb128103a613155bcfc943c3">acf7e010</a></li>
+<li>  Multiple changes have happened around query parameter retrieval in order
+to remove duplicated functionality from Twitter Server that exists in
+Finagle. Users are encouraged to use finagle-http&rsquo;s Uri class within their
+own code to retrieve params. <a href="https://github.com/twitter/twitter-server/commit/b538228c4401842a76a758e038f4a2ed73e98f5d">b538228c</a>
+
+<ul>
+<li>  The parse method of HttpUtils has been removed.</li>
+<li>  The protected getParams method of TwitterHandler has been removed.</li>
+<li>  The signature of the getGraceParam method of ShutdownHandler has
+been changed to take a Request.</li>
+</ul></li>
+<li>  Add a disableAdminHttpServer property to the AdminHttpServer that can be used to
+prevent the AdminHttpServer from starting by default on a TwitterServer. <a href="https://github.com/twitter/twitter-server/commit/ecef399ad98f5386cd75c031a8a2e73d2159a575">ecef399a</a></li>
+<li>  The ResourceHandler companion object is no longer a JavaSingleton.
+<a href="https://github.com/twitter/twitter-server/commit/c9defbf60202595e2840e9869fc94f6815ad52b9">c9defbf6</a></li>
+<li>  Update ScalaTest to 3.0.8, and ScalaCheck to 1.14.0. <a href="https://github.com/twitter/twitter-server/commit/d9b1fc044a2f59abea6a1c6924c1ad25d834b083">d9b1fc04</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<p>No Changes</p>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

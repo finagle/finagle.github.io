@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>🍠 November 2017 Release Notes - Version 17.11.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Moses Nakamura</h4>
+      <p class="author-twitter"><a href="https://twitter.com/mnnakamura">@mnnakamura</a></p>
+    </div>
+    <p><em>Posted November 17, 2017</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>🍠 November 2017 Release Notes - Version 17.11.0</h1>
+  
+  <p>It&rsquo;s November, and you know what that means!  Library releases!!!  We&rsquo;re now publishing
+with sbt 1.0.x, and we now also publish sbt-scrooge-plugin for sbt 1.0.x.  We are also
+continuing to publish sbt-scrooge-plugin for sbt 0.13.x.</p>
+
+<p><a href="https://github.com/twitter/finagle/blob/finagle-17.11.0/CHANGES">Finagle 17.11.0</a>, <a href="https://github.com/twitter/finatra/blob/finatra-17.11.0/CHANGELOG.md">Finatra 17.11.0</a>, <a href="https://github.com/twitter/scrooge/blob/scrooge-17.11.0/CHANGES">Scrooge 17.11.0</a>, <a href="https://github.com/twitter/twitter-server/blob/twitter-server-17.11.0/CHANGES">TwitterServer 17.11.0</a>, and <a href="https://github.com/twitter/util/blob/util-17.11.0/CHANGES">Util 17.11.0</a>.</p>
+
+<h3>Finagle</h3>
+
+<p>New Features:</p>
+
+<ul>
+<li><p>finagle-core: Add <code>ResponseClassifier</code>s, RetryOnTimeout and RetryOnChannelClosed,
+for exceptions that are commonly retried when building from ClientBuilder but had
+no MethodBuilder equivalents. <a href="https://github.com/twitter/finagle/commit/3d292b49e737538babb387ae39e6ee9124a641ed">3d292b49</a></p></li>
+<li><p>finagle-netty4: <code>Netty4Transporter</code> and <code>Netty4Listener</code> are now accessible, which
+allows external users to create their own protocols for use with Finagle on Netty 4.
+<a href="https://github.com/twitter/finagle/commit/3ce475dbdb800a635bbed944139b9690418e09d9">3ce475db</a></p></li>
+</ul>
+
+<p>Breaking API Changes:</p>
+
+<ul>
+<li><p>finagle-core: Numerous overloads of <code>c.t.f.Server.serve</code> have been marked final.
+<a href="https://github.com/twitter/finagle/commit/ea5438067e4db78bf5177a1dcde67f19fa8c185b">ea543806</a></p></li>
+<li><p>finagle-thrift: Correctly send <code>mux.Request#contexts</code> in all cases. There were some
+cases in which <code>mux.Request#contexts</code> were not always propagated. The contexts are
+now always written across the transport. Note that there may be duplicated contexts
+between &ldquo;local&rdquo; context values and &ldquo;broadcast&rdquo; context values. Local values will
+precede broadcast values in sequence. <a href="https://github.com/twitter/finagle/commit/45832aad31aa33e9bddbe18c9e721e825617a159">45832aad</a></p></li>
+</ul>
+
+<h3>Finatra</h3>
+
+<p>Changed:</p>
+
+<ul>
+<li>EmbeddedTwitterServer, EmbeddedHttpServer, and EmbeddedThriftServer flags
+and args parameters changed to call-by-name. <a href="https://github.com/twitter/finatra/commit/3276d4e99739949af2a691a9966512e86dab7715">3276d4e9</a></li>
+</ul>
+
+<p>Fixed:</p>
+
+<ul>
+<li>inject-server: Ensure EmbeddedTwitterServer has started before trying to
+close httpAdminClient. <a href="https://github.com/twitter/finatra/commit/839afc3b54a047185b6606e5ea5b39bb365e1c17">839afc3b</a></li>
+</ul>
+
+<h3>Util</h3>
+
+<p>New Features:</p>
+
+<ul>
+<li>util-security: Added <code>c.t.util.security.PrivateKeyFile</code> for reading PKCS#8
+PEM formatted <code>PrivateKey</code> files. <a href="https://github.com/twitter/util/commit/23f4a6a049c55121a4cda34be3b947f3ea4bfc46">23f4a6a0</a></li>
+</ul>
+
+<h3>Scrooge</h3>
+
+<ul>
+<li><p>scrooge-generator: Deprecated some scala generated classes and use new ones
+<code>FutureIface</code>         -&gt; <code>MethodPerEndpoint</code>,
+<code>MethodIface</code>         -&gt; <code>MethodPerEndpoint.apply()</code>,
+<code>MethodIfaceBuilder</code>  -&gt; <code>MethodPerEndpointBuilder</code>,
+<code>BaseServiceIface</code>    -&gt; <code>ServicePerEndpoint</code>,
+<code>ServiceIface</code>        -&gt; <code>ServicePerEndpoint</code>,
+<code>ServiceIfaceBuilder</code> -&gt; <code>ServicePerEndpointBuilder</code>.
+To construct a client use <code>c.t.f.ThriftRichClient.servicePerEndpoint</code> instead of
+<code>newServiceIface</code>, to convert <code>ServicePerEndpoint</code> to <code>MethodPerEndpoint</code> use
+<code>c.t.f.ThriftRichClient.methodPerEndpoint</code> instead of <code>newMethodIface</code>. <a href="https://github.com/twitter/scrooge/commit/26f86b2b2ad31a6253af3659c12b587ff86ca6b6">26f86b2b</a></p></li>
+<li><p>scrooge-generator: (BREAKING API CHANGE) Change the java generator to no longer
+generate files with <code>org.slf4j</code> imports and remove limited usage of <code>org.slf4j</code>
+Logger in generated services. <a href="https://github.com/twitter/scrooge/commit/bf5364be4aa0300276336fb2d5bdd3e3e44d7efe">bf5364be</a></p></li>
+</ul>
+
+<h3>Twitter Server</h3>
+
+<p>Breaking API Changes:</p>
+
+<ul>
+<li>Change to apply JUL log format in the <code>c.t.server.logging.Logging</code> trait
+constructor instead of in <code>premain</code> to apply format as early in the logging
+stack as possible. However, this means that users overriding the
+<code>def defaultFormatter</code> will not be able to use any flags to configure their
+formatting, note: the default <code>LogFormatter</code> does not use flags.
+<a href="https://github.com/twitter/twitter-server/commit/ec674bc5b970ffcb267f19b951e28a33ee70ba7c">ec674bc5</a></li>
+</ul>
+
+<h3>Changelogs</h3>
+
+<ul>
+<li><a href="https://github.com/twitter/finagle/blob/finagle-17.11.0/CHANGES">Finagle 17.11.0</a></li>
+<li><a href="https://github.com/twitter/util/blob/util-17.11.0/CHANGES">Util 17.11.0</a></li>
+<li><a href="https://github.com/twitter/scrooge/blob/scrooge-17.11.0/CHANGES">Scrooge 17.11.0</a></li>
+<li><a href="https://github.com/twitter/twitter-server/blob/twitter-server-17.11.0/CHANGES">TwitterServer 17.11.0</a></li>
+<li><a href="https://github.com/twitter/finatra/blob/finatra-17.11.0/CHANGELOG.md">Finatra 17.11.0</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

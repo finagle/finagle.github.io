@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>New and upcoming Finagle examples</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Travis Brown</h4>
+      <p class="author-twitter"><a href="https://twitter.com/travisbrown">@travisbrown</a></p>
+    </div>
+    <p><em>Posted October 30, 2014</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>New and upcoming Finagle examples</h1>
+  
+  <p>Part of my role as an open source advocate for Scala projects at Twitter
+involves talking to developers outside of Twitter about how we can make
+<a href="https://engineering.twitter.com/opensource/projects">our open source projects</a>
+more widely useful and accessible, and one of the most common requests for
+Finagle is for more introductory tutorials and examples.</p>
+
+<p>One of the steps we&rsquo;re taking in this direction is a major overhaul of
+<a href="https://github.com/twitter/finagle/tree/6.22.0/finagle-example/"><code>finagle-example</code></a>,
+which we&rsquo;ll be moving out of the main Finagle repository and
+into its own project under the <a href="https://github.com/finagle/">Finagle organization</a>
+on GitHub. At the same time we&rsquo;ll be
+filling out the top-level introduction to the examples (which is <a href="https://github.com/twitter/finagle/tree/6.22.0/finagle-example">currently a
+little bare</a>),
+adding more detailed API documentation, providing <a href="https://github.com/twitter/finagle/tree/6.22.0/finagle-example/src/main/scala/com/twitter/finagle/example">better example coverage for
+Finagle subprojects</a>,
+and creating a larger set of
+<a href="https://github.com/twitter/finagle/tree/6.22.0/finagle-example/src/main/java/com/twitter/finagle/example/java">Java examples</a>
+to show off our new work on improving Java compatibility.
+</p>
+
+<p>We&rsquo;re also working on several stand-alone example projects and tutorials,
+including the <a href="https://github.com/finagle/finagle-example-name-finder">Finagle Name Finder</a>,
+which provides a simple Scala wrapper for a few pieces of <a href="https://opennlp.apache.org/">OpenNLP</a>,
+a Java library for natural language processing, and uses that wrapper to define
+a <a href="http://en.wikipedia.org/wiki/Named-entity_recognition">named entity recognition</a>
+RPC service built on Finagle and <a href="https://thrift.apache.org/">Thrift</a>.
+You can start up a name finding service in your SBT console with just a few
+lines of code:</p>
+<pre class="highlight scala"><code><span class="k">import</span> <span class="nn">com.twitter.finagle.Thrift</span>
+<span class="k">import</span> <span class="nn">com.twitter.finagle.examples.names.thriftscala._</span>
+
+<span class="k">val</span> <span class="n">server</span> <span class="k">=</span> <span class="nc">SafeNameRecognizerService</span><span class="o">.</span><span class="n">create</span><span class="o">(</span>
+  <span class="n">langs</span> <span class="k">=</span> <span class="nc">Seq</span><span class="o">(</span><span class="s">"en"</span><span class="o">),</span>
+  <span class="n">numThreads</span> <span class="k">=</span> <span class="mi">4</span><span class="o">,</span>
+  <span class="n">numRecognizers</span> <span class="k">=</span> <span class="mi">4</span>
+<span class="o">)</span> <span class="n">map</span> <span class="o">{</span> <span class="n">service</span> <span class="k">=&gt;</span>
+  <span class="nc">Thrift</span><span class="o">.</span><span class="n">serveIface</span><span class="o">(</span><span class="s">"localhost:9090"</span><span class="o">,</span> <span class="n">service</span><span class="o">)</span>
+<span class="o">}</span> <span class="n">onSuccess</span> <span class="o">{</span> <span class="k">_</span> <span class="k">=&gt;</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">"Server started successfully"</span><span class="o">)</span>
+<span class="o">}</span> <span class="n">onFailure</span> <span class="o">{</span> <span class="n">ex</span> <span class="k">=&gt;</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">"Could not start the server: "</span> <span class="o">+</span> <span class="n">ex</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>You can then create a client (either locally in the same console, or on another
+machine):</p>
+<pre class="highlight scala"><code><span class="k">import</span> <span class="nn">com.twitter.finagle.Thrift</span>
+<span class="k">import</span> <span class="nn">com.twitter.finagle.examples.names.thriftscala._</span>
+
+<span class="k">val</span> <span class="n">client</span> <span class="k">=</span>
+  <span class="nc">Thrift</span><span class="o">.</span><span class="n">newIface</span><span class="o">[</span><span class="kt">NameRecognizerService.FutureIface</span><span class="o">](</span><span class="s">"localhost:9090"</span><span class="o">)</span>
+</code></pre>
+
+<p>And feed it a document:</p>
+<pre class="highlight scala"><code><span class="k">val</span> <span class="n">doc</span> <span class="k">=</span> <span class="s">"""
+An anomaly which often struck me in the character of my friend Sherlock Holmes
+was that, although in his methods of thought he was the neatest and most
+methodical of mankind, and although also he affected a certain quiet primness of
+dress, he was none the less in his personal habits one of the most untidy men
+that ever drove a fellow-lodger to distraction. Not that I am in the least
+conventional in that respect myself. The rough-and-tumble work in Afghanistan,
+coming on the top of a natural Bohemianism of disposition, has made me rather
+more lax than befits a medical man.
+"""</span>
+
+<span class="n">client</span><span class="o">.</span><span class="n">findNames</span><span class="o">(</span><span class="s">"en"</span><span class="o">,</span> <span class="n">doc</span><span class="o">)</span> <span class="n">onSuccess</span> <span class="o">{</span> <span class="n">response</span> <span class="k">=&gt;</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">"People: "</span> <span class="o">+</span> <span class="n">response</span><span class="o">.</span><span class="n">persons</span><span class="o">.</span><span class="n">mkString</span><span class="o">(</span><span class="s">", "</span><span class="o">))</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">"Places: "</span> <span class="o">+</span> <span class="n">response</span><span class="o">.</span><span class="n">locations</span><span class="o">.</span><span class="n">mkString</span><span class="o">(</span><span class="s">", "</span><span class="o">))</span>
+<span class="o">}</span> <span class="n">onFailure</span> <span class="o">{</span> <span class="n">ex</span> <span class="k">=&gt;</span>
+  <span class="n">println</span><span class="o">(</span><span class="s">"Something bad happened: "</span> <span class="o">+</span> <span class="n">ex</span><span class="o">.</span><span class="n">getMessage</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>And the service will tokenize the document, identify parts of speech, attempt
+to find all the names of people, places, and organizations, and promptly return
+the results:</p>
+<pre class="highlight plaintext"><code>People: Sherlock Holmes
+Places: Afghanistan
+</code></pre>
+
+<p>When you start a service, you can have OpenNLP recognizers loaded into memory
+for a given set of languages, but the service can also load languages from disk
+for individual requests—for example, we&rsquo;ve only loaded the English-language
+models for the service we started above, but we could also copy a set of
+Spanish-language models into our <code>models</code> directory, and then our client could
+ask to use them:</p>
+<pre class="highlight scala"><code><span class="k">val</span> <span class="n">esDoc</span> <span class="k">=</span> <span class="s">"""
+Alrededor de 1902 fue el primero en aplicar una descarga eléctrica en un tubo
+sellado y con gas neón con la idea de crear una lámpara. Inspirado en parte por
+la invención de Daniel McFarlan Moore, la lámpara de Moore, Claude inventó la
+lámpara de neón mediante la descarga eléctrica de un gas inerte comprobando que
+el brillo era considerable.
+"""</span>
+
+<span class="k">val</span> <span class="n">result</span> <span class="k">=</span> <span class="n">client</span><span class="o">.</span><span class="n">findNames</span><span class="o">(</span><span class="s">"es"</span><span class="o">,</span> <span class="n">esDoc</span><span class="o">)</span>
+</code></pre>
+
+<p>We&rsquo;re using the Name Finder project in a new &ldquo;Finagle Essentials&rdquo; course at
+<a href="https://twitter.com/university">Twitter University</a>, and
+<a href="https://finagle.github.io/finagle-example-name-finder/">the slides</a> for that
+course go into more detail about how the implementation works. The project is
+currently designed to fit into an overview of the fundamental abstractions
+behind Finagle, and to demonstrate just how easy it is to get a basic (but useful)
+Finagle service up and running, but over the next few months we&rsquo;ll be expanding
+it to show off more of Finagle&rsquo;s capabilities.</p>
+
+<p>We&rsquo;re also working on a tutorial that walks through the implementation of a
+Finagle protocol for <a href="https://github.com/scodec/scodec">scodec</a>, a Scala binary
+serialization library that&rsquo;s part of the <a href="http://typelevel.org/">Typelevel</a>
+group of projects. If you&rsquo;re interested in helping out with this kind of
+tutorial development, or if you have a Finagle example project, blog post, etc.
+that you&rsquo;d like us to feature, or if you just have questions, please get in
+touch via <a href="https://twitter.com/finagle">@finagle</a>
+or the <a href="https://groups.google.com/d/forum/finaglers">Finaglers mailing list</a>,
+and be sure to watch this space for updates as we continue to improve our
+documentation and examples.</p>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

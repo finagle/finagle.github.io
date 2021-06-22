@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Spring Update 2020</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Vladimir Kostyukov</h4>
+      <p class="author-twitter"><a href="https://twitter.com/vkostyukov">@vkostyukov</a></p>
+    </div>
+    <p><em>Posted June  4, 2020</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>Spring Update 2020</h1>
+  
+  <p>Salute, Finaglers 🙇‍♂️! Four times a year we send out a comprehensive overview of all these exciting changes we’ve been working behind the curtains 🎭. As you probably guessed already, this is one of those times ✨! It’s a Q1 2020 quarterly review episode!</p>
+
+<h4>ThriftMux Compression (aka t7x)</h4>
+
+<p>ThriftMux’s support for negotiating payload compression is out of beta and is generally available for service owners. The way this is structured is services on both ends of the wire would need to <a href="https://github.com/twitter/finagle/blob/develop/doc/src/sphinx/Compression.rst">opt-in for compression </a> in their Finagle clients &amp; servers. </p>
+
+<p>Enabling compression can be beneficial for network-bound services that have a few CPU cycles to spare. We highly encourage you, though, to run your own tests before enabling that feature. As always, we’re curious to hear about your performance adventures so do not hesitate to reach out!</p>
+
+<h4>Finatra Java API Improvements</h4>
+
+<p>We discovered a few shortcomings in our Java APIs. Specifically, the lifecycle management ergonomics in the Java version of Finatra APIs <a href="https://github.com/twitter/finatra/commit/f04772df4da0d53fa27714396a6a591f80de4e53">weren’t on par with the original (Scala)</a>. </p>
+
+<h4>Finatra’s New Jackson Support</h4>
+
+<p>We also reworked Finatra’s Jackson integration such that it’s no longer coupled with the HTTP package. As a result of this restructuring, we’re able to provide better JSON parsing/printing APIs.</p>
+
+<h4>SameSite Cookie is ON</h4>
+
+<p>With Chrome shifting into being more considerate of the <a href="https://blog.chromium.org/2019/10/developers-get-ready-for-new.html">lack of the SameSite cookie attribute</a>, we’ve switched Finagle to propagate that attribute with its server-set cookies by default.</p>
+
+<h4>Scala 2.13 Support</h4>
+
+<p>CSL’s libraries have always been in the front lines when it comes to supporting modern Scala versions, such as 2.13. All packages within Finagle, Util, and TwitterServer are now cross-compiled (and cross-published in the OSS) for Scala 2.13. Finatra is next.</p>
+
+<h4>Reference Counted SSL Engines</h4>
+
+<p>The vast majority of Finagle’s and Netty’s SSL bits are backed by native structures that require careful off-heap memory considerations for every secure connection. Netty already had support for reference-counted SSL engines but we hadn’t been utilizing them within Finagle due to a bug in Netty. That approach, while being perfectly workable, had one noticeable downside - the native memory management machinery had been bundled into regular GC cycles, occasionally slowing them down.</p>
+
+<p>We <a href="https://github.com/netty/netty/commit/031c2e2e8899d037228a492a458ccd194eb8df9c#diff-cfd417915faad637e4278b54adafd9ba">fixed</a> the Netty bug and partnered with the VM team to experiment with a new implementation where the created SSL engines are explicitly released after use so they don’t end up polluting the finalizer queue (CSL-8292). The results were very promising on some of our high throughput services (25% shorter CMS remark phase - part of full GC) so we enabled that by default for everyone.</p>
+
+<h4>New Finatra CaseClass Validation API</h4>
+
+<p>We reworked Finatra’s validation API for case classes from the ground up to fix its shortcomings and suboptimal structure. It’s now less coupled with the rest of the framework (doesn’t have to be used as part of JSON deserialization), has more features, provides better extension points, and comes with <a href="https://twitter.github.io/finatra/user-guide/validation/index.html">a refined documentation</a>. </p>
+
+<h4>Scrooge-generated Code Improvements</h4>
+
+<p>Twitter&rsquo;s Michael Braun (<a href="https://twitter.com/mbraun88">@mbraun88</a>) spent his Q1 hackweek improving compile times for Scrooge-generated code by simplifying output constructs. Not only is the new code about 20% faster to compile, it also potentially unlocks more JIT optimizations (i.e., inlining) at runtime.</p>
+
+<h4>Metrics Metadata</h4>
+
+<p>About a year ago we started partnering with Matt Dannenberg (Twitter) to work on the metrics metadata project that aims to provide both humans and computers with the additional (on top of just a pair name, value) information about exported metrics. Things like the kind of a metric (counter, gauge, histogram), unit of measure, whether it’s latched and many others can now be exported from every TwitterServer’s admin interface - hit your /admin/metrics_metadata.json endpoint to see it in action!  Right now it doesn’t have that much information, but we plan to instrument our metrics over the next couple of quarters.</p>
+
+<h4>Bumped Dependencies</h4>
+
+<ul>
+<li>Logback 1.2.3</li>
+<li>Guice 4.2.0</li>
+<li>Joda 2.10.2</li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

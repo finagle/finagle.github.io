@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>🦋 Spring Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Kevin Oliver</h4>
+      <p class="author-twitter"><a href="https://twitter.com/kevino">@kevino</a></p>
+    </div>
+    <p><em>Posted April 18, 2018</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>🦋 Spring Review</h1>
+  
+  <p>It’s time to take a look back at what went down with Finagle, Finatra &amp; friends over the past three months, and get an idea of what’s to come. As projects don’t tend to care about quarterly boundaries, some of our work is a work in progress.</p>
+
+<h4>Efficiency</h4>
+
+<p>Low level machinery:</p>
+
+<ul>
+<li>LIFO <code>Promise</code> continuations are on, and most importantly, the extra overhead has been <a href="https://github.com/twitter/util/commit/bf47b55ff45a31bbd541f66257f2244df5c35f5b">ripped out</a>.</li>
+<li><code>Buf</code> concatenation has been <a href="https://github.com/twitter/util/commit/060a8d15bd5a3c9121e71ea3f9a1fb9974d4ab6f">optimized</a>, and our ThriftMux throughput simulations saw a 2–4% increase.</li>
+<li>Made <code>Promise.poll</code> and <code>Promise.isDefined</code> <a href="https://github.com/twitter/util/commit/5197362634c6db982fdc0d181eed14cdd7090f4b">faster</a>.</li>
+</ul>
+
+<h4>Resiliency</h4>
+
+<p>After a few years of languishing with an experimental tag, backup requests have been rewritten and are killing tail latencies in production. <a href="https://twitter.github.io/finagle/guide/MethodBuilder.html#backup-requests">Read up</a> and see if they can help your service.</p>
+
+<p>HTTP/2 client work continues and we continue to find interesting things. Of note — it does not seem like many folks out on the internets have implemented cleartext h2 upgrades.</p>
+
+<h4>Operability</h4>
+
+<p>Our MySQL client received a number of usability fixes to it’s APIs (<a href="https://github.com/twitter/finagle/commit/5a54f45da4b78f22ccc001164f7c3df5314b34ce">1</a>, <a href="https://github.com/twitter/finagle/commit/48f688d1b52ed51499eb3c693a4fe253a5b67100">2</a>, <a href="https://github.com/twitter/finagle/commit/d8e44b2dc4d4d5c7276c3daa2b937ce15a7321b9">3</a>, <a href="https://github.com/twitter/finagle/commit/f3676d3186fb5dddb4fc2a833c79094af5fb460e">4</a>, <a href="https://github.com/twitter/finagle/commit/ebde8ebe203a88b8cba481c39033dac3c71e02e9">5</a>, <a href="https://github.com/twitter/finagle/commit/c5bd6b975657782607ad33b73ea414661a54f544">6</a>, <a href="https://github.com/twitter/finagle/commit/f67978aaa48b7b65e20de787b0d84354cb5a968e">7</a>). There’s more planned, so stay tuned to this channel.</p>
+
+<h4>Tech Debt</h4>
+
+<p><a href="https://github.com/twitter/scrooge/commit/997f2464ca04998ce5b7a73c56c7667d1754a01b">R.I.P. libthrift 0.5.0</a>! We’ll be on version 0.10.0 for a bit before we upgrade to 0.11 which was released while we were already working on the upgrade.</p>
+
+<p>Netty 3 still lives on due to HTTP cookies, but we’re chipping away at it.</p>
+
+<hr>
+
+<p>As always, please feel free to ask questions on
+either the <a href="https://groups.google.com/forum/#!forum/finaglers">Finagle</a> or
+<a href="https://groups.google.com/forum/#!forum/finatra-users">Finatra</a> mailing lists or on <a href="https://gitter.im/twitter/finagle">Gitter</a>.</p>
+
+<p>See you this summer!</p>
+
+<p>Kevin Oliver and team</p>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

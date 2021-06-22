@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Release notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!--
+      <img src="http://www.gravatar.com/avatar/118a9dff389cc10a8914f8f91a5e96e5?s=80" class="author_gravatar">
+    -->
+    <div class="author-contact">
+      <h4 class="author-name">Moses Nakamura</h4>
+      <p class="author-twitter"><a href="https://twitter.com/mnnakamura">@mnnakamura</a></p>
+    </div>
+    <p><em>Posted August 12, 2014</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>Release notes</h1>
+  
+  <p>We&rsquo;re experimenting with a new form of release notes, so that it&rsquo;s easier to get context on what&rsquo;s going on in Finagle-land, especially with an eye to letting consumers see what the latest and greatest features are, and providing a little more context around what&rsquo;s going on.
+</p>
+
+<p>If you have questions about something you see in the changelogs that we didn&rsquo;t mention in the expanded release notes, please feel free to email me and ask for a clarification.</p>
+
+<p>At a broader level, we&rsquo;d also like to mention that we&rsquo;re interested in improving Java compatibility, so if you&rsquo;re having trouble using one of our APIs from Java, please let us know.</p>
+
+<h2>New versions</h2>
+
+<ul>
+<li><a href="#util-section"><code>util</code></a>: 6.19.0</li>
+<li><a href="#finagle-section"><code>finagle</code></a>: 6.20.0</li>
+<li><a href="#scrooge-section"><code>scrooge</code></a>: 3.16.3</li>
+<li><a href="#twitter-server-section"><code>twitter-server</code></a>: 1.7.3</li>
+</ul>
+
+<h2><a name="util-section" href="https://github.com/twitter/util">Util</a></h2>
+
+<h3>Announcements</h3>
+
+<p>We made a couple of big changes to <code>Buf</code>, our byte array abstraction, and
+<code>Reader</code>, our byte streaming abstraction.  Previously, we had a special <code>Buf</code>
+called <code>Buf.Eof</code> to denote the end of a byte Stream, but it occurred to us that
+it didn&rsquo;t make sense to have this in the byte array abstraction—it made more
+sense to model it in the byte stream abstraction, so now the semantic lies in
+the <code>Reader</code>.  <code>Reader</code> is experimental, and not used widely, so we didn&rsquo;t bump
+the major version.  We apologize if this causes you problems.</p>
+
+<p>At long last, we&rsquo;ve deprecated <code>com.twitter.util.Bijection</code>. This has been a
+long time coming, since there&rsquo;s now a <a href="https://github.com/twitter/bijection">fully-fledged open source
+project</a> built
+around <code>Bijection</code> that does everything that <code>c.t.u.Bijection</code> did, and a whole
+lot more!</p>
+
+<h3>New features</h3>
+
+<p>We&rsquo;ve added several new features to Buf, our byte array abstraction.  In part,
+this is to prepare to start exposing <a href="http://netty.io/">Netty</a>-free interfaces,
+so that we can swap Netty 3 out for other backends.  Some of those features are
+that we now have a <code>Buf.ByteBuffer</code> to wrap <code>java.nio.ByteBuffer</code>, <code>Buf</code>s now
+support reading and writing <code>U(32|64)(BE|LE)</code> integers with <code>Buf</code>s, and we&rsquo;ve
+significantly improved the performance of concatenating <code>Buf</code>s, with
+<code>ConcatBuf</code>.</p>
+
+<p>There are two new features on spools as we think more about object streaming.
+<code>Spool</code> now has take, useful for batching, and mapFuture, useful when you want
+to apply a function which returns an asynchronous result to every item in your
+spool.</p>
+
+<p>We&rsquo;ve modified the <code>Logging</code> trait so that it&rsquo;s more extensible, making it
+easier to change the handlers for your logger.  We hope that this will simplify
+having a unified way of logging across a project or organization.</p>
+
+<h3>Java compatibility</h3>
+
+<p><code>LoggerFactory</code> has been hard to use from Java for a long time.  We just created
+a <code>LoggerFactoryBuilder</code>, which should be much easier to use from Java.  There&rsquo;s
+an example in the <a href="https://github.com/twitter/util/blob/master/util-logging/src/test/java/com/twitter/logging/LoggerFactoryTest.java"><code>LoggerFactoryBuilder</code> compilation
+test</a>.
+We&rsquo;re excited about making Finagle easier to use from Java, so please let us
+know if you continue to run into trouble consuming Finagle from Java, so we can
+work with you to make Finagle more Java-friendly.</p>
+
+<h3>Docs</h3>
+
+<p>The Scaladocs for <a href="http://twitter.github.io/util/docs/#com.twitter.app.Flaggable"><code>Flag</code> and friends</a>
+have been significantly improved.  If you ever wondered how <code>util-flags</code> worked,
+the Scaladocs are now an even better place to learn the nitty gritty details.</p>
+
+<h3>Open source</h3>
+
+<p><a href="https://github.com/folone">George Leontiev</a> singlehandedly replaced all of our
+old <a href="https://code.google.com/p/specs/">specs</a> tests with <a href="http://www.scalatest.org/">ScalaTest</a>
+ones, paving the way for Util to be published against Scala 2.11.  We weren&rsquo;t
+able to publish util against 2.11 in this most recent release, but watch this
+space!  We&rsquo;re also making big strides in 2.11-ification for Finagle, in large
+part inspired by George&rsquo;s work.</p>
+
+<h3>Changelog</h3>
+
+<p>6.19.0  2014-08-05</p>
+
+<ul>
+<li><code>util</code>: smattering of minor cleanups in util and finagle</li>
+<li><code>util-core</code>: Reader and getContent symmetry</li>
+</ul>
+
+<p>6.18.4  2014-07-31</p>
+
+<ul>
+<li><code>util-core</code>: Remove confusing NOOP 0.until(5) in Future.collect().</li>
+<li><code>util-app</code>: Fix a bug in global flag parsing</li>
+</ul>
+
+<p>6.18.2  2014-07-23</p>
+
+<ul>
+<li><code>util-core</code>: Fixes a broken sbt test</li>
+<li><code>util-core</code>: Log exceptions caught by ChannelStatsHandler</li>
+<li><code>util-core</code>: Satisfy promise on fatal exception in FuturePool task</li>
+<li><code>util-core</code>: small perf improvements to Future.collect, Throw, Flag</li>
+<li><code>util-logging</code>: Java-friendly LoggerFactory API</li>
+</ul>
+
+<p>6.18.1  2014-07-08</p>
+
+<ul>
+<li><code>util</code>: Update README to reflect correct storage units.</li>
+<li><code>util-*</code>: Convert all tests in util to ScalaTest</li>
+<li><code>util-app</code>: Simplifies the logic to get the appname</li>
+<li><code>util-io</code>: Buf, Reader: remove Buf.Eof; end-of-stream is None</li>
+<li><code>util-io</code>: Create Buf.ByteBuffer to wrap java.nio.ByteBuffer</li>
+</ul>
+
+<p>6.18.0  2014-06-23</p>
+
+<ul>
+<li><code>util-app</code>: Don&rsquo;t kill the JVM on flag-parsing failure</li>
+<li><code>util-app</code>: Improve the Scaladocs for com.twitter.app.Flag and friends</li>
+<li><code>util-core</code>: Add U(32|64)(BE|LE) to Buf</li>
+<li><code>util-core</code>: Add com.twitter.util.NilStopwatch</li>
+<li><code>util-core</code>: Add src/main/java dependency on src/main/scala</li>
+<li><code>util-core</code>: Catch InterruptedException in Closable collector thread</li>
+<li><code>util-core</code>: Fix MockTimer#schedule(Duration)(=&gt; Unit)&lsquo;s cancel</li>
+<li><code>util-core</code>: Fix update-after-interrupt race condition in AsyncSemaphore</li>
+<li><code>util-core</code>: Signal the deprecation of com.twitter.util.Bijection.</li>
+<li><code>util-logging</code>: Add additional handlers to Logging trait</li>
+</ul>
+
+<p>6.17.0  2014-06-04</p>
+
+<ul>
+<li><code>util</code>: Upgrade dependency versions</li>
+<li><code>util-core</code>: Scheduler productivity = cpuTime/wallTime</li>
+<li><code>util-core</code>: Add a <code>take</code> method to <code>Spool</code></li>
+<li><code>util-core</code>: Introduce <code>ConcatBuf</code></li>
+<li><code>util-core</code>: add <code>Spool.collectFuture</code></li>
+</ul>
+
+<h2><a name="finagle-section" href="https://github.com/twitter/finagle">Finagle</a></h2>
+
+<h3>Announcements</h3>
+
+<p>We&rsquo;ve renamed Finagle threads, so that they are now called “finagle/netty3”.
+This should make it easier to figure out what is going on in your stack traces.</p>
+
+<h3>New features</h3>
+
+<p><code>finagle-http</code> now supports streaming the request body. This is not yet
+documented, but there is <a href="https://github.com/twitter/finagle/pull/284/files">a pull request</a>
+to add documentation to the Finagle user guide.  We&rsquo;d love to hear what you
+think.</p>
+
+<p><code>getContent</code> and <code>Reader</code> are two ways to retrieve the body of the HTTP message.
+The previous behavior was that when the message was chunked, calling
+<code>reader.read(n)</code> retrieved n bytes of the message body, and <code>getContent</code>
+returned an empty <code>ChannelBuffer</code>. When the message was not chunked,
+<code>getContent</code> returned a <code>ChannelBuffer</code> filled with the message body, and
+calling <code>reader.read(n)</code> was a future that never resolved.  The new behavior is
+that when the message is chunked, the behavior remains the same, but when not
+chunked, calling <code>reader.read(n)</code> retrieves <code>n</code> bytes of the message body. We
+think this is behavior is much more aligned with expectations.</p>
+
+<p>The previous default for inet! resolution in Finagle was to never refresh the
+DNS lookup, so people had to do terrible hacks to get it to work properly.  Part
+of the problem was that Twitter doesn&rsquo;t change DNS entries frequently, so we
+don&rsquo;t rely on DNS for service discovery often.  However, the new Finagle
+supports timer-based DNS resolution as default in <code>InetResolver</code>.  Thanks a ton
+to <a href="https://github.com/agleyzer">Alex Gleyzer</a>, who came up with the original
+implementation, and <a href="https://github.com/jixu">Cobb</a>, who got it ready to merge
+into Finagle.</p>
+
+<p>Per-host stats can be too noisy to turn on in production, and will entail
+significant GC pressure if you have many downstream hosts.  We&rsquo;ve added a new
+flag that you can enable to turn on per host stats,
+<code>com.twitter.finagle.loadbalancer.perHostStats</code>, since they are often useful for
+debugging problems locally, or in staging environments.</p>
+
+<p><code>finagle-thriftmux</code> now supports the experimental feature GC Avoidance if you
+turn on the right flags.  We&rsquo;re beginning to load test it now, but it&rsquo;s not
+ready for prime time yet.  If you&rsquo;re trying to use GC Avoidance outside of
+Twitter, you might have a hard time.  In some parts it depends upon having a JDK
+which supports <code>System.minorGc</code>, an extra call on <code>System</code> which will only
+trigger a minor GC.  We&rsquo;ve discussed other ways of forcing a minor GC, like
+allocating a lot of big arrays very quickly, but haven&rsquo;t implemented them yet.
+Please get in contact if you&rsquo;re interested in working on this.</p>
+
+<h3>Docs</h3>
+
+<p>We&rsquo;ve significantly improved the documentation around HTTP streaming, and also
+added a bunch of examples.  This hasn&rsquo;t been merged yet, but can be found at the
+<a href="https://github.com/twitter/finagle/pull/284/files">pull request</a> to add
+documentation to the Finagle user guide.  We&rsquo;d love to hear what you think.</p>
+
+<h3>New stats</h3>
+
+<p>We&rsquo;ve added several new stats to Finagle, to generally improve insight into
+Finagle.  We&rsquo;ve added a <code>marked_dead</code> counter to the <code>FailFastFactory</code>, so that
+you can see when your client perceives that downstream endpoints are flapping.</p>
+
+<p>We&rsquo;ve also added a couple of counters in <code>WatermarkPool</code>, to make it easier to
+see when you&rsquo;re having queueing problems, and are asked to wait in line for a
+connection, namedly <code>pool_num_waited</code>, and <code>pool_num_too_many_waiters</code>.  </p>
+
+<p>We&rsquo;ve added a service acquisition latency stat to <code>StatsFactoryWrapper</code>, which
+gives insight into how long it takes to acquire a service.  Since TCP
+connections are usually quite fast, and should mostly be cached, this usually
+measures how long you spend queueing for a connection.</p>
+
+<h3>Open source</h3>
+
+<p>Inspired in large part by the great work in Util to get ready for Scala 2.11,
+we&rsquo;ve started making Finagle ready for Scala 2.11.  A large part of this is
+paying down technical debt that we&rsquo;ve accrued, like having half of our tests
+still be on specs, which is super deprecated.  Because of this, we&rsquo;re trying to
+move as much as possible onto ScalaTest, which is what we use now. 
+<a href="https://github.com/p-antoine">Pierre-Antoine Ganaye</a>, the author of the very
+cool <a href="https://github.com/finagle/finagle-zookeeper">finagle-zookeeper</a> project,
+stepped up and migrated the <code>finagle-core</code> tests over, while getting up to speed
+on Finagle, and the Finagle community took on the mantle for the <a href="https://github.com/twitter/finagle/issues/290">rest of the
+tests</a>.  We&rsquo;re over halfway
+there, and we&rsquo;re beginning to think about how to switch over our other projects,
+like Scrooge and Twitter-server.</p>
+
+<p>In order to make it easier to get new contributors started with Finagle, we&rsquo;ve
+added sections about review process and starter issues.  Also, so that open
+source users can see how many other open source users there are and have more
+confidence in our commitment to open source, we&rsquo;ve started an adopters list.</p>
+
+<h3>Changelog</h3>
+
+<p>6.20.0</p>
+
+<ul>
+<li><code>finagle</code>: Smattering of minor cleanups in util and finagle</li>
+<li><code>finagle</code>: Upgrade sbt to 0.13</li>
+<li><code>finagle</code>: Upgrade to Netty 3.9.1.1.Final</li>
+<li><code>finagle-core</code>: Add NameTree.Fail to permit failing a name without fallback</li>
+<li><code>finagle-core</code>: Add a generic DtabStatsFilter</li>
+<li><code>finagle-core</code>: Add a singleton exception and a counter in WatermarkPool</li>
+<li><code>finagle-core</code>: DefaultClient in terms of StackClient</li>
+<li><code>finagle-core</code>: Disable Netty&rsquo;s thread renaming</li>
+<li><code>finagle-core</code>: Fix CumulativeGauge memory leak</li>
+<li><code>finagle-core</code>: Fix negative resolution in Namer.global</li>
+<li><code>finagle-core</code>: Fixed ChannelStatsHandler to properly filter exceptions</li>
+<li><code>finagle-core</code>: Forces finagle-core to use ipv4 network stack</li>
+<li><code>finagle-core</code>: Improve <code>Failure.toString</code></li>
+<li><code>finagle-core</code>: Include path and Dtab.local in NoBrokersAvailableException</li>
+<li><code>finagle-core</code>: Log exceptions caught by ChannelStatsHandler</li>
+<li><code>finagle-core</code>: Make timer-based DNS resolution as default of InetResolver</li>
+<li><code>finagle-core</code>: Reader and getContent symmetry</li>
+<li><code>finagle-core</code>: Reduces log level for common exceptions</li>
+<li><code>finagle-core</code>: Register clients centrally</li>
+<li><code>finagle-doc</code>: Add fintop to companion projects list on Finagle website</li>
+<li><code>finagle-http</code>: Don&rsquo;t emit (illegal) newlines in lengthy dtab header values</li>
+<li><code>finagle-http</code>: Fix code style from an open-source contribution</li>
+<li><code>finagle-http</code>: Migrate from specs to ScalaTest</li>
+<li><code>finagle-kestrel</code>: Make transaction abort timeout configurable in MultiReader</li>
+<li><code>finagle-mux</code>: Added extra client logging</li>
+<li><code>finagle-mux</code>: Fix broken draining behavior</li>
+<li><code>finagle-mux</code>: Improve granularity of rate to bytes/millisecond</li>
+<li><code>finagle-serversets</code>: Handle errors that occur when fetching endpoints</li>
+<li><code>finagle-serversets</code>: Increase ZK session timeout to 10 seconds</li>
+<li><code>finagle-serversets</code>: Merge WeightedSocketAddresses with same host:port but different weight in Stabilizer</li>
+<li><code>finagle-serversets</code>: Synchronize bug fixes &amp; test coverage across ZK facades</li>
+<li><code>finagle-swift</code>: Fixes pants build warning</li>
+<li><code>finagle-thrift</code>: Add explicit dependency on libthrift</li>
+<li><code>finagle-thrift</code>: Remove usage of java_sources, should be able to depend on it normally</li>
+</ul>
+
+<p>6.19.0</p>
+
+<ul>
+<li><code>finagle-core</code>: Allow trailing semicolons in dtabs</li>
+<li><code>finagle-core</code>: Rescue exceptions thrown by filter in <code>Filter.andthen(Filter)</code></li>
+<li><code>finagle-core</code>: StackClient, StackClientLike don&rsquo;t leak underlying In, Out types</li>
+<li><code>finagle-doc</code>: Clarify cancellation</li>
+<li><code>finagle-doc</code>: Fix broken link in document</li>
+<li><code>finagle-doc</code>: Fix name footnote in finagle Names docs</li>
+<li><code>finagle-http</code>: Buf, Reader remove Buf.Eof; end-of-stream is None</li>
+<li><code>finagle-http</code>: Prepend comment to JSONP callbacks</li>
+<li><code>finagle-http</code>: Removing specs from the CookieMapSpec test.</li>
+<li><code>finagle-kestrel</code>: Make failFast configurable in Kestrel codec</li>
+<li><code>finagle-mysql</code>: Ensure mysql specific tracing is composed.</li>
+<li><code>finagle-mysql</code>: Finagle MySQL PreparedStatement accepts Value types as params.</li>
+<li><code>finagle-serversets</code>: Identity Providers for Serverset2</li>
+<li><code>finagle-thriftmux</code>: Add withProtocolFactory API endpoint</li>
+<li><code>finagle-thriftmux</code>: Don&rsquo;t reuse InMemoryStatsReceiver in the same test</li>
+</ul>
+
+<p>6.18.0</p>
+
+<ul>
+<li><code>finagle-*</code>: release scrooge v3.16.0</li>
+<li><code>finagle-*</code>: release util v6.18.0</li>
+<li><code>finagle-core</code>: Add <code>description</code> field to com.twitter.finagle.Stackable trait</li>
+<li><code>finagle-core</code>: Add a Flag to turn on per-host stats</li>
+<li><code>finagle-core</code>: Add a service acquisition latency stat to StatsFactoryWrapper</li>
+<li><code>finagle-core</code>: Don&rsquo;t support empty path elements in com.twitter.finagle.Path</li>
+<li><code>finagle-core</code>: Improves FailFastFactory documentation</li>
+<li><code>finagle-core</code>: Make c.t.f.Failure a direct subclass of Exception</li>
+<li><code>finagle-core</code>: Skip SOCKS proxy when connecting to loopback address</li>
+<li><code>finagle-core</code>: Use Monitor from caller&rsquo;s context in DefaultTimer</li>
+<li><code>finagle-http</code>: Add &ldquo;Enhance Your Calm&rdquo; and &ldquo;Too Many Requests&rdquo; HTTP status codes</li>
+<li><code>finagle-http</code>: Add exp.HttpServer, which allows request limits to be configured</li>
+<li><code>finagle-http</code>: Change Request#params to a memoized def</li>
+<li><code>finagle-http</code>: Stream request body</li>
+<li><code>finagle-kestrel</code>: Add Name-based methods for MultiReader construction</li>
+<li><code>finagle-memcached</code>: Expose the client type <code>KetamaClient</code> in the <code>build()</code> API</li>
+<li><code>finagle-mux</code>: GC Avoidance Algorithm</li>
+<li><code>finagle-mux</code>: Hook up GC avoidance to servers</li>
+<li><code>finagle-mux</code>: Move UseMux.java to the correct directory</li>
+<li><code>finagle-serversets</code>: Randomizes backoff interval in ZK2</li>
+<li><code>finagle-serversets</code>: Start resolution eagerly in ZK2</li>
+<li><code>finagle-stats</code>: Add a stat-filtration GlobalFlag</li>
+<li><code>finagle-*</code>: release ostrich v9.5.2</li>
+<li><code>user guide</code>: Add Google Analytics tracking code</li>
+<li><code>user guide</code>: Add sections about review process and starter issues</li>
+<li><code>user guide</code>: Update Finagle adopter list on user guide website</li>
+<li><code>wily</code>: Add Dtab expansion</li>
+</ul>
+
+<p>6.17.0</p>
+
+<ul>
+<li><code>finagle</code>: Add list of Finagle adopters</li>
+<li><code>finagle</code>: Upgrade third-party dependencies</li>
+<li><code>finagle-core</code>: Add <code>Addr.Neg</code> to the user guide&rsquo;s list of Addr types</li>
+<li><code>finagle-core</code>: Added Failure support for sourcing to finagle</li>
+<li><code>finagle-core</code>: ClientBuilder should turn per-host stats off by default (matching new Client building API).</li>
+<li><code>finagle-core</code>: Implement DefaultServer in terms of StackServer</li>
+<li><code>finagle-core</code>: Improve the Dtab API</li>
+<li><code>finagle-core</code>: Prevent scoping stats with the empty-string</li>
+<li><code>finagle-core</code>: Rolls up the /tries scope properly</li>
+<li><code>finagle-core</code>: ServerStatsReceiver and ClientStatsReceiver can now update their root scope</li>
+<li><code>finagle-core</code>: fix race case in DelayedFactory</li>
+<li><code>finagle-core</code>: introduce AbstractResolver</li>
+<li><code>finagle-core</code>: remove need for hostConnectionLimit when using ClientBuilder#stack</li>
+<li><code>finagle-core</code>: widen to type for ServerBuilder#stack</li>
+<li><code>finagle-core</code>: widen type of ClientBuilder#stack</li>
+<li><code>finagle-doc</code>: Removed a line from conf.py</li>
+<li><code>finagle-http</code>: DtabFilter should always clear dtab headers</li>
+<li><code>finagle-http</code>: add HOST header for CONNECT method</li>
+<li><code>finagle-http</code>: scala 2.10 compatible tests</li>
+<li><code>finagle-memcached</code>: filter out one more cancelling request exception in failure accrual</li>
+<li><code>finagle-memcached</code>: remove empty test</li>
+<li><code>finagle-mux</code>: Improve Mux server close behavior, control messages to non-Mux clients</li>
+<li><code>finagle-mux</code>: Marked a gc test as flaky</li>
+<li><code>finagle-mux</code>: Modifies MuxService to essentially be a Service[Spool[Buf], Spool[Buf]] Problem</li>
+<li><code>finagle-mux</code>: Rm ClientHangupException in favor of CancelledRequestException</li>
+<li><code>finagle-mysql</code>: Retrieving a timestamp from the DB nw creates a timestamp in UTC</li>
+<li><code>finagle-mysql</code>: fix for issue where time was not being returned in UTC for binary protocol</li>
+<li><code>finagle-serversets</code>: Prevent gauges from being garbage collected</li>
+<li><code>finagle-thrift</code>: Blackhole control messages sent to non-mux Thrift clients</li>
+<li><code>finagle-thriftmux</code>: Add per-connection protocol-usage stats</li>
+<li><code>finagle-thriftmux</code>: Add stats to identify ThriftMux clients and servers</li>
+<li><code>finagle-thriftmux</code>: Propagate Contexts from non-ThriftMux clients</li>
+<li><code>finagle-thriftmux</code>: add ClientBuilder#stack compatibility and make APIs symmetric</li>
+<li><code>finagle-thriftmux</code>: pass along ClientId with ClientBuilder API</li>
+</ul>
+
+<h2><a name="scrooge-section" href="https://github.com/twitter/scrooge">Scrooge</a></h2>
+
+<h3>New features</h3>
+
+<p>We wrote a <a href="https://twitter.github.io/scrooge/Linter.html">scrooge-linter</a>,
+which we&rsquo;re really excited about.  If you&rsquo;re at a company that has a lot of
+Thrift IDL files, you know the pain of trying to get everyone to write them in a
+standard way, especially since the tooling is so anemic.  <code>scrooge-linter</code>
+begins to fix that problem, by linting your IDL files so you can catch
+non-conforming thrift quickly and systematically.</p>
+
+<h3>Docs</h3>
+
+<p>The docs on how to use the scrooge tool from the command line have long been out
+of date.  We just did a big refresher of them, and it&rsquo;s much easier to get up
+and running with a new Scrooge project now.</p>
+
+<h3>Changelog</h3>
+
+<p>3.16.3</p>
+
+<ul>
+<li><code>scrooge-core</code>: Add union metadata for reflection</li>
+<li><code>scrooge-doc</code>: Clarify docs on CLI usage</li>
+<li><code>scrooge-generator</code>: Fix error message for missing required field</li>
+<li><code>scrooge-generator</code>: Modify compiler to accept a Scaladoc comment at the end of Thrift file</li>
+<li><code>scrooge-generator</code>: Normalize scalatest versions between poms and 3rdparty</li>
+<li><code>scrooge-generator</code>: Stricter checks for invalid Thrift filenames</li>
+<li><code>scrooge-ostrich</code>: Default to using <code>Protocols.binaryFactory</code></li>
+</ul>
+
+<p>3.16.1</p>
+
+<ul>
+<li><code>scrooge-*</code>: release finagle 6.18.0</li>
+<li><code>scrooge-*</code>: release util 6.18.0</li>
+<li><code>scrooge-linter</code>: Fix multiple arguments to linter + pants/mvn fixes</li>
+<li><code>scrooge</code>: Separate flow for linter</li>
+<li><code>scrooge</code>: Skip includes when linting</li>
+</ul>
+
+<p>3.16.0</p>
+
+<ul>
+<li><code>scrooge-*</code>: Upgrade dependencies to latest versions</li>
+<li><code>scrooge</code>: Move scrooge-linter into scrooge</li>
+<li><code>scrooge</code>: Add SimpleID.originalName for enum fields</li>
+</ul>
+
+<h2><a name="twitter-server-section" href="https://github.com/twitter/twitter-server">Twitter Server</a></h2>
+
+<h3>New features</h3>
+
+<p>It has historically been difficult to understand how your client is configured,
+even though all clients are configured very similarly, usually with only small
+changes in parameters.  However, when debugging, users sometimes need to know
+how long timeouts have been set to, what kind of load balancer is being used,
+and other configuration parameters, so that we can debug problems more quickly.
+Now, we have a neat admin endpoint where users can gain insight into each client
+individually.</p>
+
+<p>Having logging at multiple granularities is a real luxury, but sometimes you
+realize that you&rsquo;ve set the log level incorrectly, and you need to be able to
+see more granular logs on a box that&rsquo;s already in an interesting state, in
+production.  To that end, we&rsquo;ve added a logging handler to the Twitter-server
+admin service, which can both tell you about the current log levels, but can
+also be used to change logging granularities on the fly.</p>
+
+<p>We added a new admin handler to display the base dtab, so that it&rsquo;s easier to
+reason about what will happen to a service when it receives a new dtab.  Instead
+of having to guess based on its behavior, or try to figure it out through
+inspecting the code, you can just query now, and know the right answer
+immediately.</p>
+
+<p>Built-in metrics are one of the coolest features of Finagle, but there are
+really a ton of them, especially if you have many downstreams, or you use per
+host stats.  In order to make this problem easier to deal with, we added a flag,
+<code>com.twitter.finagle.stats.statsFilter</code>, which you can pass in to filter out
+some stats that you know you will never use.</p>
+
+<h3>Changelog</h3>
+
+<p>1.7.3</p>
+
+<ul>
+<li>Add admin endpoint for per-client configuration</li>
+<li>Add trace ID to twitter-server logging</li>
+<li>Create a logging handler for on-the-fly logging updates</li>
+</ul>
+
+<p>1.7.2</p>
+
+<ul>
+<li>release finagle v6.18.0</li>
+<li>release util v6.18.0</li>
+<li>user guide: Add blurb about filtering out stats</li>
+</ul>
+
+<p>1.7.1</p>
+
+<ul>
+<li>Upgrade versions of all dependencies</li>
+<li>Admin dtab handler: display base dtab</li>
+<li>Change productivity stat to cpuTime/wallTime</li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

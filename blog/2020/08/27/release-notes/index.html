@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>August 2020 Release Notes - Version 20.8.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Ruben Oanta</h4>
+      <p class="author-twitter"><a href="https://twitter.com/rubenoanta">@rubenoanta</a></p>
+    </div>
+    <p><em>Posted August 27, 2020</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>August 2020 Release Notes - Version 20.8.1</h1>
+  
+  <p>Release 20.8.0 had a corrupt artifact uploaded to maven central. This patch release
+addresses that and includes some other goodies:</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  finagle-thriftmux: Add MethodBuilder specific APIs for ThriftMux partition aware client.
+<a href="https://github.com/twitter/finagle/commit/e2f467c11e07db4a59c0f13888b0ecf36bcf34d6">e2f467c1</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Added</h4>
+
+<ul>
+<li>  thrift: JavaThriftRouter now allows mounting controllers by value (as opposed to via DI).
+<a href="https://github.com/twitter/finatra/commit/bcc760565ef4826d3393b318f0f73f554d4afdf7">bcc76056</a></li>
+<li>  finatra-kafka: Expose delivery timeout duration in KafkaProducerConfig. <a href="https://github.com/twitter/finatra/commit/cc02343057284fb3d0924b09909f2c28666b01e5">cc023430</a></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  inject-core: Remove deprecated com.twitter.inject.Mockito trait. Users are encouraged to
+switch to the com.twitter.mock.Mockito trait from util/util-mock. <a href="https://github.com/twitter/finatra/commit/92c3f7ba0f06ab4baf57489af04a32982052e145">92c3f7ba</a></li>
+</ul>
+
+<h4>Fixed</h4>
+
+<ul>
+<li>  inject-server: Ensure Awaiter.any does not try to block on an empty list of Awaitables. Add
+tests. <a href="https://github.com/twitter/finatra/commit/b19e8a253f86d9143160a0b57196f4b587c8f3df">b19e8a25</a></li>
+<li>  finatra-jackson: Fix bugs around generic case class deserialization involving other generic
+types. Reported (with reproduction and pointers) on GitHub by @aatasiei
+(<a href="https://github.com/twitter/finatra/issues/547">https://github.com/twitter/finatra/issues/547</a>). Fixes #547. <a href="https://github.com/twitter/finatra/commit/a6ba62b6b53ac5470a3b99a36634ec0f35600540">a6ba62b6</a></li>
+<li>  finatra-jackson: Fix a bug preventing JSON parsing of generic case classes, which in turn, contain
+fields with generic case classes. Reported (with a thorough reproducer and an analysis) on GitHub
+by @aatasiei (<a href="https://github.com/twitter/finatra/issues/548">https://github.com/twitter/finatra/issues/548</a>). Fixes #548. <a href="https://github.com/twitter/finatra/commit/0a3803ff9ae3e975c4dbe32538f7907fe7f6d9f1">0a3803ff</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  util-mock: Introduce <a href="https://github.com/mockito/mockito-scala">mockito-scala</a> based mocking
+integration. Fix up and update mockito testing dependencies:
+
+<ul>
+<li>  mockito-all:1.10.19 to mockito-core:3.3.3</li>
+<li>  scalatestplus:mockito-1-10:3.1.0.0 to scalatestplus:mockito-3-2:3.1.2.0 <a href="https://github.com/twitter/util/commit/b2fb4b3a9e063a2183d4f14de4ae04f5e1b2abb2">b2fb4b3a</a></li>
+</ul></li>
+<li>  util-app: Add support for flags of Java Enum types. <a href="https://github.com/twitter/util/commit/4657258dfe0d7e1a70ad7460a78601c715bfb4bd">4657258d</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<ul>
+<li>  Check SecurityManager permissions in the ContentHandler to ensure that contention
+snapshotting is allowed. <a href="https://github.com/twitter/twitter-server/commit/ce783a3cadb9b27473006b59547adf22c534f5d9">ce783a3c</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>  scrooge-generator: The Scala generator no longer generates Proxy classes
+on structs by default. These can be opted into on a struct-by-struct
+basis by adding a Thrift annotation to a struct,
+(com.twitter.scrooge.scala.generateStructProxy = &ldquo;true&rdquo;). See struct Request
+in scrooge-generator-tests/src/test/resources/gold_file_input/gold.thrift
+for an example. <a href="https://github.com/twitter/scrooge/commit/2a0f311b0dc8cbfca907197f8e0218ecbce1e780">2a0f311b</a></li>
+<li>  scrooge-generator: Fixed a bug in the Java generated code where responses were
+often deserialized twice. <a href="https://github.com/twitter/scrooge/commit/175e135888188dbd3f9da41254ff69db73f0dd84">175e1358</a></li>
+<li>  scrooge-generator: Java-generated ServiceIface interfaces now extend
+c.t.f.thrift.AbstractThriftService. <a href="https://github.com/twitter/scrooge/commit/a36486fb4b0a229232c1104009fbababd886d80c">a36486fb</a></li>
+<li>  scrooge-generator: Reduced the size of generated Scala code. <a href="https://github.com/twitter/scrooge/commit/1dc7e4f4d4f6e49dfb3f2b9d61df377e2f8fcc13">1dc7e4f4</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

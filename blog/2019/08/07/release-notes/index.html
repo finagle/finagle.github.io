@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>August 2019 Release Notes - Version 19.8.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Kevin Oliver</h4>
+      <p class="author-twitter"><a href="https://twitter.com/kevino">@kevino</a></p>
+    </div>
+    <p><em>Posted August  7, 2019</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>August 2019 Release Notes - Version 19.8.0</h1>
+  
+  <p>Hot off the press — the August releases. Here&rsquo;s what&rsquo;s what.</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  finagle-core: The contents of the c.t.f.dispatch.GenSerialClientDispatcher object have been
+moved to the new c.t.f.dispatch.ClientDispatcher object. The stats receiver free constructors
+of GenSerialClientDispatcher and SerialClientDispatcher have been removed.
+<a href="https://github.com/twitter/finagle/commit/4b0493c6842c222cff71e3b4667fc8e958e3220c">4b0493c6</a></li>
+<li>  finagle-thrift: The deprecated ReqRepThriftServiceBuilder object has been
+removed. Users should migrate to ReqRepMethodPerEndpointBuilder. <a href="https://github.com/twitter/finagle/commit/f1c4d5890c14e2131d9543f1a5fa6dd59e908306">f1c4d589</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  finagle-core: Failed reads on Linux due to a remote peer disconnecting should now be properly
+seen as c.t.f.ChannelClosedException instead of a c.t.f.UnknownChannelException.
+<a href="https://github.com/twitter/finagle/commit/b06fab3edceabb010783c3d5ba86c16bfe3b7067">b06fab3e</a></li>
+<li>  finagle: Upgrade to Jackson 2.9.9. <a href="https://github.com/twitter/finagle/commit/464ae7516926d36bcd111266b26c09288648ff16">464ae751</a></li>
+<li>  finagle: Upgrade to Netty 4.1.38.Final. <a href="https://github.com/twitter/finagle/commit/23532f19a47ac931ca2ba32773b829a630396127">23532f19</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Added</h4>
+
+<ul>
+<li>  finatra-http: Introduce the new streaming request and response types:
+c.t.finatra.http.streaming.StreamingRequest <a href="https://github.com/twitter/finatra/commit/9687e2d7c4be2faf164d322974018cb3e49f0d5f">9687e2d7</a>,
+c.t.finatra.http.streaming.StreamingResponse <a href="https://github.com/twitter/finatra/commit/30fcb6860221e2c252452d2c28c8d70f4782b872">30fcb686</a>.
+Examples are located in finatra/examples/streaming-example/.</li>
+<li>  finatra-jackson: Add the ability to specify fields in the MethodValidation annotation.
+<a href="https://github.com/twitter/finatra/commit/545674e62195ba6d060f74a83cfb9956eeea3451">545674e6</a></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  inject-thrift-client: make ThriftClientModuleTrait extend StackClientModuleTrait for symmetry
+with other protocol client modules. <a href="https://github.com/twitter/finatra/commit/271051494d9c9622a6a9eecb7a04cfd204633aa7">27105149</a></li>
+<li>  finatra-http: Deprecated c.t.finatra.http.response.StreamingResponse, Use
+c.t.finatra.http.response.ResponseBuilder.streaming to construct a
+c.t.finatra.http.streaming.StreamingResponse instead. <a href="https://github.com/twitter/finatra/commit/30fcb6860221e2c252452d2c28c8d70f4782b872">30fcb686</a></li>
+<li>  finatra: Upgrade to Jackson 2.9.9. <a href="https://github.com/twitter/finatra/commit/f050be4f65251bc0b6cc8cd9a9b3ab15e6448c76">f050be4f</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li>  scrooge-generator: The deprecated ReqRepThriftServiceBuilder has been
+removed. <a href="https://github.com/twitter/scrooge/commit/14d4b98084551822cda2a50159bab19cd0894338">14d4b980</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<h4>Changes</h4>
+
+<ul>
+<li>  Upgrade to Jackson 2.9.9. <a href="https://github.com/twitter/twitter-server/commit/2a185d94a6cf6dd1130da839d2148bba7a4179c3">2a185d94</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  util-logging: The namespace forwarders for Level and Policy in com.twitter.logging.config
+have been removed. Code should be updated to use com.twitter.logging.Level and
+com.twitter.logging.Policy where necessary. Users are encouraged to use &lsquo;util-slf4j-api&rsquo; though
+where possible. <a href="https://github.com/twitter/util/commit/6ab4aeac5e6b77dba8471b1b06ae4160a3feed56">6ab4aeac</a></li>
+<li>  util-logging: The deprecated com.twitter.logging.config.LoggerConfig and associated
+classes have been removed. These have been deprecated since 2012. Code should be updated
+to use com.twitter.logging.LoggerFactory where necessary. Users are encouraged to use
+&lsquo;util-slf4j-api&rsquo; though where possible. <a href="https://github.com/twitter/util/commit/5d43773eb14c73240d4b9424e880ebcff8ecfe20">5d43773e</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  util: Upgrade to Jackson 2.9.9. <a href="https://github.com/twitter/util/commit/0f0bcd44d8a241c8b2e14af568cbe83dec0c7fae">0f0bcd44</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

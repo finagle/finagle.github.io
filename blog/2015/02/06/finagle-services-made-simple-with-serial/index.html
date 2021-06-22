@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Finagle services made simple with Serial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Travis Brown</h4>
+      <p class="author-twitter"><a href="https://twitter.com/travisbrown">@travisbrown</a></p>
+    </div>
+    <p><em>Posted February  6, 2015</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>Finagle services made simple with Serial</h1>
+  
+  <p>Most internal services at Twitter speak the <a href="https://thrift.apache.org/">Thrift protocol</a>, which
+provides many benefits—once you&rsquo;ve defined your data types and service
+interfaces, for example, it&rsquo;s possible to create bindings for a wide range of
+programming languages, and Twitter&rsquo;s <a href="https://twitter.github.io/scrooge/">Scrooge</a> in particular makes
+it easy to create high-performance Finagle servers and clients for your Thrift
+interfaces.</p>
+
+<p>In some cases, though, it would be more convenient not to have to worry about
+things like interface description files, the build system plugins necessary to
+generate bindings from them, etc. In particular, being able to define Finagle
+services that take arbitrary types as inputs and outputs in a Scala REPL would
+make writing tutorials and quickstart projects much more straightforward, and
+would enable easier experimentation with other parts of the Finagle API.
+</p>
+
+<p>With this in mind, <a href="https://twitter.com/vkostyukov">Vladimir Kostyukov</a> and I
+decided to spend part of Twitter&rsquo;s January 2015 Hack Week putting together a
+library that would allow users to create Finagle clients and servers that use
+Scala (or Java) libraries for serialization instead of IDL-based systems like
+Thrift. The result was <a href="https://github.com/finagle/finagle-serial">Finagle Serial</a>, a new project in the <a href="https://github.com/finagle">Finagle
+organization</a>. Serial is built on <a href="https://twitter.github.io/finagle/guide/Protocols.html#mux">Mux</a>, a generic
+session-layer RPC protocol that supports multiplexing, and currently provides
+support for using <a href="https://github.com/scodec/scodec">Scodec</a> for object serialization. Other
+serialization libraries may be supported in the future, but we found that
+Scodec worked well for the initial proof-of-concept implementation.</p>
+
+<h2>Starting a server</h2>
+
+<p>With Serial, you don&rsquo;t need to describe your service interfaces using an
+external IDL—instead you simply provide <em>codecs</em> for your input and output
+types. If you clone the <a href="https://github.com/finagle/finagle-serial">Serial repository</a> and <a href="http://www.scala-sbt.org/0.13/tutorial/Setup.html">install
+SBT</a>, you can launch a REPL with the following command:</p>
+<pre class="highlight shell"><code>sbt <span class="s2">"project scodec"</span> console
+</code></pre>
+
+<p>And then define and start a Finagle server with just a few lines of code:</p>
+<pre class="highlight scala"><code><span class="k">import</span> <span class="nn">com.twitter.finagle.Service</span>
+<span class="k">import</span> <span class="nn">com.twitter.util.Future</span>
+<span class="k">import</span> <span class="nn">io.github.finagle.serial.scodec.ScodecSerial</span>
+<span class="k">import</span> <span class="nn">java.net.InetSocketAddress</span>
+<span class="k">import</span> <span class="nn">scodec.Codec</span>
+<span class="k">import</span> <span class="nn">scodec.codecs._</span>
+
+<span class="k">val</span> <span class="n">protocol</span> <span class="k">=</span> <span class="nc">ScodecSerial</span><span class="o">(</span><span class="n">int32</span><span class="o">,</span> <span class="n">double</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">reciprocalServer</span> <span class="k">=</span>
+  <span class="n">protocol</span><span class="o">.</span><span class="n">serveFunction</span><span class="o">(</span><span class="k">new</span> <span class="nc">InetSocketAddress</span><span class="o">(</span><span class="mi">8123</span><span class="o">))(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="k">_</span><span class="o">)</span>
+</code></pre>
+
+<p>And that&rsquo;s all—we now have a Finagle server running on port 8123 that will
+return the floating-point reciprocal of any integer we pass to it.</p>
+
+<p>Note that all you need to be able to serve a Finagle <code>Service[Req, Rep]</code> (or an
+ordinary function from <code>Req</code> to <code>Rep</code>) is a pair of codecs for the <code>Req</code> and
+<code>Rep</code> types.</p>
+
+<p>In this example, <code>int32</code> and <code>double</code> are the Scodec codecs that we&rsquo;ve decided
+to use for the <code>Int</code> and <code>Double</code> input and output types. These are fairly simple,
+but Scodec makes it possible to define more complex codecs with very little
+boilerplate (see for example the ones for the <code>User</code> and <code>Greeting</code> case classes
+below).</p>
+
+<p>We can try out our server by defining and calling a client:</p>
+<pre class="highlight scala"><code><span class="k">val</span> <span class="n">reciprocal</span> <span class="k">=</span> <span class="n">protocol</span><span class="o">.</span><span class="n">newService</span><span class="o">(</span><span class="s">"localhost:8123"</span><span class="o">)</span>
+
+<span class="n">reciprocal</span><span class="o">(</span><span class="mi">1001</span><span class="o">).</span><span class="n">onSuccess</span><span class="o">(</span><span class="n">result</span> <span class="k">=&gt;</span> <span class="n">println</span><span class="o">(</span><span class="n">f</span><span class="s">"$result%.12f"</span><span class="o">))</span>
+</code></pre>
+
+<p>Which should print <code>0.000999000999</code>, exactly as we&rsquo;d expect.</p>
+
+<h2>Handling exceptions</h2>
+
+<p>Now for a slightly more interesting service:</p>
+<pre class="highlight scala"><code><span class="k">val</span> <span class="n">protocol</span> <span class="k">=</span> <span class="nc">ScodecSerial</span><span class="o">(</span><span class="n">variableSizeBits</span><span class="o">(</span><span class="n">uint8</span><span class="o">,</span> <span class="n">utf8</span><span class="o">),</span> <span class="n">int32</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">intParsingServer</span> <span class="k">=</span>
+  <span class="n">protocol</span><span class="o">.</span><span class="n">serveFunction</span><span class="o">(</span><span class="k">new</span> <span class="nc">InetSocketAddress</span><span class="o">(</span><span class="mi">8124</span><span class="o">))(</span><span class="k">_</span><span class="o">.</span><span class="n">toInt</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">intParser</span> <span class="k">=</span> <span class="n">protocol</span><span class="o">.</span><span class="n">newService</span><span class="o">(</span><span class="s">"localhost:8124"</span><span class="o">)</span>
+
+<span class="n">intParser</span><span class="o">(</span><span class="s">"2015"</span><span class="o">).</span><span class="n">onSuccess</span><span class="o">(</span><span class="n">println</span><span class="o">)</span>
+</code></pre>
+
+<p>This should print <code>2015</code>. But the function that we&rsquo;re serving is of course not
+very well-behaved—it&rsquo;ll throw an exception on strings that can&rsquo;t be
+parsed into integers. So what happens if we call our client with invalid input?</p>
+<pre class="highlight scala"><code><span class="n">intParser</span><span class="o">(</span><span class="s">"I'm not a number"</span><span class="o">).</span><span class="n">onFailure</span><span class="o">(</span><span class="n">result</span> <span class="k">=&gt;</span> <span class="n">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Too bad: $result"</span><span class="o">))</span>
+</code></pre>
+
+<p>You should see the following:</p>
+<pre class="highlight scala"><code><span class="nc">Too</span> <span class="n">bad</span><span class="k">:</span> <span class="kt">java.lang.NumberFormatException:</span> <span class="kt">For</span> <span class="kt">input</span> <span class="kt">string:</span> <span class="err">"</span><span class="kt">I'm</span> <span class="kt">not</span> <span class="kt">a</span> <span class="kt">number</span><span class="err">"</span>
+</code></pre>
+
+<p>Note that we&rsquo;re getting a <code>NumberFormatException</code>, not a
+<a href="https://twitter.github.io/finagle/docs/index.html#com.twitter.finagle.mux.ServerApplicationError"><code>ServerApplicationError</code></a> or some other kind of Finagle-explicit exception
+type. This is because the default Scodec protocol implementation knows how to
+serialize a few common exception types so that they can be sent over the wire.</p>
+
+<h2>Using your own input, output, and error types</h2>
+
+<p>Using types you&rsquo;ve defined as your service&rsquo;s input and output is as easy as
+providing codecs for those types, and you also can extend the functionality in
+the default implementation with information about how to serialize your own
+exception types. Custom error types requires a little more work than custom
+input and output types, but it&rsquo;s still fairly concise (and is likely to improve
+in future iterations of the API).</p>
+
+<p>Suppose for example that we&rsquo;ve got a simple user greeting service with a couple
+of case classes and a custom error type:</p>
+<pre class="highlight scala"><code><span class="k">case</span> <span class="k">class</span> <span class="nc">User</span><span class="o">(</span><span class="n">name</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span>
+<span class="k">case</span> <span class="k">class</span> <span class="nc">Greeting</span><span class="o">(</span><span class="n">u</span><span class="k">:</span> <span class="kt">User</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="n">toString</span> <span class="k">=</span> <span class="n">s</span><span class="s">"Hello, ${u.name}!"</span>
+<span class="o">}</span>
+<span class="k">case</span> <span class="k">class</span> <span class="nc">GreetingError</span><span class="o">(</span><span class="n">message</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Exception</span><span class="o">(</span><span class="n">message</span><span class="o">)</span>
+
+<span class="k">object</span> <span class="nc">GreetUser</span> <span class="k">extends</span> <span class="nc">Service</span><span class="o">[</span><span class="kt">User</span>, <span class="kt">Greeting</span><span class="o">]</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="n">apply</span><span class="o">(</span><span class="n">u</span><span class="k">:</span> <span class="kt">User</span><span class="o">)</span> <span class="k">=</span> <span class="n">u</span> <span class="k">match</span> <span class="o">{</span>
+    <span class="k">case</span> <span class="nc">User</span><span class="o">(</span><span class="s">"Mary"</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Future</span><span class="o">.</span><span class="n">value</span><span class="o">(</span><span class="nc">Greeting</span><span class="o">(</span><span class="n">u</span><span class="o">))</span>
+    <span class="k">case</span> <span class="nc">User</span><span class="o">(</span><span class="n">other</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="nc">Future</span><span class="o">.</span><span class="n">exception</span><span class="o">(</span><span class="nc">GreetingError</span><span class="o">(</span><span class="n">s</span><span class="s">"Unknown user: $other"</span><span class="o">))</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre>
+
+<p>The easy part is defining our codecs for our input and output case classes:</p>
+<pre class="highlight scala"><code><span class="k">val</span> <span class="n">userCodec</span><span class="k">:</span> <span class="kt">Codec</span><span class="o">[</span><span class="kt">User</span><span class="o">]</span> <span class="k">=</span> <span class="n">variableSizeBits</span><span class="o">(</span><span class="n">uint24</span><span class="o">,</span> <span class="n">utf8</span><span class="o">).</span><span class="n">as</span><span class="o">[</span><span class="kt">User</span><span class="o">]</span>
+<span class="k">val</span> <span class="n">greetingCodec</span><span class="k">:</span> <span class="kt">Codec</span><span class="o">[</span><span class="kt">Greeting</span><span class="o">]</span> <span class="k">=</span> <span class="n">userCodec</span><span class="o">.</span><span class="n">as</span><span class="o">[</span><span class="kt">Greeting</span><span class="o">]</span>
+</code></pre>
+
+<p>We have to create a new <code>ScodecSerial</code> instance to add support for our custom
+error type, but then we&rsquo;re done:</p>
+<pre class="highlight scala"><code><span class="k">import</span> <span class="nn">io.github.finagle.serial.scodec.ApplicationErrorCodec</span>
+
+<span class="k">object</span> <span class="nc">UserSerial</span> <span class="k">extends</span> <span class="nc">ScodecSerial</span> <span class="o">{</span>
+  <span class="k">override</span> <span class="k">lazy</span> <span class="k">val</span> <span class="n">applicationErrorCodec</span> <span class="k">=</span>
+    <span class="nc">ApplicationErrorCodec</span><span class="o">.</span><span class="n">basic</span><span class="o">.</span><span class="n">add</span><span class="o">(</span><span class="nc">GreetingError</span><span class="o">(</span><span class="k">_</span><span class="o">))</span> <span class="o">{</span>
+      <span class="k">case</span> <span class="nc">GreetingError</span><span class="o">(</span><span class="n">message</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">message</span>
+    <span class="o">}.</span><span class="n">underlying</span>
+<span class="o">}</span>
+
+<span class="k">val</span> <span class="n">protocol</span> <span class="k">=</span> <span class="nc">UserSerial</span><span class="o">(</span><span class="n">userCodec</span><span class="o">,</span> <span class="n">greetingCodec</span><span class="o">)</span>
+
+<span class="k">val</span> <span class="n">server</span> <span class="k">=</span> <span class="n">protocol</span><span class="o">.</span><span class="n">serve</span><span class="o">(</span><span class="k">new</span> <span class="nc">InetSocketAddress</span><span class="o">(</span><span class="mi">8125</span><span class="o">),</span> <span class="nc">GreetUser</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">client</span> <span class="k">=</span> <span class="n">protocol</span><span class="o">.</span><span class="n">newService</span><span class="o">(</span><span class="s">"localhost:8125"</span><span class="o">)</span>
+</code></pre>
+
+<p>Now Mary will get a greeting and everyone else will get a <code>GreetingError</code>:</p>
+<pre class="highlight scala"><code><span class="n">scala</span><span class="o">&gt;</span> <span class="n">client</span><span class="o">(</span><span class="nc">User</span><span class="o">(</span><span class="s">"Mary"</span><span class="o">)).</span><span class="n">onSuccess</span><span class="o">(</span><span class="n">println</span><span class="o">)</span>
+<span class="n">res33</span><span class="k">:</span> <span class="kt">com.twitter.util.Future</span><span class="o">[</span><span class="kt">Greeting</span><span class="o">]</span> <span class="k">=</span> <span class="o">...</span>
+<span class="nc">Hello</span><span class="o">,</span> <span class="nc">Mary</span><span class="o">!</span>
+
+<span class="n">scala</span><span class="o">&gt;</span> <span class="n">client</span><span class="o">(</span><span class="nc">User</span><span class="o">(</span><span class="s">"Travis"</span><span class="o">)).</span><span class="n">onFailure</span><span class="o">(</span><span class="n">println</span><span class="o">)</span>
+<span class="n">res34</span><span class="k">:</span> <span class="kt">com.twitter.util.Future</span><span class="o">[</span><span class="kt">Greeting</span><span class="o">]</span> <span class="k">=</span> <span class="o">...</span>
+<span class="nc">GreetingError</span><span class="k">:</span> <span class="kt">Unknown</span> <span class="kt">user:</span> <span class="kt">Travis</span>
+</code></pre>
+
+<p>Any exceptions that the implementation doesn&rsquo;t know how to serialize will result
+in the exception&rsquo;s message being wrapped in a Serial <code>ApplicationError</code>.</p>
+
+<h2>Using Serial</h2>
+
+<p>Serial is a very young project, but Finagle and Mux are a good foundation to
+build on, and we&rsquo;d love to have other people give it a try.</p>
+
+<p>The API documentation is available on <a href="https://finagle.github.io/finagle-serial/docs/#package">the project&rsquo;s GitHub Pages site</a>,
+and the project&rsquo;s <a href="https://github.com/finagle/finagle-serial">README</a> presents some initial benchmarks and goes
+into more detail on topics like exception serialization. If you&rsquo;re interested in
+writing an implementation for another serialization library, we&rsquo;ve put together
+some <a href="https://www.scalacheck.org/">ScalaCheck</a>-based integration testing tools that can help you
+verify that it&rsquo;s working correctly.</p>
+
+<p>Please let us know if you have any questions, either by filing a GitHub issue or
+getting in touch through <a href="https://twitter.com/finagle">@finagle</a> or the
+<a href="https://groups.google.com/forum/#!forum/finaglers">Finaglers mailing list</a>!</p>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

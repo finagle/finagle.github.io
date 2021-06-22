@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>March 2020 Release Notes - Version 20.3.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Yufan Gong</h4>
+      <p class="author-twitter"><a href="https://twitter.com/yufangong">@yufangong</a></p>
+    </div>
+    <p><em>Posted March  9, 2020</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>March 2020 Release Notes - Version 20.3.0</h1>
+  
+  <p>Days are getting longer🌻, March has arrived. Here&rsquo;s what we have done in this release.</p>
+
+<h3><a href="https://github.com/twitter/finagle/">Finagle</a></h3>
+
+<h4>New Features</h4>
+
+<ul>
+<li>finagle-opencensus-tracing: Add support for providing a custom TextFormat for header
+propagation. <a href="https://github.com/twitter/finagle/commit/a02d377afb0118e448a60fd15c8fc3f351f8b2bb">a02d377a</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li><p>finagle-netty4: When not using the JDK implementation, the Netty reference counted SSL
+types are used which move SSL cleanup out of the GC cycle, reducing pause durations.
+<a href="https://github.com/twitter/finagle/commit/466aa5bf191aba11e61777532ba452f5b7401729">466aa5bf</a></p></li>
+<li><p>finagle-base-http: Support for the <code>SameSite</code> cookie attribute is now on by default. This can
+be manipulated via the <code>com.twitter.finagle.http.cookie.supportSameSiteCodec</code> flag. This means
+that cookies that have a value other than <code>Unset</code> for the <code>sameSite</code> field will have the
+attribute encoded (by servers) and decoded (by clients). See this
+<a href="https://blog.chromium.org/2019/10/developers-get-ready-for-new.html">Chromium blog post</a>
+for more information about the <code>SameSite</code> attribute. <a href="https://github.com/twitter/finagle/commit/f96c3729db4785bb944cd152abd4813c95544f90">f96c3729</a></p></li>
+<li><p>finagle-core: The default NullTracer for ClientBuilder has been removed. Affected clients may
+now see tracing enabled by default via the Java ServiceLoader, as described in the
+<a href="http://twitter.github.io/finagle/guide/Tracing.html">Finagle User&rsquo;s Guide</a>. <a href="https://github.com/twitter/finagle/commit/6b3f094009f1ba23558479fb5862b44972d6e5eb">6b3f0940</a></p></li>
+<li><p>finagle-http2: The HTTP/2 frame logging tools now log at level INFO. This is symmetric with
+the behavior of the <code>ChannelSnooper</code> tooling which serves a similar purpose which is to aid
+in debugging data flow and isn&rsquo;t intended to be enabled in production. <a href="https://github.com/twitter/finagle/commit/78e4596be02a0af0fb5e3ff0df681a8c1317efcc">78e4596b</a></p></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li><p>finagle-zipkin-scribe: add a logical retry mechanism to scribe&rsquo;s TRY_LATER response <a href="https://github.com/twitter/finagle/commit/23ff595b0732ce4c55d50d4fe664d7ceb3cb2cac">23ff595b</a></p></li>
+<li><p>finagle-http2: Initialize state in H2Pool before use in the gauge to avoid a
+NullPointerException. <a href="https://github.com/twitter/finagle/commit/289de8a3f2dfd0920842943a9a7a530852b3dc81">289de8a3</a></p></li>
+<li><p>finagle-http2: HTTP/2 server pipeline now traps close calls to ensure that
+events from the initial HTTP/1.x pipeline don&rsquo;t close the HTTP/2 session. For
+example, the initial pipeline was subject to session timeouts even though the
+tail of the socket pipeline was effectively dead. Closing of HTTP/2 server
+pipelines is now handled through the <code>H2ServerFilter</code>. <a href="https://github.com/twitter/finagle/commit/670dbf7459d3e73433bd9e39df8c37163c0a9908">670dbf74</a></p></li>
+<li><p>finagle-http2: HTTP/2 servers clean out unused channel handlers when upgrading
+from a HTTP/1.x pipeline, removing some traps such as unintended timeouts.
+<a href="https://github.com/twitter/finagle/commit/3dfe82267d8b3f48bd948c4e4d1b218be7c49fe7">3dfe8226</a></p></li>
+<li><p>finagle-opencensus-tracing: Fixed internal server error when invalid or no propagation headers
+are provided. <a href="https://github.com/twitter/finagle/commit/a02d377afb0118e448a60fd15c8fc3f351f8b2bb">a02d377a</a></p></li>
+<li><p>finagle-zipkin-scribe: export application metrics under a consistent <code>zipkin-scribe</code> scope. Finagle client
+stats under <code>clnt/zipkin-scribe</code> <a href="https://github.com/twitter/finagle/commit/a17659ddab67919e8f09e895e5ae2c3465c91d20">a17659dd</a></p></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li><p>finagle-zipkin-scribe: update the deprecated <code>FutureIface</code> to <code>MethodPerEndpoint</code> <a href="https://github.com/twitter/finagle/commit/23ff595b0732ce4c55d50d4fe664d7ceb3cb2cac">23ff595b</a></p></li>
+<li><p>finagle-zipkin-scribe: Coalesce <code>ScribeRawZipkinTracer</code> apply methods into two simple ones. <a href="https://github.com/twitter/finagle/commit/a17659ddab67919e8f09e895e5ae2c3465c91d20">a17659dd</a></p></li>
+<li><p>finagle-zipkin-scribe: <code>DefaultSampler</code> moved to <code>c.t.f.zipkin.core</code> in finagle-zipkin-core. <a href="https://github.com/twitter/finagle/commit/ac9c7ec15b76739fc0a1e747b2a3023b21f7aad4">ac9c7ec1</a></p></li>
+<li><p>finagle-zipkin-scribe: <code>initialSampleRate</code> GlobalFlag is moved to finagle-zipkin-core, under the same package
+scope <code>c.t.f.zipkin</code>. <a href="https://github.com/twitter/finagle/commit/ac9c7ec15b76739fc0a1e747b2a3023b21f7aad4">ac9c7ec1</a></p></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/finatra/">Finatra</a></h3>
+
+<h4>Added</h4>
+
+<ul>
+<li><p>finatra-kafka-streams: Add method to <code>c.t.f.kafkastreams.test.TopologyTesterTopic</code> to write
+Kafka messages with custom headers to topics. <a href="https://github.com/twitter/finatra/commit/a9fef3dcb4098074507603fb9fa1e70f176e40a6">a9fef3dc</a></p></li>
+<li><p>finatra-http: Add <code>toBufReader</code> to get the underlying Reader of Buf from StreamingResponse.
+If the consumed Stream primitive is not Buf, the returned reader streams a serialized
+JSON array. <a href="https://github.com/twitter/finatra/commit/876d0ba9c594a1877bdb20f10020ab45b260350e">876d0ba9</a></p></li>
+<li><p>inject-app: Add functions to <code>c.t.inject.app.AbstractApp</code> to provide better
+ergonomics for Java users to call and use basic <code>App</code> lifecycle callbacks. 
+<a href="https://github.com/twitter/finatra/commit/f04772df4da0d53fa27714396a6a591f80de4e53">f04772df</a></p></li>
+<li><p>inject-server: Add functions to <code>c.t.inject.server.AbstractTwitterServer</code> to provide 
+better ergonomics for Java users to call and use basic <code>TwitterServer</code> lifecycle 
+callbacks. <a href="https://github.com/twitter/finatra/commit/f04772df4da0d53fa27714396a6a591f80de4e53">f04772df</a></p></li>
+<li><p>inject-slf4j: Add a way to retrieve the currently stored Local Context map backing the
+MDC. <a href="https://github.com/twitter/finatra/commit/12b9410e7792da81c94e942964bbf822d0e0746c">12b9410e</a></p></li>
+<li><p>finatra-jackson: Added new functionality in the <code>CaseClassDeserializer</code> to support more
+Jackson annotations during deserialization. See documentation for more information.
+<a href="https://github.com/twitter/finatra/commit/490148909e913c71e0e2eb42fd0cdf52c89fe805">49014890</a></p></li>
+<li><p>finatra: Add NullKafkaProducer for unit tests to avoid network connection failures in the log.
+<a href="https://github.com/twitter/finatra/commit/d8d4d5db00c567715f25a7ccdf8b16bb7f3fa853">d8d4d5db</a></p></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li><p>finatra-validation|jackson: Remove Jackson dependency from finatra/validation. This
+was for <code>ErrorCode</code> reporting but can be moved to finatra/jackson. <a href="https://github.com/twitter/finatra/commit/f024f9292ab141564aa8b1ef5d08b7705607ad6f">f024f929</a></p></li>
+<li><p>finatra-kafka-streams: (BREAKING API CHANGE) Update AsyncTransformer to preserve
+record context. <a href="https://github.com/twitter/finatra/commit/be5dd08f0daeb5c98569de7c8fbb6cd5fbbf195b">be5dd08f</a></p></li>
+<li><p>finatra-jackson: Better handling of Scala enumeration mapping errors. Currently, if mapping
+of a Scala enumeration during deserialization fails a <code>java.util.NoSuchElementException</code> is
+thrown which escapes deserialization error handling. Update to instead handle this failure case
+in order to correctly translate into a <code>CaseClassFieldMappingException</code> which will be wrapped
+into a <code>CaseClassMappingException</code>. <a href="https://github.com/twitter/finatra/commit/4753c6e8ccc03edbc94c9e5da6dd206b71a5ec3a">4753c6e8</a></p></li>
+<li><p>finatra: Update Google Guice version to 4.2.0 <a href="https://github.com/twitter/finatra/commit/76506c35961f0e8abe5e0897c43186e26b750de7">76506c35</a></p></li>
+<li><p>finatra: Bumped version of Joda to 2.10.2 and Joda-Convert to 1.5. <a href="https://github.com/twitter/finatra/commit/9adef42127e9efbb4d36cb114748a69bedd9e444">9adef421</a></p></li>
+<li><p>finatra-jackson|finatra-http-annotations: Move http-releated Jackson &ldquo;injectablevalues&rdquo;
+annotations from <code>finatra/jackson</code> to <code>finatra/http-annotations</code>.</p></li>
+</ul>
+
+<p>Specifically the follow have changed packages,
+  <code>c.t.finatra.request.QueryParam</code>       &ndash;&gt; <code>c.t.finatra.http.annotations.QueryParam</code>
+  <code>c.t.finatra.request.RouteParam</code>        &ndash;&gt; <code>c.t.finatra.http.annotations.RouteParam</code>
+  <code>c.t.finatra.request.FormParam</code>         &ndash;&gt; <code>c.t.finatra.http.annotations.FormParam</code>
+  <code>c.t.finatra.request.Header</code>                &ndash;&gt; <code>c.t.finatra.http.annotations.Header</code>
+  <code>c.t.finatra.request.JsonIgnoreBody</code> &ndash;&gt; <code>c.t.finatra.http.annotations.JsonIgnoreBody</code></p>
+
+<p>Users should update from <code>finatra/jackson/src/main/java</code> (<code>finatra-jackson_2.12</code>)
+  to <code>finatra/http-annotations/src/main/java</code> (<code>finatra-http-annotations_2.12</code>).
+  <a href="https://github.com/twitter/finatra/commit/77469e17d62aab4edaf670ff1691401974449660">77469e17</a></p>
+
+<ul>
+<li><p>finatra-jackson: Updated Finatra Jackson integration to introduce a new <code>ScalaObjectMapper</code>
+and module to simplify configuration and creation of the mapper. See documentation for more
+information. <a href="https://github.com/twitter/finatra/commit/490148909e913c71e0e2eb42fd0cdf52c89fe805">49014890</a></p></li>
+<li><p>finatra-jackson: (BREAKING API CHANGE) Moved the java binding annotations, <code>CamelCaseMapper</code> and
+<code>SnakeCaseMapper</code> from <code>c.t.finatra.annotations</code> in <code>finatra/jackson</code> to
+<code>c.t.finatra.json.annotations</code> in <code>finatra/json-annotations</code>. Moved
+<code>c.t.finatra.response.JsonCamelCase</code> to <code>c.t.finatra.json.annotations.JsonCamelCase</code> which is also
+now deprecated. Users are encouraged to use the standard Jackson annotations or a mapper with
+the desired property naming strategy configured.</p></li>
+</ul>
+
+<p>Many exceptions for case class deserialization were meant to be internal to the framework but are
+  useful or necessary outside of the internals of JSON deserialization. As such we have cleaned up
+  and made most JSON deserialization exceptions public. As a result, all the exceptions have been moved
+  from <code>c.t.finatra.json.internal.caseclass.exceptions</code> to <code>c.t.finatra.jackson.caseclass.exceptions</code>.</p>
+
+<p><code>c.t.finatra.json.internal.caseclass.exceptions.CaseClassValidationException</code> has been renamed to
+  <code>c.t.finatra.jackson.caseclass.exceptions.CaseClassFieldMappingException</code>. <code>JsonInjectException</code>,
+  <code>JsonInjectionNotSupportedException</code>, and <code>RequestFieldInjectionNotSupportedException</code> have all been
+  deleted and replaced with <code>c.t.finatra.jackson.caseclass.exceptions.InjectableValuesException</code>
+  which represents the same error cases.</p>
+
+<p>The <code>FinatraJsonMappingException</code> has been removed. Users are encouraged to instead use the general
+  Jackson <code>JsonMappingException</code> (which the <code>FinatraJsonMappingException</code> extends).</p>
+
+<p><code>RepeatedCommaSeparatedQueryParameterException</code> has been moved tom finatra/http.
+  <a href="https://github.com/twitter/finatra/commit/490148909e913c71e0e2eb42fd0cdf52c89fe805">49014890</a></p>
+
+<h4>Fixed</h4>
+
+<ul>
+<li><p>finatra-jackson: Access to parameter names via Java reflection is not supported in Scala 2.11.
+Added a work around for the parsing of case class structures to support JSON deserialization in
+Scala 2.11 and forward. <a href="https://github.com/twitter/finatra/commit/59ec2c21627ce0e525fb55fb09582a4c62747e78">59ec2c21</a></p></li>
+<li><p>finatra-jackson: Fix for enforcing &ldquo;fail on unknown properties&rdquo; during deserialization. Previously,
+the <code>CaseClassDeserializer</code> was optimized to only read the fields in the case class constructor
+from the incoming JSON and thus ignored any unknown fields during deserialization. The fix will
+now properly fail if the <code>DeserializationFeature</code> is set or if the <code>JsonProperties</code> is configured
+accordingly. <a href="https://github.com/twitter/finatra/commit/490148909e913c71e0e2eb42fd0cdf52c89fe805">49014890</a></p></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/util/">Util</a></h3>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li><p>util-core: The system property <code>com.twitter.util.UseLocalInInterruptible</code> no longer
+can be used to modulate which Local state is present when a Promise is interrupted.
+<a href="https://github.com/twitter/util/commit/da6389421142b0d0f756abbf4508edf02812b9d9">da638942</a></p></li>
+<li><p>util-core: <code>Future.unapply</code> has been removed. Use <code>Future.poll</code> to retrieve Future&rsquo;s
+state. <a href="https://github.com/twitter/util/commit/26beb347f7f24dbf42272c1344d5d59d9ebe896a">26beb347</a></p></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>util-core: Promises now exclusively use the state local to setting the interrupt
+handler when raising on a Promise. <a href="https://github.com/twitter/util/commit/da6389421142b0d0f756abbf4508edf02812b9d9">da638942</a></li>
+</ul>
+
+<h4>New Features</h4>
+
+<ul>
+<li><p>util-app: Add <code>c.t.util.app.App#onExitLast</code> to be able to provide better Java
+ergonomics for designating a final exit function. <a href="https://github.com/twitter/util/commit/d523c0c50de551814d4eb8485d68db52e8c14c51">d523c0c5</a></p></li>
+<li><p>util-core: Add <code>c.t.io.Reader.concat</code> to conveniently concatenate a collection
+of Reader to a single Reader. <a href="https://github.com/twitter/util/commit/68b28ac1835e920f5f0a0a17cdb33953032679ee">68b28ac1</a></p></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>util-logging: Add a missing <code>_*</code> that could result in exceptions when using the
+<code>Logger.apply(Level, Throwable, String, Any*)</code> signature. <a href="https://github.com/twitter/util/commit/c875d359d6505a6979258f9fd596fa05ebd3c792">c875d359</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h3>
+
+<ul>
+<li>Add <code>c.t.server.AbstractTwitterServer#onExitLast</code> to allow Java users to
+easily register a final exit function. <a href="https://github.com/twitter/twitter-server/commit/9a936b0248e26fd9fc239af6436e25e9c96efac8">9a936b02</a></li>
+</ul>
+
+<h3><a href="https://github.com/twitter/scrooge/">Scrooge</a></h3>
+
+<ul>
+<li><p>scrooge-generator: Add the ability to use a type in a file before you declare it.
+<a href="https://github.com/twitter/scrooge/commit/141483217354e75588af441c4731debbb78228c3">14148321</a></p></li>
+<li><p>scrooge-linter: Removed the <code>TransitivePersistence</code> and <code>DocumentedPersisted</code> lint rules,
+as they aren&rsquo;t useful outside of Twitter. <a href="https://github.com/twitter/scrooge/commit/80176dc08d9526af4474b9fd3f823b259e1584b3">80176dc0</a></p></li>
+<li><p>scrooge-linter: Added the ability to load additional <code>LintRule</code> implementations dynamically
+via <code>com.twitter.app.LoadService</code>.  <a href="https://github.com/twitter/scrooge/commit/80176dc08d9526af4474b9fd3f823b259e1584b3">80176dc0</a></p></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

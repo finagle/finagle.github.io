@@ -1,0 +1,71 @@
+body {
+  padding-bottom: 15px;
+}
+
+.post h2, .about h2 {
+  padding-top: 15px;
+  border-top: 1px solid #d1e2f3;
+}
+
+h1, h2, h3, h4, h1 a, h2 a, h3 a, h4 a {
+  color: #4d769f;
+}
+
+.meta {
+  padding: 5px 0px;
+  border-bottom: 1px solid #d1e2f3;
+  border-top: 1px solid #d1e2f3;
+  margin: 15px 0px;
+}
+
+h4.author-name {
+  color: #769cc1;
+  margin-bottom: 5px;
+}
+
+p.author-twitter a {
+  color: #c7254e;
+}
+
+.container > hr {
+  margin: 20px 0;
+}
+
+.container {
+	max-width: 940px;
+}
+
+.navbar {
+  background: #769cc1;
+  margin-bottom: 30px;
+}
+
+.navbar .nav li a {
+  text-align: center;
+  color: rgba(255, 255, 255, .9);
+  -webkit-text-shadow: none;
+  text-shadow: none;
+}
+
+.navbar .nav li a:hover {
+  color: rgba(255, 255, 255, 1);
+  background: #4d769f;
+}
+
+.navbar .nav li.dropdown ul li a {
+  text-align: left;
+  color: black;
+}
+
+.navbar .navbar-header button span {
+  background-color: white;
+}
+
+.navbar .nav li.dropdown ul li a:hover {
+  color: rgba(255, 255, 255, 1);
+  background: #769cc1;
+}
+
+i.fa {
+  width: 20px;
+}
