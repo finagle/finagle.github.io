@@ -17,9 +17,9 @@ New Features
 ------------
 
 -   util-jvm: Experimentally crossbuilds with Scala 3. [bfdde071](https://github.com/twitter/util/commit/bfdde0713ea93f29f2fe72800313c0b66f3d9e0b)
--   util-stats: Counter, Gauge, and Stat can be instrumented with descriptions. `PHAB_ID = D615481`
--   util-cache: Experimentally crossbuilds with Scala 3. [22977aa0](https://github.com/twitter/util/commit/22977aa0ff20fe5fc1226cb9a1d75fe38424280c).
--   util-cache-guava: Experimentally crossbuilds with Scala 3. [6131382e](https://github.com/twitter/util/commit/6131382e273326d14e4784463f7612f388008600).
+-   util-stats: Counter, Gauge, and Stat can be instrumented with descriptions. [4e68dd09](https://github.com/twitter/util/commit/4e68dd096bf241a7a62b26963578b2cedea8b5b5)
+-   util-cache: Experimentally crossbuilds with Scala 3. [22977aa0](https://github.com/twitter/util/commit/22977aa0ff20fe5fc1226cb9a1d75fe38424280c)
+-   util-cache-guava: Experimentally crossbuilds with Scala 3. [6131382e](https://github.com/twitter/util/commit/6131382e273326d14e4784463f7612f388008600)
 -   util-routing: Experimentally crossbuilds with Scala 3. [9615a9f1](https://github.com/twitter/util/commit/9615a9f14ced61de3fb30846127c7094dda72a8f)
 -   util-sl4j-api: Experimentally crossbuilds with Scala 3. [e2368780](https://github.com/twitter/util/commit/e23687809145b8366046deaa8a7639e97c1152d6)
 -   util-sl4j-jul-bridge: Experimentally crossbuilds with Scala 3. [16a4a945](https://github.com/twitter/util/commit/16a4a945d1107a3030944595babb250e010954c8)
@@ -29,7 +29,7 @@ New Features
     error message. When an error is encountered, flag parsing will continue to collect parse error
     information instead of escaping on the first flag failure. After parsing all flags, if any errors
     are present, a message containing all of the failed flags and their error reason,
-    along with the help usage message will be emitted. \`0def519d &lt;https://github.com/twitter/util/commit/0def519daf1cfd5dbed03faba750fbf331672a4e&gt;\_\_
+    along with the help usage message will be emitted. [0def519d](https://github.com/twitter/util/commit/0def519daf1cfd5dbed03faba750fbf331672a4e)
 
 Runtime Behavior Changes
 ------------------------
@@ -47,7 +47,7 @@ Breaking API Changes
     a val and is now a def. A new c.t.app.App\#includeGlobalFlags def has been exposed, which
     defaults to true. The c.t.app\#includeGlobalFlags def can be overridden to false
     (ex: override protected def includeGlobalFlags: Boolean = false) in order to skip discovery
-    of GlobalFlags during flag parsing. \`b44e820c &lt;https://github.com/twitter/util/commit/b44e820c7992746a24fc98e509c749035ded288f&gt;\_\_
+    of GlobalFlags during flag parsing. [b44e820c](https://github.com/twitter/util/commit/b44e820c7992746a24fc98e509c749035ded288f)
 
 
 [Scrooge](https://github.com/twitter/scrooge/)
