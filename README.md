@@ -9,23 +9,40 @@ repository and submit a pull request for us to review.
 
 ## Setup
 
-Once you've forked the repository, run the following command to grab the
-project's dependencies:
+The first thing you need is a recent version of Docker. See the 
+[Docker Desktop](https://www.docker.com/products/docker-desktop) page for installation
+instructions.
+
+The second thing we need to do is get the docker image built. We have a simple helper
+command to do that for you:
 
 ``` bash
-gem install bundler
-bundle install
+$ build_docker_image.sh
 ```
 
-Note that you'll need to have [Ruby](https://www.ruby-lang.org/)
-and [RubyGems](https://rubygems.org/) installed first.
+This will build a new docker image on your local machine and tag it `ghpublish`.
+Once that completes successfully we can boot into our docker image and start our work.
+
+``` bash
+$ docker_start.sh
+   # ... Container starts ...
+docker $ cd finagle.github.io
+docker $ bundle install # installs all the dependencies from the gemfile
+```
+
+Now you're ready to start working on the site.
 
 ## Generating the site
 
-Now you can run `bundle exec rake dev` and open a browser window to `http://localhost:4567/`
-to see your local build of the site. Any changes you make to the `sources`
-directory will be reflected more or less immediately, and errors will be shown
-in the console you launched `rake dev` in.
+Once inside the container with the bundle installed we can generate and preview the site:
+
+``` bash
+docker $ bundle exec middleman server # preview the site locally before publishing
+```
+
+You can open the site preview from the host OS and preview the files by going to 
+`http://localhost:4567/` in your host OS's browser. Updates to the underlying source files
+will be detected and automatically rebuilt for the previewing server.
 
 ## Writing a post
 
@@ -57,9 +74,17 @@ have changes to suggest, etc. Please let us know if you have any questions!
 
 ## Deploying the site
 
+---
+**NOTE**
+
+You must have the appropriate Github access to perform the deployment step.
+
+---
+
 Once you merged you new blog post into the `source` branch, it's time to get that deployed
 on [Github Pages](https://pages.github.com/) by running `bundle exec middleman deploy`
-against the `source` branch.
+against the `source` branch from inside the docker container (if you exited you'll need to
+`bundle install` again).
 
 ## Licensing
 

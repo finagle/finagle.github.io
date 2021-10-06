@@ -139,6 +139,8 @@ GEM
       hitimes
     tzinfo (1.2.5)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2021.3)
+      tzinfo (>= 1.0.0)
     uber (0.0.15)
     uglifier (2.7.2)
       execjs (>= 0.3.0)
@@ -158,6 +160,7 @@ DEPENDENCIES
   rake (= 12.3.3)
   rdiscount (= 2.2.0.1)
   redcarpet (= 3.5.1)
+  tzinfo-data
 
 BUNDLED WITH
    1.16.6
