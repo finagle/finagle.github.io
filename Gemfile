@@ -12,3 +12,5 @@ gem 'rake', '12.3.3'
 gem "rdiscount", '2.2.0.1'
 gem "redcarpet", '3.5.1'
 
+gem "tzinfo-data"
+
