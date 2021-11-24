@@ -93,7 +93,6 @@ Added
 Changed
 -------
 
--   finatra: Bump version of Jackson to 2.13.0 [044293fe](https://github.com/twitter/finatra/commit/044293fe14009791aa0e0c78edbaa7c8d1ac24da)
 -   http-server (BREAKING API CHANGE): Will now serialize many self-referential Jackson types as "{}"
     instead of returning a serialization error. See <https://github.com/FasterXML/jackson-databind/commit/765e2fe1b7f6cdbc6855b32b39ba876fdff9fbcc>
     for more details. [044293fe](https://github.com/twitter/finatra/commit/044293fe14009791aa0e0c78edbaa7c8d1ac24da)
