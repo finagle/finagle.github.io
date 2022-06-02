@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>June 2021 Release Notes - Version 21.6.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Ruben Oanta</h4>
+      <p class="author-twitter"><a href="https://twitter.com/rubenoanta">@rubenoanta</a></p>
+    </div>
+    <p><em>Posted June 22, 2021</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>June 2021 Release Notes - Version 21.6.0</h1>
+  
+  <p>June release, hot off the press:</p>
+
+<h1><a href="https://github.com/twitter/util/">Util</a></h1>
+
+<h2>New Features</h2>
+
+<ul>
+<li>  util-core: Add ClasspathResource, a utility for loading classpath resources as an
+optional InputStream. <a href="https://github.com/twitter/util/commit/c9da7c43e902550ea23ec28b700d8cb57542a8ab">c9da7c43</a></li>
+<li>  util-jackson: Add com.twitter.util.jackson.YAML for YAML serde operations with a
+default configured ScalaObjectMapper. Add more methods to com.twitter.util.jackson.JSON
+<a href="https://github.com/twitter/util/commit/8e964d9e14068d26de738220cbc4254be38f461e">8e964d9e</a></li>
+<li><p>util-jackson: Introduce a new library for JSON serialization and deserialization based on the
+Jackson integration in <a href="https://twitter.github.io/finatra/user-guide/json/index.html">Finatra</a>.</p>
+
+<p>This includes a custom case class deserializer which &ldquo;fails slow&rdquo; to collect all mapping failures
+for error reporting. This deserializer is also natively integrated with the util-validator library
+to provide for performing case class validations during deserialization. <a href="https://github.com/twitter/util/commit/8aaf226e40243af920ea0632d11f8e10d27ad230">8aaf226e</a></p></li>
+</ul>
+
+<h2>Breaking API Changes</h2>
+
+<ul>
+<li>  util-stats: Removed MetricSchema trait (CounterSchema, GaugeSchema and HistogramSchema).
+StatReceiver derived classes use MetricBuilder directly to create counters, gauges and stats.
+<a href="https://github.com/twitter/util/commit/2fa17e27d018caec8b6e865fcadbc5d0d9f2950c">2fa17e27</a></li>
+</ul>
+
+<h1><a href="https://github.com/twitter/scrooge/">Scrooge</a></h1>
+
+<p>No Changes</p>
+
+<h1><a href="https://github.com/twitter/finagle/">Finagle</a></h1>
+
+<h2>New Features</h2>
+
+<ul>
+<li>  finagle-core: Introduce Dtab.limited, which is a process-local Dtab that will
+NOT be remotely broadcast for any protocol, where Dtab.local will be
+broadcast for propagation on supported protocols. For path name resolution, the
+Dtab.local will take precedence over the Dtab.limited, if the same path is
+defined in both, and both take precedence over the Dtab.base. The existing
+Dtab.local request propagation behavior remains unchanged. <a href="https://github.com/twitter/finagle/commit/2e06c669bae26a67fc84b32fbd50a6a5f9903d52">2e06c669</a></li>
+<li>  finagle-core: Add descriptions to RequestDraining, PrepFactory, PrepConn, and
+protoTracing modules in StackClient. Add descriptions to preparer and
+protoTracing modules in StackServer. <a href="https://github.com/twitter/finagle/commit/1ea1a3ebb79639de795e2920f5e2c541428d18b1">1ea1a3eb</a></li>
+</ul>
+
+<h2>Breaking API Changes</h2>
+
+<ul>
+<li>  finagle-memcached: Ketama Partitioned Client has been removed and the Partition Aware
+Memcached Client has been made the default. As part of this change,
+com.twitter.finagle.memcached.UsePartitioningMemcachedClient toggle has been removed,
+and it no longer applies. <a href="https://github.com/twitter/finagle/commit/2628b84bf2a8460954fc9eec4ebb1c9e1f275e85">2628b84b</a></li>
+</ul>
+
+<h2>Runtime Behavior Changes</h2>
+
+<ul>
+<li>  finagle-core: Broadcast context keys lookups are now case insensitive. This change is backwards
+compatible as the marshalled key id is unchanged. Although enabled by default, this change will
+be temporarily sitting behind a toggle, com.twitter.finagle.context.MarshalledContextLookupId
+that can be used to turn off this change. <a href="https://github.com/twitter/finagle/commit/69c290933f442627470d1b03af5e5c93afabcf7e">69c29093</a></li>
+</ul>
+
+<h2>Deprecations</h2>
+
+<ul>
+<li>  finagle-core: The ServerBuilder pattern has been deprecated. Use the stack server pattern
+instead. <a href="https://github.com/twitter/finagle/commit/386171ad0d0a995f8c4812f819144a27bcad49e6">386171ad</a></li>
+</ul>
+
+<h1><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h1>
+
+<h2>Runtime Behavior Changes</h2>
+
+<ul>
+<li>  Sort sublinks from Admin UI alphabetically. <a href="https://github.com/twitter/twitter-server/commit/d8e915d9b6ab3c99ff4cd29d84cd939d8c19b1c5">d8e915d9</a></li>
+<li>  Added more information on how to enable/disable tracing in admin/tracing UI.
+<a href="https://github.com/twitter/twitter-server/commit/d3eb9be60a77b7d816560ed478bf5e98ddef0784">d3eb9be6</a></li>
+<li>  Resize stack module description table based on the width of the window in
+Downstream Clients and Listening Servers pages in Admin UI. <a href="https://github.com/twitter/twitter-server/commit/e7b47f37e7078462fc9683266c327c2e58e7d5ed">e7b47f37</a></li>
+</ul>
+
+<h1><a href="https://github.com/twitter/finatra/">Finatra</a></h1>
+
+<h2>Changed</h2>
+
+<ul>
+<li>  inject-thrift-client (BREAKING API CHANGE): Removed the deprecated
+c.t.inject.thrift.modules.FilteredThriftClientModule. Please use its successor
+c.t.inject.thrift.modules.ThriftMethodBuilderClientModule for per-method configuration of a
+Thrift client. <a href="https://github.com/twitter/finatra/commit/008d8ca13b8f72222e7407d0d5372bafb55387fc">008d8ca1</a></li>
+<li>  thrift: Add service_class to Finatra library thrift registry entry. <a href="https://github.com/twitter/finatra/commit/c5159208b64620b63712126c05471a705cafeda3">c5159208</a></li>
+<li><p>finatra (BREAKING API CHANGE): Update to use the new util/util-jackson ScalaObjectMapper for
+case class object mapping. We&rsquo;ve removed the custom Finatra c.t.finatra.jackson.ScalaObjectMapper
+and instead now use the c.t.util.jackson.ScalaObjectMapper. Since the c.t.util.jackson.ScalaObjectMapper
+does not support <a href="https://www.joda.org/joda-time/">Joda-Time</a>, backwards compatibility is
+maintained through usage of the Finatra ScalaObjectMapperModule for obtaining a configured
+ScalaObjectMapper which will be created with Joda-Time support, though support for Joda-Time in
+Finatra is deprecated and users should expect for Joda-Time support to be removed in an upcoming release.
+Users should prefer to use the JDK 8 java.time classes or java.util.Date.</p>
+
+<p>The finatra/inject c.t.inject.domain.WrappedValue has been removed and users should update to the
+util/util-core c.t.util.WrappedValue instead.</p>
+
+<p>The finatra/jackson JsonDiff utility is also removed. Users should switch to the improved version
+in util/util-jackson: c.t.util.jackson.JsonDiff.</p>
+
+<p>With the move to the util/util-jackson ScalaObjectMapper we&rsquo;re also able to clean up some awkward
+directory structures in Finatra which were necessary because of dependencies. Specifically, the
+finatra/json-annotations library no longer exists, as @InjectableValue is now an annotation in
+util/util-jackson-annotations, and the remaining binding annotations @CamelCaseMapper and @SnakeCaseMapper
+have been moved into finatra/jackson.</p>
+
+<p>Using the util/util-jackson ScalaObjectMapper also brings <a href="https://www.oracle.com/technical-resources/articles/java/jf14-date-time.html">Java 8 date/time</a>
+(JSR310) support via inclusion of the Jackson <a href="https://github.com/FasterXML/jackson-modules-java8/tree/master/datetime">JavaTimeModule</a>
+by default.</p>
+
+<p>Lastly, we&rsquo;ve also added the YamlScalaObjectMapperModule which can be used in place of the
+ScalaObjectMapperModule in order to provide a YAMLFactory configured ScalaObjectMapper.
+<a href="https://github.com/twitter/finatra/commit/9a168a981b46f04df87a6c5f2a1d0bfe42edd966">9a168a98</a></p></li>
+<li><p>inject-utils: Remove deprecated c.t.inject.utils.StringUtils. Users should prefer to use
+the corresponding methods in com.twitter.conversions.StringOps from util/util-core, instead.
+<a href="https://github.com/twitter/finatra/commit/3a063a9eec134db1b8f643d21b75984feafa1083">3a063a9e</a></p></li>
+<li><p>inject-utils: Remove deprecated c.t.inject.utils.AnnotationUtils. Users should instead prefer
+c.t.util.reflect.Annotations from util/util-reflect. <a href="https://github.com/twitter/finatra/commit/35b58d3494fb6aa727986f1ab6bd1ca5266f15b2">35b58d34</a></p></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

@@ -106,6 +106,187 @@
   </div>
   <div class="col-md-9">
       <article>
+        <h2><a href="/blog/2022/06/01/announce-migrations/">🌇 Upcoming module removals & migration guide🌇</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/zsong">Zhe Song</a> on June  1, 2022</em></p>
+      <p>Twitter <a href="https://blog.twitter.com/engineering/en_us/topics/infrastructure/2021/processing-billions-of-events-in-real-time-at-twitter-">processes billions of events in real time</a>  every day using a variety of technologies including Hadoop, Kafka, and of course Finagle.</p>
+
+<p>In 2018, we open sourced <a href="https://github.com/twitter/finatra/commit/47cce5462">Finatra Kafka Streams</a> , which we had already been using in production at Twitter...</p>
+      <a href="/blog/2022/06/01/announce-migrations/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2022/04/20/release-notes/">April 2022 Release Notes - Version 22.4.0</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/helygwb">Helen Woldesenbet</a> on April 20, 2022</em></p>
+      <p>Spring is finally here 😎. Enjoy the lovely weather with our April release 🎉.</p>
+
+<h1><a href="https://github.com/twitter/finagle/">Finagle</a></h1>
+
+<h2>Bug Fixes</h2>
+
+<ul>
+<li>  finagle-integration: we discovered that we had a dead code in MuxClientSession.
+Let’s remove Timer as a parameter in MuxClientSession since it’s a...</li>
+</ul>
+      <a href="/blog/2022/04/20/release-notes/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2022/03/29/release-notes/">March 2022 Release Notes - Version 22.3.0</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/yufangong">Yufan Gong</a> on March 29, 2022</em></p>
+      <p>March is here ☀️, and Spring isn’t far behind 🌱. Enjoy this wonderful time of year with our March release 🥂.</p>
+
+<h1><a href="https://github.com/twitter/util/">Util</a></h1>
+
+<h2>Deprecations</h2>
+
+<ul>
+<li>  util-stats: Deprecated methods on MetricBuilder for directly instantiating metrics so that we can
+eventually remove...</li>
+</ul>
+      <a href="/blog/2022/03/29/release-notes/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2022/03/04/release-notes/">February 2022 Release Notes - Version 22.2.0</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/mnnakamura">Moses Nakamura</a> on March  4, 2022</em></p>
+      <p>One of the joys of winter is drinking a mug of hot cocoa, curling up in a nook, and warming yourself by the heat of your computer compiling Scala code ☕🖥️🔥</p>
+
+<p>We have a new release, and no houses were burned down in electrical fires while getting it...</p>
+      <a href="/blog/2022/03/04/release-notes/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2022/02/03/fall-winter/">2021 Fall/Winter Update 🍂❄️</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/joybestou">Joy Bestourous</a> on February  3, 2022</em></p>
+      <p>Happy New Year, folks! 🥳 What better way to honor the year of 2022 🎇 than with some highlights from the second half of 2021. Welcome to the CSL Half-ly Review, a summary of all great CSL things from the second half of 2021🕺🏼.</p>
+
+<h3>Finagle-Postgres</h3>
+
+<p>Big...</p>
+      <a href="/blog/2022/02/03/fall-winter/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2022/01/18/release-notes/">January 2022 Release Notes - Version 22.1.0</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/DinoCassowary">Kyle Bahr</a> on January 18, 2022</em></p>
+      <p>Happy New Year! Ease yourself into the new year with our January release.</p>
+
+<h1><a href="https://github.com/twitter/util/">Util</a></h1>
+
+<h2>Breaking API Changes</h2>
+
+<ul>
+<li>  util-jackson: The error message when failing to deserialize a character now correctly prints the non-character string. <a href="https://github.com/twitter/util/commit/4ddeaf899564a895d92d77fe7919a46ad7c100a3">4ddeaf89</a>
+</li>
+</ul>
+
+<h2>Runtime Behavior...</h2>
+      <a href="/blog/2022/01/18/release-notes/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2021/12/17/release-notes/">December 2021 Release Notes - Version 21.12.0</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/asz">Attila Szegedi</a> on December 17, 2021</em></p>
+      <p>The year-end holiday season is upon us, so Happy New Year 🎩 🥂 and enjoy our December release! 🥳</p>
+
+<h1><a href="https://github.com/twitter/util/">Util</a></h1>
+
+<h2>Breaking API Changes</h2>
+
+<ul>
+<li>  util-core: Activity.collect* and Var.collect* are now implemented in terms of known collection
+type scala.collection.Seq...</li>
+</ul>
+      <a href="/blog/2021/12/17/release-notes/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2021/11/24/release-notes/">November 2021 Release Notes - Version 21.11.0</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/dordogh">Dorothy Ordogh</a> on November 24, 2021</em></p>
+      <p>The winter ❄️ holidays are coming, so here is an early gift 🎁 from us to you: the November release ☃️</p>
+
+<h1><a href="https://github.com/twitter/util/">Util</a></h1>
+
+<h2>Breaking API Changes</h2>
+
+<ul>
+<li>  util-security: Use snakeyaml to parse yaml instead of a buggy custom yaml
+parser. This means that thrown IOExceptions...</li>
+</ul>
+      <a href="/blog/2021/11/24/release-notes/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2021/11/01/release-notes/">October 2021 Release Notes - Version 21.10.0</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/joybestou">Joy Bestourous</a> on November  1, 2021</em></p>
+      <p>Didn’t get enough of Halloween this season? Here’s an extra treat: the October release 🎃🍬🍫</p>
+
+<h1><a href="https://github.com/twitter/util/">Util</a></h1>
+
+<h2>New Features</h2>
+
+<ul>
+<li>  util-core: Add convenience methods to convert to java.time.ZonedDateTime and
+java.time.OffsetDateTime. toInstant, toZonedDateTime, and...</li>
+</ul>
+      <a href="/blog/2021/11/01/release-notes/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2021/09/30/release-notes/">September 2021 Release Notes - Version 21.9.0</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/brycelanderson">Bryce Anderson</a> on September 30, 2021</em></p>
+      <p>September release, hot off the press:</p>
+
+<h1><a href="https://github.com/twitter/util/">Util</a></h1>
+
+<h2>New Features</h2>
+
+<ul>
+<li>  util-jvm: Experimentally crossbuilds with Scala 3. <a href="https://github.com/twitter/util/commit/bfdde0713ea93f29f2fe72800313c0b66f3d9e0b">bfdde071</a>
+</li>
+<li>  util-stats: Counter, Gauge, and Stat can be instrumented with descriptions. <a href="https://github.com/twitter/util/commit/4e68dd096bf241a7a62b26963578b2cedea8b5b5">4e68dd09</a>
+</li>
+<li>  util-cache: Experimentally crossbuilds...</li>
+</ul>
+      <a href="/blog/2021/09/30/release-notes/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2021/08/13/release-notes/">August 2021 Release Notes - Version 21.8.0</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/allam_hamdi">Hamdi Allam</a> on August 13, 2021</em></p>
+      <p>August release, hot off the press:</p>
+
+<h1><a href="https://github.com/twitter/util/">Util</a></h1>
+
+<h2>New Features</h2>
+
+<ul>
+<li>  util-stats: add getAllExpressionsWithLabel utility to InMemoryStatsReceiver. <a href="https://github.com/twitter/util/commit/29602592800306e0ff34aa79fd6d17c03162ee8b">29602592</a>
+</li>
+<li>  util-app: Experimentally crossbuilds with Scala 3. <a href="https://github.com/twitter/util/commit/94f1fa3738fdbb5866571e83d303c65bd507de49">94f1fa37</a>
+</li>
+<li>  util-app-lifecycle: Experimentally crossbuilds...</li>
+</ul>
+      <a href="/blog/2021/08/13/release-notes/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2021/08/03/summer-review/">Summer Update 2021 🐬</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/freshlemonfish">Jing Yan</a> on August  3, 2021</em></p>
+      <p>Shall I compare thee to a summer’s day? With blooms 🌸 and breezes 🍃, comes our Q2 update!</p>
+
+<h3>Tech Debts Grooming</h3>
+
+<p>Every quarter, we spend a sprint to team up and kill tech debt ⚔️! This quarter, we set our minds on migrations, deprecations, and user...</p>
+      <a href="/blog/2021/08/03/summer-review/">Read more...</a>
+      </article>
+      <article>
+        <h2><a href="/blog/2021/06/22/release-notes/">June 2021 Release Notes - Version 21.6.0</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/rubenoanta">Ruben Oanta</a> on June 22, 2021</em></p>
+      <p>June release, hot off the press:</p>
+
+<h1><a href="https://github.com/twitter/util/">Util</a></h1>
+
+<h2>New Features</h2>
+
+<ul>
+<li>  util-core: Add ClasspathResource, a utility for loading classpath resources as an
+optional InputStream. <a href="https://github.com/twitter/util/commit/c9da7c43e902550ea23ec28b700d8cb57542a8ab">c9da7c43</a>
+</li>
+<li>  util-jackson: Add com.twitter.util.jackson.YAML for YAML serde operations with...</li>
+</ul>
+      <a href="/blog/2021/06/22/release-notes/">Read more...</a>
+      </article>
+      <article>
         <h2><a href="/blog/2021/05/28/release-notes/">☀️ May 2021 Release Notes - Version 21.5.0</a></h2>
       <p><em>Posted by <a href="https://twitter.com/cacoco">Christopher Coco</a> on May 28, 2021</em></p>
       <p>As we head into the summer months and longer days, we’ve got a new release of the Twitter CSL libraries.</p>
@@ -910,6 +1091,19 @@ worth of features and improvements to Finagle and Friends: <a href="https://twit
       <a href="/blog/2018/01/17/release-notes/">Read more...</a>
       </article>
       <article>
+        <h2><a href="/blog/2017/12/12/guava-less/">Guava-less</a></h2>
+      <p><em>Posted by <a href="https://twitter.com/kevino">Kevin Oliver</a> on December 12, 2017</em></p>
+      <p>We have been minimizing our dependency on <a href="https://github.com/google/guava">Guava</a>, which is big
+and often causes version conflicts for our users. This work will be
+released as part of January’s 18.1 release, though there are 2 places
+it remains:</p>
+
+<ul>
+<li><p><code>util-cache-guava</code> has a <code>CacheBuilder</code></p></li>
+</ul>
+      <a href="/blog/2017/12/12/guava-less/">Read more...</a>
+      </article>
+      <article>
         <h2><a href="/blog/2017/12/12/release-notes/">⛄ December 2017 Release Notes - Version 17.12.0</a></h2>
       <p><em>Posted by <a href="https://twitter.com/isabel_kmartin">Isabel Martin</a> on December 12, 2017</em></p>
       <p>The December release has arrived!</p>
@@ -925,19 +1119,6 @@ worth of features and improvements to Finagle and Friends: <a href="https://twit
 the http.MethodBuilder...</p></li>
 </ul>
       <a href="/blog/2017/12/12/release-notes/">Read more...</a>
-      </article>
-      <article>
-        <h2><a href="/blog/2017/12/12/guava-less/">Guava-less</a></h2>
-      <p><em>Posted by <a href="https://twitter.com/kevino">Kevin Oliver</a> on December 12, 2017</em></p>
-      <p>We have been minimizing our dependency on <a href="https://github.com/google/guava">Guava</a>, which is big
-and often causes version conflicts for our users. This work will be
-released as part of January’s 18.1 release, though there are 2 places
-it remains:</p>
-
-<ul>
-<li><p><code>util-cache-guava</code> has a <code>CacheBuilder</code></p></li>
-</ul>
-      <a href="/blog/2017/12/12/guava-less/">Read more...</a>
       </article>
       <article>
         <h2><a href="/blog/2017/11/17/release-notes/">🍠 November 2017 Release Notes - Version 17.11.0</a></h2>

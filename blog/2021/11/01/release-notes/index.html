@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>October 2021 Release Notes - Version 21.10.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Joy Bestourous</h4>
+      <p class="author-twitter"><a href="https://twitter.com/joybestou">@joybestou</a></p>
+    </div>
+    <p><em>Posted November  1, 2021</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>October 2021 Release Notes - Version 21.10.0</h1>
+  
+  <p>Didn&rsquo;t get enough of Halloween this season? Here&rsquo;s an extra treat: the October release 🎃🍬🍫</p>
+
+<h1><a href="https://github.com/twitter/util/">Util</a></h1>
+
+<h2>New Features</h2>
+
+<ul>
+<li>  util-core: Add convenience methods to convert to java.time.ZonedDateTime and
+java.time.OffsetDateTime. toInstant, toZonedDateTime, and toOffsetDateTime also preserve
+nanosecond resolution. <a href="https://github.com/twitter/util/commit/c2750767b44b3ab329028b4e3617b78b9124696e">c2750767</a></li>
+<li>  util-stats: Moved c.t.finagle.stats.LoadedStatsReceiver and c.t.finagle.stats.DefaultStatsReceiver
+from the finagle-core module to util-stats. <a href="https://github.com/twitter/util/commit/266b69bd1e23e1fe3bb2b73aa73168ee5f11c8fc">266b69bd</a></li>
+</ul>
+
+<h1><a href="https://github.com/twitter/scrooge/">Scrooge</a></h1>
+
+<p>No Changes</p>
+
+<h1><a href="https://github.com/twitter/finagle/">Finagle</a></h1>
+
+<h2>Breaking API Changes</h2>
+
+<ul>
+<li><p>finagle-core: c.t.f.loadbalancer.distributor.AddressedFactory has been removed. Use
+c.t.f.loadbalancer.EndpointFactory directly instead. <a href="https://github.com/twitter/finagle/commit/4043382a1fc81fa7de1c2491eba9392b01260e77">4043382a</a></p></li>
+<li><p>finagle-core: Moved c.t.finagle.stats.LoadedStatsReceiver and c.t.finagle.stats.DefaultStatsReceiver
+from the finagle-core module to util-stats. <a href="https://github.com/twitter/finagle/commit/709c0c37429c1f047cf53360e32e3d4cfea0bfed">709c0c37</a></p></li>
+</ul>
+
+<h1><a href="https://github.com/twitter/finatra/">Finatra</a></h1>
+
+<h2>Changed</h2>
+
+<ul>
+<li>  http-server: Add versions of HttpRouter#filter which accept a Guice TypeLiteral to
+aid Java users in being able to apply generically typed Filters obtained from the object graph.
+<a href="https://github.com/twitter/finatra/commit/46a45c4b1340ca8c4f5ab801a8589a3979d90c33">46a45c4b</a></li>
+</ul>
+
+<h1><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h1>
+
+<p>No Changes</p>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>

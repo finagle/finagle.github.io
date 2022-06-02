@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>September 2021 Release Notes - Version 21.9.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Bryce Anderson</h4>
+      <p class="author-twitter"><a href="https://twitter.com/brycelanderson">@brycelanderson</a></p>
+    </div>
+    <p><em>Posted September 30, 2021</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>September 2021 Release Notes - Version 21.9.0</h1>
+  
+  <p>September release, hot off the press:</p>
+
+<h1><a href="https://github.com/twitter/util/">Util</a></h1>
+
+<h2>New Features</h2>
+
+<ul>
+<li>  util-jvm: Experimentally crossbuilds with Scala 3. <a href="https://github.com/twitter/util/commit/bfdde0713ea93f29f2fe72800313c0b66f3d9e0b">bfdde071</a></li>
+<li>  util-stats: Counter, Gauge, and Stat can be instrumented with descriptions. <a href="https://github.com/twitter/util/commit/4e68dd096bf241a7a62b26963578b2cedea8b5b5">4e68dd09</a></li>
+<li>  util-cache: Experimentally crossbuilds with Scala 3. <a href="https://github.com/twitter/util/commit/22977aa0ff20fe5fc1226cb9a1d75fe38424280c">22977aa0</a></li>
+<li>  util-cache-guava: Experimentally crossbuilds with Scala 3. <a href="https://github.com/twitter/util/commit/6131382e273326d14e4784463f7612f388008600">6131382e</a></li>
+<li>  util-routing: Experimentally crossbuilds with Scala 3. <a href="https://github.com/twitter/util/commit/9615a9f14ced61de3fb30846127c7094dda72a8f">9615a9f1</a></li>
+<li>  util-sl4j-api: Experimentally crossbuilds with Scala 3. <a href="https://github.com/twitter/util/commit/e23687809145b8366046deaa8a7639e97c1152d6">e2368780</a></li>
+<li>  util-sl4j-jul-bridge: Experimentally crossbuilds with Scala 3. <a href="https://github.com/twitter/util/commit/16a4a945d1107a3030944595babb250e010954c8">16a4a945</a></li>
+<li>  util-stats: Experimentally crossbuilds with Scala 3. <a href="https://github.com/twitter/util/commit/ea54f59c0d31b2cd37065af59dcd1d37a39e6a09">ea54f59c</a></li>
+<li>  util-zk-test: Experimentally crossbuilds with Scala 3. <a href="https://github.com/twitter/util/commit/86df882b076c2c8df8eef3bd2e5e467a2089486b">86df882b</a></li>
+<li>  util-app: Flags parsing will now roll-up multiple flag parsing errors into a single
+error message. When an error is encountered, flag parsing will continue to collect parse error
+information instead of escaping on the first flag failure. After parsing all flags, if any errors
+are present, a message containing all of the failed flags and their error reason,
+along with the help usage message will be emitted. <a href="https://github.com/twitter/util/commit/0def519daf1cfd5dbed03faba750fbf331672a4e">0def519d</a></li>
+</ul>
+
+<h2>Runtime Behavior Changes</h2>
+
+<ul>
+<li>  util: Bump version of Jackson to 2.11.4. <a href="https://github.com/twitter/util/commit/72b9ba1e6464af1dcab33d6d336b207342034e99">72b9ba1e</a></li>
+<li>  util: Bump version of json4s to 3.6.11. <a href="https://github.com/twitter/util/commit/a9afb222f1418995eebea38750df460ff134cea6">a9afb222</a></li>
+</ul>
+
+<h2>Breaking API Changes</h2>
+
+<ul>
+<li>  util-app: the c.t.app.App#flags field is now a final def instead of a val to address
+override val scenarios where the c.t.app.App#flags are accessed as part of construction,
+resulting in a NullPointerException due to access ordering issues.
+The c.t.app.Flags class is now made final. The c.t.app.App#name field has changed from
+a val and is now a def. A new c.t.app.App#includeGlobalFlags def has been exposed, which
+defaults to true. The c.t.app#includeGlobalFlags def can be overridden to false
+(ex: override protected def includeGlobalFlags: Boolean = false) in order to skip discovery
+of GlobalFlags during flag parsing. <a href="https://github.com/twitter/util/commit/b44e820c7992746a24fc98e509c749035ded288f">b44e820c</a></li>
+</ul>
+
+<h1><a href="https://github.com/twitter/scrooge/">Scrooge</a></h1>
+
+<h2>Breaking API Changes</h2>
+
+<ul>
+<li>  scrooge-generator: Dropped the generic (higher-kinded-types) service interface in scala-gen,
+users are recommended to use YourService.MethodPerEndpoint, YourService.ServicePerEndpoint
+and YourService.ReqRepServicePerEndpoint to represent Thrift service endpoints. Note,
+-finagle option is required to generated finagle binding code. <a href="https://github.com/twitter/scrooge/commit/8d768ca620a33d18b89492a7a2077007cedb6e7d">8d768ca6</a></li>
+<li>  scrooge-generator: Removed YourService.FutureIface and YourService[Future] in scala-gen,
+use \$YourService.MethodPerEndpoint instead. Correspondingly, YourService\$FinagleService and
+related constructors taking MethodPerEndpoint as parameters. <a href="https://github.com/twitter/scrooge/commit/8d768ca620a33d18b89492a7a2077007cedb6e7d">8d768ca6</a></li>
+<li>  Scrooge-generator: Dropped ThriftServiceBuilder.build and MethodIfaceBuilder.newMethodIface.
+<a href="https://github.com/twitter/scrooge/commit/8d768ca620a33d18b89492a7a2077007cedb6e7d">8d768ca6</a></li>
+<li>  scrooge-generator: Add reserved keywords to ThriftParser. If your field names match
+these keywords, you may need to modify them. This change should not affect backwards
+and forwards compatiblility if using binary protocol for serde. <a href="https://github.com/twitter/scrooge/commit/884f360361bc4abf2e2c91ada1e9cbc15f584b0d">884f3603</a></li>
+</ul>
+
+<h1><a href="https://github.com/twitter/finagle/">Finagle</a></h1>
+
+<h2>Breaking API Changes</h2>
+
+<ul>
+<li>  finagle-thrift: Removed c.t.finagle.thrift.ThriftClient#newMethodIface and
+ThriftClient#thriftService, use c.t.f.thrift.ThriftClient#methodPerEndpoint. <a href="https://github.com/twitter/finagle/commit/fc21cccf2003c5acdc1989b19e783d774209363a">fc21cccf</a></li>
+</ul>
+
+<h2>Bug Fixes</h2>
+
+<ul>
+<li>  finagle-core/partitioning: Close balancers and their gauges when repartitioning.
+<a href="https://github.com/twitter/finagle/commit/d0bd053d2043eb1dd9e6aa8e43668a10ee857911">d0bd053d</a></li>
+</ul>
+
+<h2>Runtime Behavior Changes</h2>
+
+<ul>
+<li>  finagle: Upgrade to Netty 4.1.67.Final and netty-tcnative 2.0.40.Final. <a href="https://github.com/twitter/finagle/commit/c373fc087b1b04cf36bc43baa576dc81337248a1">c373fc08</a></li>
+<li>  finagle: Downgrade to Netty 4.1.66.Final <a href="https://github.com/twitter/finagle/commit/cbfbef8986fbdeabccda74bf9d2e1f35f706beb9">cbfbef89</a></li>
+<li>  finagle: Bump version of Jackson to 2.11.4. <a href="https://github.com/twitter/finagle/commit/19750a804fba41b5c074c39cda94d85dccb4160a">19750a80</a></li>
+<li>  finagle-core: OffloadFilter hands off work from Netty I/O thread to the offload CPU thread pool
+right after we enter the Finagle stack by default. Previously this could be enabled via a toggle.
+The com.twitter.finagle.OffloadEarly toggle has been removed. <a href="https://github.com/twitter/finagle/commit/2b5086fe877ef40ff62bff1171439b09c754848d">2b5086fe</a></li>
+</ul>
+
+<h1><a href="https://github.com/twitter/finatra/">Finatra</a></h1>
+
+<h2>Breaking API Change</h2>
+
+<ul>
+<li>  finatra-thrift: Removed c.t.finatra.thrift.ThriftClient#thriftClient, use
+#methodPerEndpoint. <a href="https://github.com/twitter/finatra/commit/ed7ffac459be28b1bd61afae3f7bead02ed2875d">ed7ffac4</a></li>
+</ul>
+
+<h2>Runtime Behavior Changes</h2>
+
+<ul>
+<li>  finatra: Bump version of Logback to 1.2.6. <a href="https://github.com/twitter/finatra/commit/42cb5fc35e7c2ed9d9d936b12ca79fd46cf3af45">42cb5fc3</a></li>
+<li>  finatra: Bump version of Jackson to 2.11.4. <a href="https://github.com/twitter/finatra/commit/dff47602dc48238c76ea8a25a7ced13fc2120af6">dff47602</a></li>
+<li>  finatra: Bump version of Joda-Time to 2.10.10. <a href="https://github.com/twitter/finatra/commit/4906eab1d788eb28586cd28bbaea445ca88f9c1d">4906eab1</a></li>
+<li>  finatra: Bump version of logback to 1.2.5. <a href="https://github.com/twitter/finatra/commit/9eaa5f9d9486e54881676c2838436fc59e827d87">9eaa5f9d</a></li>
+<li>  finatra: Bump version of json4s to 3.6.11. <a href="https://github.com/twitter/finatra/commit/496d0e7d30e3b44d2c5223bd7aa1e1439b077fdc">496d0e7d</a></li>
+</ul>
+
+<h1><a href="https://github.com/twitter/twitter-server/">Twitter Server</a></h1>
+
+<h2>Runtime Behavior Changes</h2>
+
+<ul>
+<li>  Bump version of Logback to 1.2.6. <a href="https://github.com/twitter/twitter-server/commit/4a1930f0da624ff59dbe47a9508f52d98603355f">4a1930f0</a></li>
+<li>  Bump version of Jackson to 2.11.4. <a href="https://github.com/twitter/twitter-server/commit/b4a8b44f34445d31ebfcfa00f0343f79cbf27089">b4a8b44f</a></li>
+<li>  Bump version of logback to 1.2.5. <a href="https://github.com/twitter/twitter-server/commit/0a2bfd6dee0d1651545b9ad0b001cf78a5f5b28d">0a2bfd6d</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>
