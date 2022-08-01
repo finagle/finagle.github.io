@@ -12,7 +12,7 @@ This release comes with a delay, which was intentional. A few months ago, we've 
 
 The next release should have been in November. However, looking at the team's quite busy schedule throughout the rest of the year, it's very unlikely we would be able to make time for one more release in 2022. The 2023 Q1 release is looking more realistic.
 
-We'll continue pablishing nightly snapshots (versioned as 22.10.0-SNAPSHOT) and will cut a patch release should any security vulnerabilities be fixed. Otherwise, tune back in 2023!
+We'll continue publishing nightly snapshots (versioned as 22.10.0-SNAPSHOT) and will cut a patch release should any security vulnerabilities be fixed. Otherwise, tune back in 2023!
 
 ## [Finagle 22.7](https://github.com/twitter/finagle/releases/tag/finagle-22.7.0)
 
