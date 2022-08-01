@@ -70,7 +70,7 @@ request to multiple partitions. [59381065](https://github.com/twitter/finagle/co
 -   finagle: Bump version of lz4-java to 1.8.0. [305c467c](https://github.com/twitter/finagle/commit/305c467c2ba8f72b2ada012b592b000b961809a4)
 -   finagle: Upgrade to Netty 4.1.78.Final and netty-tcnative 2.0.53.Final to support
     tls tracing for finagle in \[Pixie\](<https://pixie.dev/>). The Pixie changes aren't
-    complete yet, but upgrading netty is a prerequisite for that. [d251883b](https://github.com/twitter/finagle/commit/d251883b19dfd177a5c08dfc790327bfeb19c7c0)\`
+    complete yet, but upgrading netty is a prerequisite for that. [d251883b](https://github.com/twitter/finagle/commit/d251883b19dfd177a5c08dfc790327bfeb19c7c0)\
 
 ## [Finatra 22.7](https://github.com/twitter/finatra/releases/tag/finatra-22.7.0)
 
