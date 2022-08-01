@@ -26,7 +26,7 @@ We'll continue pablishing nightly snapshots (versioned as 22.10.0-SNAPSHOT) and 
     [f00434c1](https://github.com/twitter/finagle/commit/f00434c1f473c93ec4b5cfec11b9255b2f97f91b)
 -   finagle-memcached: Add new function, newLoadBalancedTwemcacheClient, to create a TwemcacheClient
     that doesn't use a partitioning service.
-    \`PHAB\_ID=D911789
+    [eebf0821](https://github.com/twitter/finagle/commit/eebf0821b1251d6a910ac952bec0ccfba661884e)
 
 #### Bug Fixes
 
