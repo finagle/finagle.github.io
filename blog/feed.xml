@@ -4,10 +4,182 @@
   <id>https://finagle.github.io/blog</id>
   <link href="https://finagle.github.io/blog"/>
   <link href="https://finagle.github.io/blog/blog/feed.xml" rel="self"/>
-  <updated>2022-06-01T00:00:00Z</updated>
+  <updated>2022-07-28T00:00:00Z</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>Jul 2022 Release Notes - Version 22.7.0</title>
+    <link rel="alternate" href="https://finagle.github.io/blog/2022/07/28/release-notes/"/>
+    <id>https://finagle.github.io/blog/2022/07/28/release-notes/</id>
+    <published>2022-07-28T00:00:00Z</published>
+    <updated>2022-08-01T10:33:34-07:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;This release comes with a delay, which was intentional. A few months ago, we&amp;rsquo;ve decided to slow down our release train and switch from releasing monthly (12 releases a year) to releasing quarterly (4 releases a year).&lt;/p&gt;
+
+&lt;p&gt;The next release should have been in November. However, looking at the team&amp;rsquo;s quite busy schedule throughout the rest of the year, it&amp;rsquo;s very unlikely we would be able to make time for one more release in 2022. The 2023 Q1 release is looking more realistic.&lt;/p&gt;
+
+&lt;p&gt;We&amp;rsquo;ll continue publishing nightly snapshots (versioned as 22.10.0-SNAPSHOT) and will cut a patch release should any security vulnerabilities be fixed. Otherwise, tune back in 2023!&lt;/p&gt;
+
+&lt;h2&gt;&lt;a href="https://github.com/twitter/finagle/releases/tag/finagle-22.7.0"&gt;Finagle 22.7&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h4&gt;New Features&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  finagle-thrift: Changing visibility of InputBuffer and OutputBuffer from [finagle] to [twitter].  &lt;a href="https://github.com/twitter/finagle/commit/d56bb847a9b7722f13a2cc2fc536cb1c3bdd60a7"&gt;d56bb847&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  finagle-core: Introduce panic mode in load balancers. Configure the threshold for
+panic mode to start using withLoadBalancer.panicMode. &lt;a href="https://github.com/twitter/finagle/commit/c6060de877b97936ef2ca54431a4539f6ee06c78"&gt;c6060de8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  finagle-core: Provide ServerParamsInjector, a class that will be service-loaded at run-time
+by Finagle servers, and will allow generic configuration of all sets of parameters.
+&lt;a href="https://github.com/twitter/finagle/commit/f00434c1f473c93ec4b5cfec11b9255b2f97f91b"&gt;f00434c1&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  finagle-memcached: Add new function, newLoadBalancedTwemcacheClient, to create a TwemcacheClient
+that doesn&amp;rsquo;t use a partitioning service.
+&lt;a href="https://github.com/twitter/finagle/commit/eebf0821b1251d6a910ac952bec0ccfba661884e"&gt;eebf0821&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Bug Fixes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  finagle-core: fix issue where Trace.traceLocal and Trace.traceLocalFuture nested traces mistakenly
+annotate to the parent span. &lt;a href="https://github.com/twitter/finagle/commit/77a7e774cd4f3bde8bbbfe67eb38732a7cc2ef3a"&gt;77a7e774&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Breaking API Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  finagle-core: Remove unused DeterministicAperture along with pathways to use weight-unaware
+aperture loadbalancers. &lt;a href="https://github.com/twitter/finagle/commit/a5004ecc810e39c32e3041472f3bb752fc669e94"&gt;a5004ecc&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  finagle-base-http: Methods for getting/setting Accept, Authorization, Host, Referer,
+User-Agent, X-Forwarded-For headers were moved from c.t.f.http.Message class to
+c.t.f.http.Request as these headers are only valid on requests and not on responses.
+Methods for getting/setting Location, Retry-After, Server, and WWW-Authenticate headers
+were moved from c.t.f.http.Message class to c.t.f.http.Response as they are only valid
+on responses and not on requests.&lt;/li&gt;
+&lt;li&gt;  finagle-core: Update OffloadFilter.Param API to encourage recommended construction.
+&lt;a href="https://github.com/twitter/finagle/commit/b684552f9e2a7a7abc2d9ba2b74d1a394b8cad27"&gt;b684552f&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  finagle-core: Trace.recordLocalSpan is private[this] and no longer protected. &lt;a href="https://github.com/twitter/finagle/commit/77a7e774cd4f3bde8bbbfe67eb38732a7cc2ef3a"&gt;77a7e774&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  finagle-core: &amp;ldquo;ServiceFactory#status&amp;rdquo; is abstract and requires implementation in the inherited
+classes. &lt;a href="https://github.com/twitter/finagle/commit/b2a7f4eaa004482157ffa2018e6d772d9138b139"&gt;b2a7f4ea&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  finagle-core: StackTransformer has been renamed to ServerStackTransformer and the symmetric
+client equivalent (ClientStackTransformer) has been added. For those using the older StackTransformer
+API you will both need to change the code (fix the extends) __and__ rename the META-INF file from
+resources/META-INF/services/com.twitter.finagle.StackTransformer to
+resources/META-INF/services/com.twitter.finagle.ServerStackTransformer in order to have your
+transformer continue to service-load correctly. &lt;a href="https://github.com/twitter/finagle/commit/f5de196dddb93109b64b4d4c216fe77d5f075565"&gt;f5de196d&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Runtime Behavior Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: Changed the default implementation for random and deterministic aperture
+load balancers to weighted aperture. &lt;a href="https://github.com/twitter/finagle/commit/f67c839cfe1b2a9a8c555dc750a3a522afa41244"&gt;f67c839c&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-partitioning: ThriftCustomPartitioningServices now allow fanning out the same
+request to multiple partitions. &lt;a href="https://github.com/twitter/finagle/commit/59381065511362d86736a15508364936e9480f8e"&gt;59381065&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle-core: Rename the counter metric loadbalancer/max_effort_exhausted to
+loadbalancer/panicked. &lt;a href="https://github.com/twitter/finagle/commit/a055f74b4e145ad7daef3f73b8d5837a9b4e979f"&gt;a055f74b&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle: Upgrade to Netty 4.1.76.Final and netty-tcnative 2.0.51.Final. &lt;a href="https://github.com/twitter/finagle/commit/c07a9b0bb6e49cd8438817e590d0f6557d110085"&gt;c07a9b0b&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle: Update Jackson library to version 2.13.3 &lt;a href="https://github.com/twitter/finagle/commit/92d39db21b713130b305f06f554337ccbad8ab11"&gt;92d39db2&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle: Bump version of lz4-java to 1.8.0. &lt;a href="https://github.com/twitter/finagle/commit/305c467c2ba8f72b2ada012b592b000b961809a4"&gt;305c467c&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;finagle: Upgrade to Netty 4.1.78.Final and netty-tcnative 2.0.53.Final to support
+tls tracing for finagle in [Pixie](&lt;a href="https://pixie.dev/"&gt;https://pixie.dev/&lt;/a&gt;). The Pixie changes aren&amp;rsquo;t
+complete yet, but upgrading netty is a prerequisite for that. &lt;a href="https://github.com/twitter/finagle/commit/d251883b19dfd177a5c08dfc790327bfeb19c7c0"&gt;d251883b&lt;/a&gt;\&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;a href="https://github.com/twitter/finatra/releases/tag/finatra-22.7.0"&gt;Finatra 22.7&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h4&gt;Changed&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  inject-utils|inject-thrift: Move package private methods PossiblyRetryable#isCancellation and
+PossibleRetryable#isNonRetryable in inject-thrift to inject-utils ExceptionUtils as publicly
+usable methods. These methods are generally useful when processing interrupts on Futures.
+&lt;a href="https://github.com/twitter/finatra/commit/3d3514506d7c22002fc4744e5b50c1238c54f580"&gt;3d351450&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Runtime Behavior Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;inject-server: Remove deprecated c.t.inject.server.DeprecatedLogging trait. This trait was
+introduced as a placeholder shim to ensure that JUL util-logging Flags were still defined within
+a Finatra server such that servers did not fail upon startup if Flag values were being set.
+The default behavior during Flag parsing is to error if a Flag value is passed for a Flag not
+defined within the application.&lt;/p&gt;
+
+&lt;p&gt;We have removed the shim and the trait (and thus the Flag definitions), as it is not expected
+that users use util-logging JUL Flags for logging configuration with Finatra servers since Finatra
+uses the SLF4J-API. Logging configuration should be done on the choosen SLF4J-API logging
+implementation. If your server fails to start after this change, please ensure you are not passing
+values for the JUL util-logging Flags. &lt;a href="https://github.com/twitter/finatra/commit/5b5ccf4f170256d06f47e8bca4f8ff1a29429c1a"&gt;5b5ccf4f&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Changed&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;finatra: Removed &lt;code&gt;kafka&lt;/code&gt; and &lt;code&gt;kafka-streams&lt;/code&gt; modules from finatra core library.&lt;/p&gt;
+
+&lt;p&gt;Note: We published a stand-alone &lt;a href="https://github.com/finagle/finatra-kafka"&gt;finatra-kafka client&lt;/a&gt;
+with deprecation announcement to serve as exit pathway for current users.&lt;/p&gt;
+
+&lt;p&gt;Announcement: &lt;a href="https://finagle.github.io/blog/2022/06/01/announce-migrations/"&gt;finagle blog&lt;/a&gt;
+&lt;a href="https://github.com/twitter/finatra/commit/27e2c9c40caada815b2665e0702725ebdd6dc6f9"&gt;27e2c9c4&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Added&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  finatra: Introduce InMemoryTracer for inspecting Trace information via tests. &lt;a href="https://github.com/twitter/finatra/commit/0755b77e702d4bbe554aa1a30ac52235d0023168"&gt;0755b77e&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Runtime Behavior Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;finatra: Update Jackson library to version 2.13.3 &lt;a href="https://github.com/twitter/finatra/commit/a4065f196b6c9c7ee5c7f8c48bdb556ddc79a064"&gt;a4065f19&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;a href="https://github.com/twitter/util/releases/tag/util-22.7.0"&gt;Util 22.7&lt;/a&gt;&lt;/h2&gt;
+
+&lt;h4&gt;Breaking API Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  util-stats: SourceRole subtypes have been moved into the SourceRole object to make their
+relationship to the parent type more clear. &lt;a href="https://github.com/twitter/util/commit/633cf5b0649c8377207201c633fdd7ecf6ae6758"&gt;633cf5b0&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;Runtime Behavior Changes&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  util-jackson: Update Jackson library to version 2.13.3 &lt;a href="https://github.com/twitter/util/commit/8c96a44240688d9a32a42e8c6e3e225244055dab"&gt;8c96a442&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  util-jackson: Deserialized case classes with validation on optional fields shouldn&amp;rsquo;t throw an error.
+&lt;a href="https://github.com/twitter/util/commit/3b94d2e628d6d62d678006c3177f46dfeb1e0ec9"&gt;3b94d2e6&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  util: Update snakeyaml to 1.28 &lt;a href="https://github.com/twitter/util/commit/d486a7dab7110ee05d24760e9d9531f75393254d"&gt;d486a7da&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;a href="https://github.com/twitter/scrooge/releases/tag/scrooge-22.7.0"&gt;Scrooge 22.7&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  scrooge-generator: Introduce a AnnotatedFieldType to abstract type annotations from
+FieldType definitions. Currently used to propagate thrift annotations inside of
+collection types. &lt;a href="https://github.com/twitter/scrooge/commit/59e91e6404cb802f0297c1fc7cb89e6692b3f4e9"&gt;59e91e64&lt;/a&gt; &lt;a href="https://github.com/twitter/scrooge/commit/2fa68351e354a21c511ab666bcf66274fd2941f8"&gt;2fa68351&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  scrooge-core: c.t.scrooge.ThriftUnion.fieldInfoForUnionClass API for retrieving
+ThriftStructFieldInfo for a ThriftUnion member class without having to instantiate
+it. &lt;a href="https://github.com/twitter/scrooge/commit/19809c226bfc5ea18613e18a0d897cba553c5f56"&gt;19809c22&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  scrooge-generator: Add @.generated annotation to Swift generated code &lt;a href="https://github.com/twitter/scrooge/commit/8fd6a0896e5ca768189bd8ea1bb3c97d091916c8"&gt;8fd6a089&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  scrooge-generator: Provide a \$STRUCT#unsetFields method to allow bulk unsets &lt;a href="https://github.com/twitter/scrooge/commit/aef5029b24f11992255d0bc0497cb1d064c67b1b"&gt;aef5029b&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;  scrooge-generator: support thrift validations on nested fields that are struct, union, and
+exception &lt;a href="https://github.com/twitter/scrooge/commit/8bad4dd746dae8513016f39f423457e8af4ac5fe"&gt;8bad4dd7&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;&lt;a href="https://github.com/twitter/twitter-server/releases/tag/twitter-server-22.7.0"&gt;Twitter Server 22.7&lt;/a&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;  Admin HTTP server is now on Finagle&amp;rsquo;s default HTTP protocol version, which supports
+HTTP/1.1, HTTP/2 cleartext protocol upgrade, HTTP/2 prior-knowledge, and ALPN.
+&lt;a href="https://github.com/twitter/twitter-server/commit/6b9bf60fbc8df03c9b56bba46dd2ad074a67024e"&gt;6b9bf60f&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+  </entry>
   <entry>
     <title>🌇 Upcoming module removals &amp; migration guide🌇</title>
     <link rel="alternate" href="https://finagle.github.io/blog/2022/06/01/announce-migrations/"/>
@@ -420,82 +592,6 @@ c.t.inject.logging.Logging#debugFutureResult and c.t.inject.logging.Logging#time
 &lt;p&gt;Cheers,&lt;/p&gt;
 
 &lt;p&gt;Joy and Bryce on behalf of CSL&lt;/p&gt;
-</content>
-  </entry>
-  <entry>
-    <title>January 2022 Release Notes - Version 22.1.0</title>
-    <link rel="alternate" href="https://finagle.github.io/blog/2022/01/18/release-notes/"/>
-    <id>https://finagle.github.io/blog/2022/01/18/release-notes/</id>
-    <published>2022-01-18T00:00:00Z</published>
-    <updated>2022-06-01T17:33:07-07:00</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <content type="html">&lt;p&gt;Happy New Year! Ease yourself into the new year with our January release.&lt;/p&gt;
-
-&lt;h1&gt;&lt;a href="https://github.com/twitter/util/"&gt;Util&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h2&gt;Breaking API Changes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;  util-jackson: The error message when failing to deserialize a character now correctly prints the non-character string. &lt;a href="https://github.com/twitter/util/commit/4ddeaf899564a895d92d77fe7919a46ad7c100a3"&gt;4ddeaf89&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Runtime Behavior Changes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;  util: Bump version of Jackson to 2.13.1. &lt;a href="https://github.com/twitter/util/commit/4ddeaf899564a895d92d77fe7919a46ad7c100a3"&gt;4ddeaf89&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;  util-core: Return suppressed exception information in Closable.sequence &lt;a href="https://github.com/twitter/util/commit/2211f75bf5c9384326e9d289fea4caa6ed82df38"&gt;2211f75b&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;&lt;a href="https://github.com/twitter/scrooge/"&gt;Scrooge&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h2&gt;No Changes&lt;/h2&gt;
-
-&lt;h1&gt;&lt;a href="https://github.com/twitter/finagle/"&gt;Finagle&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h2&gt;Runtime Behavior Changes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;  finagle: Bump version of Jackson to 2.13.1. &lt;a href="https://github.com/twitter/finagle/commit/831b25120addc828b7de83ae20dfbc7c2606125a"&gt;831b2512&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;&lt;a href="https://github.com/twitter/finatra/"&gt;Finatra&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h2&gt;Added&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;http-server: (BREAKING API CHANGE) Allow for customization of the building of the HTTP and HTTPS
-ListeningServer constructs. This allows users to specify any additional configuration over the
-Finagle Service[-R, +R] that is constructed by the HttpRouter. The
-c.t.finatra.http.HttpServerTrait#build method has been replaced by two more specific versions:
-#buildHttpListeningServer and #buildHttpsListeningServer which are used in postWarmup to
-create the appropriate ListeningServer given it has a defined port value.&lt;/p&gt;
-
-&lt;p&gt;We also update the EmbeddedHttpServer and EmbeddedHttpClient to allow for being able to run both
-the HTTP and HTTPS listening servers in tests. This is done by setting the httpsPortFlag to the
-value of https.port which will enable the binding of the HTTPS listening server to the ephemeral
-port in tests. &lt;a href="https://github.com/twitter/finatra/commit/13a600ff81fad6c0e0a68723a87dcea78f0d0c4b"&gt;13a600ff&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;mysql-client: Add base client configuration in EmbeddedMysqlServer to enable for more robust
-testing setup. This would allow users to add configurations like charset.
-Added a overridable function createRichClient to MysqlClientModuleTrait to allow
-creating the mysql client in other ways like newRichClient(Finagle.Name, String).
-&lt;a href="https://github.com/twitter/finatra/commit/dc1de2154e2eab4080fffdbf2ff177fd846cc13b"&gt;dc1de215&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2&gt;Changed&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;  finatra: Bump version of Jackson to 2.13.1 &lt;a href="https://github.com/twitter/finatra/commit/79bd09c4f4b64c195eacf812786c874c3864ce1c"&gt;79bd09c4&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h1&gt;&lt;a href="https://github.com/twitter/twitter-server/"&gt;Twitter Server&lt;/a&gt;&lt;/h1&gt;
-
-&lt;h2&gt;Runtime Behavior Changes&lt;/h2&gt;
-
-&lt;ul&gt;
-&lt;li&gt;  Bump version of Jackson to 2.13.1. &lt;a href="https://github.com/twitter/twitter-server/commit/da33afe983a21d7e7a9b9a3fe27ecf358ec84d03"&gt;da33afe9&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
 </content>
   </entry>
 </feed>

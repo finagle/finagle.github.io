@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Jul 2022 Release Notes - Version 22.7.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="/assets/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/assets/css/font-awesome.css" rel="stylesheet">
+    <link href="/assets/css/syntax.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link href="../../../../../assets/css/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- JS -->
+    <script type="text/javascript" src="/assets/js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <link type="application/atom+xml" rel="alternate" href="/blog/feed.xml" />
+
+
+    <!-- Google Analytics Magic -->
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-39101739-6', 'finagle.github.io');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <!-- navbar excitement -->
+    <div class="navbar navbar-custom navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-right navbar-nav">
+            <li><a href="https://twitter.github.io/finagle/">Project</a></li>
+            <li><a href="https://github.com/finagle/">Ecosystem</a></li>
+            <li class="dropdown">
+              <a href="https://twitter.github.io/finagle/">Learn more <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/">
+                  <i class="fa fa-book"></i> User's guide</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://twitter.github.io/finagle/guide/Quickstart.html">
+                  <i class="fa fa-check-square-o"></i> Quickstart</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/ADOPTERS.md">
+                  <i class="fa fa-smile-o"></i> Adopters</a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="https://github.com/twitter/finagle">Get involved <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle">
+                  <i class="fa fa-github-alt"></i> Source</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/twitter/finagle/blob/master/CONTRIBUTING.md">
+                  <i class="fa fa-code-fork"></i> Contributing</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://twitter.com/finagle">
+                  <i class="fa fa-twitter"></i> @finagle</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://groups.google.com/forum/#!forum/finaglers">
+                  <i class="fa fa-envelope"></i> Mailing list</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="http://stackoverflow.com/questions/tagged/finagle">
+                  <i class="fa fa-stack-overflow"></i> Stack Overflow</a>
+                </li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="https://github.com/finagle/finagle.github.io/">
+                  <i class="fa fa-pencil"></i> Write a blog post!</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div><!-- /.navbar -->
+    <div class="container">
+      <div class="row">
+
+<div class="col-md-3">
+  <div><a href="/" class="logo"><img src="/assets/img/finagle_logo_small.png" alt="Finagle" /></a></div>
+  <div class="meta">
+    <!---->
+    <div class="author-contact">
+      <h4 class="author-name">Vladimir Kostyukov</h4>
+      <p class="author-twitter"><a href="https://twitter.com/vkostyukov">@vkostyukov</a></p>
+    </div>
+    <p><em>Posted July 28, 2022</em></p>
+  </div>
+  
+  <div class="share">
+    <span class="social-share-button"><a href="https://twitter.com/share" class="twitter-share-button" data-via="finagle">Tweet</a></span>
+    
+    <span><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></span>
+  </div>
+</div>
+
+<div class="post col-md-9">
+  <h1>Jul 2022 Release Notes - Version 22.7.0</h1>
+  
+  <p>This release comes with a delay, which was intentional. A few months ago, we&rsquo;ve decided to slow down our release train and switch from releasing monthly (12 releases a year) to releasing quarterly (4 releases a year).</p>
+
+<p>The next release should have been in November. However, looking at the team&rsquo;s quite busy schedule throughout the rest of the year, it&rsquo;s very unlikely we would be able to make time for one more release in 2022. The 2023 Q1 release is looking more realistic.</p>
+
+<p>We&rsquo;ll continue publishing nightly snapshots (versioned as 22.10.0-SNAPSHOT) and will cut a patch release should any security vulnerabilities be fixed. Otherwise, tune back in 2023!</p>
+
+<h2><a href="https://github.com/twitter/finagle/releases/tag/finagle-22.7.0">Finagle 22.7</a></h2>
+
+<h4>New Features</h4>
+
+<ul>
+<li>  finagle-thrift: Changing visibility of InputBuffer and OutputBuffer from [finagle] to [twitter].  <a href="https://github.com/twitter/finagle/commit/d56bb847a9b7722f13a2cc2fc536cb1c3bdd60a7">d56bb847</a></li>
+<li>  finagle-core: Introduce panic mode in load balancers. Configure the threshold for
+panic mode to start using withLoadBalancer.panicMode. <a href="https://github.com/twitter/finagle/commit/c6060de877b97936ef2ca54431a4539f6ee06c78">c6060de8</a></li>
+<li>  finagle-core: Provide ServerParamsInjector, a class that will be service-loaded at run-time
+by Finagle servers, and will allow generic configuration of all sets of parameters.
+<a href="https://github.com/twitter/finagle/commit/f00434c1f473c93ec4b5cfec11b9255b2f97f91b">f00434c1</a></li>
+<li>  finagle-memcached: Add new function, newLoadBalancedTwemcacheClient, to create a TwemcacheClient
+that doesn&rsquo;t use a partitioning service.
+<a href="https://github.com/twitter/finagle/commit/eebf0821b1251d6a910ac952bec0ccfba661884e">eebf0821</a></li>
+</ul>
+
+<h4>Bug Fixes</h4>
+
+<ul>
+<li>  finagle-core: fix issue where Trace.traceLocal and Trace.traceLocalFuture nested traces mistakenly
+annotate to the parent span. <a href="https://github.com/twitter/finagle/commit/77a7e774cd4f3bde8bbbfe67eb38732a7cc2ef3a">77a7e774</a></li>
+</ul>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  finagle-core: Remove unused DeterministicAperture along with pathways to use weight-unaware
+aperture loadbalancers. <a href="https://github.com/twitter/finagle/commit/a5004ecc810e39c32e3041472f3bb752fc669e94">a5004ecc</a></li>
+<li>  finagle-base-http: Methods for getting/setting Accept, Authorization, Host, Referer,
+User-Agent, X-Forwarded-For headers were moved from c.t.f.http.Message class to
+c.t.f.http.Request as these headers are only valid on requests and not on responses.
+Methods for getting/setting Location, Retry-After, Server, and WWW-Authenticate headers
+were moved from c.t.f.http.Message class to c.t.f.http.Response as they are only valid
+on responses and not on requests.</li>
+<li>  finagle-core: Update OffloadFilter.Param API to encourage recommended construction.
+<a href="https://github.com/twitter/finagle/commit/b684552f9e2a7a7abc2d9ba2b74d1a394b8cad27">b684552f</a></li>
+<li>  finagle-core: Trace.recordLocalSpan is private[this] and no longer protected. <a href="https://github.com/twitter/finagle/commit/77a7e774cd4f3bde8bbbfe67eb38732a7cc2ef3a">77a7e774</a></li>
+<li>  finagle-core: &ldquo;ServiceFactory#status&rdquo; is abstract and requires implementation in the inherited
+classes. <a href="https://github.com/twitter/finagle/commit/b2a7f4eaa004482157ffa2018e6d772d9138b139">b2a7f4ea</a></li>
+<li>  finagle-core: StackTransformer has been renamed to ServerStackTransformer and the symmetric
+client equivalent (ClientStackTransformer) has been added. For those using the older StackTransformer
+API you will both need to change the code (fix the extends) __and__ rename the META-INF file from
+resources/META-INF/services/com.twitter.finagle.StackTransformer to
+resources/META-INF/services/com.twitter.finagle.ServerStackTransformer in order to have your
+transformer continue to service-load correctly. <a href="https://github.com/twitter/finagle/commit/f5de196dddb93109b64b4d4c216fe77d5f075565">f5de196d</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li><p>finagle-core: Changed the default implementation for random and deterministic aperture
+load balancers to weighted aperture. <a href="https://github.com/twitter/finagle/commit/f67c839cfe1b2a9a8c555dc750a3a522afa41244">f67c839c</a></p></li>
+<li><p>finagle-partitioning: ThriftCustomPartitioningServices now allow fanning out the same
+request to multiple partitions. <a href="https://github.com/twitter/finagle/commit/59381065511362d86736a15508364936e9480f8e">59381065</a></p></li>
+<li><p>finagle-core: Rename the counter metric loadbalancer/max_effort_exhausted to
+loadbalancer/panicked. <a href="https://github.com/twitter/finagle/commit/a055f74b4e145ad7daef3f73b8d5837a9b4e979f">a055f74b</a></p></li>
+<li><p>finagle: Upgrade to Netty 4.1.76.Final and netty-tcnative 2.0.51.Final. <a href="https://github.com/twitter/finagle/commit/c07a9b0bb6e49cd8438817e590d0f6557d110085">c07a9b0b</a></p></li>
+<li><p>finagle: Update Jackson library to version 2.13.3 <a href="https://github.com/twitter/finagle/commit/92d39db21b713130b305f06f554337ccbad8ab11">92d39db2</a></p></li>
+<li><p>finagle: Bump version of lz4-java to 1.8.0. <a href="https://github.com/twitter/finagle/commit/305c467c2ba8f72b2ada012b592b000b961809a4">305c467c</a></p></li>
+<li><p>finagle: Upgrade to Netty 4.1.78.Final and netty-tcnative 2.0.53.Final to support
+tls tracing for finagle in [Pixie](<a href="https://pixie.dev/">https://pixie.dev/</a>). The Pixie changes aren&rsquo;t
+complete yet, but upgrading netty is a prerequisite for that. <a href="https://github.com/twitter/finagle/commit/d251883b19dfd177a5c08dfc790327bfeb19c7c0">d251883b</a>\</p></li>
+</ul>
+
+<h2><a href="https://github.com/twitter/finatra/releases/tag/finatra-22.7.0">Finatra 22.7</a></h2>
+
+<h4>Changed</h4>
+
+<ul>
+<li>  inject-utils|inject-thrift: Move package private methods PossiblyRetryable#isCancellation and
+PossibleRetryable#isNonRetryable in inject-thrift to inject-utils ExceptionUtils as publicly
+usable methods. These methods are generally useful when processing interrupts on Futures.
+<a href="https://github.com/twitter/finatra/commit/3d3514506d7c22002fc4744e5b50c1238c54f580">3d351450</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li><p>inject-server: Remove deprecated c.t.inject.server.DeprecatedLogging trait. This trait was
+introduced as a placeholder shim to ensure that JUL util-logging Flags were still defined within
+a Finatra server such that servers did not fail upon startup if Flag values were being set.
+The default behavior during Flag parsing is to error if a Flag value is passed for a Flag not
+defined within the application.</p>
+
+<p>We have removed the shim and the trait (and thus the Flag definitions), as it is not expected
+that users use util-logging JUL Flags for logging configuration with Finatra servers since Finatra
+uses the SLF4J-API. Logging configuration should be done on the choosen SLF4J-API logging
+implementation. If your server fails to start after this change, please ensure you are not passing
+values for the JUL util-logging Flags. <a href="https://github.com/twitter/finatra/commit/5b5ccf4f170256d06f47e8bca4f8ff1a29429c1a">5b5ccf4f</a></p></li>
+</ul>
+
+<h4>Changed</h4>
+
+<ul>
+<li><p>finatra: Removed <code>kafka</code> and <code>kafka-streams</code> modules from finatra core library.</p>
+
+<p>Note: We published a stand-alone <a href="https://github.com/finagle/finatra-kafka">finatra-kafka client</a>
+with deprecation announcement to serve as exit pathway for current users.</p>
+
+<p>Announcement: <a href="https://finagle.github.io/blog/2022/06/01/announce-migrations/">finagle blog</a>
+<a href="https://github.com/twitter/finatra/commit/27e2c9c40caada815b2665e0702725ebdd6dc6f9">27e2c9c4</a></p></li>
+</ul>
+
+<h4>Added</h4>
+
+<ul>
+<li>  finatra: Introduce InMemoryTracer for inspecting Trace information via tests. <a href="https://github.com/twitter/finatra/commit/0755b77e702d4bbe554aa1a30ac52235d0023168">0755b77e</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>finatra: Update Jackson library to version 2.13.3 <a href="https://github.com/twitter/finatra/commit/a4065f196b6c9c7ee5c7f8c48bdb556ddc79a064">a4065f19</a></li>
+</ul>
+
+<h2><a href="https://github.com/twitter/util/releases/tag/util-22.7.0">Util 22.7</a></h2>
+
+<h4>Breaking API Changes</h4>
+
+<ul>
+<li>  util-stats: SourceRole subtypes have been moved into the SourceRole object to make their
+relationship to the parent type more clear. <a href="https://github.com/twitter/util/commit/633cf5b0649c8377207201c633fdd7ecf6ae6758">633cf5b0</a></li>
+</ul>
+
+<h4>Runtime Behavior Changes</h4>
+
+<ul>
+<li>  util-jackson: Update Jackson library to version 2.13.3 <a href="https://github.com/twitter/util/commit/8c96a44240688d9a32a42e8c6e3e225244055dab">8c96a442</a></li>
+<li>  util-jackson: Deserialized case classes with validation on optional fields shouldn&rsquo;t throw an error.
+<a href="https://github.com/twitter/util/commit/3b94d2e628d6d62d678006c3177f46dfeb1e0ec9">3b94d2e6</a></li>
+<li>  util: Update snakeyaml to 1.28 <a href="https://github.com/twitter/util/commit/d486a7dab7110ee05d24760e9d9531f75393254d">d486a7da</a></li>
+</ul>
+
+<h2><a href="https://github.com/twitter/scrooge/releases/tag/scrooge-22.7.0">Scrooge 22.7</a></h2>
+
+<ul>
+<li>  scrooge-generator: Introduce a AnnotatedFieldType to abstract type annotations from
+FieldType definitions. Currently used to propagate thrift annotations inside of
+collection types. <a href="https://github.com/twitter/scrooge/commit/59e91e6404cb802f0297c1fc7cb89e6692b3f4e9">59e91e64</a> <a href="https://github.com/twitter/scrooge/commit/2fa68351e354a21c511ab666bcf66274fd2941f8">2fa68351</a></li>
+<li>  scrooge-core: c.t.scrooge.ThriftUnion.fieldInfoForUnionClass API for retrieving
+ThriftStructFieldInfo for a ThriftUnion member class without having to instantiate
+it. <a href="https://github.com/twitter/scrooge/commit/19809c226bfc5ea18613e18a0d897cba553c5f56">19809c22</a></li>
+<li>  scrooge-generator: Add @.generated annotation to Swift generated code <a href="https://github.com/twitter/scrooge/commit/8fd6a0896e5ca768189bd8ea1bb3c97d091916c8">8fd6a089</a></li>
+<li>  scrooge-generator: Provide a \$STRUCT#unsetFields method to allow bulk unsets <a href="https://github.com/twitter/scrooge/commit/aef5029b24f11992255d0bc0497cb1d064c67b1b">aef5029b</a></li>
+<li>  scrooge-generator: support thrift validations on nested fields that are struct, union, and
+exception <a href="https://github.com/twitter/scrooge/commit/8bad4dd746dae8513016f39f423457e8af4ac5fe">8bad4dd7</a></li>
+</ul>
+
+<h2><a href="https://github.com/twitter/twitter-server/releases/tag/twitter-server-22.7.0">Twitter Server 22.7</a></h2>
+
+<ul>
+<li>  Admin HTTP server is now on Finagle&rsquo;s default HTTP protocol version, which supports
+HTTP/1.1, HTTP/2 cleartext protocol upgrade, HTTP/2 prior-knowledge, and ALPN.
+<a href="https://github.com/twitter/twitter-server/commit/6b9bf60fbc8df03c9b56bba46dd2ad074a67024e">6b9bf60f</a></li>
+</ul>
+
+</div>
+</div>
+
+      <hr>
+      <!-- footer -->
+      <div class="footer pull-right">
+        <p>&copy; 2014–2019 <a href="https://twitter.com/">Twitter, Inc.</a> and other contributors
+      </div><!-- /footer -->
+    </div><!-- /container -->
+  </body>
+</html>
